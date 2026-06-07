@@ -1,0 +1,6 @@
+groq
+requests
+matplotlib
+seaborn
+numpy
+openai

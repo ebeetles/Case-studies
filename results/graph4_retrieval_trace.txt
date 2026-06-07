@@ -1,0 +1,34 @@
+ROUND 2, CANDIDATE 1:
+  Weakness diagnosed: novelty
+  Query used: "glial cell interaction modulation in neurodegenerative diseases"
+  Retrieval relevance: 2/3
+  Papers retrieved:
+    1. Targeting MAPK-dependent pathways to modulate reactive astrocyte pathology in neurodegeneration.
+    2. Astrocytes in Brain Aging and Neurodegeneration: Cellular Mechanisms and Interventional Strategies.
+    3. Valosin-Containing Protein Contributes to Plexiform Neurofibroma Formation and Represents a Novel Therapeutic Target.
+  Score before: novelty_wins=2, specificity_wins=4, feasibility_wins=4
+  Score after:  novelty_wins=1, specificity_wins=1, feasibility_wins=1
+  Change: worse
+
+ROUND 2, CANDIDATE 2:
+  Weakness diagnosed: feasibility
+  Query used: "patient-derived cell variability solutions in metabolic disorders"
+  Retrieval relevance: 2/3
+  Papers retrieved:
+    1. Disease models of Leigh syndrome: From yeast to organoids.
+    2. Comparison of amyloid fibril formation by two closely related immunoglobulin light chain variable domains.
+  Score before: novelty_wins=4, specificity_wins=2, feasibility_wins=1
+  Score after:  novelty_wins=1, specificity_wins=1, feasibility_wins=1
+  Change: worse
+
+ROUND 3, FINAL CANDIDATE:
+  Weakness diagnosed: consistency
+  Query used: "glial cell interaction immune response modulation disease"
+  Retrieval relevance: 2/3
+  Papers retrieved:
+    1. LEP Knockdown Improves Functional Recovery After Spinal Cord Injury and Potentially Regulates Microglial Polarization via JAK-STAT Signaling Pathway.
+    2. Microglia crosstalk with T cells in neurodegenerative diseases: pathogenesis and treatment targets.
+    3. IFI27 modulates the immune response in childhood neuropsychiatric systemic lupus erythematosus by regulating CD8
+  Score before: novelty_wins=1, specificity_wins=1, feasibility_wins=1
+  Score after:  novelty_wins=1, specificity_wins=1, feasibility_wins=1
+  Change: same
