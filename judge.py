@@ -4,7 +4,7 @@ from __future__ import annotations
 Judge module: scores research ideas using the OpenAI API.
 
 Set OPENAI_API_KEY in your environment before running.
-Override model with JUDGE_MODEL env var (default: gpt-4o).
+Override model with JUDGE_MODEL env var (default: gpt-5.4-mini).
 
 Three separate LLM calls per idea (never combined into one prompt):
   1. Novelty score    (0-3)  + PubMed query for novelty literature
@@ -27,7 +27,19 @@ from openai import OpenAI
 
 from retrieval import extract_pubmed_query
 
-JUDGE_MODEL = os.environ.get("JUDGE_MODEL", "gpt-4o")
+_DEFAULT_JUDGE = "gpt-5.4-mini"
+_LEGACY_JUDGE_MODELS = frozenset({"gpt-4o-mini", "gpt-4o"})
+
+
+def get_judge_model() -> str:
+    """Resolve the active judge model, upgrading legacy gpt-4o defaults."""
+    model = os.environ.get("JUDGE_MODEL", _DEFAULT_JUDGE).strip()
+    if model in _LEGACY_JUDGE_MODELS:
+        return _DEFAULT_JUDGE
+    return model or _DEFAULT_JUDGE
+
+
+JUDGE_MODEL = _DEFAULT_JUDGE
 SEED_TRUNCATE = 200
 
 _client: OpenAI | None = None
@@ -57,13 +69,36 @@ def _get_client() -> OpenAI:
     return _client
 
 
+def _uses_gpt5_api(model: str) -> bool:
+    return model.startswith("gpt-5") or model.startswith("o")
+
+
+def _chat_completion(
+    client: OpenAI,
+    *,
+    model: str,
+    messages: list[dict],
+    temperature: float = 0,
+    max_output: int | None = None,
+):
+    """Call chat.completions with parameters compatible with the target model."""
+    params: dict = {"model": model, "messages": messages}
+    if not _uses_gpt5_api(model):
+        params["temperature"] = temperature
+    if max_output is not None:
+        token_key = "max_completion_tokens" if _uses_gpt5_api(model) else "max_tokens"
+        params[token_key] = max_output
+    return client.chat.completions.create(**params)
+
+
 def check_judge_ready() -> None:
     """Verify OpenAI is reachable. Raises on failure."""
     client = _get_client()
-    r = client.chat.completions.create(
-        model=JUDGE_MODEL,
+    r = _chat_completion(
+        client,
+        model=get_judge_model(),
         messages=[{"role": "user", "content": "Reply with exactly: OK"}],
-        max_tokens=5,
+        max_output=5,
         temperature=0,
     )
     if not r.choices[0].message.content:
@@ -76,8 +111,9 @@ def _call_judge(prompt: str) -> str:
     last_err: Exception | None = None
     for attempt in range(3):
         try:
-            r = client.chat.completions.create(
-                model=JUDGE_MODEL,
+            r = _chat_completion(
+                client,
+                model=get_judge_model(),
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0,
             )
@@ -206,7 +242,7 @@ def composite_score(novelty: int, gaps: int, feasibility: int) -> float:
 
 def score_idea(idea: dict, seed_papers: list[dict]) -> dict:
     """Legacy absolute scoring — retained for reference, not used in the pipeline."""
-    print(f"    [judge] Scoring with {JUDGE_MODEL}...")
+    print(f"    [judge] Scoring with {get_judge_model()}...")
     print("    [judge] Scoring novelty...")
     novelty,     novelty_text     = score_novelty(idea, seed_papers)
     print("    [judge] Scoring consistency...")

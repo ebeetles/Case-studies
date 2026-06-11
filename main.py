@@ -9,6 +9,7 @@ Final condition comparison uses pairwise judging (A vs C, B vs C).
 
 import json
 import os
+from datetime import datetime, timezone
 from pathlib import Path
 
 from pipeline import run_pipeline, print_c_verification
@@ -39,16 +40,51 @@ def _sanitize_env() -> None:
             os.environ[var] = os.environ[var].strip()
 
 
+def _next_run_id() -> int:
+    """Return the next sequential run ID by reading all_runs_log.json."""
+    all_runs_path = os.path.join(RESULTS_DIR, "all_runs_log.json")
+    if not os.path.exists(all_runs_path):
+        return 1
+    with open(all_runs_path) as f:
+        existing = json.load(f)
+    if not existing:
+        return 1
+    return max(e.get("run_id", 0) for e in existing) + 1
+
+
 def save_logs(logs: list[list[dict]], condition_comparisons: list[dict]):
     os.makedirs(RESULTS_DIR, exist_ok=True)
     combined: list[dict] = []
     for log in logs:
         combined.extend(log)
     combined.extend(condition_comparisons)
+
+    # ── Current-run log (always overwritten) ──────────────────────────────
     path = os.path.join(RESULTS_DIR, "run_log.json")
     with open(path, "w") as f:
         json.dump(combined, f, indent=2)
     print(f"Run log saved to {path} ({len(combined)} entries)")
+
+    # ── Persistent all-runs log (appended) ────────────────────────────────
+    run_id    = _next_run_id()
+    timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    tagged    = [{**entry, "run_id": run_id, "run_timestamp": timestamp}
+                 for entry in combined]
+
+    all_runs_path = os.path.join(RESULTS_DIR, "all_runs_log.json")
+    if os.path.exists(all_runs_path):
+        with open(all_runs_path) as f:
+            existing: list[dict] = json.load(f)
+    else:
+        existing = []
+
+    existing.extend(tagged)
+    with open(all_runs_path, "w") as f:
+        json.dump(existing, f, indent=2)
+
+    total_runs = run_id
+    print(f"All-runs log updated: {all_runs_path} "
+          f"(run {run_id}, {len(existing)} total entries across {total_runs} run(s))")
 
 
 if __name__ == "__main__":
@@ -72,17 +108,17 @@ if __name__ == "__main__":
             "  Or put it in a .env file in the project root."
         )
 
-    from judge import JUDGE_MODEL, check_judge_ready
+    from judge import get_judge_model, check_judge_ready
     from retrieval import check_retrieval_ready
-    from generator import GENERATOR_MODEL, check_generator_ready
+    from generator import get_generator_model, check_generator_ready
 
     print("\nPreflight checks...")
     check_judge_ready()
-    print(f"  Judge:     {JUDGE_MODEL} (OpenAI)")
+    print(f"  Judge:     {get_judge_model()} (OpenAI)")
     check_retrieval_ready()
     print("  Retrieval: PubMed")
     check_generator_ready()
-    print(f"  Generator: {GENERATOR_MODEL} (Groq)")
+    print(f"  Generator: {get_generator_model()} (Groq)")
 
     print("\n>>> Running Condition A: Baseline")
     result_a, log_a = run_pipeline(condition="A")
@@ -142,7 +178,7 @@ if __name__ == "__main__":
     print(f"  Method:       {result_c['method']}")
     print(f"  Contribution: {result_c['contribution']}")
 
-    generate_all_graphs(log_a, log_b, log_c)
+    generate_all_graphs(log_a, log_b, log_c, comparison_logs)
 
     print_c_verification(log_c)
 

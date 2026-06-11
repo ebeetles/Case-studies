@@ -201,7 +201,9 @@ def run_pipeline(condition: str) -> tuple[dict, list[dict]]:
         generic_papers = retrieve_papers(GENERIC_QUERY, n=5)
         print(f"[{condition}] Retrieved {len(generic_papers)} generic papers.")
 
-    ideas = generate_candidates(SEED_PAPERS, generic_papers, n=N_CANDIDATES)
+    ideas = generate_candidates(
+        SEED_PAPERS, generic_papers, n=N_CANDIDATES, condition=condition,
+    )
     print(f"[{condition}] Generated {len(ideas)} candidates. Pairwise ranking...")
 
     r1_ranked, r1_comparisons = rank_candidates_pairwise(ideas, SEED_PAPERS)
@@ -254,20 +256,32 @@ def run_pipeline(condition: str) -> tuple[dict, list[dict]]:
             weakness_feedback = diagnose_weakness(idea, weakness_type, SEED_PAPERS)
             ood_query = generate_ood_query(idea, weakness_type, weakness_feedback)
             gap_papers, filtered_titles = tracker.retrieve_deduplicated(ood_query, n=3)
-            relevance = check_retrieval_relevance(
-                idea, weakness_feedback, gap_papers, is_ood=True,
-            )
 
-            print(f"[{condition}]   Refining candidate {cid}...")
-            refined = refine_candidate(
-                idea, weakness_type, weakness_feedback, gap_papers, is_ood=True,
-            )
+            if not gap_papers:
+                print(f"[{condition}]   No OOD papers available — keeping parent for cid {cid}.")
+                kept_idea, kept_ranking = idea, ranking
+                refine_cmp = {
+                    "idea_a_label": "parent", "idea_b_label": "refined",
+                    "winners": {d: "parent" for d in ("novelty", "specificity", "feasibility", "overall")},
+                    "justifications": {d: "No OOD papers retrieved; parent kept unchanged." for d in ("novelty", "specificity", "feasibility", "overall")},
+                }
+                relevance = None
+                weakness_histories[cid].append(weakness_type)
+            else:
+                relevance = check_retrieval_relevance(
+                    idea, weakness_feedback, gap_papers, is_ood=True,
+                )
 
-            print(f"[{condition}]   Pairwise: parent vs refined candidate {cid}...")
-            kept_idea, kept_ranking, refine_cmp = pairwise_pick_winner(
-                idea, refined, SEED_PAPERS, "parent", "refined",
-            )
-            weakness_histories[cid].append(weakness_type)
+                print(f"[{condition}]   Refining candidate {cid}...")
+                refined = refine_candidate(
+                    idea, weakness_type, weakness_feedback, gap_papers, is_ood=True,
+                )
+
+                print(f"[{condition}]   Pairwise: parent vs refined candidate {cid}...")
+                kept_idea, kept_ranking, refine_cmp = pairwise_pick_winner(
+                    idea, refined, SEED_PAPERS, "parent", "refined",
+                )
+                weakness_histories[cid].append(weakness_type)
 
             log.append(_make_entry(
                 condition, 2, cid, kept_idea, kept_ranking,
@@ -348,19 +362,30 @@ def run_pipeline(condition: str) -> tuple[dict, list[dict]]:
         weakness_feedback = diagnose_weakness(best_idea, weakness_type, SEED_PAPERS)
         ood_query = generate_ood_query(best_idea, weakness_type, weakness_feedback)
         gap_papers, filtered_titles = tracker.retrieve_deduplicated(ood_query, n=3)
-        final_relevance = check_retrieval_relevance(
-            best_idea, weakness_feedback, gap_papers, is_ood=True,
-        )
 
-        print(f"[{condition}]   Refining final candidate...")
-        refined_final = refine_candidate(
-            best_idea, weakness_type, weakness_feedback, gap_papers, is_ood=True,
-        )
+        if not gap_papers:
+            print(f"[{condition}]   No OOD papers available — keeping parent for Round 3.")
+            final_idea, final_ranking = best_idea, best_ranking
+            final_cmp = {
+                "idea_a_label": "parent", "idea_b_label": "refined",
+                "winners": {d: "parent" for d in ("novelty", "specificity", "feasibility", "overall")},
+                "justifications": {d: "No OOD papers retrieved; parent kept unchanged." for d in ("novelty", "specificity", "feasibility", "overall")},
+            }
+            final_relevance = None
+        else:
+            final_relevance = check_retrieval_relevance(
+                best_idea, weakness_feedback, gap_papers, is_ood=True,
+            )
 
-        print(f"[{condition}]   Pairwise: parent vs final refined...")
-        final_idea, final_ranking, final_cmp = pairwise_pick_winner(
-            best_idea, refined_final, SEED_PAPERS, "parent", "refined",
-        )
+            print(f"[{condition}]   Refining final candidate...")
+            refined_final = refine_candidate(
+                best_idea, weakness_type, weakness_feedback, gap_papers, is_ood=True,
+            )
+
+            print(f"[{condition}]   Pairwise: parent vs final refined...")
+            final_idea, final_ranking, final_cmp = pairwise_pick_winner(
+                best_idea, refined_final, SEED_PAPERS, "parent", "refined",
+            )
         round3_history.append(weakness_type)
 
         log.append(_make_entry(

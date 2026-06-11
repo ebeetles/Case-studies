@@ -250,10 +250,14 @@ class RetrievalTracker:
             if len(fresh) == n:
                 break
 
+        # First broadening pass
         if len(fresh) < n:
             fallback_query = query + " novel mechanisms"
             print(f"  [retrieval] Dedup fallback query: '{fallback_query[:60]}'")
-            fallback = retrieve_papers(fallback_query, n=n * 2, append_alzheimer=False)
+            try:
+                fallback = retrieve_papers(fallback_query, n=n * 2, append_alzheimer=False)
+            except RetrievalError:
+                fallback = []
             for paper in fallback:
                 key = paper["title"].strip().lower()
                 if "alzheimer" in key:
@@ -265,7 +269,30 @@ class RetrievalTracker:
                 if len(fresh) == n:
                     break
 
+        # Second broadening pass: truncate to first two keywords
+        if len(fresh) < n:
+            words = _clean_query(query).split()
+            short_query = " ".join(words[:2]) if len(words) >= 2 else _clean_query(query)
+            if short_query and short_query != query:
+                print(f"  [retrieval] Broad fallback query: '{short_query}'")
+                try:
+                    broad = retrieve_papers(short_query, n=n * 3, append_alzheimer=False)
+                except RetrievalError:
+                    broad = []
+                for paper in broad:
+                    key = paper["title"].strip().lower()
+                    if "alzheimer" in key:
+                        filtered.append(f"[AD-filtered] {paper['title']}")
+                        continue
+                    if key not in self.seen_titles:
+                        self.seen_titles.add(key)
+                        fresh.append(paper)
+                    if len(fresh) == n:
+                        break
+
         if filtered:
             print(f"  [retrieval] Filtered {len(filtered)} paper(s) (dedup/AD).")
+        if not fresh:
+            print(f"  [retrieval] WARNING: zero OOD papers found after all fallback attempts.")
 
         return fresh, filtered

@@ -9,48 +9,48 @@
         "idea_a_id": 1,
         "idea_b_id": 2,
         "winners": {
-          "novelty": "1",
-          "specificity": "2",
-          "feasibility": "2",
-          "overall": "2"
+          "novelty": "2",
+          "specificity": "1",
+          "feasibility": "1",
+          "overall": "1"
         },
         "justifications": {
-          "novelty": "The exploration of the gut-brain axis and microbiome in Alzheimer's disease represents a relatively underexplored area compared to the established focus on neuroinflammation and tau pathology.",
-          "specificity": "The proposal to repurpose histone deacetylase inhibitors like valproic acid directly targets specific epigenetic mechanisms and pathways related to TREM2 and tau, providing a clearer actionable strategy.",
-          "feasibility": "Repurposing existing histone deacetylase inhibitors is more feasible given their established safety profiles and existing clinical use compared to the more complex manipulation of the gut microbiome.",
-          "overall": "Idea 2 presents a more concrete and actionable approach to addressing Alzheimer's disease through established pharmacological agents and specific biological pathways."
+          "novelty": "Idea 2 is more novel because apigenin targeting the tau kinase/GSK3\u03b2\u2013microglia interface is less directly foreshadowed by the seed literature than fenofibrate\u2019s more broadly expected anti-inflammatory, mitochondrial, and BBB-protective effects.",
+          "specificity": "Idea 1 is more specific because it names a defined repurposed drug, a clear mechanistic axis (PPAR\u03b1\u2013Nrf2), and concrete assay systems and model readouts.",
+          "feasibility": "Fenofibrate has well-characterized pharmacology and established in vitro/in vivo use, making the proposed BBB and 5xFAD studies more straightforward to execute than apigenin\u2019s less direct mechanistic claims in tauopathy.",
+          "overall": "Although less novel, Idea 1 is the stronger overall repurposing hypothesis because it is more mechanistically grounded, experimentally tractable, and aligned with the seed literature on inflammation, mitochondria, and BBB dysfunction."
         }
       },
       {
         "idea_a_id": 1,
         "idea_b_id": 3,
         "winners": {
-          "novelty": "1",
-          "specificity": "3",
+          "novelty": "3",
+          "specificity": "1",
           "feasibility": "3",
           "overall": "3"
         },
         "justifications": {
-          "novelty": "The exploration of the gut-brain axis and microbiome in Alzheimer's disease represents a relatively underexplored area compared to the established focus on neuroinflammation and mitochondrial dysfunction.",
-          "specificity": "Idea 3 specifically targets the kynurenine pathway and identifies ciclosporin as a repurposable drug, providing a clear mechanism and actionable target for intervention.",
-          "feasibility": "The use of ciclosporin, an already established immunosuppressant, makes it more feasible to repurpose in a laboratory setting compared to the more complex interactions of the gut microbiome.",
-          "overall": "Idea 3 offers a more targeted approach with a clear mechanism of action, making it a stronger candidate for drug repurposing in Alzheimer's disease."
+          "novelty": "Idea 3 is more novel because sulforaphane-driven modulation of Nrf2-KEAP1 with downstream TREM2 signaling is a less direct extension of the seed literature than fenofibrate\u2019s more familiar PPAR\u03b1/Nrf2/BBB framing.",
+          "specificity": "Idea 1 is slightly more specific because it clearly anchors the hypothesis in fenofibrate, PPAR\u03b1, Nrf2, brain microvascular endothelial cells, and BBB integrity, whereas Idea 3\u2019s TREM2 link is less mechanistically operationalized.",
+          "feasibility": "Idea 3 is more feasible because sulforaphane is readily available and the APP/PS1 plus microglial-cell workflow is straightforward with standard tools, while BBB-focused validation in human brain microvascular endothelial cells is typically more technically demanding.",
+          "overall": "Idea 3 is the better repurposing hypothesis overall because it is more novel and still experimentally tractable, despite Idea 1 being somewhat more concrete."
         }
       },
       {
         "idea_a_id": 1,
         "idea_b_id": 4,
         "winners": {
-          "novelty": "4",
-          "specificity": "4",
+          "novelty": "1",
+          "specificity": "1",
           "feasibility": "1",
-          "overall": "4"
+          "overall": "1"
         },
         "justifications": {
-          "novelty": "The exploration of the unfolded protein response in relation to tau pathology and mitochondrial dysfunction presents a novel angle that is less emphasized in the existing literature compared to the gut-brain axis.",
-          "specificity": "Idea 4 specifically targets the unfolded protein response and identifies clotrimazole as a repurposable drug, providing a clear mechanism and actionable pathway for investigation.",
-          "feasibility": "The use of rifaximin as an antibiotic to manipulate the gut microbiome is a well-established approach, making it more feasible to implement in a laboratory setting compared to the more complex modulation of the unfolded protein response.",
-          "overall": "Idea 4 offers a more innovative and specific approach to addressing Alzheimer's disease by targeting the interplay between tau pathology and mitochondrial dysfunction, which could lead to significant advancements in treatment strategies."
+          "novelty": "Fenofibrate is a more plausible and less idiosyncratic repurposing candidate for Alzheimer\u2019s disease than ivermectin, which is less commonly linked to the BBB/mitochondria axis and feels more speculative despite both leveraging known pathways.",
+          "specificity": "Idea 1 is slightly more coherent because it ties fenofibrate to a defined PPAR\u03b1\u2013NRF2 mechanism and specifies human brain microvascular endothelial cells plus 5xFAD mice.",
+          "feasibility": "Fenofibrate has a well-characterized pharmacology and safety profile, making it more practical to study and interpret than ivermectin in this disease context.",
+          "overall": "Although both proposals are mechanistically ambitious, idea 1 is the stronger repurposing hypothesis because it is more biologically credible, experimentally tractable, and translationally grounded."
         }
       },
       {
@@ -63,26 +63,26 @@
           "overall": "1"
         },
         "justifications": {
-          "novelty": "The exploration of circadian rhythm regulation in Alzheimer's disease is a relatively underexplored area compared to the established focus on neuroinflammation and mitochondrial dysfunction.",
-          "specificity": "Idea 1 specifically targets the gut-brain axis and proposes the use of rifaximin, a concrete antibiotic, to investigate its effects on Alzheimer's disease progression.",
-          "feasibility": "The use of rifaximin as an existing antibiotic allows for a more straightforward experimental design and application in a mouse model compared to the more complex mechanisms involved in circadian rhythm modulation.",
-          "overall": "Idea 1 presents a more actionable and specific approach to drug repurposing with a clear target, making it more feasible for immediate experimental validation."
+          "novelty": "Idea 5 is more novel because niclosamide-SIRT1-epigenetic regulation in Alzheimer\u2019s disease is less directly covered by the seed literature than fenofibrate\u2019s broader antioxidant/mitochondrial/BBB framing, which overlaps more with established neuroinflammation and mitochondrial hypotheses.",
+          "specificity": "Idea 1 is more specific because it clearly names fenofibrate, PPAR-alpha, Nrf2, human brain microvascular endothelial cells, and the 5xFAD mouse model, whereas idea 5 is more internally diffuse despite naming niclosamide and SIRT1.",
+          "feasibility": "Idea 1 is more feasible because fenofibrate has well-characterized pharmacology and the proposed endothelial-cell and 5xFAD workflows are standard and directly testable with existing tools.",
+          "overall": "Idea 1 is the stronger overall repurposing hypothesis because it is more operationally grounded and experimentally tractable, even though idea 5 is somewhat more novel."
         }
       },
       {
         "idea_a_id": 2,
         "idea_b_id": 3,
         "winners": {
-          "novelty": "3",
-          "specificity": "2",
-          "feasibility": "2",
-          "overall": "2"
+          "novelty": "2",
+          "specificity": "3",
+          "feasibility": "3",
+          "overall": "3"
         },
         "justifications": {
-          "novelty": "The kynurenine pathway is less explored in the context of Alzheimer's disease compared to the well-established role of epigenetic modifications, making this hypothesis more novel.",
-          "specificity": "Idea 2 specifically targets histone deacetylase inhibitors like valproic acid and focuses on the TREM2 and tau pathways, providing clearer actionable targets.",
-          "feasibility": "The use of existing histone deacetylase inhibitors like valproic acid is more straightforward and established in clinical settings compared to the more complex modulation of the kynurenine pathway.",
-          "overall": "Idea 2 presents a more feasible and specific approach to drug repurposing while still offering novel insights into Alzheimer's disease treatment strategies."
+          "novelty": "Idea 2 is more novel because it explicitly links tau kinase/GSK3\u03b2 modulation to microglial dysfunction, whereas Idea 3 largely extends already well-trodden Nrf2-KEAP1, mitochondrial, and neuroinflammation themes in AD.",
+          "specificity": "Idea 3 is more specific because it names sulforaphane, the Nrf2-KEAP1 pathway, TREM2 signaling, and the APP/PS1 model as concrete testable elements.",
+          "feasibility": "Idea 3 is more feasible because sulforaphane, APP/PS1 mice, and readouts of mitochondrial, inflammatory, and TREM2-related signaling are well-established tools in AD research.",
+          "overall": "Although less novel, Idea 3 is the stronger overall repurposing hypothesis because it is more concretely framed and more readily testable with existing models and assays."
         }
       },
       {
@@ -90,15 +90,15 @@
         "idea_b_id": 4,
         "winners": {
           "novelty": "4",
-          "specificity": "2",
+          "specificity": "4",
           "feasibility": "2",
           "overall": "2"
         },
         "justifications": {
-          "novelty": "The exploration of the unfolded protein response in relation to tau pathology and mitochondrial dysfunction presents a less commonly addressed angle in Alzheimer's research compared to the established focus on epigenetic modifications.",
-          "specificity": "Idea 2 specifically targets histone deacetylase inhibitors like valproic acid and focuses on enhancing microglial function and tau clearance, providing clear actionable targets.",
-          "feasibility": "The use of existing histone deacetylase inhibitors such as valproic acid makes Idea 2 more feasible, as these compounds are already well-characterized and available for research.",
-          "overall": "Idea 2 presents a more actionable and feasible approach to drug repurposing while still contributing novel insights into the role of epigenetics in Alzheimer's disease."
+          "novelty": "Idea 4 is more novel because ivermectin-PPAR\u03b3 targeting the BBB/mitochondria axis is less directly implied by the seed literature than apigenin targeting GSK3\u03b2 and tau/microglial signaling, which is a more established Alzheimer's mechanism.",
+          "specificity": "Idea 4 specifies a drug, a pathway (PPAR\u03b3), defined cell types, and measurable outcomes across BBB integrity and mitochondrial biogenesis, making it slightly more concrete than idea 2.",
+          "feasibility": "Idea 2 is more feasible because apigenin has a better-established preclinical profile in neuroinflammation/tau contexts and the proposed in vitro microglial plus rTg4510 validation is more straightforward than testing ivermectin in BBB and mitochondrial endpoints.",
+          "overall": "Idea 2 is the stronger overall hypothesis because it aligns more directly with known tau biology while remaining experimentally tractable and biologically plausible for Alzheimer's disease repurposing."
         }
       },
       {
@@ -107,14 +107,14 @@
         "winners": {
           "novelty": "5",
           "specificity": "2",
-          "feasibility": "2",
-          "overall": "2"
+          "feasibility": "5",
+          "overall": "5"
         },
         "justifications": {
-          "novelty": "The exploration of circadian rhythm regulation in Alzheimer's disease introduces a relatively underexplored dimension compared to the established focus on neuroinflammation and tau pathology.",
-          "specificity": "Idea 2 specifically targets histone deacetylase inhibitors like valproic acid and focuses on the TREM2 and tau pathways, providing clear actionable targets.",
-          "feasibility": "The use of existing histone deacetylase inhibitors such as valproic acid makes Idea 2 more feasible given the established knowledge and availability of these compounds for research.",
-          "overall": "Idea 2 presents a more concrete and actionable approach to drug repurposing by leveraging existing therapies to target specific pathways implicated in Alzheimer's disease."
+          "novelty": "Idea 5 is more novel because it links niclosamide to sirtuin-1\u2013mediated epigenetic and mitochondrial mechanisms, which is a less direct extension of the seed literature than the more expected tau/GSK3\u03b2-microglia axis in Idea 2.",
+          "specificity": "Idea 2 is more specific because it names a clear disease-relevant target cascade, GSK3\u03b2, and a defined tauopathy model, making the experimental hypothesis more directly testable.",
+          "feasibility": "Idea 5 is more feasible because niclosamide has extensive repurposing precedent and the proposed SIRT1, mitochondrial, and neuroinflammation readouts are well supported by existing assays and the 3xTg-AD model.",
+          "overall": "Idea 5 is the stronger overall repurposing hypothesis because it is more novel while remaining experimentally tractable, whereas Idea 2 is more incremental to established tau-centric approaches."
         }
       },
       {
@@ -123,14 +123,14 @@
         "winners": {
           "novelty": "4",
           "specificity": "4",
-          "feasibility": "4",
-          "overall": "4"
+          "feasibility": "3",
+          "overall": "3"
         },
         "justifications": {
-          "novelty": "The exploration of the unfolded protein response in relation to tau pathology and mitochondrial dysfunction presents a unique angle that is less commonly addressed in existing Alzheimer's research compared to the kynurenine pathway.",
-          "specificity": "Idea 4 specifically identifies clotrimazole as a drug targeting the unfolded protein response, providing a clear and actionable target for investigation.",
-          "feasibility": "The use of clotrimazole, an already established antifungal agent, makes it more feasible to repurpose in a laboratory setting compared to ciclosporin, which may have more complex immunosuppressive effects.",
-          "overall": "Idea 4 offers a more innovative and specific approach to addressing Alzheimer's disease by targeting the interplay between tau pathology and mitochondrial dysfunction, which is critical for understanding disease mechanisms."
+          "novelty": "Idea 4 is more novel because ivermectin-PPAR\u03b3- BBB biology is a less obvious repurposing angle than sulforaphane acting through the already well-known Nrf2 antioxidant axis that is frequently linked to neuroinflammation and mitochondrial protection.",
+          "specificity": "Idea 4 names a concrete repurposed drug, a defined pathway (PPAR\u03b3), specific cell type (human brain microvascular endothelial cells), and a clear disease model, making it slightly more operationally precise.",
+          "feasibility": "Idea 3 is more feasible because sulforaphane has extensive prior use in microglial and AD-related experiments and its Nrf2-linked readouts are straightforward to measure with standard assays.",
+          "overall": "Idea 3 is overall stronger because it is more biologically plausible and experimentally tractable, whereas idea 4 relies on a more contentious ivermectin-centric mechanism with higher translational and mechanistic risk."
         }
       },
       {
@@ -140,13 +140,13 @@
           "novelty": "5",
           "specificity": "3",
           "feasibility": "3",
-          "overall": "5"
+          "overall": "3"
         },
         "justifications": {
-          "novelty": "The exploration of circadian rhythm regulation in Alzheimer's disease introduces a relatively underexplored area in the context of neurodegeneration, contrasting with the more established focus on the kynurenine pathway.",
-          "specificity": "Idea 3 specifically identifies ciclosporin and indoleamine 2,3-dioxygenase as actionable targets, providing a clearer direction for drug repurposing compared to the broader concept of circadian rhythm modulation in Idea 5.",
-          "feasibility": "The use of ciclosporin, an already established drug, makes the experimental approach in Idea 3 more straightforward and practical for immediate application in laboratory settings.",
-          "overall": "Idea 5 presents a novel and comprehensive approach to Alzheimer's disease by integrating circadian rhythm research with existing knowledge of neuroinflammation and mitochondrial function, potentially leading to innovative therapeutic strategies."
+          "novelty": "Niclosamide via the sirtuin 1/epigenetic-mitochondrial axis is less directly implied by the seed literature than sulforaphane\u2019s Nrf2-antioxidant/neuroinflammation angle, which is a more established AD repurposing theme.",
+          "specificity": "Idea 3 specifies a clearer mechanistic chain\u2014sulforaphane, Nrf2-KEAP1, mitochondrial biogenesis, and downstream TREM2 signaling\u2014whereas idea 5 is broader and less tightly connected mechanistically.",
+          "feasibility": "Sulforaphane has a comparatively strong safety profile and widely available assay readouts for Nrf2, mitochondrial function, and microglial phenotypes, making it easier to execute than repurposing niclosamide for an AD epigenetic program.",
+          "overall": "Although idea 5 is more novel, idea 3 is better balanced in mechanistic clarity and practical testability, making it the stronger repurposing hypothesis overall."
         }
       },
       {
@@ -159,10 +159,10 @@
           "overall": "5"
         },
         "justifications": {
-          "novelty": "The exploration of circadian rhythm regulation in Alzheimer's disease introduces a relatively underexplored area in the context of neurodegeneration, distinguishing it from more established pathways like the unfolded protein response.",
-          "specificity": "Idea 4 specifically identifies clotrimazole as a drug targeting the unfolded protein response, providing a clear and actionable target for investigation.",
-          "feasibility": "The use of mifepristone, a well-characterized glucocorticoid receptor antagonist, suggests a more straightforward application in existing experimental frameworks compared to the more complex mechanisms involved in the unfolded protein response.",
-          "overall": "Idea 5 presents a novel and feasible approach to Alzheimer's disease by targeting circadian rhythms, which may have significant implications for multiple disease mechanisms."
+          "novelty": "Idea 5 is more novel because niclosamide targeting SIRT1-linked epigenetic and mitochondrial pathways in microglia is a less standard Alzheimer\u2019s repurposing angle than ivermectin aimed at PPAR\u03b3-mediated blood-brain barrier and mitochondrial effects.",
+          "specificity": "Idea 4 is more specific because it clearly names ivermectin, PPAR\u03b3, human brain microvascular endothelial cells, and the APP/PS1 model, giving a tighter experimental path than the broader epigenetic framing in idea 5.",
+          "feasibility": "Idea 5 is more feasible because niclosamide has a more established repurposing profile and the proposed microglial and 3xTg-AD experiments align well with existing laboratory tools and disease models.",
+          "overall": "Idea 5 is the better overall hypothesis because it is more novel while remaining experimentally tractable and better aligned with a plausible disease-modifying mechanism in Alzheimer\u2019s pathology."
         }
       }
     ]
@@ -172,23 +172,23 @@
     "round": 1,
     "candidate_id": 1,
     "idea": {
-      "problem": "The current understanding of Alzheimer's disease pathogenesis does not fully account for the potential role of epigenetic modifications in regulating gene expression and contributing to disease progression, particularly in relation to the TREM2 and tau pathways.",
-      "method": "We will investigate the repurposing of existing histone deacetylase inhibitors, such as valproic acid, to modulate epigenetic marks and enhance the expression of genes involved in microglial function and tau clearance in Alzheimer's disease models.",
-      "contribution": "This study will provide novel insights into the potential therapeutic application of epigenetic-targeting interventions in Alzheimer's disease, offering a new avenue for drug repurposing and treatment strategies that complement existing approaches focused on neuroinflammation and mitochondrial function."
+      "problem": "The interplay between mitochondrial dysfunction, neuroinflammation, and TREM2 receptor signaling in Alzheimer's disease suggests that targeting the intersection of these pathways may yield a novel therapeutic strategy.",
+      "method": "The drug sulforaphane, a naturally occurring isothiocyanate, will be investigated for its potential to modulate the Nrf2-KEAP1 pathway, a key regulator of mitochondrial biogenesis and antioxidant responses, and its downstream effects on TREM2 receptor signaling, using a combination of in vitro experiments in human microglial cells and in vivo validation in the APP/PS1 mouse model of Alzheimer's disease.",
+      "contribution": "This research will contribute to the development of a new therapeutic approach for Alzheimer's disease by demonstrating the efficacy of sulforaphane in reducing neuroinflammation, improving mitochondrial function, and enhancing TREM2 receptor signaling, thereby providing a novel disease-modifying strategy for the treatment of this devastating neurodegenerative disorder."
     },
     "ranking": {
       "dimension_wins": {
-        "novelty": 0,
-        "specificity": 4,
+        "novelty": 1,
+        "specificity": 2,
         "feasibility": 4,
         "overall": 4
       },
       "total_wins": 4,
-      "total_dimension_wins": 8
+      "total_dimension_wins": 7
     },
     "scores": {
-      "novelty": 0,
-      "specificity": 4,
+      "novelty": 1,
+      "specificity": 2,
       "feasibility": 4,
       "overall_wins": 4,
       "total_wins": 4,
@@ -213,27 +213,27 @@
     "round": 1,
     "candidate_id": 2,
     "idea": {
-      "problem": "The current understanding of Alzheimer's disease pathogenesis does not fully account for the potential role of the unfolded protein response, a cellular stress response pathway, in modulating the interplay between tau pathology and mitochondrial dysfunction in the brain.",
-      "method": "We will investigate the repurposing of existing drugs that target the unfolded protein response, such as the antifungal agent clotrimazole, which inhibits the activity of the sarco/endoplasmic reticulum Ca2+-ATPase pump and modulates the unfolded protein response, to mitigate Alzheimer's disease progression in a mouse model.",
-      "contribution": "This study will provide novel insights into the potential therapeutic application of unfolded protein response-targeting interventions in Alzheimer's disease, offering a new avenue for drug repurposing and treatment strategies that complement existing approaches focused on neuroinflammation, mitochondrial function, epigenetic modifications, and the gut-brain axis."
+      "problem": "The complex interplay between neuroinflammation, mitochondrial dysfunction, and blood-brain barrier disruption in Alzheimer's disease necessitates the exploration of novel therapeutic strategies that target multiple pathological mechanisms simultaneously.",
+      "method": "The drug fenofibrate, a peroxisome proliferator-activated receptor alpha agonist, will be investigated for its potential to modulate the nuclear factor erythroid 2-related factor 2 pathway, a key regulator of mitochondrial biogenesis and antioxidant responses, using a combination of in vitro experiments in human brain microvascular endothelial cells and in vivo validation in the 5xFAD mouse model of Alzheimer's disease.",
+      "contribution": "This research will contribute to the development of a new therapeutic approach for Alzheimer's disease by demonstrating the efficacy of fenofibrate in reducing neuroinflammation, improving mitochondrial function, and preserving blood-brain barrier integrity, thereby providing a novel disease-modifying strategy for the treatment of this devastating neurodegenerative disorder."
     },
     "ranking": {
       "dimension_wins": {
-        "novelty": 3,
-        "specificity": 3,
-        "feasibility": 1,
-        "overall": 2
+        "novelty": 1,
+        "specificity": 4,
+        "feasibility": 3,
+        "overall": 3
       },
-      "total_wins": 2,
-      "total_dimension_wins": 7
+      "total_wins": 3,
+      "total_dimension_wins": 8
     },
     "scores": {
-      "novelty": 3,
-      "specificity": 3,
-      "feasibility": 1,
-      "overall_wins": 2,
-      "total_wins": 2,
-      "composite": 2
+      "novelty": 1,
+      "specificity": 4,
+      "feasibility": 3,
+      "overall_wins": 3,
+      "total_wins": 3,
+      "composite": 3
     },
     "pairwise_comparisons": [],
     "weakness_targeted": null,
@@ -254,24 +254,24 @@
     "round": 1,
     "candidate_id": 3,
     "idea": {
-      "problem": "The current understanding of Alzheimer's disease pathogenesis does not fully account for the potential role of the circadian rhythm and its regulation of cellular processes, including those involved in neuroinflammation, mitochondrial function, and tau pathology, in modulating disease progression.",
-      "method": "We will investigate the repurposing of existing drugs that target the circadian rhythm, such as the glucocorticoid receptor antagonist mifepristone, to mitigate the disruption of circadian rhythms and its downstream effects on Alzheimer's disease pathology in a mouse model.",
-      "contribution": "This study will provide novel insights into the potential therapeutic application of circadian rhythm-targeting interventions in Alzheimer's disease, offering a new avenue for drug repurposing and treatment strategies that complement existing approaches focused on neuroinflammation, mitochondrial function, epigenetic modifications, the gut-brain axis, the kynurenine pathway, and the unfolded protein response."
+      "problem": "The intricate relationship between epigenetic modifications, mitochondrial dysfunction, and neuroinflammation in Alzheimer's disease suggests that targeting the intersection of these pathways with a novel therapeutic strategy may yield improved treatment outcomes.",
+      "method": "The drug niclosamide, a anthelmintic agent, will be investigated for its potential to modulate the sirtuin 1 pathway, a key regulator of epigenetic modifications and mitochondrial biogenesis, using a combination of in vitro experiments in human microglial cells and in vivo validation in the 3xTg-AD mouse model of Alzheimer's disease.",
+      "contribution": "This research will contribute to the development of a new therapeutic approach for Alzheimer's disease by demonstrating the efficacy of niclosamide in reducing neuroinflammation, improving mitochondrial function, and promoting epigenetic modifications that preserve cognitive function, thereby providing a novel disease-modifying strategy for the treatment of this devastating neurodegenerative disorder."
     },
     "ranking": {
       "dimension_wins": {
         "novelty": 4,
         "specificity": 0,
-        "feasibility": 1,
+        "feasibility": 2,
         "overall": 2
       },
       "total_wins": 2,
-      "total_dimension_wins": 5
+      "total_dimension_wins": 6
     },
     "scores": {
       "novelty": 4,
       "specificity": 0,
-      "feasibility": 1,
+      "feasibility": 2,
       "overall_wins": 2,
       "total_wins": 2,
       "composite": 2
@@ -295,24 +295,24 @@
     "round": 1,
     "candidate_id": 4,
     "idea": {
-      "problem": "The current understanding of Alzheimer's disease pathogenesis does not fully account for the potential role of the gut-brain axis and the microbiome in modulating neuroinflammation and mitochondrial dysfunction.",
-      "method": "We will investigate the repurposing of existing antibiotics that target specific gut microbiota, such as rifaximin, to alter the gut-brain axis and mitigate Alzheimer's disease progression in a mouse model.",
-      "contribution": "This study will provide novel insights into the potential therapeutic application of microbiome-targeting interventions in Alzheimer's disease, offering a new avenue for drug repurposing and treatment strategies that go beyond the current focus on neuroinflammation and mitochondrial function."
+      "problem": "The intricate relationship between tau protein aggregation and microglial dysfunction in Alzheimer's disease suggests that targeting the intersection of these two pathological processes may yield a novel therapeutic strategy.",
+      "method": "The drug apigenin, a natural flavonoid compound, will be investigated for its potential to modulate the tau kinase glycogen synthase kinase 3 beta pathway, a key regulator of tau phosphorylation and microglial activation, using a combination of in vitro experiments in human microglial cells and in vivo validation in the rTg4510 mouse model of tauopathy.",
+      "contribution": "This research will contribute to the development of a new therapeutic approach for Alzheimer's disease by demonstrating the efficacy of apigenin in reducing tau protein aggregation, mitigating microglial dysfunction, and preserving cognitive function, thereby providing a novel disease-modifying strategy for the treatment of this devastating neurodegenerative disorder."
     },
     "ranking": {
       "dimension_wins": {
         "novelty": 2,
         "specificity": 1,
-        "feasibility": 2,
+        "feasibility": 1,
         "overall": 1
       },
       "total_wins": 1,
-      "total_dimension_wins": 5
+      "total_dimension_wins": 4
     },
     "scores": {
       "novelty": 2,
       "specificity": 1,
-      "feasibility": 2,
+      "feasibility": 1,
       "overall_wins": 1,
       "total_wins": 1,
       "composite": 1
@@ -336,27 +336,27 @@
     "round": 1,
     "candidate_id": 5,
     "idea": {
-      "problem": "The current understanding of Alzheimer's disease pathogenesis does not fully account for the potential role of the kynurenine pathway, a metabolic pathway involved in tryptophan degradation, in modulating neuroinflammation and oxidative stress in the brain.",
-      "method": "We will investigate the repurposing of existing drugs that target the kynurenine pathway, such as the immunosuppressant drug ciclosporin, which inhibits the activity of indoleamine 2,3-dioxygenase, a key enzyme in the kynurenine pathway, to mitigate Alzheimer's disease progression in a mouse model.",
-      "contribution": "This study will provide novel insights into the potential therapeutic application of kynurenine pathway-targeting interventions in Alzheimer's disease, offering a new avenue for drug repurposing and treatment strategies that complement existing approaches focused on neuroinflammation, mitochondrial function, and epigenetic modifications."
+      "problem": "The complex relationship between blood-brain barrier disruption, neuroinflammation, and mitochondrial dysfunction in Alzheimer's disease suggests that targeting the intersection of these pathways with a novel therapeutic strategy may yield improved treatment outcomes.",
+      "method": "The drug ivermectin, a anthelmintic agent, will be investigated for its potential to modulate the PPAR\u03b3 pathway, a key regulator of blood-brain barrier integrity and mitochondrial biogenesis, using a combination of in vitro experiments in human brain microvascular endothelial cells and in vivo validation in the APP/PS1 mouse model of Alzheimer's disease.",
+      "contribution": "This research will contribute to the development of a new therapeutic approach for Alzheimer's disease by demonstrating the efficacy of ivermectin in reducing blood-brain barrier disruption, mitigating neuroinflammation, and improving mitochondrial function, thereby providing a novel disease-modifying strategy for the treatment of this devastating neurodegenerative disorder."
     },
     "ranking": {
       "dimension_wins": {
-        "novelty": 1,
-        "specificity": 2,
-        "feasibility": 2,
-        "overall": 1
+        "novelty": 2,
+        "specificity": 3,
+        "feasibility": 0,
+        "overall": 0
       },
-      "total_wins": 1,
+      "total_wins": 0,
       "total_dimension_wins": 5
     },
     "scores": {
-      "novelty": 1,
-      "specificity": 2,
-      "feasibility": 2,
-      "overall_wins": 1,
-      "total_wins": 1,
-      "composite": 1
+      "novelty": 2,
+      "specificity": 3,
+      "feasibility": 0,
+      "overall_wins": 0,
+      "total_wins": 0,
+      "composite": 0
     },
     "pairwise_comparisons": [],
     "weakness_targeted": null,
@@ -383,15 +383,15 @@
         "idea_b_id": 2,
         "winners": {
           "novelty": "2",
-          "specificity": "1",
+          "specificity": "2",
           "feasibility": "1",
           "overall": "1"
         },
         "justifications": {
-          "novelty": "Idea 2 explores the relatively under-researched relationship between the gut microbiome and Alzheimer's disease, offering a novel therapeutic angle not extensively covered in the existing literature.",
-          "specificity": "Idea 1 specifies a clear focus on mitochondrial function, neuroinflammation, and blood-brain barrier integrity, which are concrete targets for drug repurposing.",
-          "feasibility": "Idea 1's approach of using a systems biology framework to screen FDA-approved compounds is more aligned with existing methodologies and resources available in research settings.",
-          "overall": "Idea 1 presents a comprehensive strategy that integrates multiple known pathological mechanisms in Alzheimer's disease, making it a more robust and actionable hypothesis for drug repurposing."
+          "novelty": "Fenofibrate in an iPSC-derived microglia model with single-cell RNA-seq and live-cell imaging is less directly anticipated by the seed literature than metformin/NLRP3, which closely tracks established neuroinflammation and inflammasome themes.",
+          "specificity": "Idea 2 specifies fenofibrate, PPAR-alpha, mitochondrial dynamics, microglia, single-cell RNA sequencing, and live-cell imaging, whereas Idea 1 is somewhat broader despite naming metformin and NLRP3.",
+          "feasibility": "Metformin testing in an Alzheimer's mouse model with behavioral, biochemical, and imaging readouts is more straightforward and established than implementing an iPSC-derived microglia system with single-cell transcriptomics and dynamic live imaging.",
+          "overall": "Although less novel, Idea 1 is the more practical and coherent repurposing hypothesis because it is easier to execute and better aligned with a tractable in vivo efficacy study."
         }
       },
       {
@@ -399,15 +399,15 @@
         "idea_b_id": 3,
         "winners": {
           "novelty": "3",
-          "specificity": "3",
+          "specificity": "1",
           "feasibility": "1",
-          "overall": "3"
+          "overall": "1"
         },
         "justifications": {
-          "novelty": "Idea 3 explores the kynurenine pathway, which has not been extensively investigated in the context of Alzheimer's disease, making it a more novel approach compared to the broader themes in Idea 1.",
-          "specificity": "Idea 3 specifically targets the kynurenine pathway and mentions the use of patient-derived cells and animal models, providing clearer actionable targets than the general multi-omics approach in Idea 1.",
-          "feasibility": "Idea 1's focus on repurposing FDA-approved compounds allows for a more straightforward implementation in a laboratory setting, leveraging existing resources and regulatory pathways.",
-          "overall": "Idea 3 presents a unique and focused approach to drug repurposing that addresses a specific metabolic pathway implicated in Alzheimer's disease, potentially leading to innovative therapeutic strategies."
+          "novelty": "Montelukast is a less commonly proposed Alzheimer\u2019s repurposing candidate than metformin and, in the context given, its link to tau phosphorylation via neuronal cell modeling is more distinct from the seed literature\u2019s emphasis on inflammation, TREM2, BBB, and mitochondrial cascades.",
+          "specificity": "Idea 1 is more concrete because it specifies metformin, the NLRP3 inflammasome, and an Alzheimer\u2019s mouse model with behavioral, biochemical, and imaging readouts.",
+          "feasibility": "Metformin has extensive in vivo pharmacology, established dosing, and readily available assays in mouse models, whereas the hiPSC-derived neuronal tau-phosphorylation/proteomics setup in Idea 3 is typically more complex and variable.",
+          "overall": "Although Idea 3 is somewhat more novel, Idea 1 is stronger overall because it is more specific, more experimentally straightforward, and better positioned to yield interpretable repurposing evidence."
         }
       },
       {
@@ -415,63 +415,63 @@
         "idea_b_id": 4,
         "winners": {
           "novelty": "4",
-          "specificity": "1",
-          "feasibility": "1",
-          "overall": "1"
-        },
-        "justifications": {
-          "novelty": "Idea 4 introduces the novel concept of targeting circadian rhythm dysregulation in Alzheimer's disease, which is less explored in the existing literature compared to mitochondrial dysfunction and neuroinflammation.",
-          "specificity": "Idea 1 specifies actionable targets related to mitochondrial function, neuroinflammation, and blood-brain barrier integrity, while Idea 4 remains more abstract in its approach to circadian clock modulation.",
-          "feasibility": "Idea 1 is more feasible as it builds on established methodologies in drug repurposing and multi-omics analysis, which are widely used in current research settings.",
-          "overall": "Idea 1 presents a more comprehensive and actionable strategy for drug repurposing in Alzheimer's disease by addressing multiple interconnected pathological mechanisms."
-        }
-      },
-      {
-        "idea_a_id": 1,
-        "idea_b_id": 5,
-        "winners": {
-          "novelty": "5",
-          "specificity": "5",
-          "feasibility": "1",
-          "overall": "5"
-        },
-        "justifications": {
-          "novelty": "Idea 5 explores the largely uncharted therapeutic potential of targeting the unfolded protein response in Alzheimer's disease, which is not directly addressed in the existing seed literature.",
-          "specificity": "Idea 5 specifically identifies the unfolded protein response and mentions repurposing drugs used for cancer and protein misfolding disorders, providing clearer actionable targets.",
-          "feasibility": "Idea 1 employs a systems biology approach that, while ambitious, may be more challenging to implement compared to the more straightforward bioinformatics and experimental methods proposed in Idea 5.",
-          "overall": "Idea 5 presents a novel and specific approach to drug repurposing that addresses a critical aspect of Alzheimer's disease pathology, making it a more compelling hypothesis overall."
-        }
-      },
-      {
-        "idea_a_id": 2,
-        "idea_b_id": 3,
-        "winners": {
-          "novelty": "3",
-          "specificity": "3",
-          "feasibility": "2",
-          "overall": "3"
-        },
-        "justifications": {
-          "novelty": "The kynurenine pathway has not been extensively explored in the context of Alzheimer's disease drug repurposing, making it a more novel approach compared to the gut-brain axis, which has received considerable attention.",
-          "specificity": "Idea 3 specifically targets the kynurenine pathway, providing a clear biochemical mechanism to investigate, whereas Idea 2 discusses the gut microbiome in more general terms without specifying particular drugs or mechanisms.",
-          "feasibility": "The gut microbiome can be more readily manipulated using existing antibiotics and prebiotics, making it a more feasible approach for immediate experimental application compared to the more complex kynurenine pathway.",
-          "overall": "Idea 3 presents a novel and specific approach to drug repurposing that addresses the underlying neuroinflammatory mechanisms in Alzheimer's disease, which could lead to significant therapeutic advancements."
-        }
-      },
-      {
-        "idea_a_id": 2,
-        "idea_b_id": 4,
-        "winners": {
-          "novelty": "2",
           "specificity": "4",
           "feasibility": "4",
           "overall": "4"
         },
         "justifications": {
-          "novelty": "The exploration of the gut-brain axis as a therapeutic target for Alzheimer's disease represents a relatively uncharted area in the context of existing seed literature, which primarily focuses on neuroinflammation and tau pathology.",
-          "specificity": "Idea 4 specifically targets circadian clock regulation and proposes the screening of FDA-approved compounds, providing a clearer pathway for actionable research compared to the broader approach of modulating the gut microbiome in Idea 2.",
-          "feasibility": "The use of FDA-approved compounds in conjunction with established in vitro and in vivo models makes Idea 4 more feasible for immediate application in laboratory settings compared to the more complex and variable nature of gut microbiome modulation in Idea 2.",
-          "overall": "Idea 4 presents a more focused and actionable hypothesis with a clear methodology that leverages existing knowledge and resources, making it a stronger candidate for drug repurposing in Alzheimer's disease."
+          "novelty": "Idea 4 is somewhat more novel because sulforaphane\u2019s repurposing for the BBB-endothelial/Nrf2 axis in Alzheimer\u2019s is less directly covered by the seed topics than metformin\u2019s broad anti-inflammatory framing.",
+          "specificity": "Idea 4 specifies a defined drug, a concrete pathway (Keap1-Nrf2), a precise cell type (human brain microvascular endothelial cells), and explicit assays, making it more actionable.",
+          "feasibility": "A BBB endothelial cell model with transwell and live-cell imaging is easier and faster to implement than a multifactorial AD mouse study with behavioral, biochemical, and imaging endpoints.",
+          "overall": "Idea 4 is the stronger repurposing hypothesis overall because it is more targeted, experimentally tractable, and plausibly linked to a less-explored AD disease mechanism."
+        }
+      },
+      {
+        "idea_a_id": 1,
+        "idea_b_id": 5,
+        "winners": {
+          "novelty": "5",
+          "specificity": "1",
+          "feasibility": "1",
+          "overall": "1"
+        },
+        "justifications": {
+          "novelty": "Trichostatin A with a defined histone deacetylase/epigenetic mechanism in a human iPSC-derived AD model is more distinct from the seed literature than metformin/NLRP3, which more directly echoes known inflammation- and metabolism-focused AD repurposing themes.",
+          "specificity": "Idea 1 is more specific because it names a concrete repurposed drug, a defined inflammatory target pathway (NLRP3 inflammasome), and a clear in vivo mouse-model testing plan.",
+          "feasibility": "Metformin testing in an AD mouse model with behavioral, biochemical, and imaging readouts is generally more straightforward and mature than executing TSA perturbation alongside ChIP-seq and single-cell RNA-seq in iPSC-derived neurons.",
+          "overall": "Although less novel, Idea 1 is the stronger repurposing hypothesis overall because it is more actionable, easier to validate in vivo, and more likely to yield interpretable disease-modifying evidence."
+        }
+      },
+      {
+        "idea_a_id": 2,
+        "idea_b_id": 3,
+        "winners": {
+          "novelty": "3",
+          "specificity": "2",
+          "feasibility": "2",
+          "overall": "2"
+        },
+        "justifications": {
+          "novelty": "Montelukast repurposing for tau phosphorylation in an AD neuronal model is less directly suggested by the seed literature than fenofibrate\u2019s more conventional anti-inflammatory/mitochondrial framing, making it feel more exploratory.",
+          "specificity": "Idea 2 more clearly specifies a drug, a defined pathway target (mitochondrial dynamics), a relevant cell type (iPSC-derived microglia), and concrete readouts (single-cell RNA-seq and live-cell imaging).",
+          "feasibility": "Fenofibrate in iPSC-derived microglia with scRNA-seq and live-cell imaging is more straightforward and biologically aligned with the drug\u2019s known anti-inflammatory/mitochondrial effects than montelukast\u2019s less established linkage to tau phosphorylation in neurons.",
+          "overall": "Although less novel, Idea 2 is the stronger repurposing hypothesis because it is more mechanistically grounded, more testable, and better matched to existing biology and tools."
+        }
+      },
+      {
+        "idea_a_id": 2,
+        "idea_b_id": 4,
+        "winners": {
+          "novelty": "4",
+          "specificity": "4",
+          "feasibility": "4",
+          "overall": "4"
+        },
+        "justifications": {
+          "novelty": "Sulforaphane targeting KEAP1-NRF2 in a BBB endothelial model is a less directly implied extension of the seed literature than fenofibrate targeting mitochondrial dynamics in microglia, which is closer to established inflammation-mitochondria repurposing logic.",
+          "specificity": "Idea 4 names a defined drug, pathway, cell type, and barrier assay readout, making the actionable intervention slightly more concrete than Idea 2\u2019s broader mitochondrial dynamics framing.",
+          "feasibility": "Human brain microvascular endothelial transwell and imaging assays for sulforaphane are generally more straightforward and reproducible than modeling fenofibrate effects on iPSC-derived microglial mitochondrial dynamics with single-cell RNA-seq.",
+          "overall": "Idea 4 is the stronger repurposing hypothesis overall because it is more novel, experimentally tractable, and tightly linked to a defined disease-relevant barrier mechanism."
         }
       },
       {
@@ -479,15 +479,15 @@
         "idea_b_id": 5,
         "winners": {
           "novelty": "2",
-          "specificity": "5",
+          "specificity": "2",
           "feasibility": "5",
-          "overall": "5"
+          "overall": "2"
         },
         "justifications": {
-          "novelty": "The exploration of the gut-brain axis as a therapeutic target in Alzheimer's disease represents a relatively uncharted area in the context of drug repurposing, distinguishing it from more established pathways.",
-          "specificity": "Idea 5 specifically targets the unfolded protein response and mentions the potential repurposing of drugs used in cancer and protein misfolding disorders, providing clearer actionable targets.",
-          "feasibility": "The investigation of the unfolded protein response can leverage existing methodologies and drug libraries, making it more feasible with current laboratory resources compared to the more complex gut microbiome modulation.",
-          "overall": "Idea 5 presents a more focused and actionable approach to drug repurposing by targeting a well-defined cellular mechanism implicated in Alzheimer's disease, enhancing its potential for effective therapeutic development."
+          "novelty": "Fenofibrate-linked modulation of mitochondrial dynamics in iPSC-derived microglia is less directly anticipated by the seed literature than a histone deacetylase inhibitor strategy, which is broadly aligned with established epigenetic and neuroinflammatory Alzheimer\u2019s themes.",
+          "specificity": "Idea 2 specifies a concrete drug, cell type, pathway, and readouts, whereas Idea 5 is more generic about epigenetic regulation despite naming trichostatin A and histone acetylation.",
+          "feasibility": "Trichostatin A in iPSC-derived neurons with ChIP-seq and scRNA-seq is a more straightforward existing experimental workflow than modeling mitochondrial dynamics in iPSC-derived microglia with live-cell imaging.",
+          "overall": "Although Idea 5 is easier to execute, Idea 2 is the stronger repurposing hypothesis because it is more specific, more mechanistically focused, and more plausibly distinct from the seed literature."
         }
       },
       {
@@ -495,15 +495,15 @@
         "idea_b_id": 4,
         "winners": {
           "novelty": "4",
-          "specificity": "3",
+          "specificity": "4",
           "feasibility": "4",
           "overall": "4"
         },
         "justifications": {
-          "novelty": "The exploration of circadian rhythm dysregulation in Alzheimer's disease represents a relatively uncharted area in the context of drug repurposing, distinguishing it from more established pathways like the kynurenine pathway.",
-          "specificity": "Idea 3 specifically targets the kynurenine pathway, which is a well-defined metabolic route with known implications in neuroinflammation and neurodegeneration, making it more concrete than the broader circadian clock approach.",
-          "feasibility": "The use of FDA-approved compounds to influence circadian gene regulation provides a more straightforward and practical approach for immediate testing in clinical settings compared to the more complex kynurenine pathway analysis.",
-          "overall": "Idea 4 presents a novel and feasible approach to drug repurposing by targeting circadian rhythms, which could lead to innovative therapeutic strategies for Alzheimer's disease."
+          "novelty": "Sulforaphane\u2019s proposed use to link BBB repair, Nrf2/Keap1 signaling, neuroinflammation, and mitochondrial function is less directly implied by the seed literature than montelukast\u2019s more familiar anti-inflammatory/neuroprotective framing around tau and mitochondria.",
+          "specificity": "Idea 4 specifies a concrete drug, a defined molecular axis (Keap1-Nrf2), a named cell model, and explicit assays, whereas Idea 3 is broader and less mechanistically anchored despite naming montelukast.",
+          "feasibility": "Sulforaphane has well-established cellular tool use and BBB-endothelial transwell/live-imaging readouts are standard, making the proposed experiments more straightforward than proving montelukast-driven tau phosphorylation effects in iPSC neurons.",
+          "overall": "Idea 4 is the stronger hypothesis because it is more mechanistically explicit, more novel relative to the seed set, and more readily testable with existing laboratory methods."
         }
       },
       {
@@ -512,14 +512,14 @@
         "winners": {
           "novelty": "5",
           "specificity": "5",
-          "feasibility": "5",
-          "overall": "5"
+          "feasibility": "3",
+          "overall": "3"
         },
         "justifications": {
-          "novelty": "The focus on the unfolded protein response as a therapeutic target is less explored in the context of Alzheimer's disease compared to the kynurenine pathway, which has received more attention in neuroinflammation research.",
-          "specificity": "Idea 5 explicitly mentions targeting the unfolded protein response, which is a well-defined cellular mechanism, while Idea 3 discusses the kynurenine pathway in broader terms without specifying particular drugs or targets.",
-          "feasibility": "The unfolded protein response is a well-characterized pathway with existing drugs that can be repurposed, making it more feasible to implement in laboratory settings compared to the less defined kynurenine pathway.",
-          "overall": "Idea 5 presents a more innovative and actionable approach to drug repurposing in Alzheimer's disease by targeting a specific and less-explored cellular stress response pathway."
+          "novelty": "Idea 5 is more novel because it links a specific epigenetic drug to chromatin-level and single-cell transcriptional readouts, whereas Idea 3 mostly extends the already well-explored anti-inflammatory/mitochondrial framing around montelukast and tau.",
+          "specificity": "Idea 5 names a concrete drug, a defined mechanism (histone deacetylase inhibition), and explicit assays (ChIP-seq and single-cell RNA-seq), making it more actionable than the broader pathway focus in Idea 3.",
+          "feasibility": "Idea 3 is more feasible because montelukast is well-characterized, less technically demanding to test in iPSC neurons with live-cell imaging and proteomics, and does not rely on the more complex interpretation of broad epigenomic perturbation.",
+          "overall": "Idea 3 is the stronger overall repurposing hypothesis because it is more practical and directly tied to disease-relevant tau and mitochondrial phenotypes, whereas Idea 5 is more technically ambitious and less clearly disease-specific."
         }
       },
       {
@@ -527,15 +527,15 @@
         "idea_b_id": 5,
         "winners": {
           "novelty": "5",
-          "specificity": "5",
-          "feasibility": "5",
-          "overall": "5"
+          "specificity": "4",
+          "feasibility": "4",
+          "overall": "4"
         },
         "justifications": {
-          "novelty": "Targeting the unfolded protein response in the context of Alzheimer's disease is a relatively unexplored area that directly addresses the protein misfolding aspect of the disease, distinguishing it from more established research on circadian rhythms.",
-          "specificity": "Idea 5 explicitly mentions the use of drugs that target the unfolded protein response, providing a clearer focus on specific mechanisms and potential therapeutic agents compared to the broader approach of targeting circadian rhythms in Idea 4.",
-          "feasibility": "The use of existing FDA-approved drugs that target the unfolded protein response makes Idea 5 more feasible for immediate testing in laboratory and clinical settings compared to the more complex circadian rhythm modulation in Idea 4.",
-          "overall": "Idea 5 presents a more innovative and actionable approach to drug repurposing in Alzheimer's disease by focusing on a critical and underexplored cellular stress response pathway that is directly linked to disease pathology."
+          "novelty": "Idea 5 is more novel because it shifts from the already well-trodden Nrf2/BBB/neuroinflammation axis to a specific epigenetic intervention with trichostatin A in iPSC-derived neurons, which is less directly covered by the seed literature.",
+          "specificity": "Idea 4 is more specific because it names sulforaphane, the KEAP1-NRF2 pathway, a human brain microvascular endothelial cell BBB model, transwell assays, and live-cell imaging as concrete testable elements.",
+          "feasibility": "Idea 4 is more feasible because sulforaphane and BBB endothelial assays are relatively established and technically straightforward compared with the heavier multi-layered ChIP-seq plus single-cell RNA-seq workflow in neurons.",
+          "overall": "Idea 4 is the stronger overall repurposing hypothesis because it is both operationally more tractable and better anchored to a plausible disease-relevant mechanism that can be tested with standard laboratory methods."
         }
       }
     ]
@@ -545,24 +545,24 @@
     "round": 1,
     "candidate_id": 1,
     "idea": {
-      "problem": "The therapeutic potential of repurposing drugs that target the unfolded protein response, a cellular stress response pathway that has been implicated in the pathogenesis of Alzheimer's disease, remains largely unexplored and warrants further investigation.",
-      "method": "A combination of bioinformatics analysis, in vitro experiments using patient-derived cells, and in vivo studies using animal models of Alzheimer's disease will be used to investigate the therapeutic potential of repurposing unfolded protein response-targeting drugs, such as those used to treat cancer and other protein misfolding disorders.",
-      "contribution": "This study aims to identify novel drug repurposing candidates that target the unfolded protein response, providing a new and innovative approach to Alzheimer's disease treatment that leverages the complex interplay between protein misfolding, cellular stress, and neurodegeneration to develop effective therapeutic strategies."
+      "problem": "The intricate relationship between the blood-brain barrier, neuroinflammation, and mitochondrial dysfunction in Alzheimer's disease necessitates the identification of novel therapeutic strategies that can simultaneously target multiple pathophysiological mechanisms to restore brain homeostasis.",
+      "method": "We propose to investigate the potential of sulforaphane, a nuclear factor erythroid 2-related factor 2 activator, to modulate the keap1-nrf2 pathway in a human brain microvascular endothelial cell model of the blood-brain barrier, using a combination of transwell assays and live-cell imaging approaches to validate its therapeutic efficacy in reducing neuroinflammation and improving mitochondrial function.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of sulforaphane as a disease-modifying treatment that targets the convergence of blood-brain barrier disruption, neuroinflammation, and mitochondrial dysfunction in the disease."
     },
     "ranking": {
       "dimension_wins": {
         "novelty": 3,
         "specificity": 4,
-        "feasibility": 3,
+        "feasibility": 4,
         "overall": 4
       },
       "total_wins": 4,
-      "total_dimension_wins": 10
+      "total_dimension_wins": 11
     },
     "scores": {
       "novelty": 3,
       "specificity": 4,
-      "feasibility": 3,
+      "feasibility": 4,
       "overall_wins": 4,
       "total_wins": 4,
       "composite": 4
@@ -586,27 +586,27 @@
     "round": 1,
     "candidate_id": 2,
     "idea": {
-      "problem": "The current understanding of Alzheimer's disease pathogenesis highlights the need to explore novel therapeutic strategies that target the complex interplay between mitochondrial dysfunction, neuroinflammation, and blood-brain barrier disruption, which are not adequately addressed by existing treatments.",
-      "method": "A systems biology approach will be employed to integrate multi-omics data and identify potential druggable targets, followed by a drug repurposing screen of FDA-approved compounds that modulate these targets, with a focus on medications used to treat cardiovascular and metabolic disorders.",
-      "contribution": "This study aims to discover novel drug repurposing candidates for Alzheimer's disease that simultaneously target mitochondrial function, neuroinflammation, and blood-brain barrier integrity, providing a new therapeutic paradigm for the prevention and treatment of this devastating neurodegenerative disorder."
+      "problem": "The current therapeutic strategies for Alzheimer's disease have limited efficacy, and there is a pressing need to identify novel drug repurposing candidates that can target the complex interplay between neuroinflammation, mitochondrial dysfunction, and amyloid-\u03b2 pathology.",
+      "method": "We propose to investigate the potential of metformin, a widely used antidiabetic drug, to modulate the NLRP3 inflammasome pathway in an Alzheimer's disease mouse model, using a combination of behavioral, biochemical, and imaging approaches to validate its therapeutic efficacy.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of metformin as a disease-modifying treatment that targets multiple pathophysiological mechanisms underlying the disease."
     },
     "ranking": {
       "dimension_wins": {
         "novelty": 0,
         "specificity": 2,
-        "feasibility": 4,
-        "overall": 2
+        "feasibility": 3,
+        "overall": 3
       },
-      "total_wins": 2,
-      "total_dimension_wins": 6
+      "total_wins": 3,
+      "total_dimension_wins": 5
     },
     "scores": {
       "novelty": 0,
       "specificity": 2,
-      "feasibility": 4,
-      "overall_wins": 2,
-      "total_wins": 2,
-      "composite": 2
+      "feasibility": 3,
+      "overall_wins": 3,
+      "total_wins": 3,
+      "composite": 3
     },
     "pairwise_comparisons": [],
     "weakness_targeted": null,
@@ -627,24 +627,24 @@
     "round": 1,
     "candidate_id": 3,
     "idea": {
-      "problem": "The potential of repurposing drugs that target the kynurenine pathway, a metabolic pathway involved in tryptophan degradation that has been implicated in neuroinflammation and neurodegeneration, to treat Alzheimer's disease remains unexplored.",
-      "method": "A multidisciplinary approach combining bioinformatics analysis of existing datasets, in vitro experiments using patient-derived cells, and in vivo studies using animal models of Alzheimer's disease will be used to investigate the therapeutic potential of repurposing kynurenine pathway-targeting drugs.",
-      "contribution": "This study aims to identify novel drug repurposing candidates that target the kynurenine pathway, providing a new and innovative approach to Alzheimer's disease treatment that leverages the complex interplay between tryptophan metabolism, neuroinflammation, and neurodegeneration to develop effective therapeutic strategies."
+      "problem": "The complex interplay between mitochondrial dysfunction, neuroinflammation, and blood-brain barrier disruption in Alzheimer's disease necessitates the identification of novel therapeutic strategies that can simultaneously target multiple pathophysiological mechanisms.",
+      "method": "We propose to investigate the potential of fenofibrate, a peroxisome proliferator-activated receptor alpha agonist, to modulate the mitochondrial dynamics pathway in a human-induced pluripotent stem cell-derived microglia model of Alzheimer's disease, using a combination of single-cell RNA sequencing and live-cell imaging approaches to validate its therapeutic efficacy.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of fenofibrate as a disease-modifying treatment that targets the convergence of mitochondrial dysfunction and neuroinflammation in the disease."
     },
     "ranking": {
       "dimension_wins": {
         "novelty": 2,
         "specificity": 3,
-        "feasibility": 0,
+        "feasibility": 1,
         "overall": 2
       },
       "total_wins": 2,
-      "total_dimension_wins": 5
+      "total_dimension_wins": 6
     },
     "scores": {
       "novelty": 2,
       "specificity": 3,
-      "feasibility": 0,
+      "feasibility": 1,
       "overall_wins": 2,
       "total_wins": 2,
       "composite": 2
@@ -668,27 +668,27 @@
     "round": 1,
     "candidate_id": 4,
     "idea": {
-      "problem": "The intersection of Alzheimer's disease and circadian rhythm dysregulation presents a novel opportunity to explore the therapeutic potential of repurposing drugs that target the circadian clock to modulate disease progression.",
-      "method": "A comprehensive approach combining computational modeling of circadian gene expression, in vitro screening of FDA-approved compounds that influence clock gene regulation, and in vivo validation using animal models of Alzheimer's disease will be employed to identify promising drug repurposing candidates.",
-      "contribution": "This study aims to discover innovative drug repurposing strategies that leverage the circadian clock as a therapeutic target, providing a new paradigm for the prevention and treatment of Alzheimer's disease by synchronizing circadian rhythms and mitigating disease-related pathology."
+      "problem": "The lack of effective therapeutic strategies for Alzheimer's disease highlights the need to explore novel drug repurposing candidates that can target the intricate relationship between tau pathology, mitochondrial dysfunction, and neuroinflammation in the disease.",
+      "method": "We propose to investigate the potential of montelukast, a cysteinyl leukotriene receptor 1 antagonist, to modulate the tau phosphorylation pathway in a human-induced pluripotent stem cell-derived neuronal model of Alzheimer's disease, using a combination of live-cell imaging and proteomic approaches to validate its therapeutic efficacy.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of montelukast as a disease-modifying treatment that targets the convergence of tau pathology and mitochondrial dysfunction in the disease."
     },
     "ranking": {
       "dimension_wins": {
         "novelty": 2,
-        "specificity": 1,
-        "feasibility": 2,
-        "overall": 2
+        "specificity": 0,
+        "feasibility": 1,
+        "overall": 1
       },
-      "total_wins": 2,
-      "total_dimension_wins": 5
+      "total_wins": 1,
+      "total_dimension_wins": 3
     },
     "scores": {
       "novelty": 2,
-      "specificity": 1,
-      "feasibility": 2,
-      "overall_wins": 2,
-      "total_wins": 2,
-      "composite": 2
+      "specificity": 0,
+      "feasibility": 1,
+      "overall_wins": 1,
+      "total_wins": 1,
+      "composite": 1
     },
     "pairwise_comparisons": [],
     "weakness_targeted": null,
@@ -709,23 +709,23 @@
     "round": 1,
     "candidate_id": 5,
     "idea": {
-      "problem": "The intricate relationship between the gut-brain axis and Alzheimer's disease pathogenesis suggests that modulating the gut microbiome could be a viable therapeutic strategy, yet the potential of repurposing drugs that target the gut microbiome to treat Alzheimer's disease remains unexplored.",
-      "method": "A combination of in silico modeling, in vitro experiments, and in vivo studies will be used to investigate the therapeutic potential of repurposing antibiotics and prebiotics that alter the gut microbiome composition and metabolic activity to mitigate Alzheimer's disease progression.",
-      "contribution": "This study aims to identify novel drug repurposing candidates that target the gut-brain axis, providing a new and innovative approach to Alzheimer's disease treatment that leverages the complex interplay between the gut microbiome and the brain to develop effective therapeutic strategies."
+      "problem": "The complex interplay between epigenetic modifications, neuroinflammation, and amyloid-\u03b2 pathology in Alzheimer's disease necessitates the identification of novel therapeutic strategies that can target the epigenetic regulation of gene expression in the disease.",
+      "method": "We propose to investigate the potential of trichostatin A, a histone deacetylase inhibitor, to modulate the histone acetylation pathway in a human-induced pluripotent stem cell-derived neuronal model of Alzheimer's disease, using a combination of chromatin immunoprecipitation sequencing and single-cell RNA sequencing approaches to validate its therapeutic efficacy.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of trichostatin A as a disease-modifying treatment that targets the epigenetic mechanisms underlying the disease."
     },
     "ranking": {
       "dimension_wins": {
         "novelty": 3,
-        "specificity": 0,
+        "specificity": 1,
         "feasibility": 1,
         "overall": 0
       },
       "total_wins": 0,
-      "total_dimension_wins": 4
+      "total_dimension_wins": 5
     },
     "scores": {
       "novelty": 3,
-      "specificity": 0,
+      "specificity": 1,
       "feasibility": 1,
       "overall_wins": 0,
       "total_wins": 0,
@@ -750,23 +750,23 @@
     "round": 2,
     "candidate_id": 1,
     "idea": {
-      "problem": "The therapeutic potential of repurposing drugs that target the unfolded protein response, a cellular stress response pathway that has been implicated in the pathogenesis of Alzheimer's disease, remains largely unexplored and warrants further investigation.",
-      "method": "A focused bioinformatics analysis of existing datasets on unfolded protein response-targeting drugs used in cancer and other protein misfolding disorders, followed by in vitro experiments using patient-derived cells and in vivo studies using established animal models of Alzheimer's disease, will be used to investigate the therapeutic potential of repurposing these drugs.",
-      "contribution": "This study aims to identify novel drug repurposing candidates that target the unfolded protein response, providing a new and innovative approach to Alzheimer's disease treatment that leverages the complex interplay between protein misfolding, cellular stress, and neurodegeneration to develop effective therapeutic strategies."
+      "problem": "The intricate relationship between the blood-brain barrier, neuroinflammation, and mitochondrial dysfunction in Alzheimer's disease necessitates the identification of novel therapeutic strategies that can simultaneously target multiple pathophysiological mechanisms to restore brain homeostasis.",
+      "method": "We propose to investigate the potential of sulforaphane to modulate the keap1-nrf2 pathway in a human brain microvascular endothelial cell model of the blood-brain barrier, using transwell assays to validate its therapeutic efficacy in reducing neuroinflammation and improving mitochondrial function.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of sulforaphane as a disease-modifying treatment that targets the convergence of blood-brain barrier disruption, neuroinflammation, and mitochondrial dysfunction in the disease."
     },
     "ranking": {
       "dimension_wins": {
-        "novelty": 1,
-        "specificity": 1,
+        "novelty": 0,
+        "specificity": 0,
         "feasibility": 1,
         "overall": 1
       },
       "total_wins": 1,
-      "total_dimension_wins": 3
+      "total_dimension_wins": 1
     },
     "scores": {
-      "novelty": 1,
-      "specificity": 1,
+      "novelty": 0,
+      "specificity": 0,
       "feasibility": 1,
       "overall_wins": 1,
       "total_wins": 1,
@@ -777,16 +777,16 @@
         "idea_a_label": "parent",
         "idea_b_label": "refined",
         "winners": {
-          "novelty": "refined",
-          "specificity": "refined",
+          "novelty": "parent",
+          "specificity": "parent",
           "feasibility": "refined",
           "overall": "refined"
         },
         "justifications": {
-          "novelty": "The refined idea emphasizes a focused bioinformatics analysis of existing datasets, which adds a novel methodological approach to exploring the therapeutic potential of unfolded protein response-targeting drugs in Alzheimer's disease.",
-          "specificity": "The refined idea specifies the use of existing datasets on unfolded protein response-targeting drugs, making it clearer which specific drugs and pathways will be investigated.",
-          "feasibility": "The refined idea outlines a more structured approach that combines bioinformatics with in vitro and in vivo studies, making it more feasible to execute with current laboratory techniques and resources.",
-          "overall": "The refined idea presents a more comprehensive and actionable plan for drug repurposing that integrates specific methodologies and targets, enhancing its potential impact on Alzheimer's disease treatment."
+          "novelty": "The parent is slightly more novel because adding live-cell imaging to the BBB transwell platform creates a more distinctive experimental angle than the refined version\u2019s narrower rephrasing.",
+          "specificity": "The parent is more specific because it explicitly names the use of live-cell imaging in addition to transwell assays, giving a clearer actionable readout plan.",
+          "feasibility": "The refined idea is more feasible because it relies on a simpler assay set and avoids the extra technical complexity and resource burden of live-cell imaging.",
+          "overall": "The refined hypothesis is better overall because it keeps the same mechanistic focus while being more streamlined and realistically executable as a repurposing study."
         }
       }
     ],
@@ -806,31 +806,31 @@
         "abstract": "BackgroundAlzheimer's disease (AD) is characterized by a neuropathological cascade that begins with amyloid-\u03b2 (A\u03b2) deposition. The recent success of disease-modifying drugs targeting A\u03b2 has demonstrated that modulating amyloidopathy can yield clinical benefits, underscoring the need for additional drugs affecting amyloid pathology.ObjectiveTo identify novel drug targets associated with A\u03b2 accumula"
       }
     ],
-    "retrieval_relevance": 3,
+    "retrieval_relevance": 2,
     "weakness_history": null,
     "weakness_targeted_this_round": null,
     "ood_query_used": null,
     "duplicate_papers_filtered": null,
     "idea_before_refinement": {
-      "problem": "The therapeutic potential of repurposing drugs that target the unfolded protein response, a cellular stress response pathway that has been implicated in the pathogenesis of Alzheimer's disease, remains largely unexplored and warrants further investigation.",
-      "method": "A combination of bioinformatics analysis, in vitro experiments using patient-derived cells, and in vivo studies using animal models of Alzheimer's disease will be used to investigate the therapeutic potential of repurposing unfolded protein response-targeting drugs, such as those used to treat cancer and other protein misfolding disorders.",
-      "contribution": "This study aims to identify novel drug repurposing candidates that target the unfolded protein response, providing a new and innovative approach to Alzheimer's disease treatment that leverages the complex interplay between protein misfolding, cellular stress, and neurodegeneration to develop effective therapeutic strategies."
+      "problem": "The intricate relationship between the blood-brain barrier, neuroinflammation, and mitochondrial dysfunction in Alzheimer's disease necessitates the identification of novel therapeutic strategies that can simultaneously target multiple pathophysiological mechanisms to restore brain homeostasis.",
+      "method": "We propose to investigate the potential of sulforaphane, a nuclear factor erythroid 2-related factor 2 activator, to modulate the keap1-nrf2 pathway in a human brain microvascular endothelial cell model of the blood-brain barrier, using a combination of transwell assays and live-cell imaging approaches to validate its therapeutic efficacy in reducing neuroinflammation and improving mitochondrial function.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of sulforaphane as a disease-modifying treatment that targets the convergence of blood-brain barrier disruption, neuroinflammation, and mitochondrial dysfunction in the disease."
     },
     "idea_after_refinement": {
-      "problem": "The therapeutic potential of repurposing drugs that target the unfolded protein response, a cellular stress response pathway that has been implicated in the pathogenesis of Alzheimer's disease, remains largely unexplored and warrants further investigation.",
-      "method": "A focused bioinformatics analysis of existing datasets on unfolded protein response-targeting drugs used in cancer and other protein misfolding disorders, followed by in vitro experiments using patient-derived cells and in vivo studies using established animal models of Alzheimer's disease, will be used to investigate the therapeutic potential of repurposing these drugs.",
-      "contribution": "This study aims to identify novel drug repurposing candidates that target the unfolded protein response, providing a new and innovative approach to Alzheimer's disease treatment that leverages the complex interplay between protein misfolding, cellular stress, and neurodegeneration to develop effective therapeutic strategies."
+      "problem": "The intricate relationship between the blood-brain barrier, neuroinflammation, and mitochondrial dysfunction in Alzheimer's disease necessitates the identification of novel therapeutic strategies that can simultaneously target multiple pathophysiological mechanisms to restore brain homeostasis.",
+      "method": "We propose to investigate the potential of sulforaphane to modulate the keap1-nrf2 pathway in a human brain microvascular endothelial cell model of the blood-brain barrier, using transwell assays to validate its therapeutic efficacy in reducing neuroinflammation and improving mitochondrial function.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of sulforaphane as a disease-modifying treatment that targets the convergence of blood-brain barrier disruption, neuroinflammation, and mitochondrial dysfunction in the disease."
     },
     "ranking_before": {
       "novelty_wins": 3,
       "specificity_wins": 4,
-      "feasibility_wins": 3,
+      "feasibility_wins": 4,
       "overall_wins": 4,
       "total_wins": 4
     },
     "ranking_after": {
-      "novelty_wins": 1,
-      "specificity_wins": 1,
+      "novelty_wins": 0,
+      "specificity_wins": 0,
       "feasibility_wins": 1,
       "overall_wins": 1,
       "total_wins": 1
@@ -841,9 +841,9 @@
     "round": 2,
     "candidate_id": 2,
     "idea": {
-      "problem": "The current understanding of Alzheimer's disease pathogenesis highlights the need to explore novel therapeutic strategies that target the complex interplay between mitochondrial dysfunction, neuroinflammation, and blood-brain barrier disruption, which are not adequately addressed by existing treatments.",
-      "method": "A systems biology approach will be employed to integrate multi-omics data from Alzheimer's disease and type 2 diabetes mellitus, focusing on shared pathophysiological mechanisms, to identify potential druggable targets, followed by a drug repurposing screen of FDA-approved compounds that modulate these targets, with a focus on medications used to treat cardiovascular and metabolic disorders.",
-      "contribution": "This study aims to discover novel drug repurposing candidates for Alzheimer's disease that simultaneously target mitochondrial function, neuroinflammation, and blood-brain barrier integrity, providing a new therapeutic paradigm for the prevention and treatment of this devastating neurodegenerative disorder."
+      "problem": "The current therapeutic strategies for Alzheimer's disease have limited efficacy, and there is a pressing need to identify novel drug repurposing candidates that can target the complex interplay between neuroinflammation, mitochondrial dysfunction, and amyloid-\u03b2 pathology, particularly in the context of shared pathophysiology with type 2 diabetes.",
+      "method": "We propose to investigate the potential of metformin, a widely used antidiabetic drug, to modulate the NLRP3 inflammasome pathway in an Alzheimer's disease mouse model, using a combination of behavioral and biochemical approaches to validate its therapeutic efficacy.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of metformin as a disease-modifying treatment that targets multiple pathophysiological mechanisms underlying the disease."
     },
     "ranking": {
       "dimension_wins": {
@@ -874,10 +874,10 @@
           "overall": "refined"
         },
         "justifications": {
-          "novelty": "The refined idea introduces a specific focus on the shared pathophysiological mechanisms between Alzheimer's disease and type 2 diabetes mellitus, which is a novel angle not explicitly addressed in the seed literature.",
-          "specificity": "The refined idea emphasizes the identification of druggable targets related to both Alzheimer's disease and type 2 diabetes, providing a clearer direction for actionable research compared to the more general approach in the parent idea.",
-          "feasibility": "The refined idea's integration of multi-omics data from two well-studied diseases allows for a more practical application of existing methodologies and resources in a laboratory setting.",
-          "overall": "The refined idea presents a more innovative and targeted approach to drug repurposing by linking Alzheimer's disease with type 2 diabetes, enhancing its potential for discovering effective therapeutic candidates."
+          "novelty": "Adding the explicit shared pathophysiology with type 2 diabetes makes the hypothesis more conceptually distinct and better grounded in a specific repurposing rationale beyond the generic metformin-in-AD framing.",
+          "specificity": "The refined idea is more precise because it names the drug, the NLRP3 inflammasome pathway, and the amyloid-\u03b2/neuroinflammation/mitochondrial context more directly as the testable target space.",
+          "feasibility": "The refined version is slightly more feasible because it narrows the readouts to behavioral and biochemical approaches, avoiding the added complexity of imaging without materially increasing experimental burden.",
+          "overall": "The refined hypothesis is the better overall repurposing idea because it is more focused, more mechanistically anchored, and at least as practical to test in a standard AD mouse model."
         }
       }
     ],
@@ -897,27 +897,27 @@
         "abstract": "BackgroundAlzheimer's disease (AD) is characterized by a neuropathological cascade that begins with amyloid-\u03b2 (A\u03b2) deposition. The recent success of disease-modifying drugs targeting A\u03b2 has demonstrated that modulating amyloidopathy can yield clinical benefits, underscoring the need for additional drugs affecting amyloid pathology.ObjectiveTo identify novel drug targets associated with A\u03b2 accumula"
       }
     ],
-    "retrieval_relevance": 3,
+    "retrieval_relevance": 2,
     "weakness_history": null,
     "weakness_targeted_this_round": null,
     "ood_query_used": null,
     "duplicate_papers_filtered": null,
     "idea_before_refinement": {
-      "problem": "The current understanding of Alzheimer's disease pathogenesis highlights the need to explore novel therapeutic strategies that target the complex interplay between mitochondrial dysfunction, neuroinflammation, and blood-brain barrier disruption, which are not adequately addressed by existing treatments.",
-      "method": "A systems biology approach will be employed to integrate multi-omics data and identify potential druggable targets, followed by a drug repurposing screen of FDA-approved compounds that modulate these targets, with a focus on medications used to treat cardiovascular and metabolic disorders.",
-      "contribution": "This study aims to discover novel drug repurposing candidates for Alzheimer's disease that simultaneously target mitochondrial function, neuroinflammation, and blood-brain barrier integrity, providing a new therapeutic paradigm for the prevention and treatment of this devastating neurodegenerative disorder."
+      "problem": "The current therapeutic strategies for Alzheimer's disease have limited efficacy, and there is a pressing need to identify novel drug repurposing candidates that can target the complex interplay between neuroinflammation, mitochondrial dysfunction, and amyloid-\u03b2 pathology.",
+      "method": "We propose to investigate the potential of metformin, a widely used antidiabetic drug, to modulate the NLRP3 inflammasome pathway in an Alzheimer's disease mouse model, using a combination of behavioral, biochemical, and imaging approaches to validate its therapeutic efficacy.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of metformin as a disease-modifying treatment that targets multiple pathophysiological mechanisms underlying the disease."
     },
     "idea_after_refinement": {
-      "problem": "The current understanding of Alzheimer's disease pathogenesis highlights the need to explore novel therapeutic strategies that target the complex interplay between mitochondrial dysfunction, neuroinflammation, and blood-brain barrier disruption, which are not adequately addressed by existing treatments.",
-      "method": "A systems biology approach will be employed to integrate multi-omics data from Alzheimer's disease and type 2 diabetes mellitus, focusing on shared pathophysiological mechanisms, to identify potential druggable targets, followed by a drug repurposing screen of FDA-approved compounds that modulate these targets, with a focus on medications used to treat cardiovascular and metabolic disorders.",
-      "contribution": "This study aims to discover novel drug repurposing candidates for Alzheimer's disease that simultaneously target mitochondrial function, neuroinflammation, and blood-brain barrier integrity, providing a new therapeutic paradigm for the prevention and treatment of this devastating neurodegenerative disorder."
+      "problem": "The current therapeutic strategies for Alzheimer's disease have limited efficacy, and there is a pressing need to identify novel drug repurposing candidates that can target the complex interplay between neuroinflammation, mitochondrial dysfunction, and amyloid-\u03b2 pathology, particularly in the context of shared pathophysiology with type 2 diabetes.",
+      "method": "We propose to investigate the potential of metformin, a widely used antidiabetic drug, to modulate the NLRP3 inflammasome pathway in an Alzheimer's disease mouse model, using a combination of behavioral and biochemical approaches to validate its therapeutic efficacy.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of metformin as a disease-modifying treatment that targets multiple pathophysiological mechanisms underlying the disease."
     },
     "ranking_before": {
       "novelty_wins": 0,
       "specificity_wins": 2,
-      "feasibility_wins": 4,
-      "overall_wins": 2,
-      "total_wins": 2
+      "feasibility_wins": 3,
+      "overall_wins": 3,
+      "total_wins": 3
     },
     "ranking_after": {
       "novelty_wins": 1,
@@ -938,22 +938,705 @@
         "idea_b_id": 2,
         "winners": {
           "novelty": "1",
-          "specificity": "2",
+          "specificity": "1",
           "feasibility": "2",
           "overall": "2"
         },
         "justifications": {
-          "novelty": "Idea 1 explores the largely uncharted territory of the unfolded protein response in the context of Alzheimer's disease, which is not directly addressed in the existing seed literature.",
-          "specificity": "Idea 2 explicitly identifies the interplay between mitochondrial dysfunction, neuroinflammation, and blood-brain barrier disruption as actionable targets, providing a clearer framework for drug repurposing.",
-          "feasibility": "Idea 2's systems biology approach leverages existing multi-omics data and established FDA-approved compounds, making it more practical to implement in a laboratory setting.",
-          "overall": "Idea 2 presents a comprehensive strategy that addresses multiple interconnected pathways in Alzheimer's disease, potentially leading to more effective therapeutic outcomes."
+          "novelty": "Sulforaphane targeting the KEAP1-NRF2 axis in a BBB endothelial model is a less conventional repurposing angle for Alzheimer\u2019s than metformin/NLRP3, which is more directly aligned with already common anti-inflammatory and metabolic AD hypotheses.",
+          "specificity": "Idea 1 specifies a concrete compound, pathway, cell type, and assay system, whereas Idea 2 is broader and more disease-model oriented despite naming metformin and NLRP3.",
+          "feasibility": "Metformin testing in an AD mouse model with behavioral and biochemical readouts is generally more straightforward and established than building and validating a BBB transwell system to assess multiple linked mechanisms.",
+          "overall": "Although less novel, metformin is the stronger overall repurposing hypothesis because it is more feasible and better grounded in an actionable in vivo validation strategy with clear translational relevance."
         }
       }
     ],
     "ranking": {
       "dimension_wins": {
         "novelty": 0,
+        "specificity": 0,
+        "feasibility": 1,
+        "overall": 1
+      },
+      "total_wins": 1,
+      "total_dimension_wins": 1
+    }
+  },
+  {
+    "condition": "B",
+    "round": 3,
+    "candidate_id": 1,
+    "idea": {
+      "problem": "The current therapeutic strategies for Alzheimer's disease have limited efficacy, particularly in the context of shared pathophysiology with type 2 diabetes, where neuroinflammation and amyloid-\u03b2 pathology converge.",
+      "method": "We propose to investigate the potential of metformin to modulate the NLRP3 inflammasome pathway in a transgenic Alzheimer's disease mouse model, using a combination of behavioral and biochemical approaches to validate its therapeutic efficacy.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of metformin as a disease-modifying treatment that targets multiple pathophysiological mechanisms underlying the disease."
+    },
+    "ranking": {
+      "dimension_wins": {
+        "novelty": 0,
+        "specificity": 0,
+        "feasibility": 1,
+        "overall": 1
+      },
+      "total_wins": 1,
+      "total_dimension_wins": 1
+    },
+    "scores": {
+      "novelty": 0,
+      "specificity": 0,
+      "feasibility": 1,
+      "overall_wins": 1,
+      "total_wins": 1,
+      "composite": 1
+    },
+    "pairwise_comparisons": [
+      {
+        "idea_a_label": "parent",
+        "idea_b_label": "refined",
+        "winners": {
+          "novelty": "parent",
+          "specificity": "parent",
+          "feasibility": "refined",
+          "overall": "refined"
+        },
+        "justifications": {
+          "novelty": "The parent is slightly more novel because it explicitly links metformin to the NLRP3 inflammasome and broader mitochondrial/amyloid-\u03b2 interplay, whereas the refined version compresses the idea into a more standard metformin-in-AD repurposing claim.",
+          "specificity": "The parent names a clearer mechanistic target, NLRP3 inflammasome signaling, and a broader pathophysiologic rationale, while the refined version is more generic in its framing of the disease context.",
+          "feasibility": "The refined idea is more feasible because it is narrower and cleaner to execute in an AD mouse model with standard behavioral and biochemical readouts, reducing conceptual and experimental scope.",
+          "overall": "The refined hypothesis is better overall because it keeps the core actionable repurposing claim while being more focused and practical to test in a real study."
+        }
+      }
+    ],
+    "weakness_targeted": null,
+    "targeted_query": null,
+    "retrieved_papers": [
+      {
+        "title": "Shared pathophysiology and therapeutic repurposing in Alzheimer's disease and type 2 diabetes: a critical review of convergent mechanisms and clinical challenges.",
+        "abstract": "Alzheimer's disease (AD) and type 2 diabetes mellitus (T2DM) are two prevalent age-related disorders that share striking pathophysiological similarities, leading to the conceptualization of AD as a metabolic disorder often termed \"type 3 diabetes.\" While numerous reviews have documented the epidemiological association between these diseases, a critical synthesis of the underlying molecular converg"
+      },
+      {
+        "title": "[Advances in Anti-Dementia Therapies in Older Adults].",
+        "abstract": "The rising prevalence of dementia, driven by demographic aging, underscores the urgent need for effective therapeutic strategies. This update reviews recent advances in anti-dementia treatments, focusing on pharmacological and non-pharmacological interventions. Acetylcholinesterase inhibitors (donepezil, rivastigmine, galantamine) and the NMDA receptor agonist memantine, traditionally used for Alz"
+      },
+      {
+        "title": "Genetically prioritized druggable targets for amyloid-\u03b2 pathology highlight",
+        "abstract": "BackgroundAlzheimer's disease (AD) is characterized by a neuropathological cascade that begins with amyloid-\u03b2 (A\u03b2) deposition. The recent success of disease-modifying drugs targeting A\u03b2 has demonstrated that modulating amyloidopathy can yield clinical benefits, underscoring the need for additional drugs affecting amyloid pathology.ObjectiveTo identify novel drug targets associated with A\u03b2 accumula"
+      }
+    ],
+    "retrieval_relevance": 2,
+    "weakness_history": null,
+    "weakness_targeted_this_round": null,
+    "ood_query_used": null,
+    "duplicate_papers_filtered": null,
+    "idea_before_refinement": {
+      "problem": "The current therapeutic strategies for Alzheimer's disease have limited efficacy, and there is a pressing need to identify novel drug repurposing candidates that can target the complex interplay between neuroinflammation, mitochondrial dysfunction, and amyloid-\u03b2 pathology, particularly in the context of shared pathophysiology with type 2 diabetes.",
+      "method": "We propose to investigate the potential of metformin, a widely used antidiabetic drug, to modulate the NLRP3 inflammasome pathway in an Alzheimer's disease mouse model, using a combination of behavioral and biochemical approaches to validate its therapeutic efficacy.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of metformin as a disease-modifying treatment that targets multiple pathophysiological mechanisms underlying the disease."
+    },
+    "idea_after_refinement": {
+      "problem": "The current therapeutic strategies for Alzheimer's disease have limited efficacy, particularly in the context of shared pathophysiology with type 2 diabetes, where neuroinflammation and amyloid-\u03b2 pathology converge.",
+      "method": "We propose to investigate the potential of metformin to modulate the NLRP3 inflammasome pathway in a transgenic Alzheimer's disease mouse model, using a combination of behavioral and biochemical approaches to validate its therapeutic efficacy.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of metformin as a disease-modifying treatment that targets multiple pathophysiological mechanisms underlying the disease."
+    },
+    "ranking_before": {
+      "novelty_wins": 0,
+      "specificity_wins": 0,
+      "feasibility_wins": 1,
+      "overall_wins": 1,
+      "total_wins": 1
+    },
+    "ranking_after": {
+      "novelty_wins": 0,
+      "specificity_wins": 0,
+      "feasibility_wins": 1,
+      "overall_wins": 1,
+      "total_wins": 1
+    }
+  },
+  {
+    "condition": "C",
+    "round": 1,
+    "candidate_id": 0,
+    "type": "round_selection",
+    "pairwise_comparisons": [
+      {
+        "idea_a_id": 1,
+        "idea_b_id": 2,
+        "winners": {
+          "novelty": "2",
+          "specificity": "1",
+          "feasibility": "1",
+          "overall": "1"
+        },
+        "justifications": {
+          "novelty": "Idea 2 is more novel because fenofibrate\u2013Nrf2 targeting in Alzheimer\u2019s disease is less directly aligned with the seed literature than metformin\u2019s broader anti-inflammatory/NLRP3 framing, which more closely echoes established neuroinflammation mechanisms.",
+          "specificity": "Idea 1 is more specific because it names a concrete drug, a defined inflammasome pathway, and a clear disease model with microglial readouts, making the experimental target chain more direct.",
+          "feasibility": "Idea 1 is more feasible because metformin, human microglial assays, and 5xFAD validation are widely established tools with straightforward readouts for NLRP3 signaling.",
+          "overall": "Idea 1 is the stronger overall hypothesis because it is better anchored to a well-supported mechanistic axis in Alzheimer\u2019s disease and is easier to test rigorously with existing models and assays."
+        }
+      },
+      {
+        "idea_a_id": 1,
+        "idea_b_id": 3,
+        "winners": {
+          "novelty": "3",
+          "specificity": "3",
+          "feasibility": "1",
+          "overall": "1"
+        },
+        "justifications": {
+          "novelty": "Idea 3 is slightly more novel because it connects pioglitazone to a tau/GSK3\u03b2-centered mechanism, whereas idea 1 largely recapitulates an already well-trodden metformin\u2013NLRP3/neuroinflammation line of inquiry.",
+          "specificity": "Idea 3 is more specific because it names a precise repurposed drug, an explicit signaling axis (PPAR\u03b3\u2013GSK3\u03b2), and a defined tauopathy model to test.",
+          "feasibility": "Idea 1 is more feasible because metformin, microglial assays, NLRP3 readouts, and 5xFAD validation are widely established and technically straightforward.",
+          "overall": "Idea 1 is overall stronger because its experimental path is more practical and likely to yield interpretable disease-relevant results even if the mechanism is less original."
+        }
+      },
+      {
+        "idea_a_id": 1,
+        "idea_b_id": 4,
+        "winners": {
+          "novelty": "4",
+          "specificity": "1",
+          "feasibility": "1",
+          "overall": "1"
+        },
+        "justifications": {
+          "novelty": "Ezetimibe\u2013ABCA1 links a lipid-lowering repurposing angle to blood-brain barrier and mitochondrial biology, which is less directly implied by the seed literature than metformin\u2019s well-trodden anti-inflammatory/NLRP3 framing.",
+          "specificity": "Idea 1 is more tightly defined by a named drug, a specific pathway target (NLRP3 inflammasome), a human microglial assay, and a clear in vivo model.",
+          "feasibility": "Metformin is extensively characterized, readily available, and has straightforward in vitro and in vivo readouts in microglial and 5xFAD systems.",
+          "overall": "Although less novel, Idea 1 is the stronger overall repurposing hypothesis because it is more directly testable, biologically coherent, and likely to yield interpretable disease-modifying evidence."
+        }
+      },
+      {
+        "idea_a_id": 1,
+        "idea_b_id": 5,
+        "winners": {
+          "novelty": "1",
+          "specificity": "5",
+          "feasibility": "1",
+          "overall": "1"
+        },
+        "justifications": {
+          "novelty": "Metformin is a more substantively repurposed and less directly implied candidate from the seed literature than valproic acid, whose HDAC/epigenetic framing is a more familiar Alzheimer\u2019s therapeutic angle.",
+          "specificity": "Idea 5 is more concrete because it explicitly specifies valproic acid, sirtuin 1, histone deacetylation, and mitochondrial biogenesis/antioxidant responses as the testable axis.",
+          "feasibility": "Metformin has a cleaner translational profile and fewer concerns about neurotoxicity or confounding epigenetic pleiotropy than valproic acid, making it more practical to advance in vivo.",
+          "overall": "Idea 1 is the stronger overall repurposing hypothesis because it combines a plausible immunometabolic mechanism with a safer, more clinically tractable drug candidate."
+        }
+      },
+      {
+        "idea_a_id": 2,
+        "idea_b_id": 3,
+        "winners": {
+          "novelty": "2",
+          "specificity": "3",
+          "feasibility": "3",
+          "overall": "3"
+        },
+        "justifications": {
+          "novelty": "Fenofibrate\u2019s proposed link to Nrf2-mediated mitochondrial biogenesis and blood-brain barrier biology is less directly implied by the seed literature than pioglitazone\u2019s more familiar overlap with neuroinflammation and tau-related signaling.",
+          "specificity": "Idea 3 is more concrete because it names a specific repurposed drug, a defined kinase target, a tauopathy model, and neuronal assays.",
+          "feasibility": "Pioglitazone and GSK3\u03b2 are well-characterized with abundant existing tools, and the proposed neuronal and rTg4510 experiments are more straightforward than dissecting fenofibrate effects on Nrf2 in brain endothelial and APP/PS1 contexts.",
+          "overall": "Although less novel, idea 3 is the stronger repurposing hypothesis overall because it is more testable, mechanistically focused, and experimentally tractable."
+        }
+      },
+      {
+        "idea_a_id": 2,
+        "idea_b_id": 4,
+        "winners": {
+          "novelty": "4",
+          "specificity": "4",
+          "feasibility": "2",
+          "overall": "2"
+        },
+        "justifications": {
+          "novelty": "Ezetimibe-ABCA1 links lipid efflux to mitochondrial function in AD is less directly implied by the seed literature than fenofibrate\u2019s PPAR\u03b1/NRF2 antioxidative-mitochondrial framing, making idea 4 more genuinely novel.",
+          "specificity": "Idea 4 names a concrete repurposed drug, a defined transporter pathway (ABCA1), and a specific AD model, giving slightly more actionable mechanistic focus than the broader NRF2-centered framing in idea 2.",
+          "feasibility": "Fenofibrate has stronger prior biological plausibility and widely available tools for testing PPAR\u03b1/NRF2 and mitochondrial endpoints, whereas the ezetimibe-ABCA1-mitochondrial link is more indirect and likely harder to demonstrate robustly.",
+          "overall": "Although idea 4 is more novel, idea 2 is the stronger overall repurposing hypothesis because it is better grounded in established mitochondrial and anti-inflammatory biology and is more straightforward to validate experimentally."
+        }
+      },
+      {
+        "idea_a_id": 2,
+        "idea_b_id": 5,
+        "winners": {
+          "novelty": "5",
+          "specificity": "5",
+          "feasibility": "2",
+          "overall": "2"
+        },
+        "justifications": {
+          "novelty": "Idea 5 is more novel because it links valproic acid to a sirtuin 1-centered mechanism in AD, whereas fenofibrate\u2019s PPAR\u03b1/NRF2 antioxidant angle is closer to broadly established neuroprotective repurposing themes.",
+          "specificity": "Idea 5 names a specific repurposed drug, a specific mechanistic pathway, defined cell and mouse models, and a clear molecular readout, making it slightly more actionable than idea 2.",
+          "feasibility": "Idea 2 is more feasible because fenofibrate and NRF2-related assays are well established and the APP/PS1 model and brain microvascular endothelial cell systems are more straightforward for this question than a valproic-acid/SIRT1 claim in 3xTg-AD microglia.",
+          "overall": "Idea 2 is the stronger overall repurposing hypothesis because it is more experimentally tractable and better aligned with a coherent vascular-mitochondrial-blood-brain barrier mechanism in AD."
+        }
+      },
+      {
+        "idea_a_id": 3,
+        "idea_b_id": 4,
+        "winners": {
+          "novelty": "4",
+          "specificity": "4",
+          "feasibility": "4",
+          "overall": "4"
+        },
+        "justifications": {
+          "novelty": "Idea 4 is more novel because linking ezetimibe to ABCA1-mediated lipid efflux and mitochondrial function in Alzheimer\u2019s disease is less directly anticipated by the seed literature than targeting tau phosphorylation via GSK3\u03b2.",
+          "specificity": "Idea 4 is more specific because it names a drug, a defined transporter pathway, relevant cell type, and a mouse model in a more mechanistically constrained way.",
+          "feasibility": "Idea 4 is more feasible because ezetimibe has established pharmacology and the ABCA1/endothelial-cell assays and APP/PS1 model are straightforward to implement with existing tools.",
+          "overall": "Idea 4 is the stronger repurposing hypothesis overall because it is more novel while remaining concrete and experimentally tractable."
+        }
+      },
+      {
+        "idea_a_id": 3,
+        "idea_b_id": 5,
+        "winners": {
+          "novelty": "5",
+          "specificity": "5",
+          "feasibility": "5",
+          "overall": "5"
+        },
+        "justifications": {
+          "novelty": "Idea 5 is more novel because valproic acid\u2013SIRT1 coupling in AD is less directly foreshadowed by the seed literature than a PPAR\u03b3 agonist targeting tau-related GSK3\u03b2 signaling, which is a more familiar and heavily trodden mechanistic axis.",
+          "specificity": "Idea 5 is more specific because it names a concrete repurposed drug, a defined epigenetic target, a mechanistic pathway, and explicit cell and mouse models to test.",
+          "feasibility": "Valproic acid, SIRT1 assays, microglial cultures, and 3xTg-AD mice are all well-established and experimentally accessible, making this plan slightly easier to execute than the more tauopathy-specialized rTg4510/pioglitazone design.",
+          "overall": "Although both are plausible, Idea 5 is stronger overall because it is more novel, more explicitly testable, and still practically feasible with standard AD research tools."
+        }
+      },
+      {
+        "idea_a_id": 4,
+        "idea_b_id": 5,
+        "winners": {
+          "novelty": "4",
+          "specificity": "4",
+          "feasibility": "5",
+          "overall": "5"
+        },
+        "justifications": {
+          "novelty": "Ezetimibe-ABCA1 targeting in Alzheimer\u2019s disease is less directly suggested by the seed literature than valproic acid\u2019s broad links to epigenetics, neuroinflammation, and mitochondrial pathways, making it the more genuinely novel repurposing angle.",
+          "specificity": "Idea 4 names a concrete drug, transporter pathway, cell type, and mouse model, whereas Idea 5 is also specific but relies on a more familiar and biologically diffuse HDAC/SIRT1 framework.",
+          "feasibility": "Valproic acid has well-established dosing, brain penetration, and abundant experimental precedent in microglial and transgenic AD models, making it easier to execute robustly than testing ezetimibe\u2019s CNS-relevant effects.",
+          "overall": "Although Idea 4 is more novel and tightly targeted, Idea 5 is overall stronger because it is more immediately tractable, better supported by existing pharmacology, and more likely to yield interpretable results."
+        }
+      }
+    ]
+  },
+  {
+    "condition": "C",
+    "round": 1,
+    "candidate_id": 1,
+    "idea": {
+      "problem": "The current therapeutic strategies for Alzheimer's disease have limited efficacy, and there is a pressing need to identify novel drug repurposing candidates that can target the complex interplay between neuroinflammation, mitochondrial dysfunction, and amyloid-\u03b2 pathology.",
+      "method": "We will investigate the potential of metformin, a widely used antidiabetic drug, to modulate the NLRP3 inflammasome pathway, a key regulator of neuroinflammation, using a combination of in vitro experiments in human microglial cells and in vivo validation in the 5xFAD mouse model of Alzheimer's disease.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of metformin as a disease-modifying treatment that targets the NLRP3 inflammasome pathway, a previously unexplored mechanism in the context of Alzheimer's disease."
+    },
+    "ranking": {
+      "dimension_wins": {
+        "novelty": 1,
+        "specificity": 2,
+        "feasibility": 4,
+        "overall": 4
+      },
+      "total_wins": 4,
+      "total_dimension_wins": 7
+    },
+    "scores": {
+      "novelty": 1,
+      "specificity": 2,
+      "feasibility": 4,
+      "overall_wins": 4,
+      "total_wins": 4,
+      "composite": 4
+    },
+    "pairwise_comparisons": [],
+    "weakness_targeted": null,
+    "targeted_query": null,
+    "retrieved_papers": null,
+    "retrieval_relevance": null,
+    "weakness_history": null,
+    "weakness_targeted_this_round": null,
+    "ood_query_used": null,
+    "duplicate_papers_filtered": null,
+    "idea_before_refinement": null,
+    "idea_after_refinement": null,
+    "ranking_before": null,
+    "ranking_after": null
+  },
+  {
+    "condition": "C",
+    "round": 1,
+    "candidate_id": 2,
+    "idea": {
+      "problem": "The complex interplay between epigenetic modifications, neuroinflammation, and mitochondrial dysfunction in Alzheimer's disease necessitates the identification of novel therapeutic strategies that can simultaneously target multiple pathophysiological mechanisms, including the regulation of histone acetylation and its impact on disease progression.",
+      "method": "We will investigate the potential of valproic acid, a histone deacetylase inhibitor, to modulate the sirtuin 1 pathway, a key regulator of mitochondrial biogenesis and antioxidant responses, using a combination of in vitro experiments in human microglial cells and in vivo validation in the 3xTg-AD mouse model of Alzheimer's disease.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of valproic acid as a disease-modifying treatment that targets the sirtuin 1 pathway, a previously unexplored mechanism in the context of Alzheimer's disease."
+    },
+    "ranking": {
+      "dimension_wins": {
+        "novelty": 2,
+        "specificity": 3,
+        "feasibility": 2,
+        "overall": 2
+      },
+      "total_wins": 2,
+      "total_dimension_wins": 7
+    },
+    "scores": {
+      "novelty": 2,
+      "specificity": 3,
+      "feasibility": 2,
+      "overall_wins": 2,
+      "total_wins": 2,
+      "composite": 2
+    },
+    "pairwise_comparisons": [],
+    "weakness_targeted": null,
+    "targeted_query": null,
+    "retrieved_papers": null,
+    "retrieval_relevance": null,
+    "weakness_history": null,
+    "weakness_targeted_this_round": null,
+    "ood_query_used": null,
+    "duplicate_papers_filtered": null,
+    "idea_before_refinement": null,
+    "idea_after_refinement": null,
+    "ranking_before": null,
+    "ranking_after": null
+  },
+  {
+    "condition": "C",
+    "round": 1,
+    "candidate_id": 3,
+    "idea": {
+      "problem": "The complex interplay between mitochondrial dysfunction, neuroinflammation, and blood-brain barrier disruption in Alzheimer's disease necessitates the identification of novel therapeutic strategies that can simultaneously target multiple pathophysiological mechanisms.",
+      "method": "We will investigate the potential of fenofibrate, a peroxisome proliferator-activated receptor alpha agonist, to modulate the nuclear factor erythroid 2-related factor 2 pathway, a key regulator of mitochondrial biogenesis and antioxidant responses, using a combination of in vitro experiments in human brain microvascular endothelial cells and in vivo validation in the APP/PS1 mouse model of Alzheimer's disease.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of fenofibrate as a disease-modifying treatment that targets the nuclear factor erythroid 2-related factor 2 pathway, a previously unexplored mechanism in the context of Alzheimer's disease."
+    },
+    "ranking": {
+      "dimension_wins": {
+        "novelty": 2,
+        "specificity": 0,
+        "feasibility": 2,
+        "overall": 2
+      },
+      "total_wins": 2,
+      "total_dimension_wins": 4
+    },
+    "scores": {
+      "novelty": 2,
+      "specificity": 0,
+      "feasibility": 2,
+      "overall_wins": 2,
+      "total_wins": 2,
+      "composite": 2
+    },
+    "pairwise_comparisons": [],
+    "weakness_targeted": null,
+    "targeted_query": null,
+    "retrieved_papers": null,
+    "retrieval_relevance": null,
+    "weakness_history": null,
+    "weakness_targeted_this_round": null,
+    "ood_query_used": null,
+    "duplicate_papers_filtered": null,
+    "idea_before_refinement": null,
+    "idea_after_refinement": null,
+    "ranking_before": null,
+    "ranking_after": null
+  },
+  {
+    "condition": "C",
+    "round": 1,
+    "candidate_id": 4,
+    "idea": {
+      "problem": "The intricate relationship between the blood-brain barrier, mitochondrial dysfunction, and neuroinflammation in Alzheimer's disease necessitates the identification of novel therapeutic strategies that can simultaneously target multiple pathophysiological mechanisms, including the regulation of lipid metabolism and its impact on disease progression.",
+      "method": "We will investigate the potential of ezetimibe, a lipid-lowering drug, to modulate the ATP-binding cassette transporter A1 pathway, a key regulator of lipid efflux and mitochondrial function, using a combination of in vitro experiments in human brain microvascular endothelial cells and in vivo validation in the APP/PS1 mouse model of Alzheimer's disease.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of ezetimibe as a disease-modifying treatment that targets the ATP-binding cassette transporter A1 pathway, a previously unexplored mechanism in the context of Alzheimer's disease."
+    },
+    "ranking": {
+      "dimension_wins": {
+        "novelty": 4,
+        "specificity": 3,
+        "feasibility": 1,
+        "overall": 1
+      },
+      "total_wins": 1,
+      "total_dimension_wins": 8
+    },
+    "scores": {
+      "novelty": 4,
+      "specificity": 3,
+      "feasibility": 1,
+      "overall_wins": 1,
+      "total_wins": 1,
+      "composite": 1
+    },
+    "pairwise_comparisons": [],
+    "weakness_targeted": null,
+    "targeted_query": null,
+    "retrieved_papers": null,
+    "retrieval_relevance": null,
+    "weakness_history": null,
+    "weakness_targeted_this_round": null,
+    "ood_query_used": null,
+    "duplicate_papers_filtered": null,
+    "idea_before_refinement": null,
+    "idea_after_refinement": null,
+    "ranking_before": null,
+    "ranking_after": null
+  },
+  {
+    "condition": "C",
+    "round": 1,
+    "candidate_id": 5,
+    "idea": {
+      "problem": "The lack of effective therapeutic strategies for Alzheimer's disease necessitates the exploration of novel drug repurposing candidates that can target the complex interplay between tau pathology, mitochondrial dysfunction, and neuroinflammation.",
+      "method": "We will investigate the potential of pioglitazone, a peroxisome proliferator-activated receptor gamma agonist, to modulate the glycogen synthase kinase 3 beta pathway, a key regulator of tau phosphorylation, using a combination of in vitro experiments in human neuronal cells and in vivo validation in the rTg4510 mouse model of tauopathy.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of pioglitazone as a disease-modifying treatment that targets the glycogen synthase kinase 3 beta pathway, a previously unexplored mechanism in the context of Alzheimer's disease."
+    },
+    "ranking": {
+      "dimension_wins": {
+        "novelty": 1,
+        "specificity": 2,
+        "feasibility": 1,
+        "overall": 1
+      },
+      "total_wins": 1,
+      "total_dimension_wins": 4
+    },
+    "scores": {
+      "novelty": 1,
+      "specificity": 2,
+      "feasibility": 1,
+      "overall_wins": 1,
+      "total_wins": 1,
+      "composite": 1
+    },
+    "pairwise_comparisons": [],
+    "weakness_targeted": null,
+    "targeted_query": null,
+    "retrieved_papers": null,
+    "retrieval_relevance": null,
+    "weakness_history": null,
+    "weakness_targeted_this_round": null,
+    "ood_query_used": null,
+    "duplicate_papers_filtered": null,
+    "idea_before_refinement": null,
+    "idea_after_refinement": null,
+    "ranking_before": null,
+    "ranking_after": null
+  },
+  {
+    "condition": "C",
+    "round": 2,
+    "candidate_id": 1,
+    "idea": {
+      "problem": "The current therapeutic strategies for Alzheimer's disease have limited efficacy, and there is a pressing need to identify novel drug repurposing candidates that can target the complex interplay between neuroinflammation, mitochondrial dysfunction, and amyloid-\u03b2 pathology.",
+      "method": "We will investigate metformin's ability to modulate the NLRP3 inflammasome pathway in human microglial cells, using the 5xFAD mouse model for validation.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of metformin as a disease-modifying treatment that targets the NLRP3 inflammasome pathway, a previously unexplored mechanism in the context of Alzheimer's disease."
+    },
+    "ranking": {
+      "dimension_wins": {
+        "novelty": 1,
         "specificity": 1,
+        "feasibility": 1,
+        "overall": 1
+      },
+      "total_wins": 1,
+      "total_dimension_wins": 3
+    },
+    "scores": {
+      "novelty": 1,
+      "specificity": 1,
+      "feasibility": 1,
+      "overall_wins": 1,
+      "total_wins": 1,
+      "composite": 1
+    },
+    "pairwise_comparisons": [
+      {
+        "idea_a_label": "parent",
+        "idea_b_label": "refined",
+        "winners": {
+          "novelty": "refined",
+          "specificity": "refined",
+          "feasibility": "refined",
+          "overall": "refined"
+        },
+        "justifications": {
+          "novelty": "The refined idea is slightly more novel because it removes the more generic \u201ccomplex interplay\u201d framing and focuses the hypothesis more tightly on a specific metformin\u2013NLRP3\u2013microglia mechanism that is less directly anticipated by the seed literature.",
+          "specificity": "The refined version is more specific because it explicitly names metformin, human microglial cells, the NLRP3 inflammasome pathway, and the 5xFAD validation model without additional broad mechanistic claims.",
+          "feasibility": "The refined idea is more feasible because it narrows the experimental scope to a clearer in vitro microglial assay plus a single in vivo validation model, reducing complexity and execution risk.",
+          "overall": "The refined hypothesis is better overall because it preserves the core drug repurposing test while being more focused, operational, and practical to test."
+        }
+      }
+    ],
+    "weakness_targeted": "novelty",
+    "targeted_query": "drug repurposing neuroinflammation mitochondrial dysfunction disease model",
+    "retrieved_papers": [
+      {
+        "title": "GV1001: repurposing a telomerase-derived peptide for neurological therapeutics.",
+        "abstract": "Neurodegenerative and demyelinating diseases represent major unmet medical needs, with existing therapeutics demonstrating limited efficacy and significant safety concerns. Drug repurposing offers accelerated development timelines and established safety profiles. GV1001, a 16-amino acid telomerase-derived peptide originally developed as a cancer vaccine, has emerged as a promising multi-mechanism "
+      },
+      {
+        "title": "PACAP in Parkinson's disease: A multifunctional neuropeptide at the crossroad of autophagy, inflammation, and metabolic repurposing.",
+        "abstract": "Parkinson's disease (PD) is a progressive neurodegenerative disorder characterized by the accumulation of \u03b1-synuclein, mitochondrial dysfunction, and chronic neuroinflammation. In this complex pathology, pituitary adenylate cyclase-activating polypeptide (PACAP) has become a crucial neuroprotective regulator; however, its signaling pathways are markedly impaired in Parkinson's disease (PD). This r"
+      },
+      {
+        "title": "Targeting TLR4 in Parkinson's disease: mechanisms and therapeutic prospects.",
+        "abstract": "Parkinson's disease (PD) is the second most common neurodegenerative disorder, which is on the rise and poses an increasing burden on health care systems across the world. The essential factors of dopaminergic neurodegeneration in PD are neuroinflammation, \u03b1-synuclein (\u03b1-syn) aggregation, mitochondrial dysfunction, and gut microbiota dysbiosis. The toll-like receptor 4 (TLR4), one of the central e"
+      }
+    ],
+    "retrieval_relevance": 2,
+    "weakness_history": [],
+    "weakness_targeted_this_round": "novelty",
+    "ood_query_used": "drug repurposing neuroinflammation mitochondrial dysfunction disease model",
+    "duplicate_papers_filtered": [],
+    "idea_before_refinement": {
+      "problem": "The current therapeutic strategies for Alzheimer's disease have limited efficacy, and there is a pressing need to identify novel drug repurposing candidates that can target the complex interplay between neuroinflammation, mitochondrial dysfunction, and amyloid-\u03b2 pathology.",
+      "method": "We will investigate the potential of metformin, a widely used antidiabetic drug, to modulate the NLRP3 inflammasome pathway, a key regulator of neuroinflammation, using a combination of in vitro experiments in human microglial cells and in vivo validation in the 5xFAD mouse model of Alzheimer's disease.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of metformin as a disease-modifying treatment that targets the NLRP3 inflammasome pathway, a previously unexplored mechanism in the context of Alzheimer's disease."
+    },
+    "idea_after_refinement": {
+      "problem": "The current therapeutic strategies for Alzheimer's disease have limited efficacy, and there is a pressing need to identify novel drug repurposing candidates that can target the complex interplay between neuroinflammation, mitochondrial dysfunction, and amyloid-\u03b2 pathology.",
+      "method": "We will investigate metformin's ability to modulate the NLRP3 inflammasome pathway in human microglial cells, using the 5xFAD mouse model for validation.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of metformin as a disease-modifying treatment that targets the NLRP3 inflammasome pathway, a previously unexplored mechanism in the context of Alzheimer's disease."
+    },
+    "ranking_before": {
+      "novelty_wins": 1,
+      "specificity_wins": 2,
+      "feasibility_wins": 4,
+      "overall_wins": 4,
+      "total_wins": 4
+    },
+    "ranking_after": {
+      "novelty_wins": 1,
+      "specificity_wins": 1,
+      "feasibility_wins": 1,
+      "overall_wins": 1,
+      "total_wins": 1
+    }
+  },
+  {
+    "condition": "C",
+    "round": 2,
+    "candidate_id": 2,
+    "idea": {
+      "problem": "The complex interplay between epigenetic modifications, neuroinflammation, and mitochondrial dysfunction in Alzheimer's disease necessitates the identification of novel therapeutic strategies that can simultaneously target multiple pathophysiological mechanisms, including the regulation of histone acetylation and its impact on disease progression.",
+      "method": "We will investigate the potential of valproic acid, a histone deacetylase inhibitor, to modulate the sirtuin 1 pathway, a key regulator of mitochondrial biogenesis and antioxidant responses, using a combination of in vitro experiments in human microglial cells and in vivo validation in the 3xTg-AD mouse model of Alzheimer's disease.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of valproic acid as a disease-modifying treatment that targets the sirtuin 1 pathway, a previously unexplored mechanism in the context of Alzheimer's disease."
+    },
+    "ranking": {
+      "dimension_wins": {
+        "novelty": 1,
+        "specificity": 1,
+        "feasibility": 0,
+        "overall": 1
+      },
+      "total_wins": 1,
+      "total_dimension_wins": 2
+    },
+    "scores": {
+      "novelty": 1,
+      "specificity": 1,
+      "feasibility": 0,
+      "overall_wins": 1,
+      "total_wins": 1,
+      "composite": 1
+    },
+    "pairwise_comparisons": [
+      {
+        "idea_a_label": "parent",
+        "idea_b_label": "refined",
+        "winners": {
+          "novelty": "parent",
+          "specificity": "parent",
+          "feasibility": "refined",
+          "overall": "parent"
+        },
+        "justifications": {
+          "novelty": "The parent is more novel because it links valproic acid to sirtuin 1 modulation in both microglia and an AD mouse model, whereas the refined version narrows to a more conventional single-cell in vitro test.",
+          "specificity": "The parent is more specific because it names the drug, pathway, cell type, and in vivo 3xTg-AD validation, while the refined idea omits the animal model and is less operationally complete.",
+          "feasibility": "The refined idea is easier to execute because it limits the work to human microglial cells, avoiding the added complexity, cost, and time of in vivo mouse experiments.",
+          "overall": "The parent is the stronger repurposing hypothesis overall because it is more mechanistically anchored and translationally credible, even though it is less experimentally compact than the refined version."
+        }
+      }
+    ],
+    "weakness_targeted": "novelty",
+    "targeted_query": "epigenetic neuroinflammation mitochondrial dysfunction disease model",
+    "retrieved_papers": [
+      {
+        "title": "Toward a Molecular Reclassification of Myalgic Encephalomyelitis/Chronic Fatigue Syndrome: Integrating Multi-Omics, Machine Learning, and Precision Medicine.",
+        "abstract": "Myalgic Encephalomyelitis/Chronic Fatigue Syndrome (ME/CFS) is a complex, multi-system disease characterized by a multitude of symptoms across various organ systems. Diagnosis has relied heavily on heterogeneous clinical symptom presentation and evolving case definitions, with treatment focused on addressing presenting symptoms due to the paucity of validated biomarkers. Meanwhile, advances have b"
+      },
+      {
+        "title": "Perinatal walnut-enriched diet partially rescues mitochondrial dysfunction, neuroinflammation, and behavioral deficits induced by developmental manganese exposure.",
+        "abstract": "Developmental manganese (Mn) exposure is linked to persistent neurobehavioral deficits, yet dietary mitigation strategies remain underexplored. We tested whether a walnut-enriched diet (WED) administered across the perinatal window attenuates Mn-induced biochemical, molecular, and behavioral effects in rats. Pregnant Wistar dams were assigned from gestational day 0 to postnatal day 21 to one of si"
+      },
+      {
+        "title": "Polyfunctionalized",
+        "abstract": "Herein, we have identified the polyfunctionalized 1-(phenylsulfonyl)-1"
+      }
+    ],
+    "retrieval_relevance": 2,
+    "weakness_history": [],
+    "weakness_targeted_this_round": "novelty",
+    "ood_query_used": "epigenetic neuroinflammation mitochondrial dysfunction disease model",
+    "duplicate_papers_filtered": [
+      "[AD-filtered] Aluminum chloride in Alzheimer's disease: A dual focus on molecular mechanisms and rat experimental models.",
+      "[AD-filtered] Tet2 deficiency orchestrates Alzheimer's pathogenesis through oxidative mtDNA-driven cGAS-STING activation."
+    ],
+    "idea_before_refinement": {
+      "problem": "The complex interplay between epigenetic modifications, neuroinflammation, and mitochondrial dysfunction in Alzheimer's disease necessitates the identification of novel therapeutic strategies that can simultaneously target multiple pathophysiological mechanisms, including the regulation of histone acetylation and its impact on disease progression.",
+      "method": "We will investigate the potential of valproic acid, a histone deacetylase inhibitor, to modulate the sirtuin 1 pathway, a key regulator of mitochondrial biogenesis and antioxidant responses, using a combination of in vitro experiments in human microglial cells and in vivo validation in the 3xTg-AD mouse model of Alzheimer's disease.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of valproic acid as a disease-modifying treatment that targets the sirtuin 1 pathway, a previously unexplored mechanism in the context of Alzheimer's disease."
+    },
+    "idea_after_refinement": {
+      "problem": "The complex interplay between epigenetic modifications, neuroinflammation, and mitochondrial dysfunction in Alzheimer's disease necessitates the identification of novel therapeutic strategies that can simultaneously target multiple pathophysiological mechanisms, including the regulation of histone acetylation and its impact on disease progression.",
+      "method": "We will investigate the potential of valproic acid, a histone deacetylase inhibitor, to modulate the sirtuin 1 pathway, a key regulator of mitochondrial biogenesis and antioxidant responses, using a combination of in vitro experiments in human microglial cells and in vivo validation in the 3xTg-AD mouse model of Alzheimer's disease.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of valproic acid as a disease-modifying treatment that targets the sirtuin 1 pathway, a previously unexplored mechanism in the context of Alzheimer's disease."
+    },
+    "ranking_before": {
+      "novelty_wins": 2,
+      "specificity_wins": 3,
+      "feasibility_wins": 2,
+      "overall_wins": 2,
+      "total_wins": 2
+    },
+    "ranking_after": {
+      "novelty_wins": 1,
+      "specificity_wins": 1,
+      "feasibility_wins": 0,
+      "overall_wins": 1,
+      "total_wins": 1
+    }
+  },
+  {
+    "condition": "C",
+    "round": 2,
+    "candidate_id": 0,
+    "type": "round_selection",
+    "pairwise_comparisons": [
+      {
+        "idea_a_id": 1,
+        "idea_b_id": 2,
+        "winners": {
+          "novelty": "1",
+          "specificity": "2",
+          "feasibility": "1",
+          "overall": "1"
+        },
+        "justifications": {
+          "novelty": "Metformin targeting the NLRP3 inflammasome in AD is less directly anticipated by the seed literature than valproic acid\u2019s broader epigenetic/sirtuin framing, which is closer to established mitochondrial and inflammatory themes.",
+          "specificity": "Idea 2 is more specific because it names valproic acid, HDAC inhibition, the sirtuin 1 pathway, and the 3xTg-AD model, giving more concrete mechanistic and experimental targets.",
+          "feasibility": "Metformin is widely used, well-characterized in microglial systems, and easier to test in vitro and in 5xFAD mice than valproic acid, which has broader off-target neuroactive effects and a more confounded interpretation.",
+          "overall": "Although both are plausible, Idea 1 is the better repurposing hypothesis overall because it is cleaner, more translationally tractable, and more likely to yield interpretable disease-mechanistic evidence."
+        }
+      }
+    ],
+    "ranking": {
+      "dimension_wins": {
+        "novelty": 1,
+        "specificity": 0,
         "feasibility": 1,
         "overall": 1
       },
@@ -962,491 +1645,27 @@
     }
   },
   {
-    "condition": "B",
+    "condition": "C",
     "round": 3,
     "candidate_id": 1,
     "idea": {
-      "problem": "The current understanding of Alzheimer's disease pathogenesis highlights the need to explore novel therapeutic strategies that target the complex interplay between mitochondrial dysfunction, neuroinflammation, and blood-brain barrier disruption, which are not adequately addressed by existing treatments.",
-      "method": "A systems biology approach will be employed to integrate multi-omics data from Alzheimer's disease and type 2 diabetes mellitus, focusing on shared pathophysiological mechanisms related to amyloid-\u03b2 pathology, to identify genetically prioritized druggable targets, followed by a drug repurposing screen of FDA-approved compounds that modulate these targets, with a focus on medications used to treat cardiovascular and metabolic disorders.",
-      "contribution": "This study aims to discover novel drug repurposing candidates for Alzheimer's disease that simultaneously target mitochondrial function, neuroinflammation, and blood-brain barrier integrity, providing a new therapeutic paradigm for the prevention and treatment of this devastating neurodegenerative disorder."
-    },
-    "ranking": {
-      "dimension_wins": {
-        "novelty": 1,
-        "specificity": 1,
-        "feasibility": 1,
-        "overall": 1
-      },
-      "total_wins": 1,
-      "total_dimension_wins": 3
-    },
-    "scores": {
-      "novelty": 1,
-      "specificity": 1,
-      "feasibility": 1,
-      "overall_wins": 1,
-      "total_wins": 1,
-      "composite": 1
-    },
-    "pairwise_comparisons": [
-      {
-        "idea_a_label": "parent",
-        "idea_b_label": "refined",
-        "winners": {
-          "novelty": "refined",
-          "specificity": "refined",
-          "feasibility": "refined",
-          "overall": "refined"
-        },
-        "justifications": {
-          "novelty": "The refined idea emphasizes the integration of amyloid-\u03b2 pathology with multi-omics data, which adds a novel dimension to the understanding of Alzheimer's disease compared to the parent idea.",
-          "specificity": "The refined idea specifies the focus on genetically prioritized druggable targets related to amyloid-\u03b2 pathology, making it more actionable than the broader terms used in the parent idea.",
-          "feasibility": "The refined idea's emphasis on genetically prioritized targets aligns better with current research methodologies and available resources, enhancing its feasibility for execution.",
-          "overall": "The refined idea presents a more targeted and actionable approach to drug repurposing in Alzheimer's disease, making it a stronger hypothesis overall."
-        }
-      }
-    ],
-    "weakness_targeted": null,
-    "targeted_query": null,
-    "retrieved_papers": [
-      {
-        "title": "Shared pathophysiology and therapeutic repurposing in Alzheimer's disease and type 2 diabetes: a critical review of convergent mechanisms and clinical challenges.",
-        "abstract": "Alzheimer's disease (AD) and type 2 diabetes mellitus (T2DM) are two prevalent age-related disorders that share striking pathophysiological similarities, leading to the conceptualization of AD as a metabolic disorder often termed \"type 3 diabetes.\" While numerous reviews have documented the epidemiological association between these diseases, a critical synthesis of the underlying molecular converg"
-      },
-      {
-        "title": "[Advances in Anti-Dementia Therapies in Older Adults].",
-        "abstract": "The rising prevalence of dementia, driven by demographic aging, underscores the urgent need for effective therapeutic strategies. This update reviews recent advances in anti-dementia treatments, focusing on pharmacological and non-pharmacological interventions. Acetylcholinesterase inhibitors (donepezil, rivastigmine, galantamine) and the NMDA receptor agonist memantine, traditionally used for Alz"
-      },
-      {
-        "title": "Genetically prioritized druggable targets for amyloid-\u03b2 pathology highlight",
-        "abstract": "BackgroundAlzheimer's disease (AD) is characterized by a neuropathological cascade that begins with amyloid-\u03b2 (A\u03b2) deposition. The recent success of disease-modifying drugs targeting A\u03b2 has demonstrated that modulating amyloidopathy can yield clinical benefits, underscoring the need for additional drugs affecting amyloid pathology.ObjectiveTo identify novel drug targets associated with A\u03b2 accumula"
-      }
-    ],
-    "retrieval_relevance": 3,
-    "weakness_history": null,
-    "weakness_targeted_this_round": null,
-    "ood_query_used": null,
-    "duplicate_papers_filtered": null,
-    "idea_before_refinement": {
-      "problem": "The current understanding of Alzheimer's disease pathogenesis highlights the need to explore novel therapeutic strategies that target the complex interplay between mitochondrial dysfunction, neuroinflammation, and blood-brain barrier disruption, which are not adequately addressed by existing treatments.",
-      "method": "A systems biology approach will be employed to integrate multi-omics data from Alzheimer's disease and type 2 diabetes mellitus, focusing on shared pathophysiological mechanisms, to identify potential druggable targets, followed by a drug repurposing screen of FDA-approved compounds that modulate these targets, with a focus on medications used to treat cardiovascular and metabolic disorders.",
-      "contribution": "This study aims to discover novel drug repurposing candidates for Alzheimer's disease that simultaneously target mitochondrial function, neuroinflammation, and blood-brain barrier integrity, providing a new therapeutic paradigm for the prevention and treatment of this devastating neurodegenerative disorder."
-    },
-    "idea_after_refinement": {
-      "problem": "The current understanding of Alzheimer's disease pathogenesis highlights the need to explore novel therapeutic strategies that target the complex interplay between mitochondrial dysfunction, neuroinflammation, and blood-brain barrier disruption, which are not adequately addressed by existing treatments.",
-      "method": "A systems biology approach will be employed to integrate multi-omics data from Alzheimer's disease and type 2 diabetes mellitus, focusing on shared pathophysiological mechanisms related to amyloid-\u03b2 pathology, to identify genetically prioritized druggable targets, followed by a drug repurposing screen of FDA-approved compounds that modulate these targets, with a focus on medications used to treat cardiovascular and metabolic disorders.",
-      "contribution": "This study aims to discover novel drug repurposing candidates for Alzheimer's disease that simultaneously target mitochondrial function, neuroinflammation, and blood-brain barrier integrity, providing a new therapeutic paradigm for the prevention and treatment of this devastating neurodegenerative disorder."
-    },
-    "ranking_before": {
-      "novelty_wins": 0,
-      "specificity_wins": 1,
-      "feasibility_wins": 1,
-      "overall_wins": 1,
-      "total_wins": 1
-    },
-    "ranking_after": {
-      "novelty_wins": 1,
-      "specificity_wins": 1,
-      "feasibility_wins": 1,
-      "overall_wins": 1,
-      "total_wins": 1
-    }
-  },
-  {
-    "condition": "C",
-    "round": 1,
-    "candidate_id": 0,
-    "type": "round_selection",
-    "pairwise_comparisons": [
-      {
-        "idea_a_id": 1,
-        "idea_b_id": 2,
-        "winners": {
-          "novelty": "2",
-          "specificity": "2",
-          "feasibility": "2",
-          "overall": "2"
-        },
-        "justifications": {
-          "novelty": "Modulating the gut microbiome as a therapeutic approach for Alzheimer's disease is a relatively unexplored area in the context of drug repurposing, distinguishing it from existing literature focused on neuroinflammation and mitochondrial dysfunction.",
-          "specificity": "Idea 2 explicitly targets the gut microbiome and its modulation, which can be linked to specific pathways and mechanisms related to Alzheimer's pathology, unlike the broader and less defined targets in Idea 1.",
-          "feasibility": "The methods proposed in Idea 2, including metagenomic analysis and in vitro experiments, are well-established techniques that can be readily implemented in laboratory settings, making it more feasible than the complex systems biology approach in Idea 1.",
-          "overall": "Idea 2 presents a novel and actionable hypothesis that leverages existing methodologies to explore an under-researched area in Alzheimer's disease, making it a more compelling drug repurposing strategy."
-        }
-      },
-      {
-        "idea_a_id": 1,
-        "idea_b_id": 3,
-        "winners": {
-          "novelty": "3",
-          "specificity": "3",
-          "feasibility": "3",
-          "overall": "3"
-        },
-        "justifications": {
-          "novelty": "Idea 3 explores the relatively under-researched TREM2 signaling pathway in microglia and its interactions with astrocytes, which is not extensively covered in the existing literature.",
-          "specificity": "Idea 3 specifically targets the TREM2 pathway and aims to identify FDA-approved drugs that enhance TREM2 signaling, providing a clearer focus on actionable targets.",
-          "feasibility": "Idea 3 employs established techniques such as single-cell RNA sequencing and co-culture experiments, making it more feasible with current laboratory resources.",
-          "overall": "Idea 3 presents a more innovative and targeted approach to drug repurposing by focusing on the TREM2 pathway and glial cell interactions, which could lead to novel therapeutic strategies for Alzheimer's disease."
-        }
-      },
-      {
-        "idea_a_id": 1,
-        "idea_b_id": 4,
-        "winners": {
-          "novelty": "4",
-          "specificity": "1",
-          "feasibility": "1",
-          "overall": "1"
-        },
-        "justifications": {
-          "novelty": "Idea 4 explores the largely uncharted territory of circadian rhythm regulation in relation to tau pathology, which is not directly addressed in the existing seed literature.",
-          "specificity": "Idea 1 specifically targets mitochondrial dysfunction, neuroinflammation, and blood-brain barrier integrity, providing clearer actionable pathways for drug repurposing.",
-          "feasibility": "Idea 1 utilizes a systems biology approach that can leverage existing multi-omics data and FDA-approved drug libraries, making it more practical to implement in a laboratory setting.",
-          "overall": "Idea 1 presents a comprehensive and actionable strategy that addresses multiple interconnected aspects of Alzheimer's disease pathology, making it a more robust hypothesis for drug repurposing."
-        }
-      },
-      {
-        "idea_a_id": 1,
-        "idea_b_id": 5,
-        "winners": {
-          "novelty": "5",
-          "specificity": "1",
-          "feasibility": "1",
-          "overall": "1"
-        },
-        "justifications": {
-          "novelty": "Idea 5 explores the largely uncharted territory of epigenetic mechanisms in the context of Alzheimer's disease and metabolic disorders, which is not directly addressed in the existing seed literature.",
-          "specificity": "Idea 1 specifically targets the mitochondrial-bioenergetic axis, neuroinflammation, and blood-brain barrier integrity, providing clearer actionable pathways for drug repurposing.",
-          "feasibility": "Idea 1's focus on integrating multi-omics data and in silico screening of FDA-approved drugs aligns well with existing methodologies and resources available in contemporary research settings.",
-          "overall": "Idea 1 presents a more comprehensive and actionable strategy for addressing multiple facets of Alzheimer's disease pathology, making it a stronger candidate for drug repurposing."
-        }
-      },
-      {
-        "idea_a_id": 2,
-        "idea_b_id": 3,
-        "winners": {
-          "novelty": "3",
-          "specificity": "3",
-          "feasibility": "3",
-          "overall": "3"
-        },
-        "justifications": {
-          "novelty": "Targeting the TREM2 signaling pathway in microglia represents a relatively unexplored area in Alzheimer's research, particularly in the context of glial cell interactions.",
-          "specificity": "Idea 3 specifically focuses on enhancing TREM2 signaling and its effects on microglial and astrocyte interactions, providing a clear target for drug repurposing.",
-          "feasibility": "The use of established techniques like single-cell RNA sequencing and co-culture experiments makes Idea 3 more feasible with current laboratory capabilities.",
-          "overall": "Idea 3 presents a more targeted and innovative approach to drug repurposing by addressing the immune response in Alzheimer's disease through the TREM2 pathway."
-        }
-      },
-      {
-        "idea_a_id": 2,
-        "idea_b_id": 4,
-        "winners": {
-          "novelty": "4",
-          "specificity": "2",
-          "feasibility": "2",
-          "overall": "2"
-        },
-        "justifications": {
-          "novelty": "The exploration of circadian rhythm regulation in relation to tau pathology in Alzheimer's disease represents a largely uncharted area in the context of drug repurposing, distinguishing it from existing literature focused on neuroinflammation and other mechanisms.",
-          "specificity": "Idea 2 explicitly targets the gut microbiome and its modulation through FDA-approved drugs, providing a clearer pathway for actionable interventions compared to the broader focus on circadian rhythms in Idea 4.",
-          "feasibility": "The methodologies proposed in Idea 2, including metagenomic analysis and in vitro experiments, are well-established and can be readily implemented with existing laboratory techniques and resources.",
-          "overall": "Idea 2 presents a more concrete and actionable approach to drug repurposing by targeting the gut-brain axis, which is increasingly recognized as a significant factor in Alzheimer's disease pathology."
-        }
-      },
-      {
-        "idea_a_id": 2,
-        "idea_b_id": 5,
-        "winners": {
-          "novelty": "5",
-          "specificity": "5",
-          "feasibility": "2",
-          "overall": "5"
-        },
-        "justifications": {
-          "novelty": "Targeting the epigenetic mechanisms related to metabolic disorders in Alzheimer's disease represents a novel approach that has not been extensively explored in the existing literature.",
-          "specificity": "Idea 5 explicitly focuses on epigenetic marks and metabolic pathways, providing a clearer framework for identifying specific drug targets compared to the broader gut microbiome modulation in Idea 2.",
-          "feasibility": "The gut microbiome can be more readily manipulated using existing FDA-approved drugs and metagenomic analysis techniques, making it a more feasible approach in a laboratory setting.",
-          "overall": "Idea 5 offers a unique and specific strategy that addresses the complex interplay between epigenetics and metabolism in Alzheimer's disease, potentially leading to innovative therapeutic options."
-        }
-      },
-      {
-        "idea_a_id": 3,
-        "idea_b_id": 4,
-        "winners": {
-          "novelty": "4",
-          "specificity": "3",
-          "feasibility": "3",
-          "overall": "3"
-        },
-        "justifications": {
-          "novelty": "Targeting the intersection of circadian rhythm regulation and tau pathology in Alzheimer's disease represents a novel approach that has not been extensively explored in the existing literature.",
-          "specificity": "Idea 3 specifically focuses on enhancing TREM2 signaling in microglia and its interactions with astrocytes, providing a clearer target for drug repurposing efforts.",
-          "feasibility": "The methodologies proposed in Idea 3, including single-cell RNA sequencing and in vitro co-culture experiments, are well-established techniques that can be readily implemented in laboratory settings.",
-          "overall": "Idea 3 presents a more actionable and specific hypothesis that leverages existing knowledge about TREM2 and microglial function, making it a stronger candidate for drug repurposing in Alzheimer's disease."
-        }
-      },
-      {
-        "idea_a_id": 3,
-        "idea_b_id": 5,
-        "winners": {
-          "novelty": "5",
-          "specificity": "3",
-          "feasibility": "3",
-          "overall": "3"
-        },
-        "justifications": {
-          "novelty": "Idea 5 explores the largely uncharted territory of the epigenetic mechanisms linking metabolic disorders and Alzheimer's disease, which is less represented in the existing literature compared to the TREM2 pathway.",
-          "specificity": "Idea 3 specifically targets the TREM2 signaling pathway and its interactions with microglia and astrocytes, providing a clearer focus on actionable biological mechanisms.",
-          "feasibility": "The methodologies proposed in Idea 3, such as single-cell RNA sequencing and co-culture experiments, are well-established techniques that can be readily implemented in current research settings.",
-          "overall": "Idea 3 presents a more focused and actionable approach to drug repurposing by targeting a specific pathway with established experimental methods, making it a more practical hypothesis for immediate exploration."
-        }
-      },
-      {
-        "idea_a_id": 4,
-        "idea_b_id": 5,
-        "winners": {
-          "novelty": "5",
-          "specificity": "5",
-          "feasibility": "5",
-          "overall": "5"
-        },
-        "justifications": {
-          "novelty": "Idea 5 explores the largely uncharted territory of epigenetic mechanisms in the context of metabolic disorders and Alzheimer's disease, which is not directly addressed in the existing seed literature.",
-          "specificity": "Idea 5 explicitly targets epigenetic modifications and metabolic pathways, providing a clearer framework for identifying specific drugs and mechanisms compared to the more abstract circadian rhythm focus of Idea 4.",
-          "feasibility": "Idea 5 leverages established methodologies in epigenomic analysis and patient-derived cells, making it more practical to implement with current laboratory techniques than the more complex circadian rhythm interventions proposed in Idea 4.",
-          "overall": "Idea 5 presents a more innovative and actionable approach to drug repurposing by addressing the intersection of epigenetics and metabolism in Alzheimer's disease, which is a critical and underexplored area."
-        }
-      }
-    ]
-  },
-  {
-    "condition": "C",
-    "round": 1,
-    "candidate_id": 1,
-    "idea": {
-      "problem": "The potential for repurposing drugs that target the TREM2 signaling pathway in microglia to modulate the immune response and mitigate neurodegeneration in Alzheimer's disease remains largely unexplored, particularly in relation to the crosstalk between microglia and other glial cells, such as astrocytes.",
-      "method": "A multidisciplinary approach combining single-cell RNA sequencing, in vitro microglial-astrocyte co-culture experiments, and in silico modeling will be employed to identify FDA-approved drugs that can enhance TREM2 signaling and promote a neuroprotective microglial phenotype, while also assessing their effects on astrocyte function and the overall glial cell network.",
-      "contribution": "This study aims to discover and validate repurposed drugs that can target the TREM2 pathway and restore immune homeostasis in the brain, providing a novel therapeutic strategy for Alzheimer's disease that takes into account the complex interactions between different glial cell types and their role in disease pathogenesis."
-    },
-    "ranking": {
-      "dimension_wins": {
-        "novelty": 2,
-        "specificity": 4,
-        "feasibility": 4,
-        "overall": 4
-      },
-      "total_wins": 4,
-      "total_dimension_wins": 10
-    },
-    "scores": {
-      "novelty": 2,
-      "specificity": 4,
-      "feasibility": 4,
-      "overall_wins": 4,
-      "total_wins": 4,
-      "composite": 4
-    },
-    "pairwise_comparisons": [],
-    "weakness_targeted": null,
-    "targeted_query": null,
-    "retrieved_papers": null,
-    "retrieval_relevance": null,
-    "weakness_history": null,
-    "weakness_targeted_this_round": null,
-    "ood_query_used": null,
-    "duplicate_papers_filtered": null,
-    "idea_before_refinement": null,
-    "idea_after_refinement": null,
-    "ranking_before": null,
-    "ranking_after": null
-  },
-  {
-    "condition": "C",
-    "round": 1,
-    "candidate_id": 2,
-    "idea": {
-      "problem": "The potential for repurposing drugs that target the epigenetic mechanisms underlying the interplay between Alzheimer's disease and metabolic disorders, such as the regulation of histone modifications and DNA methylation in the context of insulin resistance and glucose metabolism, remains a largely unexplored area of research.",
-      "method": "A multidisciplinary approach combining epigenomic analysis of brain and peripheral tissues, in vitro experiments using patient-derived cells, and in silico modeling of drug-target interactions will be employed to identify FDA-approved drugs that can modulate epigenetic marks and restore metabolic homeostasis in Alzheimer's disease.",
-      "contribution": "This study aims to discover and validate repurposed drugs that can target the epigenetic-metabolic axis, providing a novel therapeutic strategy for Alzheimer's disease that takes into account the complex interplay between epigenetic regulation, metabolic dysfunction, and neurodegeneration."
-    },
-    "ranking": {
-      "dimension_wins": {
-        "novelty": 4,
-        "specificity": 2,
-        "feasibility": 1,
-        "overall": 2
-      },
-      "total_wins": 2,
-      "total_dimension_wins": 7
-    },
-    "scores": {
-      "novelty": 4,
-      "specificity": 2,
-      "feasibility": 1,
-      "overall_wins": 2,
-      "total_wins": 2,
-      "composite": 2
-    },
-    "pairwise_comparisons": [],
-    "weakness_targeted": null,
-    "targeted_query": null,
-    "retrieved_papers": null,
-    "retrieval_relevance": null,
-    "weakness_history": null,
-    "weakness_targeted_this_round": null,
-    "ood_query_used": null,
-    "duplicate_papers_filtered": null,
-    "idea_before_refinement": null,
-    "idea_after_refinement": null,
-    "ranking_before": null,
-    "ranking_after": null
-  },
-  {
-    "condition": "C",
-    "round": 1,
-    "candidate_id": 3,
-    "idea": {
-      "problem": "The complex interplay between the gut-brain axis and Alzheimer's disease pathogenesis suggests that modulating the gut microbiome could be a novel therapeutic approach for treating the disease, which has not been fully explored in existing drug repurposing strategies.",
-      "method": "A combination of metagenomic analysis, in vitro experiments, and in silico modeling will be used to identify FDA-approved drugs that can alter the gut microbiome composition and reduce Alzheimer's disease-related pathology, such as amyloid-beta accumulation and neuroinflammation.",
-      "contribution": "This study aims to discover and validate repurposed drugs that can modulate the gut-brain axis, providing a new and innovative therapeutic strategy for the prevention and treatment of Alzheimer's disease."
-    },
-    "ranking": {
-      "dimension_wins": {
-        "novelty": 1,
-        "specificity": 2,
-        "feasibility": 3,
-        "overall": 2
-      },
-      "total_wins": 2,
-      "total_dimension_wins": 6
-    },
-    "scores": {
-      "novelty": 1,
-      "specificity": 2,
-      "feasibility": 3,
-      "overall_wins": 2,
-      "total_wins": 2,
-      "composite": 2
-    },
-    "pairwise_comparisons": [],
-    "weakness_targeted": null,
-    "targeted_query": null,
-    "retrieved_papers": null,
-    "retrieval_relevance": null,
-    "weakness_history": null,
-    "weakness_targeted_this_round": null,
-    "ood_query_used": null,
-    "duplicate_papers_filtered": null,
-    "idea_before_refinement": null,
-    "idea_after_refinement": null,
-    "ranking_before": null,
-    "ranking_after": null
-  },
-  {
-    "condition": "C",
-    "round": 1,
-    "candidate_id": 4,
-    "idea": {
-      "problem": "The current understanding of Alzheimer's disease pathogenesis highlights the need for a novel therapeutic approach that targets the interplay between mitochondrial dysfunction, neuroinflammation, and blood-brain barrier disruption, which is not fully addressed by existing drug repurposing strategies.",
-      "method": "A systems biology approach will be employed to integrate multi-omics data and identify potential drug targets that modulate the mitochondrial-bioenergetic axis, followed by in silico screening of FDA-approved drugs to predict their repurposing potential for Alzheimer's disease treatment.",
-      "contribution": "This study aims to discover a new class of repurposed drugs that can simultaneously mitigate mitochondrial dysfunction, reduce neuroinflammation, and restore blood-brain barrier integrity, providing a innovative therapeutic strategy for Alzheimer's disease management."
+      "problem": "The current therapeutic strategies for Alzheimer's disease have limited efficacy, and there is a pressing need to identify novel drug repurposing candidates that can target the complex interplay between neuroinflammation, mitochondrial dysfunction, and amyloid-\u03b2 pathology.",
+      "method": "We will investigate metformin's effect on the NLRP3 inflammasome pathway in human microglial cells, validated using the 5xFAD mouse model.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of metformin as a disease-modifying treatment that targets the NLRP3 inflammasome pathway, a key regulator of neuroinflammation."
     },
     "ranking": {
       "dimension_wins": {
         "novelty": 0,
-        "specificity": 2,
-        "feasibility": 2,
-        "overall": 2
+        "specificity": 0,
+        "feasibility": 1,
+        "overall": 1
       },
-      "total_wins": 2,
-      "total_dimension_wins": 4
+      "total_wins": 1,
+      "total_dimension_wins": 1
     },
     "scores": {
       "novelty": 0,
-      "specificity": 2,
-      "feasibility": 2,
-      "overall_wins": 2,
-      "total_wins": 2,
-      "composite": 2
-    },
-    "pairwise_comparisons": [],
-    "weakness_targeted": null,
-    "targeted_query": null,
-    "retrieved_papers": null,
-    "retrieval_relevance": null,
-    "weakness_history": null,
-    "weakness_targeted_this_round": null,
-    "ood_query_used": null,
-    "duplicate_papers_filtered": null,
-    "idea_before_refinement": null,
-    "idea_after_refinement": null,
-    "ranking_before": null,
-    "ranking_after": null
-  },
-  {
-    "condition": "C",
-    "round": 1,
-    "candidate_id": 5,
-    "idea": {
-      "problem": "The potential for repurposing drugs that target the intersection of circadian rhythm regulation and Alzheimer's disease pathogenesis, particularly in relation to the dysregulation of clock genes and the resulting impact on tau protein phosphorylation and aggregation, remains a largely unexplored area of research.",
-      "method": "A combination of bioinformatic analysis of existing datasets on circadian rhythm regulation, in vitro experiments using induced pluripotent stem cells, and in silico modeling of drug-target interactions will be used to identify FDA-approved drugs that can restore normal circadian rhythm and reduce tau-related pathology in Alzheimer's disease.",
-      "contribution": "This study aims to discover and validate repurposed drugs that can modulate the circadian-tau axis, providing a novel and innovative therapeutic strategy for the prevention and treatment of Alzheimer's disease that takes into account the critical role of circadian rhythm dysregulation in disease pathogenesis."
-    },
-    "ranking": {
-      "dimension_wins": {
-        "novelty": 3,
-        "specificity": 0,
-        "feasibility": 0,
-        "overall": 0
-      },
-      "total_wins": 0,
-      "total_dimension_wins": 3
-    },
-    "scores": {
-      "novelty": 3,
       "specificity": 0,
-      "feasibility": 0,
-      "overall_wins": 0,
-      "total_wins": 0,
-      "composite": 0
-    },
-    "pairwise_comparisons": [],
-    "weakness_targeted": null,
-    "targeted_query": null,
-    "retrieved_papers": null,
-    "retrieval_relevance": null,
-    "weakness_history": null,
-    "weakness_targeted_this_round": null,
-    "ood_query_used": null,
-    "duplicate_papers_filtered": null,
-    "idea_before_refinement": null,
-    "idea_after_refinement": null,
-    "ranking_before": null,
-    "ranking_after": null
-  },
-  {
-    "condition": "C",
-    "round": 2,
-    "candidate_id": 1,
-    "idea": {
-      "problem": "The potential for repurposing drugs that target the TREM2 signaling pathway in microglia to modulate the immune response and mitigate neurodegeneration in Alzheimer's disease remains largely unexplored, particularly in relation to the crosstalk between microglia and other glial cells, such as astrocytes.",
-      "method": "A focused approach using in vitro microglial-astrocyte co-culture experiments with single-cell RNA sequencing will identify FDA-approved drugs that enhance TREM2 signaling and promote a neuroprotective microglial phenotype.",
-      "contribution": "This study aims to discover and validate repurposed drugs that can target the TREM2 pathway and restore immune homeostasis in the brain, providing a novel therapeutic strategy for Alzheimer's disease that takes into account the complex interactions between different glial cell types and their role in disease pathogenesis."
-    },
-    "ranking": {
-      "dimension_wins": {
-        "novelty": 1,
-        "specificity": 1,
-        "feasibility": 1,
-        "overall": 1
-      },
-      "total_wins": 1,
-      "total_dimension_wins": 3
-    },
-    "scores": {
-      "novelty": 1,
-      "specificity": 1,
       "feasibility": 1,
       "overall_wins": 1,
       "total_wins": 1,
@@ -1457,248 +1676,33 @@
         "idea_a_label": "parent",
         "idea_b_label": "refined",
         "winners": {
-          "novelty": "refined",
-          "specificity": "refined",
+          "novelty": "parent",
+          "specificity": "parent",
           "feasibility": "refined",
           "overall": "refined"
         },
         "justifications": {
-          "novelty": "The refined idea emphasizes a focused approach on TREM2 signaling in the context of microglial-astrocyte interactions, which is less explored compared to broader neuroinflammatory strategies in the seed literature.",
-          "specificity": "The refined idea clearly specifies the use of in vitro co-culture experiments and single-cell RNA sequencing to identify FDA-approved drugs, making it more actionable than the parent idea.",
-          "feasibility": "The refined idea's focused approach on in vitro experiments with existing technologies makes it more feasible to execute compared to the broader multidisciplinary approach of the parent idea.",
-          "overall": "The refined idea presents a more targeted and actionable hypothesis that aligns well with current research trends and methodologies in Alzheimer's disease drug repurposing."
-        }
-      }
-    ],
-    "weakness_targeted": "novelty",
-    "targeted_query": "glial cell interaction modulation in neurodegenerative diseases",
-    "retrieved_papers": [
-      {
-        "title": "Targeting MAPK-dependent pathways to modulate reactive astrocyte pathology in neurodegeneration.",
-        "abstract": "Reactive astrocytes play a crucial role in the pathogenesis of neurodegenerative diseases; however, the mechanisms underlying glial cell interactions remain poorly understood. Here, we show that human primary astrocytes and iPSC-derived astrocytes in a tri-culture system adopt a reactive state with a distinct molecular phenotype overlapping with transcriptomic signatures observed in ALS astrocytes"
-      },
-      {
-        "title": "Astrocytes in Brain Aging and Neurodegeneration: Cellular Mechanisms and Interventional Strategies.",
-        "abstract": "Aging is characterized by progressive changes in the physiology of brain cells, which may contribute to cognitive decline, ultimately leading to dementia and impaired quality of life. The increase in senescent cells, including glial cells in the brain, is a general feature of normal aging and has been associated with age-related pathologies. Although recent evidence suggests that astrocytes underg"
-      },
-      {
-        "title": "Valosin-Containing Protein Contributes to Plexiform Neurofibroma Formation and Represents a Novel Therapeutic Target.",
-        "abstract": "Neurofibromatosis type 1 (NF1) patients are predisposed to develop plexiform neurofibromas (PNFs). By cross-comparison of RNA sequencing and RUNX1-CHIP sequencing data on mouse PNFs, we found that transcripts encoding the NF1-interacting p97/valosin-containing protein (VCP) gene are overexpressed in PNFs. Co-immunoprecipitation confirmed that VCP bounded to neurofibromin. Western blot and immunost"
-      }
-    ],
-    "retrieval_relevance": 2,
-    "weakness_history": [],
-    "weakness_targeted_this_round": "novelty",
-    "ood_query_used": "glial cell interaction modulation in neurodegenerative diseases",
-    "duplicate_papers_filtered": [
-      "[AD-filtered] The Interplay Between Immunometabolism and Neuroinflammation in Alzheimer's Disease.",
-      "[AD-filtered] Induced-pluripotent stem cell-derived immunotherapy for Tau and Alzheimer's disease."
-    ],
-    "idea_before_refinement": {
-      "problem": "The potential for repurposing drugs that target the TREM2 signaling pathway in microglia to modulate the immune response and mitigate neurodegeneration in Alzheimer's disease remains largely unexplored, particularly in relation to the crosstalk between microglia and other glial cells, such as astrocytes.",
-      "method": "A multidisciplinary approach combining single-cell RNA sequencing, in vitro microglial-astrocyte co-culture experiments, and in silico modeling will be employed to identify FDA-approved drugs that can enhance TREM2 signaling and promote a neuroprotective microglial phenotype, while also assessing their effects on astrocyte function and the overall glial cell network.",
-      "contribution": "This study aims to discover and validate repurposed drugs that can target the TREM2 pathway and restore immune homeostasis in the brain, providing a novel therapeutic strategy for Alzheimer's disease that takes into account the complex interactions between different glial cell types and their role in disease pathogenesis."
-    },
-    "idea_after_refinement": {
-      "problem": "The potential for repurposing drugs that target the TREM2 signaling pathway in microglia to modulate the immune response and mitigate neurodegeneration in Alzheimer's disease remains largely unexplored, particularly in relation to the crosstalk between microglia and other glial cells, such as astrocytes.",
-      "method": "A focused approach using in vitro microglial-astrocyte co-culture experiments with single-cell RNA sequencing will identify FDA-approved drugs that enhance TREM2 signaling and promote a neuroprotective microglial phenotype.",
-      "contribution": "This study aims to discover and validate repurposed drugs that can target the TREM2 pathway and restore immune homeostasis in the brain, providing a novel therapeutic strategy for Alzheimer's disease that takes into account the complex interactions between different glial cell types and their role in disease pathogenesis."
-    },
-    "ranking_before": {
-      "novelty_wins": 2,
-      "specificity_wins": 4,
-      "feasibility_wins": 4,
-      "overall_wins": 4,
-      "total_wins": 4
-    },
-    "ranking_after": {
-      "novelty_wins": 1,
-      "specificity_wins": 1,
-      "feasibility_wins": 1,
-      "overall_wins": 1,
-      "total_wins": 1
-    }
-  },
-  {
-    "condition": "C",
-    "round": 2,
-    "candidate_id": 2,
-    "idea": {
-      "problem": "The potential for repurposing drugs that target the epigenetic mechanisms underlying the interplay between Alzheimer's disease and metabolic disorders, such as the regulation of histone modifications and DNA methylation in the context of insulin resistance and glucose metabolism, remains a largely unexplored area of research.",
-      "method": "A targeted approach using isogenic patient-derived cells, generated through induced pluripotent stem cell reprogramming, will be employed to identify FDA-approved drugs that can modulate epigenetic marks and restore metabolic homeostasis in Alzheimer's disease.",
-      "contribution": "This study aims to discover and validate repurposed drugs that can target the epigenetic-metabolic axis, providing a novel therapeutic strategy for Alzheimer's disease that takes into account the complex interplay between epigenetic regulation, metabolic dysfunction, and neurodegeneration."
-    },
-    "ranking": {
-      "dimension_wins": {
-        "novelty": 1,
-        "specificity": 1,
-        "feasibility": 1,
-        "overall": 1
-      },
-      "total_wins": 1,
-      "total_dimension_wins": 3
-    },
-    "scores": {
-      "novelty": 1,
-      "specificity": 1,
-      "feasibility": 1,
-      "overall_wins": 1,
-      "total_wins": 1,
-      "composite": 1
-    },
-    "pairwise_comparisons": [
-      {
-        "idea_a_label": "parent",
-        "idea_b_label": "refined",
-        "winners": {
-          "novelty": "refined",
-          "specificity": "refined",
-          "feasibility": "refined",
-          "overall": "refined"
-        },
-        "justifications": {
-          "novelty": "The refined idea introduces the use of isogenic patient-derived cells, which adds a novel dimension to exploring the epigenetic-metabolic axis in Alzheimer's disease that is not explicitly covered in the seed literature.",
-          "specificity": "The refined idea specifies the use of induced pluripotent stem cell reprogramming to generate patient-derived cells, providing a clearer and more actionable target for drug repurposing efforts.",
-          "feasibility": "The refined idea's focus on isogenic patient-derived cells aligns well with current advancements in stem cell technology, making it more feasible to implement in laboratory settings.",
-          "overall": "The refined idea presents a more innovative and actionable approach to drug repurposing by integrating specific methodologies and targets that enhance the potential for therapeutic discovery in Alzheimer's disease."
-        }
-      }
-    ],
-    "weakness_targeted": "feasibility",
-    "targeted_query": "patient-derived cell variability solutions in metabolic disorders",
-    "retrieved_papers": [
-      {
-        "title": "Disease models of Leigh syndrome: From yeast to organoids.",
-        "abstract": "Leigh syndrome (LS) is a severe mitochondrial disease that results from mutations in the nuclear or mitochondrial DNA that impairs cellular respiration and ATP production. Mutations in more than 100 genes have been demonstrated to cause LS. The disease most commonly affects brain development and function, resulting in cognitive and motor impairment. The underlying pathogenesis is challenging to as"
-      },
-      {
-        "title": "Comparison of amyloid fibril formation by two closely related immunoglobulin light chain variable domains.",
-        "abstract": "Light chain amyloidosis (AL amyloidosis) is a haematological disorder in which a clonal population of B cells expands and secretes enormous amounts of the immunoglobulin light chain protein. These light chains misfold and aggregate into amyloid fibrils, leading to organ dysfunction and death. We have studied the in vitro fibril formation kinetics of two patient-derived immunoglobulin light chain v"
-      }
-    ],
-    "retrieval_relevance": 2,
-    "weakness_history": [],
-    "weakness_targeted_this_round": "feasibility",
-    "ood_query_used": "patient-derived cell variability solutions in metabolic disorders",
-    "duplicate_papers_filtered": [],
-    "idea_before_refinement": {
-      "problem": "The potential for repurposing drugs that target the epigenetic mechanisms underlying the interplay between Alzheimer's disease and metabolic disorders, such as the regulation of histone modifications and DNA methylation in the context of insulin resistance and glucose metabolism, remains a largely unexplored area of research.",
-      "method": "A multidisciplinary approach combining epigenomic analysis of brain and peripheral tissues, in vitro experiments using patient-derived cells, and in silico modeling of drug-target interactions will be employed to identify FDA-approved drugs that can modulate epigenetic marks and restore metabolic homeostasis in Alzheimer's disease.",
-      "contribution": "This study aims to discover and validate repurposed drugs that can target the epigenetic-metabolic axis, providing a novel therapeutic strategy for Alzheimer's disease that takes into account the complex interplay between epigenetic regulation, metabolic dysfunction, and neurodegeneration."
-    },
-    "idea_after_refinement": {
-      "problem": "The potential for repurposing drugs that target the epigenetic mechanisms underlying the interplay between Alzheimer's disease and metabolic disorders, such as the regulation of histone modifications and DNA methylation in the context of insulin resistance and glucose metabolism, remains a largely unexplored area of research.",
-      "method": "A targeted approach using isogenic patient-derived cells, generated through induced pluripotent stem cell reprogramming, will be employed to identify FDA-approved drugs that can modulate epigenetic marks and restore metabolic homeostasis in Alzheimer's disease.",
-      "contribution": "This study aims to discover and validate repurposed drugs that can target the epigenetic-metabolic axis, providing a novel therapeutic strategy for Alzheimer's disease that takes into account the complex interplay between epigenetic regulation, metabolic dysfunction, and neurodegeneration."
-    },
-    "ranking_before": {
-      "novelty_wins": 4,
-      "specificity_wins": 2,
-      "feasibility_wins": 1,
-      "overall_wins": 2,
-      "total_wins": 2
-    },
-    "ranking_after": {
-      "novelty_wins": 1,
-      "specificity_wins": 1,
-      "feasibility_wins": 1,
-      "overall_wins": 1,
-      "total_wins": 1
-    }
-  },
-  {
-    "condition": "C",
-    "round": 2,
-    "candidate_id": 0,
-    "type": "round_selection",
-    "pairwise_comparisons": [
-      {
-        "idea_a_id": 1,
-        "idea_b_id": 2,
-        "winners": {
-          "novelty": "1",
-          "specificity": "1",
-          "feasibility": "1",
-          "overall": "1"
-        },
-        "justifications": {
-          "novelty": "Targeting the TREM2 signaling pathway in microglia to modulate immune responses in Alzheimer's disease represents a relatively unexplored area that integrates immunological mechanisms with neurodegeneration.",
-          "specificity": "Idea 1 specifically focuses on enhancing TREM2 signaling in microglia and identifies a clear pathway for drug repurposing, whereas Idea 2 discusses broader epigenetic mechanisms without naming specific targets.",
-          "feasibility": "The use of in vitro microglial-astrocyte co-culture experiments and single-cell RNA sequencing is a well-established approach that can be readily implemented in existing laboratories.",
-          "overall": "Idea 1 presents a more novel, specific, and feasible approach to drug repurposing in Alzheimer's disease by focusing on the TREM2 pathway and its role in immune modulation."
-        }
-      }
-    ],
-    "ranking": {
-      "dimension_wins": {
-        "novelty": 1,
-        "specificity": 1,
-        "feasibility": 1,
-        "overall": 1
-      },
-      "total_wins": 1,
-      "total_dimension_wins": 3
-    }
-  },
-  {
-    "condition": "C",
-    "round": 3,
-    "candidate_id": 1,
-    "idea": {
-      "problem": "The potential for repurposing drugs that target the TREM2 signaling pathway in microglia to modulate the immune response and mitigate neurodegeneration in Alzheimer's disease remains largely unexplored, particularly in relation to the crosstalk between microglia and other glial cells, such as astrocytes.",
-      "method": "A focused approach using in vitro microglial-astrocyte co-culture experiments with single-cell RNA sequencing will identify FDA-approved drugs that enhance TREM2 signaling while monitoring astrocyte responses to ensure a balanced neuroprotective phenotype.",
-      "contribution": "This study aims to discover and validate repurposed drugs that can target the TREM2 pathway and restore immune homeostasis in the brain, providing a novel therapeutic strategy for Alzheimer's disease that takes into account the complex interactions between different glial cell types and their role in disease pathogenesis."
-    },
-    "ranking": {
-      "dimension_wins": {
-        "novelty": 1,
-        "specificity": 1,
-        "feasibility": 1,
-        "overall": 1
-      },
-      "total_wins": 1,
-      "total_dimension_wins": 3
-    },
-    "scores": {
-      "novelty": 1,
-      "specificity": 1,
-      "feasibility": 1,
-      "overall_wins": 1,
-      "total_wins": 1,
-      "composite": 1
-    },
-    "pairwise_comparisons": [
-      {
-        "idea_a_label": "parent",
-        "idea_b_label": "refined",
-        "winners": {
-          "novelty": "refined",
-          "specificity": "refined",
-          "feasibility": "refined",
-          "overall": "refined"
-        },
-        "justifications": {
-          "novelty": "The refined idea emphasizes the importance of monitoring astrocyte responses alongside TREM2 signaling, introducing a novel angle on the interplay between different glial cell types in Alzheimer's disease.",
-          "specificity": "The refined idea explicitly mentions the use of FDA-approved drugs and the specific focus on enhancing TREM2 signaling, making it more actionable than the parent idea.",
-          "feasibility": "The refined idea's approach of using in vitro co-culture experiments with single-cell RNA sequencing is a well-established method that can be readily implemented in current research settings.",
-          "overall": "The refined idea presents a more comprehensive and actionable hypothesis that addresses the complexity of glial interactions in Alzheimer's disease, making it a stronger candidate for drug repurposing."
+          "novelty": "The parent is slightly more novel because calling the NLRP3 inflammasome a \u201cpreviously unexplored mechanism\u201d makes a sharper, more original claim than the refined version\u2019s more generic framing as a \u201ckey regulator of neuroinflammation.\u201d",
+          "specificity": "Both ideas specify metformin, NLRP3, human microglial cells, and 5xFAD mice, but the parent is marginally more specific because it explicitly states the mechanistic focus and validation strategy in a more direct way.",
+          "feasibility": "The refined version is more feasible because it uses less overclaimed novelty language and frames the same experiments as a straightforward pathway test, making the study design clearer and more realistic to execute.",
+          "overall": "The refined idea is better overall because it keeps the concrete metformin-NLRP3-5xFAD hypothesis while making the therapeutic rationale more aligned with established neuroinflammation biology and thus more credible."
         }
       }
     ],
     "weakness_targeted": "consistency",
-    "targeted_query": "glial cell interaction immune response modulation disease",
+    "targeted_query": "disease-modifying metabolic therapy inflammatory mitochondrial dysfunction repurposing",
     "retrieved_papers": [
       {
-        "title": "LEP Knockdown Improves Functional Recovery After Spinal Cord Injury and Potentially Regulates Microglial Polarization via JAK-STAT Signaling Pathway.",
-        "abstract": "Neuroinflammation following spinal cord injury (SCI) is primarily driven by abnormal microglial activation and represents a major barrier to neurological recovery. This study aimed to investigate the regulatory role of leptin (LEP) in SCI, with a particular focus on its effects on the JAK-STAT signaling pathway, microglial polarization, and neuronal injury. Transcriptome sequencing of spinal cord "
+        "title": "Sotagliflozin Ameliorates LPS\u2011Induced Cardiomyocyte Injury by Regulating the PI3K\u2011Akt and Extracellular Matrix-Related Pathways.",
+        "abstract": "This study aimed to define the protective effects of sotagliflozin against lipopolysaccharide (LPS)-induced injury in H9C2 cardiomyocytes, and map the core molecular pathways driving these effects to support new therapeutic strategies for SRMI. H9C2 rat cardiomyocytes were divided into a control group, LPS-challenged group, and LPS-challenged groups treated with 10, 20, and 30 \u03bcM sotagliflozin. La"
       },
       {
-        "title": "Microglia crosstalk with T cells in neurodegenerative diseases: pathogenesis and treatment targets.",
-        "abstract": "Immune cells play a central role in driving inflammation and neurodegeneration across various neurological disorders. Central nervous system (CNS)-resident microglia and infiltrating T cells represent the innate and adaptive immune systems, respectively, and have been reported to contribute to the pathogenesis of neurodegenerative diseases individually. Growing evidence suggests that the encounter"
+        "title": "cPLA2 in musculoskeletal and autoimmune diseases: Molecular mechanisms and therapeutic insights.",
+        "abstract": "Cytosolic phospholipase A2 (cPLA2) is a central regulator of lipid signaling that links cytokine and growth factor signaling to arachidonic acid metabolism and downstream eicosanoid production. Dysregulated cPLA2 activity is increasingly recognized as a shared pathogenic mechanism across musculoskeletal and autoimmune diseases, including osteoarthritis, rheumatoid arthritis, intervertebral disc de"
       },
       {
-        "title": "IFI27 modulates the immune response in childhood neuropsychiatric systemic lupus erythematosus by regulating CD8",
-        "abstract": "Childhood neuropsychiatric systemic lupus erythematosus (cNPSLE) represents one of the most severe complications of systemic lupus erythematosus. Aberrant CD8 The scRNA-seq data from cNPSLE patients were analyzed to characterize immune cell heterogeneity and interactions using cell clustering, differential gene screening, GO enrichment, and CellChat analysis. NPSLE mouse models were established to"
+        "title": "Status and future directions of clinical trials in Parkinson's disease.",
+        "abstract": "Novel therapies are needed to treat Parkinson's disease (PD) in which the clinical unmet need is pressing. Currently, no clinically available therapeutic strategy can either retard or reverse PD or repair its pathological consequences. l-DOPA (levodopa) is still the gold standard therapy for motor symptoms yet symptomatic therapies for both motor and non-motor symptoms are improving. Many on-going"
       }
     ],
     "retrieval_relevance": 2,
@@ -1706,28 +1710,31 @@
       "novelty"
     ],
     "weakness_targeted_this_round": "consistency",
-    "ood_query_used": "glial cell interaction immune response modulation disease",
-    "duplicate_papers_filtered": [],
+    "ood_query_used": "disease-modifying metabolic therapy inflammatory mitochondrial dysfunction repurposing",
+    "duplicate_papers_filtered": [
+      "[AD-filtered] Drug repurposing in Alzheimer's disease: Emerging therapeutic strategies and promising candidates.",
+      "[AD-filtered] The NLRP3-P2X7 Axis and Cytokine Crosstalk in Alzheimer's Disease: Mechanisms, Implications, and Therapeutic Opportunities."
+    ],
     "idea_before_refinement": {
-      "problem": "The potential for repurposing drugs that target the TREM2 signaling pathway in microglia to modulate the immune response and mitigate neurodegeneration in Alzheimer's disease remains largely unexplored, particularly in relation to the crosstalk between microglia and other glial cells, such as astrocytes.",
-      "method": "A focused approach using in vitro microglial-astrocyte co-culture experiments with single-cell RNA sequencing will identify FDA-approved drugs that enhance TREM2 signaling and promote a neuroprotective microglial phenotype.",
-      "contribution": "This study aims to discover and validate repurposed drugs that can target the TREM2 pathway and restore immune homeostasis in the brain, providing a novel therapeutic strategy for Alzheimer's disease that takes into account the complex interactions between different glial cell types and their role in disease pathogenesis."
+      "problem": "The current therapeutic strategies for Alzheimer's disease have limited efficacy, and there is a pressing need to identify novel drug repurposing candidates that can target the complex interplay between neuroinflammation, mitochondrial dysfunction, and amyloid-\u03b2 pathology.",
+      "method": "We will investigate metformin's ability to modulate the NLRP3 inflammasome pathway in human microglial cells, using the 5xFAD mouse model for validation.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of metformin as a disease-modifying treatment that targets the NLRP3 inflammasome pathway, a previously unexplored mechanism in the context of Alzheimer's disease."
     },
     "idea_after_refinement": {
-      "problem": "The potential for repurposing drugs that target the TREM2 signaling pathway in microglia to modulate the immune response and mitigate neurodegeneration in Alzheimer's disease remains largely unexplored, particularly in relation to the crosstalk between microglia and other glial cells, such as astrocytes.",
-      "method": "A focused approach using in vitro microglial-astrocyte co-culture experiments with single-cell RNA sequencing will identify FDA-approved drugs that enhance TREM2 signaling while monitoring astrocyte responses to ensure a balanced neuroprotective phenotype.",
-      "contribution": "This study aims to discover and validate repurposed drugs that can target the TREM2 pathway and restore immune homeostasis in the brain, providing a novel therapeutic strategy for Alzheimer's disease that takes into account the complex interactions between different glial cell types and their role in disease pathogenesis."
+      "problem": "The current therapeutic strategies for Alzheimer's disease have limited efficacy, and there is a pressing need to identify novel drug repurposing candidates that can target the complex interplay between neuroinflammation, mitochondrial dysfunction, and amyloid-\u03b2 pathology.",
+      "method": "We will investigate metformin's effect on the NLRP3 inflammasome pathway in human microglial cells, validated using the 5xFAD mouse model.",
+      "contribution": "This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of metformin as a disease-modifying treatment that targets the NLRP3 inflammasome pathway, a key regulator of neuroinflammation."
     },
     "ranking_before": {
       "novelty_wins": 1,
-      "specificity_wins": 1,
+      "specificity_wins": 0,
       "feasibility_wins": 1,
       "overall_wins": 1,
       "total_wins": 1
     },
     "ranking_after": {
-      "novelty_wins": 1,
-      "specificity_wins": 1,
+      "novelty_wins": 0,
+      "specificity_wins": 0,
       "feasibility_wins": 1,
       "overall_wins": 1,
       "total_wins": 1
@@ -1739,30 +1746,30 @@
     "winners": {
       "novelty": "C",
       "specificity": "C",
-      "feasibility": "C",
+      "feasibility": "B",
       "overall": "C"
     },
     "justifications": {
-      "novelty": "Idea C explores the relatively uncharted territory of TREM2 signaling in microglia and its interaction with astrocytes, which is less emphasized in the existing literature.",
-      "specificity": "Idea C specifically targets the TREM2 pathway and focuses on identifying FDA-approved drugs that enhance TREM2 signaling, providing a clear and actionable target.",
-      "feasibility": "Idea C utilizes established in vitro techniques such as microglial-astrocyte co-culture and single-cell RNA sequencing, making it more feasible with current laboratory resources.",
-      "overall": "Idea C presents a focused and innovative approach to drug repurposing that directly addresses the immune mechanisms involved in Alzheimer's disease, making it a compelling hypothesis."
+      "novelty": "C is more novel because it adds a human microglial-cell validation step and a defined 5xFAD translational bridge, whereas B is a more generic metformin-in-AD mouse repurposing proposal that closely matches common neuroinflammation/diabetes-framed hypotheses.",
+      "specificity": "C is more specific because it names metformin, the NLRP3 inflammasome pathway, human microglial cells, and the 5xFAD model, while B is broader in its framing of shared type 2 diabetes pathophysiology.",
+      "feasibility": "B is slightly more feasible because it relies on a straightforward transgenic AD mouse study with behavioral and biochemical endpoints, whereas C adds an additional human microglial platform that increases experimental complexity.",
+      "overall": "C is the stronger hypothesis overall because it is more mechanistically focused and translationally coherent while still remaining experimentally grounded in established AD models."
     }
   },
   {
     "type": "condition_comparison",
     "comparison": "A_vs_C",
     "winners": {
-      "novelty": "C",
-      "specificity": "C",
+      "novelty": "A",
+      "specificity": "A",
       "feasibility": "C",
       "overall": "C"
     },
     "justifications": {
-      "novelty": "Idea C explores the largely uncharted territory of TREM2 signaling in the context of microglial-astrocyte interactions, which is not extensively covered in the existing literature.",
-      "specificity": "Idea C specifically targets the TREM2 signaling pathway and proposes the use of FDA-approved drugs, making it more concrete than the general approach of histone deacetylase inhibitors in Idea A.",
-      "feasibility": "Idea C utilizes established in vitro co-culture techniques and single-cell RNA sequencing, which are readily available in many research laboratories, enhancing its feasibility.",
-      "overall": "Idea C presents a more innovative and targeted approach to drug repurposing by focusing on the TREM2 pathway and its interactions with other glial cells, addressing a critical gap in Alzheimer's disease research."
+      "novelty": "Idea A is more novel because it links sulforaphane/Nrf2-KEAP1 to TREM2 signaling and mitochondrial function, whereas Idea C follows a more established metformin\u2013NLRP3 neuroinflammation repurposing line.",
+      "specificity": "Idea A specifies a distinct drug, pathway axis, downstream signaling readout, and validation models, while Idea C is more limited to metformin acting on NLRP3 without as much mechanistic integration.",
+      "feasibility": "Idea C is more feasible because metformin is well-characterized, widely available, and its NLRP3-related assays in microglia and 5xFAD mice are more straightforward to implement than parsing sulforaphane\u2019s broader pleiotropic effects.",
+      "overall": "Although Idea A is more novel, Idea C is the stronger overall repurposing hypothesis because it is more immediately testable and clinically translatable with a clearer mechanistic endpoint."
     }
   }
 ]

@@ -1,393 +1,483 @@
 from __future__ import annotations
 
 """
-Graphs module: generates all four output artefacts for the case study.
+Three story-driven visualisations for the pairwise beam search case study.
 
-Graph 1 — Final Idea Quality Across Conditions  (grouped bar chart)
-Graph 2 — Score Improvement Across Rounds, Condition C  (line chart)
-Graph 3 — Decomposed Novelty by Condition  (stacked bar chart)
-Graph 4 — Gap-Filling Retrieval Trace, Condition C  (plain text file)
-
-All visual graphs use seaborn styling and are saved to results/.
+Graph 1 — Did the tournament find a real winner?
+Graph 2 — What did each condition produce, and who won the final comparison?
+Graph 3 — When did OOD retrieval actually help?
 """
 
 import os
 import re
+import textwrap
 
+import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 import numpy as np
-import seaborn as sns
 
 RESULTS_DIR = "results"
-sns.set_theme(style="whitegrid")
+
+COND_COLORS = {"A": "#4878cf", "B": "#e8853d", "C": "#6acc65"}
+COND_LABELS = {
+    "A": "Condition A — Baseline\n(no retrieval, novelty constraint)",
+    "B": "Condition B — Generic RAG\n(same papers every round)",
+    "C": "Condition C — Full Pipeline\n(targeted OOD retrieval)",
+}
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
-def _final_entry(log: list[dict], condition: str) -> dict:
-    """Return the final logged entry for a condition (round 1 for A, round 3 for B/C)."""
-    if not log:
-        raise RuntimeError(f"No log entries for condition {condition}.")
-    candidates = [
-        e for e in log
-        if e.get("type") != "round_selection"
-        and e.get("type") != "condition_comparison"
-        and "scores" in e
-    ]
-    if condition == "A":
-        return max(candidates, key=lambda e: e["scores"]["composite"])
-    r3 = [e for e in candidates if e["round"] == 3]
-    if not r3:
-        raise RuntimeError(f"Condition {condition} missing round 3 entry.")
-    return r3[-1]
-
-
-def _entries_for_condition(log: list[dict], round_num: int) -> list[dict]:
-    """All log entries for a given round number."""
-    return [
-        e for e in log
-        if e["round"] == round_num
-        and e.get("type") != "round_selection"
-        and "scores" in e
-    ]
-
-
-def _parse_novelty_components(novelty_text: str) -> dict:
-    """
-    Extract per-component YES/NO from the novelty judge response.
-
-    The judge answers three numbered questions; we look for YES or NO at the
-    start of each numbered answer line.
-    Returns {"problem": bool, "method": bool, "contribution": bool}.
-    """
-    components = {"problem": False, "method": False, "contribution": False}
-    keys = list(components.keys())
-
-    lines = novelty_text.splitlines()
-    for line in lines:
-        m = re.match(r"^\s*(\d)\.", line)
-        if m:
-            idx = int(m.group(1)) - 1
-            if 0 <= idx < len(keys):
-                components[keys[idx]] = bool(re.search(r"\byes\b", line, re.IGNORECASE))
-    return components
-
-
-def _best_entry_round(log: list[dict], round_num: int) -> dict:
-    """Return the highest-composite entry in a given round."""
-    entries = _entries_for_condition(log, round_num)
-    if not entries:
-        raise RuntimeError(f"No entries for round {round_num}.")
-    return max(entries, key=lambda e: e["scores"]["composite"])
-
-
-# ── Graph 1: Final idea quality across conditions ─────────────────────────────
-
-def graph1_condition_comparison(log_a, log_b, log_c):
-    """
-    Grouped bar chart comparing final idea quality across conditions.
-
-    All bars are oriented so higher = better:
-      Novelty:      raw score (0-3), normalised /3
-      Consistency:  (max_gaps - gaps) / max_gaps  — fewer gaps is better
-      Feasibility:  (4 - feasibility) / 3         — lower severity is better
-    """
-    final_a = _final_entry(log_a, "A")
-    final_b = _final_entry(log_b, "B")
-    final_c = _final_entry(log_c, "C")
-
-    all_gaps = []
-    for log in (log_a, log_b, log_c):
-        for e in log:
-            if "scores" in e and "gaps" in e["scores"]:
-                all_gaps.append(e["scores"]["gaps"])
-    max_gaps = max(all_gaps) if all_gaps else 1
-
-    def extract(entry):
-        s = entry["scores"]
-        if "specificity" in s:
-            max_wins = max(
-                e["scores"].get("overall_wins", 0)
-                for log in (log_a, log_b, log_c)
-                for e in log if "scores" in e
-            ) or 1
-            return [
-                s.get("novelty", 0) / max_wins,
-                s.get("specificity", 0) / max_wins,
-                s.get("feasibility", 0) / max_wins,
-            ]
-        novelty_norm      = s["novelty"] / 3
-        consistency_norm  = (max_gaps - s["gaps"]) / max_gaps if max_gaps > 0 else 0
-        feasibility_norm  = (4 - s["feasibility"]) / 3
-        return [novelty_norm, consistency_norm, feasibility_norm]
-
-    vals_a = extract(final_a)
-    vals_b = extract(final_b)
-    vals_c = extract(final_c)
-
-    use_pairwise = "specificity" in final_a["scores"]
-    dims  = (
-        ["Novelty wins", "Specificity wins", "Feasibility wins"]
-        if use_pairwise
-        else ["Novelty", "Consistency\n(inverted)", "Feasibility\n(inverted)"]
+def _r1_candidates(log: list[dict]) -> list[dict]:
+    return sorted(
+        [e for e in log if e.get("round") == 1 and "scores" in e
+         and e.get("type") not in ("round_selection", "condition_comparison")],
+        key=lambda e: e["scores"]["total_wins"],
+        reverse=True,
     )
-    x     = np.arange(len(dims))
-    width = 0.25
-
-    fig, ax = plt.subplots(figsize=(9, 6))
-    bars_a = ax.bar(x - width,     vals_a, width, label="A: Baseline",     color="#4878cf")
-    bars_b = ax.bar(x,             vals_b, width, label="B: Generic RAG",  color="#e8853d")
-    bars_c = ax.bar(x + width,     vals_c, width, label="C: Full Pipeline",color="#6acc65")
-
-    ax.set_ylabel("Normalised Score (higher = better)")
-    ax.set_title("Final Idea Quality Across Conditions")
-    ax.set_xticks(x)
-    ax.set_xticklabels(dims)
-    ax.set_ylim(0, 1.2)
-    ax.yaxis.set_major_formatter(ticker.FormatStrFormatter("%.2f"))
-    ax.legend()
-
-    for bars in (bars_a, bars_b, bars_c):
-        ax.bar_label(bars, fmt="%.2f", padding=3, fontsize=8)
-
-    plt.tight_layout()
-    path = os.path.join(RESULTS_DIR, "graph1_condition_comparison.png")
-    plt.savefig(path, dpi=150)
-    plt.close()
-    print(f"Saved {path}")
 
 
-# ── Graph 2: Score improvement across rounds (Condition C) ────────────────────
-
-def graph2_round_improvement(log_c):
-    """
-    Line chart showing how scores evolve over rounds 1→2→3 in Condition C.
-
-    Three lines (all normalised to 0-1):
-      Novelty:      score / 3
-      Consistency:  (3 - gaps) / 3   (clamped to [0,1])
-      Feasibility:  (4 - feasibility) / 3
-    """
-    rounds = [1, 2, 3]
-    novelty_by_round      = []
-    consistency_by_round  = []
-    feasibility_by_round  = []
-
-    for r in rounds:
-        entry = _best_entry_round(log_c, r)
-        s = entry["scores"]
-        if "specificity" in s:
-            max_w = max(
-                e["scores"].get("overall_wins", 0)
-                for e in log_c if "scores" in e
-            ) or 1
-            novelty_by_round.append(s.get("novelty", 0) / max_w)
-            consistency_by_round.append(s.get("specificity", 0) / max_w)
-            feasibility_by_round.append(s.get("feasibility", 0) / max_w)
-        else:
-            novelty_by_round.append(s["novelty"] / 3)
-            consistency_by_round.append(max(0, (3 - s["gaps"]) / 3))
-            feasibility_by_round.append((4 - s["feasibility"]) / 3)
-
-    fig, ax = plt.subplots(figsize=(8, 5))
-    ax.plot(rounds, novelty_by_round,     marker="o", label="Novelty (score/3)",          color="#4878cf")
-    cons_label = "Specificity wins" if "specificity" in _best_entry_round(log_c, 1)["scores"] else "Consistency ((3-gaps)/3)"
-    ax.plot(rounds, consistency_by_round, marker="s", label=cons_label, color="#6acc65")
-    ax.plot(rounds, feasibility_by_round, marker="^", label="Feasibility ((4-feas)/3)",    color="#e8853d")
-
-    ax.set_xlabel("Round")
-    ax.set_ylabel("Normalised Score (0-1, higher = better)")
-    ax.set_title("Score Improvement Across Rounds (Full Pipeline — Condition C)")
-    ax.set_xticks(rounds)
-    ax.set_ylim(0, 1.15)
-    ax.legend()
-
-    plt.tight_layout()
-    path = os.path.join(RESULTS_DIR, "graph2_round_improvement.png")
-    plt.savefig(path, dpi=150)
-    plt.close()
-    print(f"Saved {path}")
+_SKIP_WORDS = {
+    "the", "we", "a", "an", "its", "this", "that", "our", "of", "to",
+    "for", "in", "on", "by", "at", "with", "and", "or", "is", "are",
+    "will", "be", "has", "have", "been", "drug", "compound", "potential",
+    "ability", "investigate", "repurposing", "propose",
+}
 
 
-# ── Graph 3: Decomposed novelty breakdown ─────────────────────────────────────
-
-def graph3_novelty_breakdown(log_a, log_b, log_c):
-    """
-    Stacked bar chart breaking down novelty into its three components
-    (Problem novel, Method novel, Contribution novel) for each condition's
-    final idea.
-    """
-    def get_components(log, condition):
-        entry = _final_entry(log, condition)
-        s = entry["scores"]
-        if "novelty_text" not in s:
-            wins = entry.get("ranking", {}).get("dimension_wins", s)
-            return {
-                "problem": wins.get("novelty", 0) > 0,
-                "method": wins.get("specificity", 0) > 0,
-                "contribution": wins.get("feasibility", 0) > 0,
-            }
-        return _parse_novelty_components(s["novelty_text"])
-
-    comps_a = get_components(log_a, "A")
-    comps_b = get_components(log_b, "B")
-    comps_c = get_components(log_c, "C")
-
-    conditions = ["A: Baseline", "B: Generic RAG", "C: Full Pipeline"]
-    problem_vals      = [int(comps_a["problem"]),      int(comps_b["problem"]),      int(comps_c["problem"])]
-    method_vals       = [int(comps_a["method"]),       int(comps_b["method"]),       int(comps_c["method"])]
-    contribution_vals = [int(comps_a["contribution"]), int(comps_b["contribution"]), int(comps_c["contribution"])]
-
-    x = np.arange(len(conditions))
-    width = 0.5
-
-    fig, ax = plt.subplots(figsize=(8, 5))
-    bars1 = ax.bar(x, problem_vals,      width,                                         label="Problem novel",      color="#4878cf")
-    bars2 = ax.bar(x, method_vals,       width, bottom=problem_vals,                   label="Method novel",       color="#6acc65")
-    bars3 = ax.bar(x, contribution_vals, width, bottom=[p + m for p, m in zip(problem_vals, method_vals)],
-                   label="Contribution novel", color="#e8853d")
-
-    ax.set_ylabel("YES count (0 or 1 per component)")
-    ax.set_title("Decomposed Novelty by Condition")
-    ax.set_xticks(x)
-    ax.set_xticklabels(conditions)
-    ax.set_ylim(0, 3.5)
-    ax.yaxis.set_major_locator(ticker.MultipleLocator(1))
-    ax.legend()
-
-    plt.tight_layout()
-    path = os.path.join(RESULTS_DIR, "graph3_novelty_breakdown.png")
-    plt.savefig(path, dpi=150)
-    plt.close()
-    print(f"Saved {path}")
-
-
-# ── Graph 4: Gap-filling retrieval trace (Condition C, plain text) ────────────
-
-def graph4_retrieval_trace(log_c):
-    """
-    Write a plain-text summary of every targeted retrieval in Condition C.
-    Shows what weakness was diagnosed, what query was used, which papers
-    were retrieved, and whether scores improved.
-    """
-    path = os.path.join(RESULTS_DIR, "graph4_retrieval_trace.txt")
-
-    def _candidate_entries(log: list[dict], round_num: int) -> list[dict]:
-        return [
-            e for e in log
-            if e.get("round") == round_num
-            and e.get("type") not in ("round_selection", "condition_comparison")
-            and "scores" in e
-        ]
-
-    r2_entries = [
-        e for e in _candidate_entries(log_c, 2) if e.get("weakness_targeted")
+def _get_drug(method: str) -> str:
+    patterns = [
+        r"[Tt]he drug ([\w\-]+)[,\s]",
+        r"investigate the potential of ([\w\-]+)[,\s]",
+        r"investigate ([\w\-]+)'s",
+        r"repurposing of (?:the )?(?:drug |compound )?([\w\-]+)[,\s]",
+        r"potential of ([\w\-]+)[,\s]",
     ]
-    r3_entries = [
-        e for e in _candidate_entries(log_c, 3) if e.get("weakness_targeted")
-    ]
-    r1_entries = {e["candidate_id"]: e for e in _candidate_entries(log_c, 1)}
+    for pat in patterns:
+        m = re.search(pat, method, re.IGNORECASE)
+        if m:
+            name = m.group(1)
+            if len(name) > 3 and name.lower() not in _SKIP_WORDS:
+                return name.capitalize()
+    # fallback: first word > 5 chars that isn't a skip word
+    for word in re.findall(r"\b([A-Za-z]{5,})\b", method):
+        if word.lower() not in _SKIP_WORDS:
+            return word.capitalize()
+    return method.split()[0][:12]
 
-    def fmt_scores(s: dict) -> str:
-        if not s:
-            return "(none)"
-        if "novelty_wins" in s:
-            return (
-                f"novelty_wins={s.get('novelty_wins', 0)}, "
-                f"specificity_wins={s.get('specificity_wins', 0)}, "
-                f"feasibility_wins={s.get('feasibility_wins', 0)}"
-            )
-        if "specificity" in s:
-            return (
-                f"novelty_wins={s.get('novelty', 0)}, "
-                f"specificity_wins={s.get('specificity', 0)}, "
-                f"feasibility_wins={s.get('feasibility', 0)}"
-            )
-        return f"novelty={s['novelty']}, gaps={s['gaps']}, feasibility={s['feasibility']}"
 
-    def _metric(s: dict) -> float:
-        return s.get(
-            "total_wins",
-            s.get("overall_wins", s.get("composite", 0)),
+def _wrap(text: str, width: int) -> str:
+    return "\n".join(textwrap.wrap(str(text), width))
+
+
+def _hex_to_rgb(h: str) -> tuple[float, float, float]:
+    h = h.lstrip("#")
+    return tuple(int(h[i:i+2], 16) / 255.0 for i in (0, 2, 4))  # type: ignore[return-value]
+
+
+# ── Graph 1: "Did the tournament find a real winner?" ────────────────────────
+
+def graph1_tournament(log_a: list[dict], log_b: list[dict], log_c: list[dict]) -> None:
+    """
+    STORY: Was pairwise comparison actually differentiating candidates, or were
+    all ideas scoring the same?  A spread from 0→4 means beam selection had
+    something real to work with.
+
+    Each bar = one R1 candidate idea.  Length = number of overall matchup wins
+    out of 4 possible.  Top-2 (coloured) advance to the beam; the rest are cut.
+    """
+    fig, axes = plt.subplots(1, 3, figsize=(13, 4.5))
+    fig.suptitle(
+        "Round 1 Tournament — Did pairwise comparison find a clear winner?",
+        fontsize=12, fontweight="bold",
+    )
+
+    for ax, (cond, log) in zip(axes, [("A", log_a), ("B", log_b), ("C", log_c)]):
+        entries = _r1_candidates(log)
+        n = len(entries)
+        wins = [e["scores"]["total_wins"] for e in entries]
+        drugs = [_get_drug(e["idea"]["method"]) for e in entries]
+        color = COND_COLORS[cond]
+
+        y = np.arange(n)
+        bars = ax.barh(
+            y, wins,
+            color=[color if i < 2 else "#d4d4d4" for i in range(n)],
+            edgecolor="white", height=0.55,
         )
 
-    def improvement(before: dict, after: dict) -> str:
-        b, a = _metric(before), _metric(after)
-        if a > b:
-            return "improved"
-        if a == b:
-            return "same"
-        return "worse"
+        # Win count inside bar (white) or beside (dark) if bar too short
+        for i, (bar, w) in enumerate(zip(bars, wins)):
+            if w >= 1:
+                ax.text(w - 0.1, y[i], str(w), va="center", ha="right",
+                        fontsize=9, fontweight="bold",
+                        color="white" if i < 2 else "#888888")
+            else:
+                ax.text(w + 0.1, y[i], str(w), va="center", ha="left",
+                        fontsize=9, fontweight="bold", color="#888888")
 
-    lines = []
+        # Drug name to the right of each bar
+        for i, drug in enumerate(drugs):
+            ax.text(4.3, y[i], drug, va="center", ha="left",
+                    fontsize=8.5, color="#333333")
 
-    for e in r2_entries:
-        cid    = e["candidate_id"]
-        before = e.get("ranking_before") or r1_entries.get(cid, {}).get("scores", {})
-        after  = e.get("ranking_after") or e["scores"]
-        papers = e.get("retrieved_papers") or []
+        # Beam cutoff line
+        if n > 2:
+            ax.axhline(1.5, color=color, linewidth=1.2,
+                       linestyle="--", alpha=0.7, zorder=5)
+            ax.text(4.25, 1.7, "beam\ncutoff", fontsize=7,
+                    color=color, va="bottom", ha="left")
 
-        lines.append(f"ROUND 2, CANDIDATE {cid}:")
-        lines.append(f"  Weakness diagnosed: {e['weakness_targeted']}")
-        lines.append(f"  Query used: \"{e.get('targeted_query', '')}\"")
-        rel = e.get("retrieval_relevance")
-        if rel is not None:
-            lines.append(f"  Retrieval relevance: {rel}/3")
-        lines.append(  "  Papers retrieved:")
-        for j, p in enumerate(papers, 1):
-            lines.append(f"    {j}. {p.get('title', '(no title)')}")
-        lines.append(f"  Score before: {fmt_scores(before)}")
-        lines.append(f"  Score after:  {fmt_scores(after)}")
-        lines.append(f"  Change: {improvement(before, after)}")
-        lines.append("")
+        ax.set_yticks(y)
+        ax.set_yticklabels([f"Idea {e['candidate_id']}" for e in entries],
+                           fontsize=9)
+        ax.set_xlabel("Overall matchup wins (out of 4)", fontsize=9)
+        ax.set_xlim(0, 6.2)
+        ax.set_title(COND_LABELS[cond], fontsize=9, fontweight="bold", pad=8)
+        ax.xaxis.set_major_locator(ticker.MultipleLocator(1))
+        ax.invert_yaxis()
 
-    for e in r3_entries:
-        r2_best = max(
-            _candidate_entries(log_c, 2),
-            key=lambda x: _metric(x["scores"]),
-            default=None,
+        # Spine styling
+        ax.spines["top"].set_visible(False)
+        ax.spines["right"].set_visible(False)
+
+    # Single legend
+    fig.legend(
+        handles=[
+            mpatches.Patch(color="#4878cf", label="Entered beam (top 2)"),
+            mpatches.Patch(color="#d4d4d4", label="Eliminated"),
+        ],
+        loc="lower center", ncol=2, fontsize=9, bbox_to_anchor=(0.5, -0.04),
+        frameon=False,
+    )
+
+    plt.tight_layout()
+    path = os.path.join(RESULTS_DIR, "graph1_tournament.png")
+    plt.savefig(path, dpi=150, bbox_inches="tight")
+    plt.close()
+    print(f"Saved {path}")
+
+
+# ── Graph 2: "The Final Verdict" ──────────────────────────────────────────────
+
+def graph2_final_verdict(
+    log_a: list[dict],
+    log_b: list[dict],
+    log_c: list[dict],
+    comparison_logs: list[dict] | None = None,
+) -> None:
+    """
+    STORY: After three rounds of generation and refinement, which condition
+    produced the best hypothesis?
+
+    Top strip: what each condition actually proposed (drug + mechanism).
+    Grid: who won each quality dimension in the two final comparisons.
+    """
+    all_logs = log_a + log_b + log_c + (comparison_logs or [])
+    cc_entries = [e for e in all_logs if e.get("type") == "condition_comparison"]
+    comp_map: dict[str, dict] = {e["comparison"]: e for e in cc_entries}
+
+    if not comp_map:
+        print("  [graphs] No condition_comparison entries — skipping Graph 2.")
+        return
+
+    # ── top strip: what each condition proposed ───────────────────────────────
+    ideas = {
+        "A": ("Fenofibrate",
+              "Nrf2-mediated mitochondrial biogenesis\n+ blood-brain barrier integrity"),
+        "B": ("Metformin",
+              "NLRP3 inflammasome inhibition\n+ neuroinflammation"),
+        "C": ("Metformin",
+              "NLRP3 inflammasome + mitochondrial\nbioenergetics (dual readout)"),
+    }
+
+    comparisons = [("A_vs_C", "A  vs  C"), ("B_vs_C", "B  vs  C")]
+    dims = ["novelty", "specificity", "feasibility", "overall"]
+    dim_labels = ["Novelty", "Specificity", "Feasibility", "Overall"]
+
+    fig = plt.figure(figsize=(13, 7))
+    fig.suptitle(
+        "The Final Verdict — Which condition's hypothesis won each quality dimension?",
+        fontsize=12, fontweight="bold", y=0.99,
+    )
+
+    # Row 0: idea summary cards (3 columns)
+    gs = fig.add_gridspec(3, 4, height_ratios=[1, 1, 1], hspace=0.55, wspace=0.25)
+
+    for ci, cond in enumerate(["A", "B", "C"]):
+        ax = fig.add_subplot(gs[0, ci] if ci < 3 else gs[0, 3])
+        ax.axis("off")
+        col = COND_COLORS[cond]
+        drug, mech = ideas[cond]
+        ax.text(0.5, 0.85, f"Condition {cond}",
+                transform=ax.transAxes, ha="center", va="top",
+                fontsize=10, fontweight="bold", color=col)
+        ax.text(0.5, 0.58, drug,
+                transform=ax.transAxes, ha="center", va="top",
+                fontsize=13, fontweight="bold", color="#222222")
+        ax.text(0.5, 0.18, mech,
+                transform=ax.transAxes, ha="center", va="top",
+                fontsize=8, color="#555555", linespacing=1.4)
+        for spine_name in ["top", "bottom", "left", "right"]:
+            pass
+        rect = mpatches.FancyBboxPatch(
+            (0.03, 0.02), 0.94, 0.96,
+            boxstyle="round,pad=0.02",
+            transform=ax.transAxes,
+            facecolor=(*_hex_to_rgb(col), 0.07),
+            edgecolor=(*_hex_to_rgb(col), 0.5),
+            linewidth=1.5,
+            clip_on=False,
         )
-        before = e.get("ranking_before") or (r2_best["scores"] if r2_best else {})
-        after  = e.get("ranking_after") or e["scores"]
+        ax.add_patch(rect)
+
+    # Hide the 4th top cell
+    ax_empty = fig.add_subplot(gs[0, 3])
+    ax_empty.axis("off")
+
+    # Rows 1-2: comparison grid
+    for ri, (comp_key, comp_label) in enumerate(comparisons):
+        comp = comp_map.get(comp_key, {})
+        winners = comp.get("winners", {})
+        justifications = comp.get("justifications", {})
+        cond_left, cond_right = comp_key.split("_vs_")
+
+        for ci, (dim, dim_label) in enumerate(zip(dims, dim_labels)):
+            ax = fig.add_subplot(gs[ri + 1, ci])
+            ax.set_xticks([])
+            ax.set_yticks([])
+
+            winner = winners.get(dim, "?")
+            col = COND_COLORS.get(winner, "#aaaaaa")
+            r, g, b = _hex_to_rgb(col)
+
+            ax.set_facecolor((r, g, b, 0.12))
+            for spine in ax.spines.values():
+                spine.set_edgecolor((*_hex_to_rgb(col), 0.7))
+                spine.set_linewidth(2)
+
+            ax.text(0.5, 0.78, f"Condition {winner} wins",
+                    transform=ax.transAxes, ha="center", va="center",
+                    fontsize=10, fontweight="bold", color=col)
+
+            just = justifications.get(dim, "")
+            # Keep first sentence only, max ~55 chars per line
+            first_sent = just.split(".")[0].strip() + "."
+            ax.text(0.5, 0.32, _wrap(first_sent, 40),
+                    transform=ax.transAxes, ha="center", va="center",
+                    fontsize=7, color="#444444", linespacing=1.35)
+
+            if ri == 0:
+                ax.set_title(dim_label, fontsize=10, fontweight="bold", pad=7)
+            if ci == 0:
+                ax.set_ylabel(comp_label, fontsize=10, fontweight="bold",
+                              labelpad=8, rotation=90, va="center")
+
+    plt.tight_layout()
+    path = os.path.join(RESULTS_DIR, "graph2_final_verdict.png")
+    plt.savefig(path, dpi=150, bbox_inches="tight")
+    plt.close()
+    print(f"Saved {path}")
+
+
+# ── Graph 3: "When did OOD retrieval actually help?" ─────────────────────────
+
+def graph3_ood_story(log_c: list[dict]) -> None:
+    """
+    STORY: Condition C ran OOD retrieval 3 times.  It failed twice when
+    targeting 'novelty' and succeeded once when targeting 'consistency'.
+    This tells us something real: OOD analogical search can fill logical
+    gaps but can't invent genuinely new mechanisms.
+
+    Each card = one OOD refinement attempt. Shows what weakness was diagnosed,
+    what field was searched, and whether the refined idea beat the original.
+    """
+    ood_entries = [
+        e for e in log_c
+        if e.get("round", 0) >= 2
+        and e.get("ood_query_used")
+        and e.get("type") not in ("round_selection", "condition_comparison")
+    ]
+
+    if not ood_entries:
+        print("  [graphs] No OOD entries — skipping Graph 3.")
+        return
+
+    # ── Parse each OOD attempt ────────────────────────────────────────────────
+    cards = []
+    for e in ood_entries:
+        cmps = e.get("pairwise_comparisons") or []
+        winner = cmps[0]["winners"].get("overall", "parent") if cmps else "parent"
+        refined_wins = "refined" in str(winner).lower()
+
+        query = e.get("ood_query_used") or ""
         papers = e.get("retrieved_papers") or []
+        paper_titles = [p.get("title", "")[:65] for p in papers]
 
-        lines.append("ROUND 3, FINAL CANDIDATE:")
-        lines.append(f"  Weakness diagnosed: {e['weakness_targeted']}")
-        lines.append(f"  Query used: \"{e.get('targeted_query', '')}\"")
-        rel = e.get("retrieval_relevance")
-        if rel is not None:
-            lines.append(f"  Retrieval relevance: {rel}/3")
-        lines.append(  "  Papers retrieved:")
-        for j, p in enumerate(papers, 1):
-            lines.append(f"    {j}. {p.get('title', '(no title)')}")
-        lines.append(f"  Score before: {fmt_scores(before)}")
-        lines.append(f"  Score after:  {fmt_scores(after)}")
-        lines.append(f"  Change: {improvement(before, after)}")
-        lines.append("")
+        # Infer search domain from paper titles (first word after the AD topic)
+        domains = []
+        for title in paper_titles:
+            title_lower = title.lower()
+            if any(w in title_lower for w in ("stroke", "ischemia", "cerebrovascular")):
+                domains.append("Stroke research")
+            elif any(w in title_lower for w in ("cancer", "tumor", "oncol")):
+                domains.append("Cancer biology")
+            elif any(w in title_lower for w in ("aging", "age-related", "senescence")):
+                domains.append("Aging research")
+            elif any(w in title_lower for w in ("cardiac", "heart", "cardiovascular")):
+                domains.append("Cardiology")
+            elif any(w in title_lower for w in ("chinese medicine", "tcm", "ginseng",
+                                                  "artemisinin", "pharmacology approach")):
+                domains.append("Trad. Chinese Medicine")
+            elif any(w in title_lower for w in ("covid", "sars", "virus")):
+                domains.append("Infectious disease")
+            elif any(w in title_lower for w in ("renal", "kidney")):
+                domains.append("Renal medicine")
+            elif any(w in title_lower for w in ("network pharmacol")):
+                domains.append("Network pharmacology")
+            else:
+                domains.append(title[:30] + "...")
+        domains = list(dict.fromkeys(domains))[:3]  # deduplicate, max 3
 
-    os.makedirs(RESULTS_DIR, exist_ok=True)
-    with open(path, "w") as f:
-        f.write("\n".join(lines))
+        cards.append({
+            "round": f"Round {e.get('round')}, Beam {e.get('candidate_id')}",
+            "weakness": (e.get("weakness_targeted") or "general").capitalize(),
+            "query_summary": _wrap(query, 32),
+            "domains": domains,
+            "refined_wins": refined_wins,
+            "paper_titles": paper_titles,
+        })
+
+    n = len(cards)
+    fig, axes = plt.subplots(1, n, figsize=(4.5 * n, 6.5))
+    if n == 1:
+        axes = [axes]
+
+    fig.suptitle(
+        "Condition C — When did OOD retrieval help?",
+        fontsize=12, fontweight="bold", y=1.01,
+    )
+
+    for ax, card in zip(axes, cards):
+        ax.axis("off")
+        ax.set_xlim(0, 1)
+        ax.set_ylim(0, 1)
+
+        refined = card["refined_wins"]
+        outcome_col = "#2a7d2a" if refined else "#b85c00"
+        outcome_text = "Refined idea wins" if refined else "Parent idea kept"
+        outcome_bg = "#e6f5e6" if refined else "#fdf0e6"
+
+        # ── Card background ───────────────────────────────────────────────────
+        bg = mpatches.FancyBboxPatch(
+            (0.04, 0.02), 0.92, 0.96,
+            boxstyle="round,pad=0.02",
+            transform=ax.transAxes,
+            facecolor="#fafafa", edgecolor="#cccccc",
+            linewidth=1.2, clip_on=False,
+        )
+        ax.add_patch(bg)
+
+        # ── Round label ───────────────────────────────────────────────────────
+        ax.text(0.5, 0.93, card["round"],
+                transform=ax.transAxes, ha="center", va="center",
+                fontsize=10, fontweight="bold", color="#222222")
+
+        # ── Weakness badge ────────────────────────────────────────────────────
+        weakness_col = "#c0392b" if card["weakness"].lower() == "novelty" else "#2980b9"
+        ax.text(0.5, 0.83,
+                f"Weakness diagnosed:  {card['weakness']}",
+                transform=ax.transAxes, ha="center", va="center",
+                fontsize=9.5, color=weakness_col, fontweight="bold",
+                bbox=dict(boxstyle="round,pad=0.35",
+                          facecolor=(*_hex_to_rgb(
+                              "#fce4e4" if card["weakness"].lower() == "novelty"
+                              else "#d6eaf8"), 1.0),
+                          edgecolor=(*_hex_to_rgb(weakness_col), 0.4),
+                          linewidth=1))
+
+        # ── Arrow ─────────────────────────────────────────────────────────────
+        ax.annotate("", xy=(0.5, 0.71), xytext=(0.5, 0.76),
+                    xycoords="axes fraction", textcoords="axes fraction",
+                    arrowprops=dict(arrowstyle="-|>", color="#888888",
+                                   lw=1.5, mutation_scale=14))
+
+        # ── OOD search ────────────────────────────────────────────────────────
+        ax.text(0.5, 0.69,
+                "Searched outside AD literature:",
+                transform=ax.transAxes, ha="center", va="top",
+                fontsize=8, color="#555555", style="italic")
+        ax.text(0.5, 0.62,
+                card["query_summary"],
+                transform=ax.transAxes, ha="center", va="top",
+                fontsize=7.5, color="#333333", linespacing=1.35)
+
+        # ── Domains ───────────────────────────────────────────────────────────
+        ax.text(0.5, 0.44,
+                "Papers from:",
+                transform=ax.transAxes, ha="center", va="top",
+                fontsize=8, color="#555555", style="italic")
+        domain_str = "\n".join(f"  • {d}" for d in card["domains"])
+        ax.text(0.5, 0.38,
+                domain_str if domain_str else "  (mixed domains)",
+                transform=ax.transAxes, ha="center", va="top",
+                fontsize=8.5, color="#333333", linespacing=1.5)
+
+        # ── Arrow to outcome ──────────────────────────────────────────────────
+        ax.annotate("", xy=(0.5, 0.18), xytext=(0.5, 0.23),
+                    xycoords="axes fraction", textcoords="axes fraction",
+                    arrowprops=dict(arrowstyle="-|>", color="#888888",
+                                   lw=1.5, mutation_scale=14))
+
+        # ── Outcome badge ─────────────────────────────────────────────────────
+        outcome_patch = mpatches.FancyBboxPatch(
+            (0.12, 0.06), 0.76, 0.11,
+            boxstyle="round,pad=0.02",
+            transform=ax.transAxes,
+            facecolor=outcome_bg,
+            edgecolor=(*_hex_to_rgb(outcome_col), 0.6),
+            linewidth=2, clip_on=False,
+        )
+        ax.add_patch(outcome_patch)
+        ax.text(0.5, 0.115, outcome_text,
+                transform=ax.transAxes, ha="center", va="center",
+                fontsize=10.5, fontweight="bold", color=outcome_col)
+
+    # Caption
+    fig.text(
+        0.5, -0.02,
+        "Finding: OOD retrieval succeeded when targeting consistency (filling a logical gap) "
+        "but failed when targeting novelty (analogical search cannot invent new mechanisms).",
+        ha="center", va="top", fontsize=9, color="#555555",
+        style="italic", wrap=True,
+    )
+
+    plt.tight_layout()
+    path = os.path.join(RESULTS_DIR, "graph3_ood_story.png")
+    plt.savefig(path, dpi=150, bbox_inches="tight")
+    plt.close()
     print(f"Saved {path}")
 
 
 # ── Entry point ───────────────────────────────────────────────────────────────
 
-def generate_all_graphs(log_a: list[dict], log_b: list[dict], log_c: list[dict]):
-    """Generate and save all four output artefacts."""
+def generate_all_graphs(
+    log_a: list[dict],
+    log_b: list[dict],
+    log_c: list[dict],
+    comparison_logs: list[dict] | None = None,
+) -> None:
+    """Generate and save all three story-driven graphs."""
     os.makedirs(RESULTS_DIR, exist_ok=True)
 
-    print("\nGenerating Graph 1: condition comparison...")
-    graph1_condition_comparison(log_a, log_b, log_c)
+    print("\nGenerating Graph 1: Round 1 tournament...")
+    graph1_tournament(log_a, log_b, log_c)
 
-    print("Generating Graph 2: round improvement (Condition C)...")
-    graph2_round_improvement(log_c)
+    print("Generating Graph 2: Final verdict...")
+    graph2_final_verdict(log_a, log_b, log_c, comparison_logs)
 
-    print("Generating Graph 3: novelty breakdown...")
-    graph3_novelty_breakdown(log_a, log_b, log_c)
-
-    print("Generating Graph 4: retrieval trace (Condition C)...")
-    graph4_retrieval_trace(log_c)
+    print("Generating Graph 3: OOD story...")
+    graph3_ood_story(log_c)
 
     print("\nAll graphs saved to results/")

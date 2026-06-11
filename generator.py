@@ -3,8 +3,8 @@ from __future__ import annotations
 """
 Generation module: produces candidate research hypotheses via the Groq API.
 
-Default model: llama-3.3-70b-versatile (Groq's current 70B Llama; 3.1 70B was
-deprecated). Override with GENERATOR_MODEL env var.
+Default model: llama-3.3-70b-versatile.
+Override with GENERATOR_MODEL env var.
 
 Set GROQ_API_KEY in your environment before running.
 
@@ -17,16 +17,43 @@ Raises GenerationError on any API or parse failure.
 
 import os
 import re
+import time
 
 from groq import Groq
 
-GENERATOR_MODEL = os.environ.get("GENERATOR_MODEL", "llama-3.3-70b-versatile")
+_DEFAULT_GENERATOR = "llama-3.3-70b-versatile"
+_stale_model_warned = False
 
-SEED_TRUNCATE   = 300
-PAPER_TRUNCATE  = 300
+
+def get_generator_model() -> str:
+    """Resolve the active Groq model, ignoring stale Gemini env overrides."""
+    global _stale_model_warned
+    model = os.environ.get("GENERATOR_MODEL", _DEFAULT_GENERATOR).strip()
+    if model and model.startswith("gemini"):
+        if not _stale_model_warned:
+            print(
+                f"  [generator] Ignoring stale GENERATOR_MODEL '{model}' "
+                f"→ {_DEFAULT_GENERATOR}"
+            )
+            _stale_model_warned = True
+        return _DEFAULT_GENERATOR
+    return model or _DEFAULT_GENERATOR
+
+
+GENERATOR_MODEL = _DEFAULT_GENERATOR
+
+SEED_TRUNCATE     = 300
+PAPER_TRUNCATE    = 300
 FEEDBACK_TRUNCATE = 400
 
 _client: Groq | None = None
+
+METHOD_SPECIFICITY_CONSTRAINT = """Your Method sentence MUST name:
+- One specific drug or compound by name
+- One specific biological target or pathway
+- One specific experimental model or validation approach"""
+
+CONDITION_A_NOVELTY_CONSTRAINT = """Do not propose any drug or intervention that has already been investigated for Alzheimer's disease in clinical trials or published research. Only propose connections that combine mechanisms in ways not yet tested."""
 
 
 class GenerationError(RuntimeError):
@@ -73,14 +100,38 @@ def _format_papers(papers: list[dict], truncate: int) -> str:
     return "\n".join(lines)
 
 
+def _rate_limit_wait_seconds(err: Exception) -> float | None:
+    """Parse a suggested wait time from a 429 / rate-limit error message."""
+    msg = str(err)
+    m = re.search(r"try again in (\d+)m([\d.]+)s", msg, re.IGNORECASE)
+    if m:
+        return int(m.group(1)) * 60 + float(m.group(2))
+    m = re.search(r"try again in ([\d.]+)s", msg, re.IGNORECASE)
+    if m:
+        return float(m.group(1))
+    m = re.search(r"retry.{0,30}after.{0,10}(\d+)", msg, re.IGNORECASE)
+    if m:
+        return float(m.group(1))
+    return None
+
+
+def _is_rate_limit(err: Exception) -> bool:
+    msg = str(err).lower()
+    return "rate_limit" in msg or "error code: 429" in msg or "429" in msg
+
+
 def _call_generator(prompt: str) -> str:
-    """Call the generator model via Groq. Raises GenerationError on failure."""
+    """Call Groq. Retries on rate-limit with wait; raises GenerationError on failure."""
     client = _get_client()
     last_err: Exception | None = None
-    for attempt in range(3):
+    non_rate_attempts = 0
+    max_attempts = 8
+    model = get_generator_model()
+
+    for attempt in range(1, max_attempts + 1):
         try:
             r = client.chat.completions.create(
-                model=GENERATOR_MODEL,
+                model=model,
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0,
             )
@@ -92,8 +143,28 @@ def _call_generator(prompt: str) -> str:
             raise
         except Exception as e:
             last_err = e
-            print(f"  [generator] Groq error (attempt {attempt+1}/3): {e}")
-    raise GenerationError(f"Generator failed after 3 attempts: {last_err}") from last_err
+            wait = _rate_limit_wait_seconds(e)
+            if _is_rate_limit(e) and attempt < max_attempts:
+                wait_secs = min((wait or 60) + 2, 900)
+                mins, secs = divmod(int(wait_secs), 60)
+                print(
+                    f"  [generator] Rate limit on {model} — "
+                    f"waiting {mins}m{secs}s before retry ({attempt}/{max_attempts})..."
+                )
+                time.sleep(wait_secs)
+                continue
+            non_rate_attempts += 1
+            print(f"  [generator] Groq error (attempt {attempt}): {e}")
+            if non_rate_attempts >= 3:
+                break
+
+    if last_err and _is_rate_limit(last_err):
+        raise GenerationError(
+            f"Groq token quota exhausted for {model}. "
+            "Wait for the daily limit to reset, upgrade your Groq tier, or "
+            f"set GENERATOR_MODEL to a smaller model. Last error: {last_err}"
+        ) from last_err
+    raise GenerationError(f"Generator failed after retries: {last_err}") from last_err
 
 
 def _clean_field_value(text: str) -> str:
@@ -160,7 +231,11 @@ def _format_existing_ideas(ideas: list[dict]) -> str:
     return "\n".join(lines)
 
 
-def _generation_prompt(literature: str, existing: list[dict]) -> str:
+def _generation_prompt(
+    literature: str,
+    existing: list[dict],
+    condition: str | None = None,
+) -> str:
     diversity = ""
     if existing:
         diversity = f"""
@@ -168,17 +243,22 @@ These hypotheses were already generated — yours must be clearly different
 (different drug/target, mechanism, or approach):
 {_format_existing_ideas(existing)}
 """
+    condition_a_rule = ""
+    if condition == "A":
+        condition_a_rule = f"\n{CONDITION_A_NOVELTY_CONSTRAINT}\n"
     return f"""You are a biomedical research assistant helping generate novel drug repurposing hypotheses for Alzheimer's disease.
 
 Here is relevant literature:
 {literature}
 {diversity}
 Generate ONE distinct research hypothesis for drug repurposing in Alzheimer's disease that goes BEYOND what is already described in these papers.
+{condition_a_rule}
+{METHOD_SPECIFICITY_CONSTRAINT}
 
 Use EXACTLY this plain-text format (no markdown, no bold, no bullets):
 
 Problem: [one sentence]
-Method: [one sentence]
+Method: [one sentence — must include the drug, target/pathway, and experimental model named above]
 Contribution: [one sentence]"""
 
 
@@ -191,6 +271,7 @@ def generate_candidates(
     seed_papers: list[dict],
     retrieved_papers: list[dict],
     n: int = 5,
+    condition: str | None = None,
 ) -> list[dict]:
     """Generate exactly n candidate research ideas. Raises on any failure."""
     literature = _build_literature_block(seed_papers, retrieved_papers)
@@ -201,7 +282,7 @@ def generate_candidates(
     for i in range(1, n + 1):
         idea: dict | None = None
         for attempt in range(max_dup_retries):
-            prompt = _generation_prompt(literature, ideas)
+            prompt = _generation_prompt(literature, ideas, condition=condition)
             if attempt > 0:
                 prompt += (
                     f"\n\nYour previous answer duplicated an existing hypothesis. "
@@ -274,10 +355,11 @@ Revise the hypothesis to address the weakness using inspiration from these adjac
 - Do NOT add new diseases, targets, or mechanisms beyond what is necessary to fix the specific weakness
 - The revised method sentence must be SHORTER than or equal to the current method sentence in word count
 - Do not mention the adjacent field papers directly
+- {METHOD_SPECIFICITY_CONSTRAINT}
 
 Use exactly this format:
 Problem: [revised or unchanged]
-Method: [revised — must be shorter or equal length]
+Method: [revised — must be shorter or equal length and include the drug, target/pathway, and experimental model named above]
 Contribution: [revised or unchanged]"""
     else:
         paper_block = _format_papers(gap_papers, PAPER_TRUNCATE)
@@ -298,10 +380,11 @@ Revise the hypothesis to address ONLY the identified weakness.
 Do NOT add new concepts, mechanisms, or approaches.
 Make it MORE specific, not more comprehensive.
 Keep the revised idea to the same length or shorter than the original.
+{METHOD_SPECIFICITY_CONSTRAINT}
 Use EXACTLY this plain-text format (no markdown, no bold, no bullets):
 
 Problem: [revised or same]
-Method: [revised to address weakness]
+Method: [revised to address weakness — must include the drug, target/pathway, and experimental model named above]
 Contribution: [revised or same]"""
 
     text = _call_generator(prompt)
