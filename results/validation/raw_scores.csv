@@ -1,0 +1,26 @@
+anon_id,true_tier,degradation_type,origin_source_id,compound,text,rubric_novelty_r1,rubric_novelty_r2,rubric_specificity_r1,rubric_specificity_r2,holistic_r1,holistic_r2
+H001,,novelty,T1-A,Metformin,Metformin may reduce amyloid-beta accumulation and plaque formation relevant to Alzheimer's disease.,2,2,4,4,4,4
+H002,3,,,Tamoxifen,"Tamoxifen, a selective estrogen receptor modulator, may have a repurposing role in Alzheimer's disease.",3,2,4,4,3,3
+H003,2,,,Acamprosate,Acamprosate may modulate glutamatergic signaling to produce non-redundant impact on Alzheimer's disease network pathophysiology.,4,3,4,4,3,3
+H004,,specificity,T1-C,Pioglitazone,Pioglitazone may affect brain processes relevant to Alzheimer's disease.,2,2,2,2,2,3
+H005,,novelty,T1-B,Liraglutide,Liraglutide may reduce amyloid-beta accumulation and plaque formation relevant to Alzheimer's disease.,2,2,4,4,4,3
+H006,2,,,Ibudilast,Ibudilast may inhibit phosphodiesterase and neuroinflammatory glial activation to reduce amyloid and tau pathology relevant to Alzheimer's disease.,3,2,4,4,4,3
+H007,2,,,Baclofen,Baclofen may act on GABA-B receptor signaling to produce non-redundant modulation of Alzheimer's disease network pathophysiology.,3,4,4,4,3,2
+H008,3,,,Clozapine,Clozapine may have effects relevant to Alzheimer's disease.,2,3,2,2,2,2
+H009,,specificity,T1-A,Metformin,Metformin may affect brain processes relevant to Alzheimer's disease.,2,2,2,3,3,3
+H010,,specificity,T1-D,Losartan,Losartan may affect processes relevant to Alzheimer's disease.,3,3,3,2,2,2
+H011,3,,,Verapamil,"Verapamil, a calcium channel blocker, may be beneficial in Alzheimer's disease.",2,3,2,2,3,3
+H012,,specificity,T1-B,Liraglutide,Liraglutide may affect brain processes relevant to Alzheimer's disease.,2,2,2,2,4,3
+H013,1,,,Liraglutide,"Liraglutide may activate the GLP-1 receptor to reduce neuroinflammation, improve neuronal insulin signaling, and slow cortical atrophy relevant to Alzheimer's disease.",3,3,5,5,4,4
+H014,3,,,Vandetanib,"Vandetanib, a tyrosine kinase inhibitor, may be repurposable for Alzheimer's disease.",3,2,4,4,2,2
+H015,,novelty,T1-D,Losartan,"Losartan may reduce amyloid-beta accumulation and plaque formation, relevant to slowing Alzheimer's disease progression.",2,2,4,4,3,3
+H016,3,,,Adenosine,Adenosine may have relevance to Alzheimer's disease treatment.,4,3,2,2,2,2
+H017,1,,,Pioglitazone,Pioglitazone may activate PPAR-γ to stabilize cerebral glucose and lipid metabolism and reduce neuroinflammation relevant to delaying Alzheimer's disease onset.,3,2,5,5,3,3
+H018,,specificity,T1-E,Sildenafil,Sildenafil may affect brain processes relevant to Alzheimer's disease.,3,3,3,4,3,3
+H019,1,,,Sildenafil,Sildenafil may inhibit phosphodiesterase-5 to increase cGMP signaling and reduce tau phosphorylation and amyloid accumulation relevant to Alzheimer's disease.,2,2,5,5,3,3
+H020,,novelty,T1-E,Sildenafil,"Sildenafil may reduce amyloid-beta accumulation and plaque formation, relevant to Alzheimer's disease.",2,2,4,5,3,3
+H021,2,,,Chenodiol,Chenodiol may act as a primary bile acid modulating an AD-related endophenotype network to produce disease-relevant molecular effects in Alzheimer's disease.,4,4,4,4,3,3
+H022,2,,,Arundine,Arundine may modulate AD-associated endophenotype pathways to produce protective molecular effects relevant to Alzheimer's disease.,2,2,3,3,2,2
+H023,1,,,Metformin,Metformin may activate AMPK and modulate the mTOR pathway to reduce neuroinflammation and tau pathology relevant to Alzheimer's disease.,2,2,4,5,4,4
+H024,1,,,Losartan,Losartan may antagonize the angiotensin II type 1 receptor to reduce oxidative stress and cerebrovascular dysfunction relevant to slowing Alzheimer's disease progression.,3,3,5,5,4,4
+H025,,novelty,T1-C,Pioglitazone,"Pioglitazone may reduce amyloid-beta accumulation and plaque formation, relevant to delaying Alzheimer's disease onset.",1,2,5,5,3,3

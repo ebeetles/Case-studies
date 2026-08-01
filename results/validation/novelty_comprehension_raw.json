@@ -1,0 +1,54 @@
+[
+  {
+    "compound": "metformin",
+    "condition": "pre",
+    "cutoff": "2012-01-01",
+    "comprehension_answer": "NO",
+    "expected_answer": "NO",
+    "comprehension_correct": true,
+    "comprehension_raw": "NO\n\nThe provided literature does **not** describe a connection between **metformin** and **AMPK/mTOR pathway modulation reducing tau pathology or neuroinflammation in Alzheimer\u2019s disease**.\n\nWhat it does contain instead:\n- **Metformin/AMPK papers**: These describe metformin activating **AMP-activated protein kinase (AMPK)** and affecting **hepatic glucose production**, **insulin sensitivity**, and **lipogenic/glucose metabolism**. For example, one entry says metformin \u201c**lowers hepatic glucose production and increases insulin sensitivity via AMPK activation**,\u201d and another says metformin \u201c**activates AMP-activated protein kinase (AMPK) in intact cells**.\u201d\n- **Alzheimer\u2019s review**: The Alzheimer\u2019s paper reviews the **amyloid hypothesis**, including \u201c**amyloid-beta production, aggregation, and downstream tau pathology**,\u201d but it explicitly does **not** mention metformin, AMPK, mTOR, or diabetes-drug repurposing.\n\nSo, based only on the provided literature, there is **no stated link** between metformin-driven AMPK/mTOR modulation and reduced tau pathology or neuroinflammation in Alzheimer\u2019s disease.",
+    "novelty_score": 3,
+    "novelty_justification": "This is a plausible and fairly expected repurposing rationale: metformin\u2019s known AMPK activation is being linked to AD-relevant processes like neuroinflammation and tau pathology, but the provided literature does not show a prior AD-specific mechanistic connection, making it neither fully established nor highly non-obvious.",
+    "judge_delta_post_minus_pre": 0,
+    "matches_expected_decay_direction": false
+  },
+  {
+    "compound": "metformin",
+    "condition": "post",
+    "cutoff": "2012-01-01",
+    "comprehension_answer": "NO",
+    "expected_answer": "YES",
+    "comprehension_correct": false,
+    "comprehension_raw": "NO\n\nThe provided literature does describe metformin as modulating the **AMPK/mTOR/S6K1 axis** in Alzheimer\u2019s disease, but only in the context of **reducing BACE1-mediated amyloid precursor protein processing and lowering amyloid-beta production/toxicity**:\n\n- \u201cMetformin activates AMPK in brain tissue, which modulates the mTOR/S6K1 signaling axis and reduces BACE1-mediated processing of amyloid precursor protein, decreasing amyloid-beta production and toxicity\u2026\u201d\n\nThe other entries describe broader associations with **lower AD risk, better cognitive performance**, and possible mechanisms such as **suppression of APOE and SPP1 expression**, but they do **not** explicitly connect metformin\u2019s AMPK/mTOR modulation to **tau pathology** or **neuroinflammation** in the text provided.",
+    "novelty_score": 3,
+    "novelty_justification": "This is a plausible and fairly expected AD repurposing rationale: the provided literature already links metformin to AMPK/mTOR/S6K/BACE1 effects, reduced amyloid-beta, and broader AD-relevant associations, so the added neuroinflammation/tau angle is extension rather than a highly novel mechanistic leap.",
+    "judge_delta_post_minus_pre": 0,
+    "matches_expected_decay_direction": false
+  },
+  {
+    "compound": "sildenafil",
+    "condition": "pre",
+    "cutoff": "2021-12-06",
+    "comprehension_answer": "NO",
+    "expected_answer": "NO",
+    "comprehension_correct": true,
+    "comprehension_raw": "NO\n\nThe provided literature does **not** describe a connection between sildenafil and PDE5 inhibition/cGMP signaling reducing tau phosphorylation or amyloid accumulation in Alzheimer\u2019s disease.\n\nWhat it does contain instead:\n- **Cardiac phosphodiesterase 5 (2001):** discusses PDE5 in **cardiac tissue**, its role in **cGMP-mediated beta-adrenergic signaling**, and its **down-regulation in heart failure**.\n- **Network medicine (2011):** presents a **general disease-network and drug-repurposing framework**, with no mention of sildenafil, PDE5, or Alzheimer\u2019s disease.\n- **Oral Sildenafil in the Treatment of Erectile Dysfunction (1998):** shows sildenafil as an **oral PDE5 inhibitor for erectile dysfunction**, with no cognitive, neurodegenerative, tau, amyloid, or Alzheimer\u2019s endpoints.\n\nSo, based only on the provided literature, there is **no** stated Alzheimer\u2019s-related mechanism involving sildenafil, PDE5 inhibition, cGMP signaling, tau phosphorylation, or amyloid accumulation.",
+    "novelty_score": 3,
+    "novelty_justification": "This is a plausible repurposing hypothesis with a clear mechanistic bridge (PDE5 inhibition \u2192 increased cGMP signaling \u2192 potential effects on tau/amyloid), but the provided literature snapshot does not show a specific AD-focused, non-obvious connection beyond a reasonable extrapolation from known signaling biology.",
+    "judge_delta_post_minus_pre": -1,
+    "matches_expected_decay_direction": true
+  },
+  {
+    "compound": "sildenafil",
+    "condition": "post",
+    "cutoff": "2021-12-06",
+    "comprehension_answer": "YES",
+    "expected_answer": "YES",
+    "comprehension_correct": true,
+    "comprehension_raw": "YES\n\nThe provided literature does describe that connection. Specifically, the 2025 summary says: **\u201cPDE5 inhibition increases cGMP signaling, reduces phospho-tau181, and decreases amyloid-beta, supporting the network-medicine candidate identification with direct experimental evidence.\u201d**\n\nThis directly links sildenafil/PDE5 inhibition and cGMP signaling to reduced tau phosphorylation and reduced amyloid accumulation in the context of Alzheimer\u2019s disease.",
+    "novelty_score": 2,
+    "novelty_justification": "This is a fairly expected AD repurposing idea because it leverages a standard PDE5\u2192cGMP\u2192neuroprotection rationale that is directly supported by the provided network and retrospective human-data literature, rather than introducing a distinctly novel AD-specific mechanistic angle.",
+    "judge_delta_post_minus_pre": -1,
+    "matches_expected_decay_direction": true
+  }
+]

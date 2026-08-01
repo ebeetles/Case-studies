@@ -1,0 +1,131 @@
+{
+  "axiom1": {
+    "Metformin": {
+      "baseline": {
+        "observed_AC": 8,
+        "count_A": 6862,
+        "count_C": 77474,
+        "total": 20804671,
+        "pmi_AC": 0.31307194139056116
+      },
+      "injected_abstract": "Metformin has been proposed as a treatment for Alzheimer's disease via AMPK activation.",
+      "after": {
+        "matched_AC": true,
+        "observed_AC": 9,
+        "count_A": 6863,
+        "count_C": 77475,
+        "total": 20804672,
+        "pmi_AC": 0.3521500860641522
+      }
+    },
+    "Liraglutide": {
+      "baseline": {
+        "observed_AC": 1,
+        "count_A": 177,
+        "count_C": 71234,
+        "total": 19954080,
+        "pmi_AC": 1.5825998154566259
+      },
+      "injected_abstract": "Liraglutide has been proposed as a treatment for Alzheimer's disease via GLP-1 receptor signaling.",
+      "after": {
+        "matched_AC": true,
+        "observed_AC": 2,
+        "count_A": 178,
+        "count_C": 71235,
+        "total": 19954081,
+        "pmi_AC": 3.147373584661624
+      }
+    }
+  },
+  "axiom2": {
+    "Metformin": {
+      "baseline": {
+        "observed_AC": 8,
+        "count_A": 6862,
+        "count_C": 77474,
+        "total": 20804671,
+        "pmi_AC": 0.31307194139056116
+      },
+      "injected_abstract": "Evidence suggests metformin may modulate AMPK pathways implicated in Alzheimer's disease neurodegeneration.",
+      "after": {
+        "matched_AC": true,
+        "observed_AC": 9,
+        "count_A": 6863,
+        "count_C": 77475,
+        "total": 20804672,
+        "pmi_AC": 0.3521500860641522
+      }
+    },
+    "Liraglutide": {
+      "baseline": {
+        "observed_AC": 1,
+        "count_A": 177,
+        "count_C": 71234,
+        "total": 19954080,
+        "pmi_AC": 1.5825998154566259
+      },
+      "injected_abstract": "Evidence suggests liraglutide may modulate GLP-1 receptor pathways implicated in Alzheimer's disease neurodegeneration.",
+      "after": {
+        "matched_AC": true,
+        "observed_AC": 2,
+        "count_A": 178,
+        "count_C": 71235,
+        "total": 19954081,
+        "pmi_AC": 3.147373584661624
+      }
+    }
+  },
+  "axiom4": {
+    "Metformin": {
+      "offtopic": {
+        "maxdate": "2010/12/31",
+        "corpus_size": 14197,
+        "count_A": 1,
+        "count_C": 15,
+        "observed_AC": 0,
+        "expected_AC": 0.0010565612453335212,
+        "pmi_AC": 0.0
+      },
+      "baseline_ad_corpus_pmi": 0.31307194139056116,
+      "baseline_window": "2010/12/31"
+    }
+  },
+  "query_log_axiom4": [
+    {
+      "link": "offtopic-total",
+      "context": "axiom4/Metformin",
+      "term": "(\"materials science\"[Title/Abstract] OR \"semiconductor\"[Title/Abstract] OR \"fluid dynamics\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2010/12/31",
+      "count": 14197,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22materials+science%22%5BTitle%2FAbstract%5D+OR+%22semiconductor%22%5BTitle%2FAbstract%5D+OR+%22fluid+dynamics%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2010%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "offtopic-A",
+      "context": "axiom4/Metformin",
+      "term": "(\"materials science\"[Title/Abstract] OR \"semiconductor\"[Title/Abstract] OR \"fluid dynamics\"[Title/Abstract]) AND (\"Metformin\"[MeSH Terms] OR \"Metformin\"[Title/Abstract] OR \"Glucophage\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2010/12/31",
+      "count": 1,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22materials+science%22%5BTitle%2FAbstract%5D+OR+%22semiconductor%22%5BTitle%2FAbstract%5D+OR+%22fluid+dynamics%22%5BTitle%2FAbstract%5D%29+AND+%28%22Metformin%22%5BMeSH+Terms%5D+OR+%22Metformin%22%5BTitle%2FAbstract%5D+OR+%22Glucophage%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2010%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "offtopic-C",
+      "context": "axiom4/Metformin",
+      "term": "(\"materials science\"[Title/Abstract] OR \"semiconductor\"[Title/Abstract] OR \"fluid dynamics\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2010/12/31",
+      "count": 15,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22materials+science%22%5BTitle%2FAbstract%5D+OR+%22semiconductor%22%5BTitle%2FAbstract%5D+OR+%22fluid+dynamics%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2010%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "offtopic-A-C",
+      "context": "axiom4/Metformin",
+      "term": "(\"materials science\"[Title/Abstract] OR \"semiconductor\"[Title/Abstract] OR \"fluid dynamics\"[Title/Abstract]) AND (\"Metformin\"[MeSH Terms] OR \"Metformin\"[Title/Abstract] OR \"Glucophage\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2010/12/31",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22materials+science%22%5BTitle%2FAbstract%5D+OR+%22semiconductor%22%5BTitle%2FAbstract%5D+OR+%22fluid+dynamics%22%5BTitle%2FAbstract%5D%29+AND+%28%22Metformin%22%5BMeSH+Terms%5D+OR+%22Metformin%22%5BTitle%2FAbstract%5D+OR+%22Glucophage%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2010%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    }
+  ]
+}

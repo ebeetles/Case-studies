@@ -1,0 +1,62 @@
+{
+  "embedding_model": "text-embedding-3-small",
+  "conditions": {
+    "A": {
+      "n": 3,
+      "within_pairwise_cosine_sim": 0.7004101673762003,
+      "mean_centroid_distance": 0.10541991392771403,
+      "hypotheses": [
+        {
+          "run_id": 1,
+          "embedding_text": "The drug fenofibrate, a peroxisome proliferator-activated receptor alpha agonist, will be investigated for its potential to modulate the nuclear factor erythroid 2-related factor 2 pathway, a key regulator of mitochondrial biogenesis and antioxidant responses, using a combination of in vitro experiments in human brain microvascular endothelial cells and in vivo validation in the 5xFAD mouse model of Alzheimer's disease. This research will contribute to the development of a new therapeutic approach for Alzheimer's disease by demonstrating the potential of fenofibrate to mitigate blood-brain barrier disruption, reduce neuroinflammation, and promote mitochondrial function, thereby providing a novel avenue for the treatment of this complex neurodegenerative disorder."
+        },
+        {
+          "run_id": 2,
+          "embedding_text": "The drug fasudil, a rho-kinase inhibitor, will be investigated for its potential to modulate the NF-\u03baB pathway, a key regulator of neuroinflammatory responses, in an experimental model of Alzheimer's disease using human-induced pluripotent stem cell-derived microglia and a blood-brain barrier-on-a-chip system. This research will contribute to the development of innovative therapeutic approaches for Alzheimer's disease by elucidating the therapeutic potential of targeting the rho-kinase/NF-\u03baB axis in a disease-relevant model that recapitulates the complex interactions between microglia, the blood-brain barrier, and neuroinflammatory pathways."
+        },
+        {
+          "run_id": 3,
+          "embedding_text": "The drug sulforaphane, a naturally occurring isothiocyanate, will be investigated for its potential to modulate the Nrf2-KEAP1 pathway, a key regulator of mitochondrial biogenesis and antioxidant responses, and its downstream effects on TREM2 receptor signaling, using a combination of in vitro experiments in human microglial cells and in vivo validation in the APP/PS1 mouse model of Alzheimer's disease. This research will contribute to the development of a new therapeutic approach for Alzheimer's disease by demonstrating the efficacy of sulforaphane in reducing neuroinflammation, improving mitochondrial function, and enhancing TREM2 receptor signaling, thereby providing a novel disease-modifying strategy for the treatment of this devastating neurodegenerative disorder."
+        }
+      ]
+    },
+    "B": {
+      "n": 3,
+      "within_pairwise_cosine_sim": 0.7496593594551086,
+      "mean_centroid_distance": 0.08725353082021077,
+      "hypotheses": [
+        {
+          "run_id": 1,
+          "embedding_text": "We propose to investigate the potential of salsalate, a nonsteroidal anti-inflammatory drug, to modulate the glycogen synthase kinase 3 beta pathway, a key regulator of tau phosphorylation, using a combination of in vitro experiments in human neuronal cells and in vivo validation in the rTg4510 mouse model of tauopathy. This study aims to contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of salsalate as a disease-modifying treatment that can mitigate tau pathology, reduce neuroinflammation, and slow down disease progression."
+        },
+        {
+          "run_id": 2,
+          "embedding_text": "We propose to investigate the potential of metformin, a widely used antidiabetic drug, to modulate the NLRP3 inflammasome pathway, a key regulator of neuroinflammation, using a combination of in vitro experiments in human microglial cells and in vivo validation in the 5xFAD mouse model of Alzheimer's disease. This study aims to contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of metformin as a disease-modifying treatment that targets the NLRP3 inflammasome pathway, thereby addressing a critical gap in the current understanding of the disease's pathophysiology."
+        },
+        {
+          "run_id": 3,
+          "embedding_text": "We propose to investigate the potential of metformin to modulate the NLRP3 inflammasome pathway in a transgenic Alzheimer's disease mouse model, using a combination of behavioral and biochemical approaches to validate its therapeutic efficacy. This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of metformin as a disease-modifying treatment that targets multiple pathophysiological mechanisms underlying the disease."
+        }
+      ]
+    },
+    "C": {
+      "n": 3,
+      "within_pairwise_cosine_sim": 0.9478575984636942,
+      "mean_centroid_distance": 0.017534573872884113,
+      "hypotheses": [
+        {
+          "run_id": 1,
+          "embedding_text": "We will investigate metformin's ability to modulate the NLRP3 inflammasome pathway in human microglial cells, using the 5xFAD mouse model for in vivo validation. This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of metformin as a disease-modifying treatment that targets the NLRP3 inflammasome pathway, a key regulator of neuroinflammation."
+        },
+        {
+          "run_id": 2,
+          "embedding_text": "We propose to investigate metformin's ability to modulate the NLRP3 inflammasome pathway in the 5XFAD mouse model. This study aims to contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of metformin as a disease-modifying treatment that can simultaneously target multiple pathophysiological mechanisms underlying the disease."
+        },
+        {
+          "run_id": 3,
+          "embedding_text": "We will investigate metformin's effect on the NLRP3 inflammasome pathway in human microglial cells, validated using the 5xFAD mouse model. This study will contribute to the development of a novel therapeutic strategy for Alzheimer's disease by providing evidence for the repurposing of metformin as a disease-modifying treatment that targets the NLRP3 inflammasome pathway, a key regulator of neuroinflammation."
+        }
+      ]
+    }
+  }
+}

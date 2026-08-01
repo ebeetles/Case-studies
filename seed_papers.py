@@ -8,96 +8,103 @@ for each query. Fetched via:
 """
 
 SEED_PAPERS = [
-    # Topic 1: Neuroinflammation and microglial activation in Alzheimer's disease
+
+    # Paper 1: Brain insulin resistance — describes the problem, no solution
+    {
+        "title": "Brain insulin resistance in Alzheimer's disease and "
+                 "related disorders: mechanisms and therapeutic approaches",
+        "abstract": (
+            "Insulin signalling in the brain regulates neuronal survival, "
+            "synaptic plasticity, and glucose metabolism. In Alzheimer's "
+            "disease, insulin resistance develops in the brain independently "
+            "of peripheral metabolic status, impairing downstream signalling "
+            "through PI3K-AKT and MAPK pathways. Brain insulin resistance "
+            "reduces neuronal glucose uptake, impairs mitochondrial function, "
+            "promotes tau hyperphosphorylation, and increases amyloid-beta "
+            "production. Intranasal insulin delivery has shown cognitive "
+            "benefits in early clinical trials, providing proof-of-concept "
+            "that restoring insulin signalling in the brain could be "
+            "therapeutically meaningful. The overlap between Alzheimer's "
+            "disease and type 2 diabetes at the molecular level has led to "
+            "the hypothesis that Alzheimer's disease represents a form of "
+            "brain-specific insulin resistance."
+        ),
+    },
+
+    # Paper 2: Impaired glucose metabolism — describes the problem, no solution
+    {
+        "title": "Cerebral glucose metabolism in Alzheimer's disease",
+        "abstract": (
+            "Reduced cerebral glucose metabolism is one of the earliest and "
+            "most consistent findings in Alzheimer's disease, detectable by "
+            "FDG-PET imaging years before symptom onset. Hypometabolism begins "
+            "in the posterior cingulate cortex and precuneus and spreads to "
+            "association cortices as disease progresses. The reduction in "
+            "glucose metabolism is not fully explained by neuronal loss alone, "
+            "suggesting impaired glucose transport and utilisation at the "
+            "cellular level. Decreased expression of glucose transporters "
+            "GLUT1 and GLUT3 has been observed in affected brain regions. "
+            "Ketone bodies can partially compensate for reduced glucose "
+            "metabolism, supporting the hypothesis that the metabolic deficit "
+            "is a driver rather than a downstream consequence of "
+            "neurodegeneration."
+        ),
+    },
+
+    # Paper 3: Neuroinflammation — standard background, no drug hint
     {
         "title": "Neuroinflammation in Alzheimer's disease",
         "abstract": (
-            "Increasing evidence suggests that Alzheimer's disease pathogenesis is not restricted "
-            "to the neuronal compartment, but includes strong interactions with immunological "
-            "mechanisms in the brain. Misfolded and aggregated proteins bind to pattern recognition "
-            "receptors on microglia and astroglia, and trigger an innate immune response "
-            "characterised by release of inflammatory mediators, which contribute to disease "
-            "progression and severity. Genome-wide association studies have confirmed that many "
-            "genes expressed in microglia play critical roles in the risk for Alzheimer's disease. "
-            "Neuroinflammation in Alzheimer's disease is characterised by microglial and astrocytic "
-            "activation, increased expression of pro-inflammatory cytokines and chemokines, and "
-            "activation of the complement cascade. Although inflammation initially has a protective "
-            "role in clearing amyloid-beta plaques, sustained neuroinflammatory signalling ultimately "
-            "contributes to synaptic dysfunction, tau pathology, and neurodegeneration."
+            "Alzheimer's disease pathogenesis is not restricted to the "
+            "neuronal compartment but includes strong interactions with "
+            "immunological mechanisms in the brain. Misfolded and aggregated "
+            "proteins bind to pattern recognition receptors on microglia and "
+            "astroglia, triggering an innate immune response characterised "
+            "by release of inflammatory mediators that contribute to disease "
+            "progression. Neuroinflammation involves microglial and astrocytic "
+            "activation, increased pro-inflammatory cytokines and chemokines, "
+            "and complement cascade activation. Although inflammation initially "
+            "has a protective role in clearing amyloid-beta, sustained "
+            "neuroinflammatory signalling ultimately contributes to synaptic "
+            "dysfunction, tau pathology, and neurodegeneration."
         ),
     },
 
-    # Topic 2: Tau protein aggregation mechanisms in Alzheimer's disease
+    # Paper 4: Tau pathology — standard background, no drug hint
     {
         "title": "Tau in Alzheimer disease and related tauopathies",
         "abstract": (
-            "The microtubule-associated protein tau is the principal component of the neurofibrillary "
-            "tangles that define Alzheimer's disease and a large group of neurodegenerative disorders "
-            "called tauopathies. In the healthy brain, tau stabilises microtubules and facilitates "
-            "axonal transport. In disease, tau undergoes abnormal post-translational modifications, "
-            "including hyperphosphorylation, acetylation, and truncation, which reduce its affinity "
-            "for microtubules and promote its self-aggregation into paired helical filaments and "
-            "neurofibrillary tangles. Pathological tau spreads through the brain in a prion-like "
-            "manner via synaptic connections, providing the basis for the Braak staging system. "
-            "The burden of neurofibrillary tangles correlates more closely with cognitive decline "
-            "than amyloid-beta plaque load, making tau a priority therapeutic target. Current "
-            "strategies include tau aggregation inhibitors, kinase inhibitors that prevent "
-            "hyperphosphorylation, and immunotherapies targeting extracellular tau species."
+            "The microtubule-associated protein tau is the principal component "
+            "of neurofibrillary tangles in Alzheimer's disease. In healthy "
+            "neurons, tau stabilises microtubules and facilitates axonal "
+            "transport. In disease, tau undergoes abnormal post-translational "
+            "modifications including hyperphosphorylation and truncation, "
+            "reducing its affinity for microtubules and promoting "
+            "self-aggregation into paired helical filaments. Pathological tau "
+            "spreads through the brain in a prion-like manner via synaptic "
+            "connections. Tau burden correlates more closely with cognitive "
+            "decline than amyloid-beta plaque load, making tau a priority "
+            "therapeutic target. Current strategies include tau aggregation "
+            "inhibitors, kinase inhibitors, and immunotherapies."
         ),
     },
 
-    # Topic 3: TREM2 signaling pathway in Alzheimer's disease
-    {
-        "title": "TREM2 in Alzheimer's disease: receptor signalling and disease mechanisms",
-        "abstract": (
-            "Triggering receptor expressed on myeloid cells 2 (TREM2) is a lipid-sensing receptor "
-            "expressed on microglia that plays a critical role in microglial survival, proliferation, "
-            "and phagocytic activity. Rare variants in TREM2, particularly the R47H variant, confer "
-            "a risk for Alzheimer's disease comparable to one copy of the APOE4 allele. TREM2 "
-            "signals through the adaptor protein TYROBP/DAP12, activating downstream PI3K-AKT and "
-            "MAPK pathways that regulate microglial metabolism and inflammatory responses. Loss of "
-            "TREM2 function impairs microglial clustering around amyloid plaques, reduces amyloid "
-            "clearance, and increases neurotoxicity. Disease-associated microglia, a transcriptionally "
-            "distinct microglial state observed in Alzheimer's disease, require TREM2 signalling for "
-            "their induction. Therapeutic strategies targeting TREM2 include agonist antibodies "
-            "designed to enhance microglial function and promote amyloid clearance."
-        ),
-    },
-
-    # Topic 4: Blood-brain barrier dysfunction in Alzheimer's disease
-    {
-        "title": "Blood-brain barrier breakdown in Alzheimer disease and other neurodegenerative disorders",
-        "abstract": (
-            "The blood-brain barrier is a highly selective semipermeable border of endothelial cells "
-            "that prevents solutes in the circulating blood from non-selectively crossing into the "
-            "extracellular fluid of the central nervous system. In Alzheimer's disease, breakdown of "
-            "the blood-brain barrier occurs early in disease progression and is associated with "
-            "cognitive impairment. Blood-brain barrier dysfunction in Alzheimer's disease involves "
-            "loss of tight junction proteins, reduced expression of major efflux transporters such as "
-            "P-glycoprotein and LRP1 that normally clear amyloid-beta from the brain, accumulation of "
-            "perivascular amyloid-beta, and increased transcytosis. Pericyte loss, which is among the "
-            "earliest cellular changes in Alzheimer's disease, is a key driver of blood-brain barrier "
-            "breakdown and is detectable via cerebrospinal fluid biomarkers including PDGFR-beta. "
-            "Restoring blood-brain barrier integrity represents a promising therapeutic approach."
-        ),
-    },
-
-    # Topic 5: Mitochondrial dysfunction in Alzheimer's disease
+    # Paper 5: Mitochondrial dysfunction — describes the metabolic problem
     {
         "title": "Mitochondria and Mitochondrial Cascades in Alzheimer's Disease",
         "abstract": (
-            "Mitochondria have a fundamental role in Alzheimer's disease pathology. The mitochondrial "
-            "cascade hypothesis proposes that inherited mitochondrial function and age-related "
-            "mitochondrial decline determine the timing of Alzheimer's disease onset and progression. "
-            "In Alzheimer's disease, mitochondrial dysfunction is characterised by impaired oxidative "
-            "phosphorylation, reduced ATP production, increased reactive oxygen species generation, "
-            "altered mitochondrial dynamics including impaired fission and fusion, and defective "
-            "mitophagy. Amyloid-beta and phosphorylated tau both interact with mitochondrial proteins "
-            "to impair electron transport chain activity, particularly at complexes I and IV. "
-            "Mitochondrial dysfunction precedes amyloid plaque deposition and neurofibrillary tangle "
-            "formation in some model systems, suggesting it may be an upstream driver rather than a "
-            "downstream consequence. Therapeutic strategies targeting mitochondrial dysfunction "
-            "include antioxidants, mitochondria-targeted peptides, and agents that enhance mitophagy."
+            "Mitochondria have a fundamental role in Alzheimer's disease "
+            "pathology. The mitochondrial cascade hypothesis proposes that "
+            "inherited mitochondrial function and age-related mitochondrial "
+            "decline determine timing of disease onset. In Alzheimer's "
+            "disease, mitochondrial dysfunction involves impaired oxidative "
+            "phosphorylation, reduced ATP production, increased reactive "
+            "oxygen species, and defective mitophagy. Amyloid-beta and "
+            "phosphorylated tau interact with mitochondrial proteins to impair "
+            "electron transport chain activity. Mitochondrial dysfunction "
+            "precedes amyloid plaque and tangle formation in some model "
+            "systems, suggesting it may be an upstream driver of "
+            "neurodegeneration rather than a downstream consequence."
         ),
     },
 ]

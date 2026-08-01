@@ -120,7 +120,7 @@ def _is_rate_limit(err: Exception) -> bool:
     return "rate_limit" in msg or "error code: 429" in msg or "429" in msg
 
 
-def _call_generator(prompt: str) -> str:
+def _call_generator(prompt: str, temperature: float = 0) -> str:
     """Call Groq. Retries on rate-limit with wait; raises GenerationError on failure."""
     client = _get_client()
     last_err: Exception | None = None
@@ -133,7 +133,7 @@ def _call_generator(prompt: str) -> str:
             r = client.chat.completions.create(
                 model=model,
                 messages=[{"role": "user", "content": prompt}],
-                temperature=0,
+                temperature=temperature,
             )
             text = r.choices[0].message.content
             if text and text.strip():
@@ -272,6 +272,7 @@ def generate_candidates(
     retrieved_papers: list[dict],
     n: int = 5,
     condition: str | None = None,
+    temperature: float = 0,
 ) -> list[dict]:
     """Generate exactly n candidate research ideas. Raises on any failure."""
     literature = _build_literature_block(seed_papers, retrieved_papers)
@@ -289,7 +290,7 @@ def generate_candidates(
                     f"Attempt {attempt + 1}: pick a different drug class, molecular "
                     f"target, or biological pathway."
                 )
-            text = _call_generator(prompt)
+            text = _call_generator(prompt, temperature=temperature)
             candidate = _parse_single_idea(text)
             key = tuple(candidate.items())
             if key not in seen:
@@ -317,6 +318,7 @@ def refine_candidate(
     weakness_text: str,
     gap_papers: list[dict],
     is_ood: bool = False,
+    temperature: float = 0,
 ) -> dict:
     """
     Revise a single idea to address its diagnosed weakness.
@@ -387,5 +389,329 @@ Problem: [revised or same]
 Method: [revised to address weakness — must include the drug, target/pathway, and experimental model named above]
 Contribution: [revised or same]"""
 
-    text = _call_generator(prompt)
+    text = _call_generator(prompt, temperature=temperature)
     return _parse_single_idea(text)
+
+
+# ── Condition D: Structured Abstraction Before Retrieval ─────────────────────
+#
+# Domain-general analogical reasoning. Four steps per candidate:
+#   1. Abstract the problem structure into domain-neutral language
+#   2. Search for cross-domain solutions to that abstract structure
+#   3. Map cross-domain solutions back to the target domain
+#   4. Enforce diversity at the abstraction level (handled by the caller via
+#      abstraction_history)
+#
+# None of the functions below are used by Conditions A, B, or C.
+
+ABSTRACTION_PROMPT = """You are a domain-agnostic scientific reasoning assistant.
+
+Read these research papers carefully:
+{seed_papers}
+
+Your task is to describe the core scientific challenge
+in completely domain-neutral language.
+
+Rules:
+- Do NOT mention Alzheimer's disease, neurodegeneration,
+  or any specific disease name
+- Do NOT mention specific proteins, genes, or biological
+  terms unless they describe a general class of mechanism
+- Express the problem using this template:
+  "A [type of process] causes [harmful outcome] through
+   [specific mechanism]. The mechanism involves
+   [key molecular/physical steps]. The goal is to
+   [intervention objective] without [key constraint
+   that makes this hard]."
+- Be specific about the mechanism, not the domain
+- The description should be recognisable as the same
+  problem if encountered in a completely different field
+
+Output ONLY the abstract problem description.
+Nothing else."""
+
+
+DIVERSITY_ABSTRACTION_PROMPT = """You are a domain-agnostic scientific reasoning assistant.
+
+Read these research papers:
+{seed_papers}
+
+Previous abstract problem framings already explored:
+{abstraction_history}
+
+Your task is to describe the SAME underlying research
+challenge from a structurally different angle.
+
+Do not simply rephrase the previous framings with
+different words. Identify a genuinely different
+aspect of the problem structure — a different
+mechanism, a different intervention point, or a
+different way the problem manifests.
+
+Apply the same rules as before:
+- No disease-specific terminology
+- Use the template: "A [process] causes [outcome]
+  through [mechanism]. The goal is to [objective]
+  without [constraint]."
+- Be specific about mechanism, not domain
+
+Output ONLY the new abstract problem description."""
+
+
+# Weakness-targeted abstraction (Rounds 2 and 3). The focus instruction is
+# injected based on the diagnosed weakness dimension.
+_WEAKNESS_ABSTRACTION_FOCUS = {
+    "novelty": (
+        "Abstract the MECHANISM more specifically — drill into the precise "
+        "molecular/physical steps so an analogous, less obvious solution from "
+        "another field becomes findable."
+    ),
+    "consistency": (
+        "Abstract the CAUSAL CHAIN more specifically — make each link from "
+        "root process to harmful outcome explicit so the intervention point is "
+        "unambiguous."
+    ),
+    "feasibility": (
+        "Abstract the INTERVENTION CONSTRAINTS more specifically — make the "
+        "practical limits (selectivity, delivery, reversibility) that make this "
+        "hard explicit."
+    ),
+}
+
+WEAKNESS_ABSTRACTION_PROMPT = """You are a domain-agnostic scientific reasoning assistant.
+
+Read these research papers:
+{seed_papers}
+
+A current candidate intervention (for context only — do not copy it):
+Problem: {problem}
+Method: {method}
+Contribution: {contribution}
+
+This candidate is weak on the {weakness} dimension.
+{focus}
+
+Re-describe the underlying scientific challenge in completely
+domain-neutral language, sharpening the aspect noted above.
+
+Rules:
+- Do NOT mention Alzheimer's disease, neurodegeneration, or any disease name
+- Do NOT name specific drugs, proteins, or genes
+- Use the template: "A [process] causes [outcome] through [mechanism].
+  The mechanism involves [key steps]. The goal is to [objective]
+  without [constraint]."
+- Be specific about mechanism, not domain
+
+Output ONLY the new abstract problem description. Nothing else."""
+
+
+CROSS_DOMAIN_QUERY_PROMPT = """Given this abstract scientific problem:
+"{abstraction}"
+
+Generate a PubMed search query (5-8 words) that would
+find papers from a completely different field that solved
+an analogous problem.
+
+Rules:
+- Do NOT include: Alzheimer, neurodegeneration, dementia,
+  brain, neuron, microglia, or any neuroscience term
+- DO search in one of these domains only:
+  oncology, cardiology, rheumatology, immunology,
+  metabolic disease, pulmonology, or infectious disease
+- The query should target the MECHANISM described in
+  the abstract problem, not the disease context
+- Focus on the intervention type, not the disease
+
+Examples of good queries for different abstractions:
+- "kinase cascade overactivation immune cells inhibitor"
+- "aldosterone receptor inflammation organ fibrosis"
+- "incretin receptor metabolic neuronal protection"
+- "autophagy lysosomal pathway restoration aging"
+
+Output ONLY the search query. Nothing else."""
+
+
+MAPPING_PROMPT = """You are a scientific reasoning assistant specialising
+in cross-domain analogical transfer.
+
+The original research problem (in abstract terms):
+{abstraction}
+
+The original research context (seed papers):
+{seed_papers_summary}
+
+Papers from an adjacent field that solved an
+analogous problem:
+{retrieved_papers}
+
+Your task: For each retrieved paper, identify the
+core intervention principle it describes. Then ask:
+what would that SAME PRINCIPLE look like if applied
+to the original research context?
+
+Do not copy the specific drug, compound, or technique
+from the adjacent field directly. Instead, identify
+WHAT PROPERTY makes it work, and find the equivalent
+in the target domain (Alzheimer's disease drug repurposing).
+
+First, in 2-4 sentences, explain the analogical transfer:
+which adjacent-field principle you are borrowing and how it
+maps onto the Alzheimer's context. Begin that block with
+"Reasoning:".
+
+Then generate ONE research hypothesis using this format:
+Problem: [one sentence — the specific gap in the
+          original research context]
+Method: [one sentence — a specific intervention
+         that applies the analogical principle,
+         naming a specific drug, target, and model]
+Contribution: [one sentence — what success looks like]
+
+The method sentence MUST name:
+- One specific FDA-approved drug or compound
+- One specific molecular target or pathway
+- One specific experimental model"""
+
+
+MAPPING_PROMPT_NO_PAPERS = """You are a scientific reasoning assistant specialising
+in cross-domain analogical transfer.
+
+The original research problem (in abstract terms):
+{abstraction}
+
+The original research context (seed papers):
+{seed_papers_summary}
+
+No adjacent-field papers were retrieved for this abstraction.
+Reason directly from the abstract problem structure: recall how
+an analogous problem is solved in a different field (oncology,
+cardiology, rheumatology, immunology, metabolic disease, or
+pulmonology), then map that principle onto the Alzheimer's context.
+
+First, in 2-4 sentences beginning with "Reasoning:", explain the
+analogical principle you are borrowing and how it maps over.
+
+Then generate ONE research hypothesis using this format:
+Problem: [one sentence]
+Method: [one sentence — naming a specific drug, target, and model]
+Contribution: [one sentence]
+
+The method sentence MUST name:
+- One specific FDA-approved drug or compound
+- One specific molecular target or pathway
+- One specific experimental model"""
+
+
+_CROSS_DOMAIN_BANNED = (
+    "alzheimer", "alzheimers", "neurodegeneration", "neurodegenerative",
+    "dementia", "brain", "neuron", "neuronal", "neurons", "microglia",
+    "microglial", "neuroinflammation", "amyloid", "neuroscience",
+)
+
+_REASONING_RE = re.compile(
+    r"reasoning\s*:?\s*(.+?)(?=\n\s*(?:\*{0,2})(?:problem)\s*:)",
+    re.IGNORECASE | re.DOTALL,
+)
+
+
+def _format_abstraction_history(history: list[str]) -> str:
+    if not history:
+        return "(none yet)"
+    return "\n".join(f"{i+1}. {a}" for i, a in enumerate(history))
+
+
+def abstract_problem(
+    seed_papers: list[dict],
+    abstraction_history: list[str] | None = None,
+    weakness_dimension: str | None = None,
+    current_idea: dict | None = None,
+) -> str:
+    """
+    Step 1 / Step 4 / Round 2-3: produce a domain-neutral abstraction of the
+    seed-paper problem.
+
+    - First candidate (no history, no weakness): ABSTRACTION_PROMPT
+    - Candidates 2-5 (history given): DIVERSITY_ABSTRACTION_PROMPT
+    - Refinement rounds (weakness_dimension given): WEAKNESS_ABSTRACTION_PROMPT
+    """
+    seed_block = _format_papers(seed_papers, SEED_TRUNCATE)
+
+    if weakness_dimension and current_idea is not None:
+        focus = _WEAKNESS_ABSTRACTION_FOCUS.get(
+            weakness_dimension,
+            _WEAKNESS_ABSTRACTION_FOCUS["novelty"],
+        )
+        prompt = WEAKNESS_ABSTRACTION_PROMPT.format(
+            seed_papers=seed_block,
+            problem=current_idea.get("problem", ""),
+            method=current_idea.get("method", ""),
+            contribution=current_idea.get("contribution", ""),
+            weakness=weakness_dimension,
+            focus=focus,
+        )
+    elif abstraction_history:
+        prompt = DIVERSITY_ABSTRACTION_PROMPT.format(
+            seed_papers=seed_block,
+            abstraction_history=_format_abstraction_history(abstraction_history),
+        )
+    else:
+        prompt = ABSTRACTION_PROMPT.format(seed_papers=seed_block)
+
+    text = _call_generator(prompt)
+    return re.sub(r"\s+", " ", text.replace("*", "")).strip()
+
+
+def cross_domain_query(abstraction: str) -> str:
+    """Step 2: derive a cross-domain PubMed query from an abstraction."""
+    prompt = CROSS_DOMAIN_QUERY_PROMPT.format(abstraction=abstraction)
+    text = _call_generator(prompt)
+    query = re.sub(r"\s+", " ", text.replace("*", "")).strip()
+    query = query.strip('"\'').rstrip(".")
+    # Hard-strip any neuroscience terms that slipped through.
+    kept = [
+        w for w in query.split()
+        if w.lower().strip(",.;:") not in _CROSS_DOMAIN_BANNED
+    ]
+    cleaned = " ".join(kept).strip()
+    if len(cleaned.split()) < 3:
+        cleaned = "mechanism pathway inhibition inflammation intervention"
+    return cleaned
+
+
+def map_cross_domain(
+    abstraction: str,
+    seed_papers: list[dict],
+    retrieved_papers: list[dict],
+) -> tuple[dict, str]:
+    """
+    Step 3: map adjacent-field solutions back to the Alzheimer's context.
+
+    Returns (idea, analogy_mapping_reasoning). When no cross-domain papers were
+    retrieved, reasons directly from the abstraction.
+    """
+    seed_summary = _format_papers(seed_papers, SEED_TRUNCATE)
+
+    if retrieved_papers:
+        paper_block = "\n".join(
+            f"{i+1}. {p['title']}: {p.get('abstract', '')}"[:PAPER_TRUNCATE]
+            for i, p in enumerate(retrieved_papers)
+        )
+        prompt = MAPPING_PROMPT.format(
+            abstraction=abstraction,
+            seed_papers_summary=seed_summary,
+            retrieved_papers=paper_block,
+        )
+    else:
+        prompt = MAPPING_PROMPT_NO_PAPERS.format(
+            abstraction=abstraction,
+            seed_papers_summary=seed_summary,
+        )
+
+    text = _call_generator(prompt)
+    idea = _parse_single_idea(text)
+    m = _REASONING_RE.search(text)
+    reasoning = (
+        re.sub(r"\s+", " ", m.group(1).replace("*", "")).strip()
+        if m else ""
+    )
+    return idea, reasoning

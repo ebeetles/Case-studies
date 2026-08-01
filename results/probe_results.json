@@ -1,0 +1,52 @@
+{
+  "temp=0.0, rounds=3 (baseline)": {
+    "n": 3,
+    "within_pairwise_cosine_sim": 0.9478575984636942,
+    "mean_centroid_distance": 0.017534573872884113,
+    "drugs_mentioned": [
+      "We will investigate metformin's ability to modulate the NLRP",
+      "We propose to investigate metformin's ability to modulate th",
+      "We will investigate metformin's effect on the NLRP3 inflamma"
+    ]
+  },
+  "temp=0.7, rounds=3": {
+    "n": 3,
+    "within_pairwise_cosine_sim": 0.7566915154457092,
+    "mean_centroid_distance": 0.08468890190124512,
+    "drugs_mentioned": [
+      "We propose to investigate pioglitazone, a peroxisome prolife",
+      "We will investigate pioglitazone's ability to modulate the p",
+      "The drug exenatide, a glucagon-like peptide-1 receptor agoni"
+    ]
+  },
+  "temp=1.0, rounds=3": {
+    "n": 3,
+    "within_pairwise_cosine_sim": 0.6451139251391093,
+    "mean_centroid_distance": 0.12626705567042032,
+    "drugs_mentioned": [
+      "The research will investigate liraglutide's ability to modul",
+      "The research hypothesis will investigate valproic acid's pot",
+      "The research hypothesis will investigate montelukast's abili"
+    ]
+  },
+  "temp=0.0, rounds=1": {
+    "n": 3,
+    "within_pairwise_cosine_sim": 0.6886289914449056,
+    "mean_centroid_distance": 0.10982064406077068,
+    "drugs_mentioned": [
+      "The research will investigate the potential of sulforaphane,",
+      "The research will investigate the potential of empagliflozin",
+      "The research hypothesis will investigate the potential of pi"
+    ]
+  },
+  "temp=0.0, rounds=2": {
+    "n": 3,
+    "within_pairwise_cosine_sim": 0.9482455849647522,
+    "mean_centroid_distance": 0.017402946949005127,
+    "drugs_mentioned": [
+      "The research will investigate the potential of pioglitazone,",
+      "We will investigate the potential of pioglitazone, a thiazol",
+      "The research will investigate the potential of pioglitazone "
+    ]
+  }
+}

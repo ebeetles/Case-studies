@@ -1,0 +1,552 @@
+{
+  "H001": {
+    "novelty": [
+      {
+        "score": 2,
+        "justification": "This is a largely generic AD framing because \u201creducing amyloid-beta accumulation and plaque formation\u201d directly invokes a heavily over-represented amyloid-cascade mechanism, with metformin serving as a repurposed agent rather than introducing a distinct mechanistic angle."
+      },
+      {
+        "score": 2,
+        "justification": "This is mostly a generic amyloid-focused AD repurposing idea, since \u201cmetformin reduces amyloid-beta accumulation/plaque\u201d is a common and well-trodden mechanism with only limited distinguishing detail."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 4,
+        "justification": "It names a specific drug (metformin), a specific disease context (Alzheimer\u2019s disease), and a defined pathway-level mechanism/target area (amyloid-beta accumulation and plaque formation), but it does not identify a precise molecular target or a clearly specified measurable downstream biomarker beyond those broad outcomes."
+      },
+      {
+        "score": 4,
+        "justification": "It names a specific compound (metformin), a concrete disease-relevant mechanism involving amyloid-beta accumulation/plaque formation, and a measurable downstream effect, though it does not specify a precise molecular target within that pathway."
+      }
+    ]
+  },
+  "H002": {
+    "novelty": [
+      {
+        "score": 3,
+        "justification": "Tamoxifen offers a somewhat distinct repurposing angle via estrogen-receptor modulation and downstream neuroprotective signaling, but this is still a fairly familiar AD rationale rather than a strikingly novel mechanism."
+      },
+      {
+        "score": 2,
+        "justification": "Tamoxifen\u2019s repurposing rationale in AD is mostly a generic hormone/neuroprotection framing (via estrogen receptor modulation and anti-inflammatory effects) that has been explored before, with little in the way of a clearly distinct AD-specific mechanism."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 4,
+        "justification": "The hypothesis names a specific compound (tamoxifen) and gives a concrete mechanistic class target (selective estrogen receptor modulation relevant to AD), but it does not specify a distinct molecular target within that pathway or a measurable downstream effect."
+      },
+      {
+        "score": 4,
+        "justification": "The hypothesis names a specific compound (tamoxifen) and a defined pharmacologic class/mechanism (selective estrogen receptor modulator), giving a concrete targetable pathway, but it does not specify a particular molecular target or measurable downstream AD effect."
+      }
+    ]
+  },
+  "H003": {
+    "novelty": [
+      {
+        "score": 4,
+        "justification": "Acamprosate\u2019s putative action on glutamatergic signaling offers a more distinct mechanistic angle than the usual amyloid/tau framing and, while not unprecedented in neurodegeneration, is sufficiently specific and non-redundant to count as clearly novel in the AD repurposing context."
+      },
+      {
+        "score": 3,
+        "justification": "It offers a somewhat distinct angle by focusing on glutamatergic modulation via acamprosate, but this remains a relatively common neurochemical framing in AD and is not a sharply novel mechanistic hypothesis."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 4,
+        "justification": "It names a specific compound (acamprosate) and a concrete pathway/mechanism (modulation of glutamatergic signaling), but it does not specify a precise molecular target or a measurable downstream effect in AD."
+      },
+      {
+        "score": 4,
+        "justification": "It names a specific compound (acamprosate) and a concrete pathway target (glutamatergic signaling), but it does not specify a precise molecular target or a directly measurable downstream AD effect."
+      }
+    ]
+  },
+  "H004": {
+    "novelty": [
+      {
+        "score": 2,
+        "justification": "This is a broad, fairly generic repurposing claim for a PPAR-\u03b3 agonist in AD, with no specific novel pathway specified and plenty of prior literature already linking pioglitazone to inflammation, insulin signaling, and amyloid-related mechanisms in Alzheimer\u2019s disease."
+      },
+      {
+        "score": 2,
+        "justification": "Pioglitazone\u2019s rationale in AD is mostly a generic anti-inflammatory/PPAR-\u03b3 metabolic-modulation framing that has been discussed repeatedly, with little in this hypothesis that introduces a distinct mechanistic angle beyond common AD repurposing themes."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 2,
+        "justification": "It names a specific compound (pioglitazone) and a disease context (Alzheimer\u2019s disease), but gives no concrete molecular target, pathway, or measurable downstream effect to test."
+      },
+      {
+        "score": 2,
+        "justification": "The hypothesis names a specific compound (pioglitazone) and a disease context (Alzheimer\u2019s disease), but it does not specify a concrete molecular target, pathway, or measurable downstream effect to test."
+      }
+    ]
+  },
+  "H005": {
+    "novelty": [
+      {
+        "score": 2,
+        "justification": "This is mostly a standard AD repurposing claim centered on reducing amyloid-beta/plaque burden, which is a heavily repeated mechanism in the literature, with liraglutide providing only a token drug-specific distinction."
+      },
+      {
+        "score": 2,
+        "justification": "This is largely a generic AD mechanism claim centered on reducing amyloid-beta and plaque burden, with liraglutide as the only distinguishing detail rather than a genuinely novel mechanistic angle."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 4,
+        "justification": "The hypothesis names a specific compound (liraglutide), a specific pathological process/pathway (amyloid-beta accumulation and plaque formation), and a measurable downstream effect, but it does not identify a precise molecular target within that pathway."
+      },
+      {
+        "score": 4,
+        "justification": "It names a specific compound (liraglutide) and a concrete mechanistic target area\u2014amyloid-beta accumulation/plaque formation in AD\u2014but does not specify a precise molecular target or assay beyond that downstream pathology."
+      }
+    ]
+  },
+  "H006": {
+    "novelty": [
+      {
+        "score": 3,
+        "justification": "Ibudilast offers a somewhat distinct repurposing angle via phosphodiesterase inhibition and glial immunomodulation, but the link to reducing amyloid and tau pathology still leans on broadly discussed anti-inflammatory/anti-amyloid AD mechanisms rather than a truly novel disease hypothesis."
+      },
+      {
+        "score": 2,
+        "justification": "Mostly generic framing: PDE inhibition and suppression of glial neuroinflammation are broad, well-precedented AD-repurposing mechanisms, and \u201creduce amyloid and tau\u201d is standard downstream language rather than a distinct new mechanistic angle."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 4,
+        "justification": "The hypothesis names a specific compound (ibudilast) and specific mechanistic targets/pathways (phosphodiesterase inhibition and neuroinflammatory glial activation), with downstream effects on amyloid and tau pathology, but it does not specify a single molecular target or a clearly defined measurable assay outcome."
+      },
+      {
+        "score": 4,
+        "justification": "The hypothesis names a specific compound (ibudilast) and concrete pathways/targets (phosphodiesterase inhibition and neuroinflammatory glial activation), but it does not specify a clearly measurable downstream effect beyond broad reductions in amyloid and tau pathology."
+      }
+    ]
+  },
+  "H007": {
+    "novelty": [
+      {
+        "score": 3,
+        "justification": "The GABA-B receptor/neuroinhibitory network modulation angle is somewhat distinct from classic amyloid/tau framing, but it still sits within a fairly well-trodden neurotransmission-based AD mechanism space rather than a strikingly novel pathway."
+      },
+      {
+        "score": 4,
+        "justification": "Baclofen\u2019s focus on GABA-B receptor-mediated modulation of AD network excitability/synaptic dysfunction is a comparatively distinct mechanistic angle, though it still sits within a broader and increasingly explored neurotransmission-based AD framework rather than a wholly unprecedented pathway."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 4,
+        "justification": "The hypothesis names a specific drug (baclofen), a specific target/pathway (GABA-B receptor signaling), and implies a testable disease-network modulation mechanism, but it does not specify a concrete measurable downstream effect."
+      },
+      {
+        "score": 4,
+        "justification": "The hypothesis names a specific drug (baclofen), a specific target/pathway (GABA-B receptor signaling), and a concrete mechanistic direction (modulation of AD network pathophysiology), but it does not specify a clearly measurable downstream effect."
+      }
+    ]
+  },
+  "H008": {
+    "novelty": [
+      {
+        "score": 2,
+        "justification": "Clozapine\u2019s proposed relevance to AD is usually framed through broad, heavily recycled themes like antipsychotic effects on neuroinflammation, neurotransmission, or protein aggregation, with no widely recognized distinct AD-specific mechanism."
+      },
+      {
+        "score": 3,
+        "justification": "Clozapine is a somewhat distinct repurposing angle because it is an atypical antipsychotic with immunomodulatory/serotonergic/cholinergic effects rather than a direct amyloid-cascade proposal, but the AD rationale is still fairly generic and often overlaps with common neuroinflammation and neurotransmitter-modulation themes."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 2,
+        "justification": "The hypothesis names a specific compound and disease (clozapine in Alzheimer\u2019s disease) but gives no concrete mechanism, molecular target, pathway, or measurable effect to test."
+      },
+      {
+        "score": 2,
+        "justification": "The hypothesis names a specific compound and disease, but it does not specify any concrete molecular target, pathway, or measurable downstream effect to test."
+      }
+    ]
+  },
+  "H009": {
+    "novelty": [
+      {
+        "score": 2,
+        "justification": "This is a broad, well-trodden repurposing idea that usually invokes common AD themes like insulin resistance, AMPK/mTOR signaling, inflammation, and amyloid/tau modulation, rather than a distinctly novel mechanistic angle."
+      },
+      {
+        "score": 2,
+        "justification": "This is a broadly repurposed, well-trodden idea: metformin has been linked to AD through common mechanisms like AMPK, insulin signaling, inflammation, and amyloid/tau modulation, rather than a clearly distinct mechanistic angle."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 2,
+        "justification": "It names the compound (metformin) and the disease context (Alzheimer\u2019s disease) but only makes a broad, non-specific claim about \u201cbrain processes\u201d without identifying a concrete pathway, target, or measurable effect."
+      },
+      {
+        "score": 3,
+        "justification": "It names the compound (metformin) and a broad disease-relevant brain-process claim, but it does not specify a concrete molecular target or a measurable downstream effect to test."
+      }
+    ]
+  },
+  "H010": {
+    "novelty": [
+      {
+        "score": 3,
+        "justification": "Losartan has a somewhat distinct repurposing angle via angiotensin II/AT1 receptor blockade and cerebrovascular/inflammatory effects, but this is still a fairly well-trodden neurovascular/neuroinflammation mechanism in AD rather than a strikingly novel pathway."
+      },
+      {
+        "score": 3,
+        "justification": "Losartan offers a somewhat distinct vascular/renin-angiotensin and blood-brain-barrier/inflammation angle, but this is still a fairly common repurposing theme in AD and not a highly novel mechanistic hypothesis."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 3,
+        "justification": "The hypothesis names a specific compound (losartan) and implies a relevant biological process in AD, but it does not specify a concrete molecular target or a measurable downstream effect to test."
+      },
+      {
+        "score": 2,
+        "justification": "The hypothesis names a specific compound (losartan) and a disease context (Alzheimer\u2019s disease) but gives no concrete mechanism, molecular target, pathway, or measurable outcome to test."
+      }
+    ]
+  },
+  "H011": {
+    "novelty": [
+      {
+        "score": 2,
+        "justification": "Verapamil\u2019s rationale in AD is mostly a generic calcium-homeostasis/neuroprotection framing that has been explored broadly for many calcium channel blockers, with little indication of a truly distinct or unusual mechanistic angle."
+      },
+      {
+        "score": 3,
+        "justification": "Verapamil offers a somewhat distinct repurposing angle via L-type calcium channel modulation and related calcium homeostasis effects, but this is still a fairly established and recurring mechanism in AD discussions rather than a strikingly novel hypothesis."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 2,
+        "justification": "The hypothesis names a specific compound (verapamil) and a disease (Alzheimer\u2019s disease), but it does not specify a concrete molecular target, pathway, or measurable downstream effect to test."
+      },
+      {
+        "score": 2,
+        "justification": "The hypothesis names a specific compound (verapamil) and disease (Alzheimer's disease) but does not specify a concrete molecular target, pathway, or measurable downstream effect to test."
+      }
+    ]
+  },
+  "H012": {
+    "novelty": [
+      {
+        "score": 2,
+        "justification": "The hypothesis is very broad and generic, since \u201caffect brain processes relevant to AD\u201d does not specify a distinct mechanism and liraglutide is already commonly discussed in AD through well-trodden insulin/neuroprotection/inflammation pathways."
+      },
+      {
+        "score": 2,
+        "justification": "This is a broad, largely generic statement about brain effects in AD without specifying a distinct mechanism, and liraglutide repurposing in AD has already been commonly framed through standard pathways like neuroinflammation, insulin signaling, and amyloid/tau-related effects."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 2,
+        "justification": "The hypothesis names a specific compound (liraglutide) and a disease context (Alzheimer\u2019s disease), but it does not specify a concrete molecular target, pathway, or measurable downstream effect to test."
+      },
+      {
+        "score": 2,
+        "justification": "The hypothesis names a specific compound (liraglutide) and a disease context (Alzheimer\u2019s disease) but does not specify a concrete molecular target, pathway, or measurable downstream effect to test."
+      }
+    ]
+  },
+  "H013": {
+    "novelty": [
+      {
+        "score": 3,
+        "justification": "This is a plausible repurposing angle with some specificity via GLP-1 receptor signaling and insulin/neuroinflammation effects, but it largely taps into well-trodden AD mechanisms that have been repeatedly proposed for incretin-based therapies rather than a truly novel mechanistic concept."
+      },
+      {
+        "score": 3,
+        "justification": "This is a plausible and somewhat distinct repurposing angle via GLP-1 receptor signaling and metabolic/neuroinflammatory modulation, but it still leans on well-trodden AD mechanisms like neuroinflammation, insulin resistance, and neuroprotection rather than introducing a genuinely new mechanistic framework."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 5,
+        "justification": "It names a specific compound (liraglutide), a specific molecular target/pathway (GLP-1 receptor activation, neuronal insulin signaling, neuroinflammation), and specific measurable downstream effects (reduced neuroinflammation and slowed cortical atrophy)."
+      },
+      {
+        "score": 5,
+        "justification": "The hypothesis names a specific drug (liraglutide), a specific molecular target/pathway (GLP-1 receptor, neuroinflammation, neuronal insulin signaling), and concrete measurable downstream effects (slowing cortical atrophy relevant to AD)."
+      }
+    ]
+  },
+  "H014": {
+    "novelty": [
+      {
+        "score": 3,
+        "justification": "Vandetanib\u2019s repurposing angle is somewhat distinct because it targets tyrosine kinase signaling (e.g., EGFR/VEGFR/RET-related pathways) rather than the usual amyloid/tau framing, but the AD rationale still tends to be a broad, generic neuroinflammation/survival-signaling argument rather than a strikingly novel mechanism."
+      },
+      {
+        "score": 2,
+        "justification": "Vandetanib\u2019s repurposing rationale is usually framed around broadly generic kinase/growth-factor signaling modulation and neuroinflammation/amyloid-tau-adjacent pathways, which are common in AD drug-repurposing proposals rather than a clearly distinct mechanistic angle."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 4,
+        "justification": "The hypothesis names a specific compound, vandetanib, and a concrete target class/mechanism as a tyrosine kinase inhibitor, but it does not specify a particular molecular target or measurable downstream AD effect."
+      },
+      {
+        "score": 4,
+        "justification": "It names a specific compound (vandetanib) and a concrete molecular class/mechanism (tyrosine kinase inhibition), but it does not specify a particular kinase target or a measurable downstream AD-relevant effect."
+      }
+    ]
+  },
+  "H015": {
+    "novelty": [
+      {
+        "score": 2,
+        "justification": "This is mostly a generic amyloid-reduction claim for AD, with losartan serving as a repurposed agent rather than introducing a clearly distinct or novel mechanistic angle."
+      },
+      {
+        "score": 2,
+        "justification": "This is largely a generic amyloid-reduction framing common in AD repurposing, with losartan as the only distinguishing detail rather than a genuinely novel mechanistic angle."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 4,
+        "justification": "It names a specific compound (losartan) and a specific biological pathway/target concept (amyloid-beta accumulation and plaque formation), with a concrete downstream effect, though it does not specify a precise molecular target."
+      },
+      {
+        "score": 4,
+        "justification": "The hypothesis names a specific compound (losartan) and a concrete biological pathway/outcome to test\u2014reduced amyloid-beta accumulation and plaque formation\u2014but it does not specify a precise molecular target or mechanism within that pathway."
+      }
+    ]
+  },
+  "H016": {
+    "novelty": [
+      {
+        "score": 4,
+        "justification": "Adenosine offers a reasonably distinct mechanistic angle in AD via purinergic signaling, neuromodulation, and inflammation/synaptic regulation rather than the usual amyloid/tau framing, though it is still a biologically familiar pathway."
+      },
+      {
+        "score": 3,
+        "justification": "Adenosine offers a somewhat distinct neuromodulatory/immunometabolic angle in AD, but as stated it is broad and overlaps heavily with well-trodden receptor/signaling and neuroinflammation pathways rather than a sharply novel disease mechanism."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 2,
+        "justification": "The hypothesis names only adenosine and Alzheimer's disease without specifying a molecular target, pathway, or measurable effect to test."
+      },
+      {
+        "score": 2,
+        "justification": "The hypothesis names a compound (adenosine) and a disease (Alzheimer's disease) but provides no specific molecular target, pathway, or measurable effect to test."
+      }
+    ]
+  },
+  "H017": {
+    "novelty": [
+      {
+        "score": 3,
+        "justification": "This proposes a plausible but fairly well-trodden repurposing angle\u2014PPAR-\u03b3 activation to improve metabolism and dampen neuroinflammation\u2014so it has some distinct metabolic nuance but remains anchored in commonly discussed AD mechanisms rather than a strikingly novel pathway."
+      },
+      {
+        "score": 2,
+        "justification": "This is a fairly standard repurposing rationale: PPAR-\u03b3 agonism, improved glucose/lipid metabolism, and anti-inflammatory effects have all been widely discussed in AD, so the hypothesis adds only a modestly distinguishing metabolic framing rather than a genuinely novel mechanism."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 5,
+        "justification": "It specifies the drug pioglitazone, the molecular target/pathway PPAR-\u03b3, and concrete downstream effects to test\u2014stabilization of cerebral glucose and lipid metabolism plus reduction of neuroinflammation relevant to AD onset."
+      },
+      {
+        "score": 5,
+        "justification": "It names a specific compound (pioglitazone), a specific molecular target/pathway (PPAR-\u03b3 activation), and concrete downstream effects to test (stabilizing cerebral glucose and lipid metabolism and reducing neuroinflammation to delay AD onset)."
+      }
+    ]
+  },
+  "H018": {
+    "novelty": [
+      {
+        "score": 3,
+        "justification": "Sildenafil offers a somewhat distinct PDE5/cGMP/vascular-neurovascular signaling angle for AD, but this is still a fairly familiar repurposing mechanism and often gets linked back to common downstream themes like cerebral blood flow, synaptic function, and amyloid/tau-adjacent pathways."
+      },
+      {
+        "score": 3,
+        "justification": "Sildenafil\u2019s PDE5/cGMP/vascular-neuroplasticity angle is somewhat distinct for AD repurposing, but it still overlaps with fairly common themes like improved cerebral blood flow, synaptic function, and downstream amyloid/tau-related neuroprotection rather than a truly novel mechanism."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 3,
+        "justification": "It names a specific compound (sildenafil) and implies a broad brain-relevant mechanism, but does not specify a concrete molecular target, pathway, or measurable downstream effect to test in Alzheimer\u2019s disease."
+      },
+      {
+        "score": 4,
+        "justification": "Sildenafil is a specific compound, and the hypothesis points to brain processes relevant to AD, which implies a concrete pathway-level target area, but it does not specify a distinct molecular target or a measurable downstream effect."
+      }
+    ]
+  },
+  "H019": {
+    "novelty": [
+      {
+        "score": 2,
+        "justification": "This is a fairly standard PDE5/cGMP-protective signaling repurposing idea for AD that still relies on common downstream amyloid/tau language, so it has only a modest distinguishing detail rather than a truly novel mechanistic angle."
+      },
+      {
+        "score": 2,
+        "justification": "This is a fairly standard PDE5/cGMP-signal-enhancement repurposing idea that has been explored in AD contexts before, and the tau/amyloid reduction language leans on familiar disease mechanisms rather than a highly distinct new angle."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 5,
+        "justification": "It names a specific drug (sildenafil), a specific molecular target/pathway (PDE5 inhibition leading to increased cGMP signaling), and specific downstream effects to test (reduced tau phosphorylation and amyloid accumulation)."
+      },
+      {
+        "score": 5,
+        "justification": "It names a specific drug (sildenafil), a specific molecular target/pathway (PDE-5 inhibition leading to increased cGMP signaling), and specific downstream effects to test (reduced tau phosphorylation and amyloid accumulation)."
+      }
+    ]
+  },
+  "H020": {
+    "novelty": [
+      {
+        "score": 2,
+        "justification": "This is mostly a generic amyloid-focused AD repurposing claim; sildenafil\u2019s PDE5/cGMP signaling is a somewhat distinct upstream angle, but the hypothesis still centers on the heavily overused \u201creduce amyloid-beta/plaque\u201d mechanism rather than a truly novel AD pathway."
+      },
+      {
+        "score": 2,
+        "justification": "This is mostly a generic amyloid-centric repurposing claim, with sildenafil\u2019s PDE5/cGMP effects as the only distinguishing detail, but it does not introduce a genuinely novel AD mechanism."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 4,
+        "justification": "The hypothesis names a specific compound (sildenafil), a specific downstream disease-relevant pathway/outcome (amyloid-beta accumulation and plaque formation), but it does not specify a precise molecular target beyond that broad mechanistic claim."
+      },
+      {
+        "score": 5,
+        "justification": "It names a specific drug (sildenafil), a concrete mechanistic claim (reduced amyloid-beta accumulation and plaque formation), and clear measurable downstream effects to test in Alzheimer's disease."
+      }
+    ]
+  },
+  "H021": {
+    "novelty": [
+      {
+        "score": 4,
+        "justification": "This is a fairly distinct mechanistic angle because it centers on chenodiol as a primary bile acid modulating an AD-related endophenotype network, which is more specific and less generic than standard amyloid/tau framing, though it still sits within broader metabolic/signaling repurposing concepts."
+      },
+      {
+        "score": 4,
+        "justification": "This is a fairly distinct repurposing angle because it centers on chenodiol as a primary bile acid acting on an AD-related endophenotype network, which is mechanistically different from standard amyloid/tau framing, even if the downstream effects may still intersect common neurodegenerative pathways."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 4,
+        "justification": "The hypothesis names a specific compound (Chenodiol) and a defined mechanistic pathway/target class (primary bile acid modulating an AD-related endophenotype network), but it does not specify a single molecular target or a concrete measurable downstream effect."
+      },
+      {
+        "score": 4,
+        "justification": "It names a specific compound (chenodiol) and a specific mechanistic frame\u2014modulating an AD-related endophenotype network via a primary bile acid pathway\u2014but it does not clearly specify a single molecular target or a concrete measurable downstream effect."
+      }
+    ]
+  },
+  "H022": {
+    "novelty": [
+      {
+        "score": 2,
+        "justification": "The claim is very generic and non-specific, using broad \u201cendophenotype pathways\u201d and \u201cprotective molecular effects\u201d language without a clearly distinct AD mechanism, so it reads more like repurposing boilerplate than a novel mechanistic hypothesis."
+      },
+      {
+        "score": 2,
+        "justification": "The hypothesis is framed in very broad, non-specific terms about \u201cmodulating AD-associated endophenotype pathways\u201d and \u201cprotective molecular effects,\u201d which reads as largely generic repurposing language with no clearly distinct mechanism beyond common AD pathway modulation."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 3,
+        "justification": "The hypothesis names a specific compound (Arundine) and a general mechanistic domain (\u201cAD-associated endophenotype pathways\u201d), but it does not identify a concrete molecular target or a specific measurable downstream effect to test."
+      },
+      {
+        "score": 3,
+        "justification": "It names a specific compound (Arundine) and a broad mechanistic class (\u201cAD-associated endophenotype pathways\u201d), but it does not identify a concrete molecular target or a clearly measurable downstream effect to test."
+      }
+    ]
+  },
+  "H023": {
+    "novelty": [
+      {
+        "score": 2,
+        "justification": "This is a plausible but fairly well-trodden mechanism: metformin-AMPK-mTOR effects on neuroinflammation and tau have been discussed repeatedly in AD, so it adds only a modestly distinguishing drug-pathway combination rather than a genuinely novel mechanistic angle."
+      },
+      {
+        "score": 2,
+        "justification": "This is a plausible but fairly well-trodden mechanism in AD repurposing work\u2014AMPK/mTOR modulation, anti-inflammatory effects, and tau-related pathways are commonly discussed\u2014so it adds only a modest distinguishing detail rather than a truly novel mechanistic angle."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 4,
+        "justification": "The hypothesis names a specific compound (metformin) and concrete molecular pathways/targets (AMPK and mTOR), but the downstream effects are framed relatively broadly (\u201creduce neuroinflammation and tau pathology\u201d) rather than as a precise measurable endpoint."
+      },
+      {
+        "score": 5,
+        "justification": "The hypothesis names a specific compound (metformin), concrete pathways/targets (AMPK and mTOR), and specific downstream effects to measure (reduced neuroinflammation and tau pathology) in Alzheimer's disease."
+      }
+    ]
+  },
+  "H024": {
+    "novelty": [
+      {
+        "score": 3,
+        "justification": "This is a plausible repurposing idea with a somewhat distinct vascular/oxidative-stress angle via AT1 receptor blockade, but it remains fairly conventional in AD literature and does not introduce a highly novel mechanistic framework."
+      },
+      {
+        "score": 3,
+        "justification": "This is a moderately distinct repurposing angle because it focuses on AT1 receptor antagonism and downstream cerebrovascular/oxidative-stress effects, but those vascular and oxidative pathways have already been discussed extensively in AD literature and do not constitute a highly novel mechanistic framework."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 5,
+        "justification": "The hypothesis names a specific compound (losartan), a specific molecular target (angiotensin II type 1 receptor), and specific downstream effects to test (reduced oxidative stress and cerebrovascular dysfunction)."
+      },
+      {
+        "score": 5,
+        "justification": "It names a specific drug (losartan), a specific molecular target (angiotensin II type 1 receptor), a mechanistic pathway (reduced oxidative stress and cerebrovascular dysfunction), and concrete downstream effects relevant to test in AD progression."
+      }
+    ]
+  },
+  "H025": {
+    "novelty": [
+      {
+        "score": 1,
+        "justification": "This is a largely generic amyloid-focused AD claim that has been extensively proposed before for pioglitazone and other anti-inflammatory/PPAR-\u03b3 agents, without a distinct mechanistic angle."
+      },
+      {
+        "score": 2,
+        "justification": "This is a largely generic amyloid-centric AD repurposing claim: pioglitazone\u2019s proposed reduction of amyloid-beta accumulation/plaque formation is a commonly discussed PPAR\u03b3/anti-inflammatory angle but not a distinctly novel mechanistic hypothesis."
+      }
+    ],
+    "specificity": [
+      {
+        "score": 5,
+        "justification": "It names a specific drug (pioglitazone), proposes a concrete mechanism linked to amyloid-beta accumulation/plaque formation, and specifies measurable downstream effects relevant to testing in AD."
+      },
+      {
+        "score": 5,
+        "justification": "It names a specific drug (pioglitazone), a concrete mechanistic outcome involving amyloid-beta accumulation and plaque formation, and a measurable downstream effect relevant to AD progression."
+      }
+    ]
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "H001": [
+    {
+      "score": 4,
+      "justification": "Metformin is a plausible repurposing candidate because it has mechanistic links to metabolism, inflammation, and possibly amyloid processing, but the evidence for a clear clinical benefit in Alzheimer's disease remains mixed and not definitive."
+    },
+    {
+      "score": 4,
+      "justification": "Metformin is a plausible repurposing candidate because it has some mechanistic links to reduced neuroinflammation and altered amyloid processing, but the evidence is mixed and not yet strong enough to make this a high-confidence Alzheimer's therapy hypothesis."
+    }
+  ],
+  "H002": [
+    {
+      "score": 3,
+      "justification": "Tamoxifen has some plausible mechanistic links to neuroprotection and anti-inflammatory effects, but the evidence for meaningful Alzheimer's benefit is limited and the drug\u2019s side-effect profile makes the repurposing case only moderately convincing."
+    },
+    {
+      "score": 3,
+      "justification": "Tamoxifen has some plausible neuroprotective and anti-inflammatory mechanisms, but evidence for meaningful clinical benefit in Alzheimer's disease is limited and mixed, so it is a moderately plausible but not strongly supported repurposing idea."
+    }
+  ],
+  "H003": [
+    {
+      "score": 3,
+      "justification": "Plausible mechanistically because acamprosate can affect glutamatergic balance and excitotoxicity, but the proposal is fairly generic, with limited direct evidence for meaningful Alzheimer\u2019s efficacy or clear non-redundant network impact."
+    },
+    {
+      "score": 3,
+      "justification": "Plausible mechanistically because acamprosate can affect glutamatergic signaling, but the proposal is fairly broad and lacks strong AD-specific evidence that this would translate into meaningful, non-redundant disease-modifying benefit."
+    }
+  ],
+  "H004": [
+    {
+      "score": 2,
+      "justification": "Very broad and under-specified: pioglitazone has some plausible anti-inflammatory/metabolic links to Alzheimer's, but the hypothesis lacks a specific mechanism, target, or evidence-backed repurposing rationale."
+    },
+    {
+      "score": 3,
+      "justification": "Pioglitazone has plausible anti-inflammatory and insulin-sensitizing mechanisms relevant to Alzheimer\u2019s disease, but the proposal is very broad and the drug\u2019s clinical evidence in AD has been mixed and not clearly convincing."
+    }
+  ],
+  "H005": [
+    {
+      "score": 4,
+      "justification": "Liraglutide has a plausible mechanistic rationale and some preclinical/early clinical support for neuroprotective effects, but the evidence remains indirect and not yet strong enough to make this a high-confidence repurposing proposal."
+    },
+    {
+      "score": 3,
+      "justification": "Liraglutide has some plausible mechanistic and preclinical support for affecting amyloid-related pathways, but the evidence for meaningful clinical benefit in Alzheimer's disease remains limited and not yet convincing enough to make it a strong repurposing proposal."
+    }
+  ],
+  "H006": [
+    {
+      "score": 4,
+      "justification": "Ibudilast has a biologically plausible mechanism with anti-inflammatory and phosphodiesterase-inhibiting effects that could be relevant to Alzheimer\u2019s, but the evidence for meaningful disease-modifying benefit in AD specifically is still limited and largely indirect."
+    },
+    {
+      "score": 3,
+      "justification": "Plausible mechanistically and drug-repurposing is feasible, but the evidence for meaningful impact on amyloid/tau in Alzheimer's is still indirect and not yet strong."
+    }
+  ],
+  "H007": [
+    {
+      "score": 3,
+      "justification": "Plausible mechanism and reasonable repurposing angle given baclofen\u2019s CNS activity, but the proposal is quite broad and under-supported by direct evidence linking GABA-B modulation to meaningful Alzheimer\u2019s disease modification."
+    },
+    {
+      "score": 2,
+      "justification": "Baclofen has a plausible CNS mechanism via GABA-B signaling, but the proposal is very broad and mechanistically indirect, with limited evidence that it would meaningfully alter Alzheimer\u2019s disease pathology rather than just symptoms or network activity."
+    }
+  ],
+  "H008": [
+    {
+      "score": 2,
+      "justification": "Clozapine has some CNS activity and could plausibly affect symptoms like agitation, but it is not a strong repurposing candidate for Alzheimer\u2019s disease because evidence for disease-modifying benefit is weak and its safety/tolerability burden is substantial in older adults."
+    },
+    {
+      "score": 2,
+      "justification": "Clozapine has some plausible neuropsychiatric and anti-inflammatory relevance, but it is a high-risk antipsychotic with no strong evidence for Alzheimer's disease modification and substantial side-effect concerns."
+    }
+  ],
+  "H009": [
+    {
+      "score": 3,
+      "justification": "Metformin is a plausible repurposing candidate because it has broad metabolic and anti-inflammatory effects that could influence AD-relevant pathways, but this hypothesis is very general and lacks a specific mechanistic or clinical rationale."
+    },
+    {
+      "score": 3,
+      "justification": "Plausible and biologically relevant given metformin\u2019s effects on metabolism and signaling pathways, but the hypothesis is very broad, under-specified, and not strong enough on its own to support a clear Alzheimer\u2019s repurposing rationale."
+    }
+  ],
+  "H010": [
+    {
+      "score": 2,
+      "justification": "Very broad and weak as a repurposing proposal: losartan has some plausible mechanistic links via blood pressure/vascular and inflammation pathways, but the hypothesis lacks specificity, direct AD-target relevance, and supporting evidence for meaningful disease-modifying effects."
+    },
+    {
+      "score": 2,
+      "justification": "Losartan has a plausible but very indirect rationale for Alzheimer\u2019s disease, since its blood-pressure and vascular effects could influence risk or progression, yet the proposal is too broad and lacks a specific AD-targeted mechanism or strong evidence for drug repurposing."
+    }
+  ],
+  "H011": [
+    {
+      "score": 3,
+      "justification": "Verapamil has some mechanistic plausibility for affecting neurodegeneration via calcium signaling and vascular effects, but the evidence for meaningful Alzheimer\u2019s benefit is limited and indirect, making this a moderate but not strong repurposing proposal."
+    },
+    {
+      "score": 3,
+      "justification": "Verapamil has plausible neuroprotective and vascular rationale with known human safety data, but the evidence for meaningful Alzheimer\u2019s benefit is limited and not strongly supported by clinical trials."
+    }
+  ],
+  "H012": [
+    {
+      "score": 4,
+      "justification": "Liraglutide is a biologically plausible repurposing candidate because GLP-1 receptor agonism may influence neuroinflammation, insulin signaling, and synaptic function, though direct clinical evidence for meaningful Alzheimer\u2019s benefit remains limited and not definitive."
+    },
+    {
+      "score": 3,
+      "justification": "Plausible and biologically informed because liraglutide (a GLP-1 receptor agonist) may influence neuroinflammation, insulin signaling, and synaptic function, but the hypothesis is very broad and not yet strong enough to be a compelling Alzheimer\u2019s repurposing proposal on its own."
+    }
+  ],
+  "H013": [
+    {
+      "score": 4,
+      "justification": "Plausible and mechanistically grounded, with supportive preclinical and some clinical rationale for GLP-1 agonists in Alzheimer\u2019s, though direct efficacy evidence remains limited and not yet definitive."
+    },
+    {
+      "score": 4,
+      "justification": "Biologically plausible and supported by prior GLP-1 agonist neuroprotective rationale, but still a repurposing hypothesis with mixed/limited clinical evidence for meaningful Alzheimer\u2019s disease efficacy."
+    }
+  ],
+  "H014": [
+    {
+      "score": 2,
+      "justification": "Vandetanib has some theoretical anti-inflammatory/anti-kinase relevance, but it is a cancer drug with significant safety liabilities and there is little direct evidence that its targets would meaningfully alter Alzheimer\u2019s disease pathology."
+    },
+    {
+      "score": 2,
+      "justification": "Vandetanib has some plausible anti-inflammatory/anti-signaling rationale, but it is a broad oncology kinase inhibitor with limited direct Alzheimer\u2019s evidence and significant safety/tolerability concerns for chronic use in an older population."
+    }
+  ],
+  "H015": [
+    {
+      "score": 3,
+      "justification": "Plausible and reasonably biologically grounded because losartan has anti-inflammatory and vascular effects that could indirectly influence amyloid pathology, but the direct evidence for meaningful Alzheimer's benefit is limited and mostly preclinical/associational."
+    },
+    {
+      "score": 3,
+      "justification": "Plausible and mechanistically grounded given losartan\u2019s vascular, anti-inflammatory, and potential amyloid-related effects, but the evidence for meaningful Alzheimer\u2019s benefit remains indirect and not yet strong enough to make it a high-confidence repurposing candidate."
+    }
+  ],
+  "H016": [
+    {
+      "score": 2,
+      "justification": "Adenosine has biologic plausibility in brain signaling and neuroinflammation, but this is far too broad and nonspecific as a repurposing proposal, with weak direct evidence for AD efficacy and substantial uncertainty about whether it would help or harm."
+    },
+    {
+      "score": 2,
+      "justification": "The idea is biologically plausible because adenosine signaling affects neuroinflammation, synaptic function, and sleep, but as a drug-repurposing proposal it is very broad, nonspecific, and lacks a clear mechanism, target, or supporting clinical evidence for Alzheimer\u2019s disease."
+    }
+  ],
+  "H017": [
+    {
+      "score": 3,
+      "justification": "Biologically plausible and supported by a known mechanism with some prior interest in AD, but clinical evidence has been mixed and it has not clearly shown robust disease-modifying benefit."
+    },
+    {
+      "score": 3,
+      "justification": "Biologically plausible and mechanistically grounded, but clinical evidence for pioglitazone in Alzheimer\u2019s has been mixed, so it\u2019s a reasonable repurposing idea with uncertain efficacy."
+    }
+  ],
+  "H018": [
+    {
+      "score": 3,
+      "justification": "It\u2019s a plausible but very broad repurposing idea because sildenafil has some mechanistic links to cerebral blood flow and signaling pathways, but the hypothesis is nonspecific and lacks direct evidence for meaningful Alzheimer\u2019s disease modification."
+    },
+    {
+      "score": 3,
+      "justification": "Plausible as a repurposing idea because sildenafil has some mechanistic links to cerebral blood flow and signaling pathways, but the hypothesis is very broad and currently lacks strong direct evidence for meaningful Alzheimer\u2019s disease benefit."
+    }
+  ],
+  "H019": [
+    {
+      "score": 3,
+      "justification": "Biologically plausible and drug-repurposing friendly due to known PDE5/cGMP effects and existing safety data, but still relatively speculative with limited convincing clinical evidence for meaningful Alzheimer\u2019s benefit."
+    },
+    {
+      "score": 3,
+      "justification": "Biologically plausible with some preclinical rationale and a clear repurposing advantage, but the evidence for meaningful Alzheimer's disease efficacy remains limited and largely indirect."
+    }
+  ],
+  "H020": [
+    {
+      "score": 3,
+      "justification": "Biological plausibility exists from sildenafil\u2019s vascular and cGMP/NO signaling effects, but the evidence for meaningful amyloid-beta reduction and plaque prevention in Alzheimer\u2019s is still limited and largely preclinical."
+    },
+    {
+      "score": 3,
+      "justification": "Biologically plausible and supported by some preclinical/observational signals, but the evidence is still indirect and not strong enough to make it a high-confidence repurposing proposal."
+    }
+  ],
+  "H021": [
+    {
+      "score": 3,
+      "justification": "This is biologically plausible and repurposable because chenodiol affects bile acid metabolism and may influence AD-relevant pathways, but the hypothesis is still broad, mechanistically indirect, and lacks strong direct evidence for disease modification in Alzheimer's."
+    },
+    {
+      "score": 3,
+      "justification": "The proposal is biologically plausible because chenodiol has mechanistic links to bile-acid signaling and could affect AD-relevant pathways, but it remains quite broad and indirect with limited specific evidence for robust disease-modifying effects in Alzheimer\u2019s."
+    }
+  ],
+  "H022": [
+    {
+      "score": 2,
+      "justification": "The proposal is very vague and mechanism-light, with little direct evidence that arundine meaningfully affects validated Alzheimer\u2019s disease targets, pathways, or translational repurposing feasibility."
+    },
+    {
+      "score": 2,
+      "justification": "The proposal is very vague and mechanistic claims are unsupported, with no clear evidence that arundine reaches the brain, hits relevant AD targets, or has meaningful prior data for repurposing in Alzheimer\u2019s disease."
+    }
+  ],
+  "H023": [
+    {
+      "score": 4,
+      "justification": "Biologically plausible and supported by known effects of metformin on AMPK/mTOR, but the evidence for meaningful Alzheimer\u2019s benefit remains mixed and not yet strong enough for a top rating."
+    },
+    {
+      "score": 4,
+      "justification": "Biologically plausible and supported by known metabolic/inflammatory effects of metformin, but clinical evidence for meaningful Alzheimer\u2019s benefit remains mixed and not yet definitive."
+    }
+  ],
+  "H024": [
+    {
+      "score": 4,
+      "justification": "Biologically plausible and supported by a reasonable mechanistic rationale linking AT1R blockade to vascular and oxidative stress pathways implicated in Alzheimer\u2019s disease, though direct evidence for meaningful disease-modifying benefit remains limited."
+    },
+    {
+      "score": 4,
+      "justification": "Biologically plausible and supported by known vascular/anti-inflammatory effects of AT1 blockade, but evidence for meaningful Alzheimer\u2019s disease modification remains indirect and not yet strong."
+    }
+  ],
+  "H025": [
+    {
+      "score": 3,
+      "justification": "Pioglitazone has a plausible anti-inflammatory/metabolic rationale and some preclinical support for effects on amyloid pathology, but clinical evidence for meaningful Alzheimer's disease prevention or disease modification has been inconsistent and overall weak."
+    },
+    {
+      "score": 3,
+      "justification": "Pioglitazone is biologically plausible as a repurposing candidate because of its anti-inflammatory and metabolic effects, but evidence for meaningful reduction of amyloid-beta/plaque burden in Alzheimer\u2019s disease has been inconsistent and clinical benefit remains unproven."
+    }
+  ]
+}

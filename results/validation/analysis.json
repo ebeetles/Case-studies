@@ -1,0 +1,197 @@
+{
+  "rubric_mean": {
+    "H001": {
+      "novelty": 2.0,
+      "specificity": 4.0
+    },
+    "H002": {
+      "novelty": 2.5,
+      "specificity": 4.0
+    },
+    "H003": {
+      "novelty": 3.5,
+      "specificity": 4.0
+    },
+    "H004": {
+      "novelty": 2.0,
+      "specificity": 2.0
+    },
+    "H005": {
+      "novelty": 2.0,
+      "specificity": 4.0
+    },
+    "H006": {
+      "novelty": 2.5,
+      "specificity": 4.0
+    },
+    "H007": {
+      "novelty": 3.5,
+      "specificity": 4.0
+    },
+    "H008": {
+      "novelty": 2.5,
+      "specificity": 2.0
+    },
+    "H009": {
+      "novelty": 2.0,
+      "specificity": 2.5
+    },
+    "H010": {
+      "novelty": 3.0,
+      "specificity": 2.5
+    },
+    "H011": {
+      "novelty": 2.5,
+      "specificity": 2.0
+    },
+    "H012": {
+      "novelty": 2.0,
+      "specificity": 2.0
+    },
+    "H013": {
+      "novelty": 3.0,
+      "specificity": 5.0
+    },
+    "H014": {
+      "novelty": 2.5,
+      "specificity": 4.0
+    },
+    "H015": {
+      "novelty": 2.0,
+      "specificity": 4.0
+    },
+    "H016": {
+      "novelty": 3.5,
+      "specificity": 2.0
+    },
+    "H017": {
+      "novelty": 2.5,
+      "specificity": 5.0
+    },
+    "H018": {
+      "novelty": 3.0,
+      "specificity": 3.5
+    },
+    "H019": {
+      "novelty": 2.0,
+      "specificity": 5.0
+    },
+    "H020": {
+      "novelty": 2.0,
+      "specificity": 4.5
+    },
+    "H021": {
+      "novelty": 4.0,
+      "specificity": 4.0
+    },
+    "H022": {
+      "novelty": 2.0,
+      "specificity": 3.0
+    },
+    "H023": {
+      "novelty": 2.0,
+      "specificity": 4.5
+    },
+    "H024": {
+      "novelty": 3.0,
+      "specificity": 5.0
+    },
+    "H025": {
+      "novelty": 1.5,
+      "specificity": 5.0
+    }
+  },
+  "holistic_mean": {
+    "H001": 4.0,
+    "H002": 3.0,
+    "H003": 3.0,
+    "H004": 2.5,
+    "H005": 3.5,
+    "H006": 3.5,
+    "H007": 2.5,
+    "H008": 2.0,
+    "H009": 3.0,
+    "H010": 2.0,
+    "H011": 3.0,
+    "H012": 3.5,
+    "H013": 4.0,
+    "H014": 2.0,
+    "H015": 3.0,
+    "H016": 2.0,
+    "H017": 3.0,
+    "H018": 3.0,
+    "H019": 3.0,
+    "H020": 3.0,
+    "H021": 3.0,
+    "H022": 2.0,
+    "H023": 4.0,
+    "H024": 4.0,
+    "H025": 3.0
+  },
+  "tier_recovery": {
+    "rubric": {
+      "novelty": {
+        "correct": 26,
+        "total": 75,
+        "rate": 0.3466666666666667
+      },
+      "specificity": {
+        "correct": 65,
+        "total": 75,
+        "rate": 0.8666666666666667
+      }
+    },
+    "holistic": {
+      "correct": 54,
+      "total": 75,
+      "rate": 0.72
+    },
+    "pairwise": {
+      "novelty": {
+        "correct": 64,
+        "total": 150,
+        "rate": 0.4266666666666667,
+        "unstable_pairs": 10,
+        "total_pairs": 75
+      },
+      "specificity": {
+        "correct": 133,
+        "total": 150,
+        "rate": 0.8866666666666667,
+        "unstable_pairs": 5,
+        "total_pairs": 75
+      }
+    }
+  },
+  "localization": {
+    "specificity": {
+      "novelty_delta": 0.1,
+      "specificity_delta": 2.4,
+      "n": 5
+    },
+    "novelty": {
+      "novelty_delta": 0.6,
+      "specificity_delta": 0.6,
+      "n": 5
+    }
+  },
+  "stability": {
+    "rubric_novelty": {
+      "mean_range": 0.4,
+      "mean_variance": 0.1,
+      "n_hyps_with_disagreement": 10
+    },
+    "rubric_specificity": {
+      "mean_range": 0.2,
+      "mean_variance": 0.05,
+      "n_hyps_with_disagreement": 5
+    },
+    "holistic": {
+      "mean_range": 0.2,
+      "mean_variance": 0.05,
+      "n_hyps_with_disagreement": 5
+    },
+    "n_hypotheses": 25,
+    "n_repeats": 2
+  }
+}

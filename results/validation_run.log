@@ -1,0 +1,90 @@
+/Users/elwinli/Case-studies/.venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[validate] Building hypothesis set (15 tiered + 10 degraded)...
+[validate] Generating degraded variants for 5 Tier-1 hypotheses via Groq (llama-3.3-70b-versatile)...
+[validate]   T1-A (Metformin): specificity-degrading...
+[validate]     -> Metformin may affect brain processes relevant to Alzheimer's disease.
+[validate]   T1-A (Metformin): novelty-degrading...
+[validate]     -> Metformin may reduce amyloid-beta accumulation and plaque formation relevant to Alzheimer's disease.
+[validate]   T1-B (Liraglutide): specificity-degrading...
+[validate]     -> Liraglutide may affect brain processes relevant to Alzheimer's disease.
+[validate]   T1-B (Liraglutide): novelty-degrading...
+[validate]     -> Liraglutide may reduce amyloid-beta accumulation and plaque formation relevant to Alzheimer's disease.
+[validate]   T1-C (Pioglitazone): specificity-degrading...
+[validate]     -> Pioglitazone may affect brain processes relevant to Alzheimer's disease.
+[validate]   T1-C (Pioglitazone): novelty-degrading...
+[validate]     -> Pioglitazone may reduce amyloid-beta accumulation and plaque formation, relevant to delaying Alzheimer's disease onset.
+[validate]   T1-D (Losartan): specificity-degrading...
+[validate]     -> Losartan may affect processes relevant to Alzheimer's disease.
+[validate]   T1-D (Losartan): novelty-degrading...
+[validate]     -> Losartan may reduce amyloid-beta accumulation and plaque formation, relevant to slowing Alzheimer's disease progression.
+[validate]   T1-E (Sildenafil): specificity-degrading...
+[validate]     -> Sildenafil may affect brain processes relevant to Alzheimer's disease.
+[validate]   T1-E (Sildenafil): novelty-degrading...
+[validate]     -> Sildenafil may reduce amyloid-beta accumulation and plaque formation, relevant to Alzheimer's disease.
+[validate] Assigned 25 anonymized IDs (H001-H025).
+[validate] Rubric judge (gpt-5.4-mini): 25 hyps x 2 dims x 2 repeats...
+[validate]   H001 done (4/100)
+[validate]   H002 done (8/100)
+[validate]   H003 done (12/100)
+[validate]   H004 done (16/100)
+[validate]   H005 done (20/100)
+[validate]   H006 done (24/100)
+[validate]   H007 done (28/100)
+[validate]   H008 done (32/100)
+[validate]   H009 done (36/100)
+[validate]   H010 done (40/100)
+[validate]   H011 done (44/100)
+[validate]   H012 done (48/100)
+[validate]   H013 done (52/100)
+[validate]   H014 done (56/100)
+[validate]   H015 done (60/100)
+[validate]   H016 done (64/100)
+[validate]   H017 done (68/100)
+[validate]   H018 done (72/100)
+[validate]   H019 done (76/100)
+[validate]   H020 done (80/100)
+[validate]   H021 done (84/100)
+[validate]   H022 done (88/100)
+[validate]   H023 done (92/100)
+[validate]   H024 done (96/100)
+[validate]   H025 done (100/100)
+[validate] Holistic judge (gpt-5.4-mini): 25 hyps x 2 repeats...
+[validate]   H001 done
+[validate]   H002 done
+[validate]   H003 done
+[validate]   H004 done
+[validate]   H005 done
+[validate]   H006 done
+[validate]   H007 done
+[validate]   H008 done
+[validate]   H009 done
+[validate]   H010 done
+[validate]   H011 done
+[validate]   H012 done
+[validate]   H013 done
+[validate]   H014 done
+[validate]   H015 done
+[validate]   H016 done
+[validate]   H017 done
+[validate]   H018 done
+[validate]   H019 done
+[validate]   H020 done
+[validate]   H021 done
+[validate]   H022 done
+[validate]   H023 done
+[validate]   H024 done
+[validate]   H025 done
+[validate] Pairwise judge (gpt-5.4-mini): 75 cross-tier pairs x 2 orders...
+[validate]   10/75 pairs done
+[validate]   20/75 pairs done
+[validate]   30/75 pairs done
+[validate]   40/75 pairs done
+[validate]   50/75 pairs done
+[validate]   60/75 pairs done
+[validate]   70/75 pairs done
+[validate]   75/75 pairs done
+[validate] Running analysis...
+[validate] Wrote results/validation/summary.md
+[validate] Wrote results/validation/raw_scores.csv
+[validate] Done in 472s.

@@ -1,0 +1,1835 @@
+[
+  {
+    "paper_id": "baricitinib_AD_neuroinflammation_2024",
+    "paper_short": "baricitinib_2024",
+    "condition": "A",
+    "research_question": "What existing FDA-approved drug, originally developed for a non-neurological indication, could suppress microglial-driven neuroinflammation and protect synaptic function through modulation of cytokine signalling described in these papers, and through what specific mechanism?",
+    "seed_paper_file": "seed_papers_baricitinib.py",
+    "ground_truth_drug": "baricitinib",
+    "final_hypothesis": {
+      "problem": "The persistent activation of microglial-driven neuroinflammation and subsequent synaptic dysfunction in Alzheimer's disease necessitates the exploration of novel therapeutic strategies that target alternative cytokine signalling pathways and their downstream effectors.",
+      "method": "The drug apremilast, a phosphodiesterase 4 inhibitor, will be investigated for its potential to modulate the NF-\u03baB signalling pathway in microglia, using a combination of in vitro experiments with primary microglial cells and in vivo validation in the APP/PS1 mouse model of Alzheimer's disease.",
+      "contribution": "This research will contribute to the development of a new therapeutic approach for Alzheimer's disease by exploring the untested potential of apremilast to suppress microglial-driven neuroinflammation and protect synaptic function through a distinct mechanism of action that targets the NF-\u03baB pathway."
+    },
+    "contamination_hit": false,
+    "contamination_terms_triggered": [],
+    "scores": {
+      "named_specific_drug": 1.0,
+      "drug_class_match": 0.0,
+      "mechanism_match": 0.5,
+      "total": 0.5,
+      "overall_similarity": 0.5488346961819666,
+      "genuine_rediscovery": true
+    },
+    "pipeline_log": [
+      {
+        "condition": "A",
+        "round": 1,
+        "candidate_id": 0,
+        "type": "round_selection",
+        "pairwise_comparisons": [
+          {
+            "idea_a_id": 1,
+            "idea_b_id": 2,
+            "winners": {
+              "novelty": "2",
+              "specificity": "2",
+              "feasibility": "2",
+              "overall": "2"
+            },
+            "justifications": {
+              "novelty": "Apremilast targeting NF-\u03baB in microglia is less directly foreshadowed by the seed literature than montelukast targeting STAT3, which aligns more closely with the provided cytokine/STAT3 neuroinflammation framing.",
+              "specificity": "Idea 2 specifies a concrete drug, pathway, cell type, and mouse model with a clearer mechanistic readout, making the testable hypothesis more operationalized.",
+              "feasibility": "Apremilast is a well-characterized PDE4 inhibitor with established pharmacology and direct links to cAMP/NF-\u03baB biology, which makes the experimental path slightly more straightforward than inferring montelukast effects on STAT3.",
+              "overall": "Idea 2 is both more novel and more tightly specified while remaining experimentally tractable, making it the stronger overall repurposing hypothesis."
+            }
+          },
+          {
+            "idea_a_id": 1,
+            "idea_b_id": 3,
+            "winners": {
+              "novelty": "3",
+              "specificity": "3",
+              "feasibility": "1",
+              "overall": "3"
+            },
+            "justifications": {
+              "novelty": "Idea 3 is more novel because linking ticagrelor to NLRP3 inflammasome modulation and mitochondrial bioenergetics in AD microglia goes beyond the seed literature\u2019s broader cytokine/STAT3 and general neuroinflammation themes.",
+              "specificity": "Idea 3 names a concrete approved drug, a defined receptor target, a specific inflammasome pathway, and a mitochondrial mechanism, making the experimental hypothesis more operationally precise.",
+              "feasibility": "Montelukast is easier to test in standard microglial and 5xFAD workflows because its pharmacology and CNS repurposing rationale are more straightforward than establishing a P2Y12\u2013NLRP3\u2013mitochondria axis in 3xTg-AD.",
+              "overall": "Despite somewhat greater mechanistic complexity, Idea 3 is the stronger repurposing hypothesis overall because it is more novel and more mechanistically specific while still being experimentally testable."
+            }
+          },
+          {
+            "idea_a_id": 1,
+            "idea_b_id": 4,
+            "winners": {
+              "novelty": "4",
+              "specificity": "4",
+              "feasibility": "1",
+              "overall": "1"
+            },
+            "justifications": {
+              "novelty": "Idea 4 is more novel because linking terbinafine to microglial kynurenine-pathway modulation in Alzheimer\u2019s disease is less directly anticipated by the seed literature than repurposing montelukast for inflammatory STAT3 signaling.",
+              "specificity": "Idea 4 specifies a concrete drug, enzyme target, pathway, cell type, and mouse model, making the mechanistic test more explicitly actionable than Idea 1.",
+              "feasibility": "Idea 1 is more feasible because montelukast, microglial STAT3 readouts, and the 5xFAD model are well-established and less biologically indirect than using terbinafine to probe IDO/kynurenine biology in APP/PS1 mice.",
+              "overall": "Idea 1 is the stronger overall repurposing hypothesis because it better balances biological plausibility and experimental tractability, even if it is somewhat less novel."
+            }
+          },
+          {
+            "idea_a_id": 1,
+            "idea_b_id": 5,
+            "winners": {
+              "novelty": "5",
+              "specificity": "1",
+              "feasibility": "1",
+              "overall": "1"
+            },
+            "justifications": {
+              "novelty": "Trifluridine is the more surprising repurposing candidate here because it is an anticancer thymidine synthase inhibitor with an epigenetic HDAC2 angle, whereas montelukast is already broadly discussed in neuroinflammation contexts and is therefore closer to an expected anti-inflammatory repurposing idea.",
+              "specificity": "Idea 1 is more specific because it names a defined receptor drug, a clear signaling axis (STAT3 in microglia), and a standard in vivo model, while Idea 5\u2019s proposed link between trifluridine and HDAC2 is less direct and less mechanistically grounded.",
+              "feasibility": "Montelukast has known pharmacology, brain-penetrance considerations, and readily testable effects on microglial STAT3 and synaptic markers, whereas trifluridine\u2019s proposed HDAC2 modulation is less established and more likely to face target-validation uncertainty.",
+              "overall": "Although Idea 5 is more novel, Idea 1 is the stronger overall repurposing hypothesis because it is more mechanistically plausible, operationally clear, and experimentally tractable with existing tools."
+            }
+          },
+          {
+            "idea_a_id": 2,
+            "idea_b_id": 3,
+            "winners": {
+              "novelty": "3",
+              "specificity": "3",
+              "feasibility": "2",
+              "overall": "2"
+            },
+            "justifications": {
+              "novelty": "Ticagrelor\u2019s proposed repurposing to target the NLRP3 inflammasome and mitochondrial bioenergetics in AD is more conceptually distinct from the seed literature\u2019s emphasis on generic cytokine/STAT3/NF-\u03baB inflammation pathways.",
+              "specificity": "Idea 3 specifies the drug, the microglial receptor target (P2Y12), the pathway (NLRP3 inflammasome), the cellular focus, and the AD model, making it more actionable than the broader NF-\u03baB modulation claim in Idea 2.",
+              "feasibility": "Apremilast has clearer mechanistic tractability for microglial inflammation studies with established PDE4 biology and typically simpler pathway readouts than disentangling ticagrelor\u2019s CNS-relevant effects on P2Y12, inflammasomes, and mitochondrial function.",
+              "overall": "Although Idea 3 is more novel and specific, Idea 2 is the stronger overall repurposing hypothesis because its mechanism is more straightforward to test and more likely to yield interpretable results in standard preclinical systems."
+            }
+          },
+          {
+            "idea_a_id": 2,
+            "idea_b_id": 4,
+            "winners": {
+              "novelty": "4",
+              "specificity": "4",
+              "feasibility": "2",
+              "overall": "2"
+            },
+            "justifications": {
+              "novelty": "Idea 4 is more novel because targeting terbinafine-mediated inhibition of the kynurenine pathway links AD neuroinflammation to a less commonly repurposed metabolic mechanism, whereas apremilast\u2019s PDE4/NF-\u03baB anti-inflammatory strategy is more established and expected.",
+              "specificity": "Idea 4 is more specific because it identifies a defined drug, enzyme target, pathway, and disease-relevant downstream axis, while Idea 2 is somewhat less mechanistically anchored despite naming apremilast and NF-\u03baB.",
+              "feasibility": "Idea 2 is more feasible because apremilast has a clearer CNS-agnostic pharmacology and well-developed toolset for testing NF-\u03baB modulation in microglia, whereas terbinafine\u2019s proposed IDO/kynurenine mechanism is less straightforward and more likely to face target-validity issues.",
+              "overall": "Idea 2 is the stronger overall repurposing hypothesis because it is more experimentally tractable and clinically grounded, even though Idea 4 is more novel."
+            }
+          },
+          {
+            "idea_a_id": 2,
+            "idea_b_id": 5,
+            "winners": {
+              "novelty": "5",
+              "specificity": "2",
+              "feasibility": "2",
+              "overall": "2"
+            },
+            "justifications": {
+              "novelty": "Idea 5 is more novel because linking trifluridine to HDAC2-mediated epigenetic control of microglial inflammatory gene expression is a less obvious and less established repurposing direction than using apremilast to dampen NF-\u03baB-driven neuroinflammation.",
+              "specificity": "Idea 2 is more specific because it names a concrete approved drug, a defined pathway target (NF-\u03baB), primary microglia, and the APP/PS1 model in a coherent testable design.",
+              "feasibility": "Apremilast has better practical feasibility because its pharmacology is better characterized and the NF-\u03baB readouts in microglia and APP/PS1 mice are more straightforward to implement than validating a trifluridine-to-HDAC2 mechanism.",
+              "overall": "Idea 2 is the stronger overall hypothesis because it is more directly actionable, mechanistically coherent, and experimentally tractable while still offering a plausible anti-inflammatory route relevant to synaptic protection."
+            }
+          },
+          {
+            "idea_a_id": 3,
+            "idea_b_id": 4,
+            "winners": {
+              "novelty": "4",
+              "specificity": "3",
+              "feasibility": "3",
+              "overall": "3"
+            },
+            "justifications": {
+              "novelty": "Idea 4 is more novel because targeting terbinafine via the kynurenine pathway and indoleamine 2,3-dioxygenase in AD is less directly anticipated by the seed literature than repurposing a P2Y12 antagonist to modulate microglial inflammasome signaling.",
+              "specificity": "Idea 3 is more specific because it clearly names ticagrelor, the P2Y12 receptor, the NLRP3 inflammasome, mitochondrial bioenergetics, primary microglia, and the 3xTg-AD model.",
+              "feasibility": "Idea 3 is more feasible because ticagrelor\u2019s pharmacology and the proposed microglial inflammasome assays and 3xTg-AD validation are more established and tractable than testing terbinafine\u2019s CNS-relevant effects on the kynurenine pathway in APP/PS1 mice.",
+              "overall": "Idea 3 is the stronger overall repurposing hypothesis because it is more mechanistically grounded, experimentally actionable, and likely to yield interpretable in vivo and in vitro results."
+            }
+          },
+          {
+            "idea_a_id": 3,
+            "idea_b_id": 5,
+            "winners": {
+              "novelty": "5",
+              "specificity": "5",
+              "feasibility": "3",
+              "overall": "3"
+            },
+            "justifications": {
+              "novelty": "Trifluridine\u2019s proposed link to HDAC2-mediated epigenetic regulation in microglia is less directly foreshadowed by the seed literature than ticagrelor\u2019s more expected anti-inflammatory/NLRP3 axis.",
+              "specificity": "Idea 5 names a concrete drug, a defined pathway (HDAC2), specific cell type, and an in vivo model, making the testable mechanistic claim more explicit.",
+              "feasibility": "Ticagrelor has clearer CNS-relevant pharmacology and a more straightforward inflammasome/microglial assay path than trifluridine\u2019s less established microglial epigenetic mechanism.",
+              "overall": "Although idea 5 is more novel, idea 3 is the more credible repurposing hypothesis because its mechanism is better aligned with existing biology and is easier to validate experimentally."
+            }
+          },
+          {
+            "idea_a_id": 4,
+            "idea_b_id": 5,
+            "winners": {
+              "novelty": "4",
+              "specificity": "5",
+              "feasibility": "5",
+              "overall": "5"
+            },
+            "justifications": {
+              "novelty": "Idea 4 is more novel because it links terbinafine to kynurenine-pathway modulation in microglia, whereas HDAC2-linked epigenetic regulation in Idea 5 is a more established and broadly explored neuroinflammatory concept.",
+              "specificity": "Idea 5 is more specific because it clearly names trifluridine, HDAC2, primary microglia, and the 5xFAD model, giving a more concrete testable mechanism and experimental setup.",
+              "feasibility": "Idea 5 is more feasible because trifluridine is already a well-characterized drug and HDAC2/microglial assays are more directly tractable than validating an unusual IDO-targeting repurposing claim in vivo.",
+              "overall": "Idea 5 is the stronger overall hypothesis because it is more operationally defined and experimentally practical while still offering a plausible mechanistic route to modulate microglial inflammation and synaptic dysfunction."
+            }
+          }
+        ]
+      },
+      {
+        "condition": "A",
+        "round": 1,
+        "candidate_id": 1,
+        "idea": {
+          "problem": "The persistent activation of microglial-driven neuroinflammation and subsequent synaptic dysfunction in Alzheimer's disease necessitates the exploration of novel therapeutic strategies that target alternative cytokine signalling pathways and their downstream effectors.",
+          "method": "The drug apremilast, a phosphodiesterase 4 inhibitor, will be investigated for its potential to modulate the NF-\u03baB signalling pathway in microglia, using a combination of in vitro experiments with primary microglial cells and in vivo validation in the APP/PS1 mouse model of Alzheimer's disease.",
+          "contribution": "This research will contribute to the development of a new therapeutic approach for Alzheimer's disease by exploring the untested potential of apremilast to suppress microglial-driven neuroinflammation and protect synaptic function through a distinct mechanism of action that targets the NF-\u03baB pathway."
+        },
+        "ranking": {
+          "dimension_wins": {
+            "novelty": 1,
+            "specificity": 2,
+            "feasibility": 4,
+            "overall": 4
+          },
+          "total_wins": 4,
+          "total_dimension_wins": 7
+        },
+        "scores": {
+          "novelty": 1,
+          "specificity": 2,
+          "feasibility": 4,
+          "overall_wins": 4,
+          "total_wins": 4,
+          "composite": 4
+        },
+        "pairwise_comparisons": [],
+        "weakness_targeted": null,
+        "targeted_query": null,
+        "retrieved_papers": null,
+        "retrieval_relevance": null,
+        "weakness_history": null,
+        "weakness_targeted_this_round": null,
+        "ood_query_used": null,
+        "duplicate_papers_filtered": null,
+        "idea_before_refinement": null,
+        "idea_after_refinement": null,
+        "ranking_before": null,
+        "ranking_after": null
+      },
+      {
+        "condition": "A",
+        "round": 1,
+        "candidate_id": 2,
+        "idea": {
+          "problem": "The complex interplay between microglial-driven neuroinflammation and synaptic dysfunction in Alzheimer's disease necessitates the exploration of novel therapeutic strategies that target the intersection of cytokine signalling and mitochondrial function.",
+          "method": "The drug ticagrelor, a P2Y12 receptor antagonist, will be investigated for its potential to modulate the NLRP3 inflammasome pathway in microglia, using a combination of in vitro experiments with primary microglial cells and in vivo validation in the 3xTg-AD mouse model of Alzheimer's disease.",
+          "contribution": "This research will contribute to the development of a new therapeutic approach for Alzheimer's disease by exploring the untested potential of ticagrelor to suppress microglial-driven neuroinflammation and protect synaptic function through a distinct mechanism of action that targets the NLRP3 inflammasome and its downstream effects on mitochondrial bioenergetics."
+        },
+        "ranking": {
+          "dimension_wins": {
+            "novelty": 2,
+            "specificity": 3,
+            "feasibility": 2,
+            "overall": 3
+          },
+          "total_wins": 3,
+          "total_dimension_wins": 7
+        },
+        "scores": {
+          "novelty": 2,
+          "specificity": 3,
+          "feasibility": 2,
+          "overall_wins": 3,
+          "total_wins": 3,
+          "composite": 3
+        },
+        "pairwise_comparisons": [],
+        "weakness_targeted": null,
+        "targeted_query": null,
+        "retrieved_papers": null,
+        "retrieval_relevance": null,
+        "weakness_history": null,
+        "weakness_targeted_this_round": null,
+        "ood_query_used": null,
+        "duplicate_papers_filtered": null,
+        "idea_before_refinement": null,
+        "idea_after_refinement": null,
+        "ranking_before": null,
+        "ranking_after": null
+      },
+      {
+        "condition": "A",
+        "round": 1,
+        "candidate_id": 3,
+        "idea": {
+          "problem": "The lack of effective treatments for Alzheimer's disease necessitates the identification of novel therapeutic strategies that target microglial-driven neuroinflammation and synaptic dysfunction, which are key contributors to disease progression.",
+          "method": "The drug montelukast, a cysteinyl leukotriene receptor antagonist, will be investigated for its potential to modulate the STAT3 signalling pathway in microglia, using a combination of in vitro experiments with primary microglial cells and in vivo validation in the 5xFAD mouse model of Alzheimer's disease.",
+          "contribution": "This research will contribute to the development of a new therapeutic approach for Alzheimer's disease by exploring the untested potential of montelukast to suppress microglial-driven neuroinflammation and protect synaptic function, providing a novel avenue for drug repurposing in the treatment of this devastating neurodegenerative disorder."
+        },
+        "ranking": {
+          "dimension_wins": {
+            "novelty": 0,
+            "specificity": 1,
+            "feasibility": 3,
+            "overall": 2
+          },
+          "total_wins": 2,
+          "total_dimension_wins": 4
+        },
+        "scores": {
+          "novelty": 0,
+          "specificity": 1,
+          "feasibility": 3,
+          "overall_wins": 2,
+          "total_wins": 2,
+          "composite": 2
+        },
+        "pairwise_comparisons": [],
+        "weakness_targeted": null,
+        "targeted_query": null,
+        "retrieved_papers": null,
+        "retrieval_relevance": null,
+        "weakness_history": null,
+        "weakness_targeted_this_round": null,
+        "ood_query_used": null,
+        "duplicate_papers_filtered": null,
+        "idea_before_refinement": null,
+        "idea_after_refinement": null,
+        "ranking_before": null,
+        "ranking_after": null
+      },
+      {
+        "condition": "A",
+        "round": 1,
+        "candidate_id": 4,
+        "idea": {
+          "problem": "The complex interplay between microglial-driven neuroinflammation, synaptic dysfunction, and epigenetic regulation in Alzheimer's disease necessitates the exploration of novel therapeutic strategies that target the intersection of cytokine signalling and histone modification.",
+          "method": "The drug trifluridine, a thymidine synthase inhibitor, will be investigated for its potential to modulate the histone deacetylase 2 pathway in microglia, using a combination of in vitro experiments with primary microglial cells and in vivo validation in the 5xFAD mouse model of Alzheimer's disease.",
+          "contribution": "This research will contribute to the development of a new therapeutic approach for Alzheimer's disease by exploring the untested potential of trifluridine to suppress microglial-driven neuroinflammation and protect synaptic function through a distinct mechanism of action that targets the epigenetic regulation of inflammatory gene expression."
+        },
+        "ranking": {
+          "dimension_wins": {
+            "novelty": 3,
+            "specificity": 2,
+            "feasibility": 1,
+            "overall": 1
+          },
+          "total_wins": 1,
+          "total_dimension_wins": 6
+        },
+        "scores": {
+          "novelty": 3,
+          "specificity": 2,
+          "feasibility": 1,
+          "overall_wins": 1,
+          "total_wins": 1,
+          "composite": 1
+        },
+        "pairwise_comparisons": [],
+        "weakness_targeted": null,
+        "targeted_query": null,
+        "retrieved_papers": null,
+        "retrieval_relevance": null,
+        "weakness_history": null,
+        "weakness_targeted_this_round": null,
+        "ood_query_used": null,
+        "duplicate_papers_filtered": null,
+        "idea_before_refinement": null,
+        "idea_after_refinement": null,
+        "ranking_before": null,
+        "ranking_after": null
+      },
+      {
+        "condition": "A",
+        "round": 1,
+        "candidate_id": 5,
+        "idea": {
+          "problem": "The intricate relationship between microglial-driven neuroinflammation, synaptic dysfunction, and the gut-brain axis in Alzheimer's disease necessitates the exploration of novel therapeutic strategies that target the intersection of cytokine signalling and the kynurenine pathway.",
+          "method": "The drug terbinafine, an antifungal agent that inhibits the enzyme indoleamine 2,3-dioxygenase, will be investigated for its potential to modulate the kynurenine pathway in microglia, using a combination of in vitro experiments with primary microglial cells and in vivo validation in the APP/PS1 mouse model of Alzheimer's disease.",
+          "contribution": "This research will contribute to the development of a new therapeutic approach for Alzheimer's disease by exploring the untested potential of terbinafine to suppress microglial-driven neuroinflammation and protect synaptic function through a distinct mechanism of action that targets the kynurenine pathway and its downstream effects on neurodegeneration."
+        },
+        "ranking": {
+          "dimension_wins": {
+            "novelty": 4,
+            "specificity": 2,
+            "feasibility": 0,
+            "overall": 0
+          },
+          "total_wins": 0,
+          "total_dimension_wins": 6
+        },
+        "scores": {
+          "novelty": 4,
+          "specificity": 2,
+          "feasibility": 0,
+          "overall_wins": 0,
+          "total_wins": 0,
+          "composite": 0
+        },
+        "pairwise_comparisons": [],
+        "weakness_targeted": null,
+        "targeted_query": null,
+        "retrieved_papers": null,
+        "retrieval_relevance": null,
+        "weakness_history": null,
+        "weakness_targeted_this_round": null,
+        "ood_query_used": null,
+        "duplicate_papers_filtered": null,
+        "idea_before_refinement": null,
+        "idea_after_refinement": null,
+        "ranking_before": null,
+        "ranking_after": null
+      }
+    ]
+  },
+  {
+    "paper_id": "baricitinib_AD_neuroinflammation_2024",
+    "paper_short": "baricitinib_2024",
+    "condition": "B",
+    "research_question": "What existing FDA-approved drug, originally developed for a non-neurological indication, could suppress microglial-driven neuroinflammation and protect synaptic function through modulation of cytokine signalling described in these papers, and through what specific mechanism?",
+    "seed_paper_file": "seed_papers_baricitinib.py",
+    "ground_truth_drug": "baricitinib",
+    "final_hypothesis": {
+      "problem": "The current understanding of microglial-driven neuroinflammation in Alzheimer's disease highlights the need for novel therapeutic strategies that can modulate cytokine signalling and protect synaptic function by targeting the intersection of immune and mitochondrial pathways.",
+      "method": "We propose to investigate the potential of Pioglitazone, a peroxisome proliferator-activated receptor gamma (PPAR\u03b3) agonist, to suppress microglial-driven neuroinflammation and protect synaptic function through modulation of the PPAR\u03b3/Nrf2 signalling pathway, specifically by enhancing CD36-mediated microglial amyloid-\u03b2 phagocytosis, as demonstrated in the APP/PS1 transgenic mouse model where PPAR\u03b3/RXR\u03b1-induced and CD36-mediated microglial amyloid-\u03b2 phagocytosis results in cognitive improvement.",
+      "contribution": "This research hypothesis aims to contribute to the development of a novel drug repurposing strategy for Alzheimer's disease, by providing new insights into the therapeutic potential of Pioglitazone in targeting microglial-driven neuroinflammation and synaptic dysfunction, and shedding light on the underlying molecular mechanisms involved."
+    },
+    "contamination_hit": false,
+    "contamination_terms_triggered": [],
+    "scores": {
+      "named_specific_drug": 1.0,
+      "drug_class_match": 0.0,
+      "mechanism_match": 0.5,
+      "total": 0.5,
+      "overall_similarity": 0.5225277633564557,
+      "genuine_rediscovery": true
+    },
+    "pipeline_log": [
+      {
+        "condition": "B",
+        "round": 1,
+        "candidate_id": 0,
+        "type": "pubmed_query",
+        "pubmed_query": "neuroinflammation microglial activation JAK-STAT signalling synaptic dysfunction FDA-approved developed non-neurological"
+      },
+      {
+        "condition": "B",
+        "round": 1,
+        "candidate_id": 0,
+        "type": "round_selection",
+        "pairwise_comparisons": [
+          {
+            "idea_a_id": 1,
+            "idea_b_id": 2,
+            "winners": {
+              "novelty": "1",
+              "specificity": "1",
+              "feasibility": "2",
+              "overall": "2"
+            },
+            "justifications": {
+              "novelty": "Ruxolitinib\u2019s direct positioning around JAK/STAT blockade in microglial cytokine signaling is a more distinct therapeutic angle than metformin\u2019s broader AMPK/NF-kappaB framing, which is already a common neuroinflammation repurposing theme.",
+              "specificity": "Idea 1 more concretely specifies a single repurposed drug, a defined pathway target (JAK1/2-STAT), and a clear disease mechanism to test in microglia and APP/PS1 mice.",
+              "feasibility": "Metformin is easier to deploy experimentally and clinically because it is inexpensive, widely used, well-characterized, and generally simpler to work with than a more immunomodulatory JAK inhibitor.",
+              "overall": "Although less novel, metformin is the more practical repurposing hypothesis overall because its safety, accessibility, and translational tractability make it a stronger candidate for real-world development."
+            }
+          },
+          {
+            "idea_a_id": 1,
+            "idea_b_id": 3,
+            "winners": {
+              "novelty": "3",
+              "specificity": "3",
+              "feasibility": "1",
+              "overall": "1"
+            },
+            "justifications": {
+              "novelty": "Azacitidine introduces a more distinct repurposing angle by linking epigenetic modulation to microglial STAT3-driven neuroinflammation, whereas Ruxolitinib is a more direct and expected JAK/STAT extension of the seed literature.",
+              "specificity": "Idea 3 names a concrete drug, a defined epigenetic mechanism, and a STAT3-linked inflammatory gene-regulation axis, making the mechanistic test slightly more articulated than the broader JAK/STAT suppression concept in Idea 1.",
+              "feasibility": "Ruxolitinib is a well-characterized JAK1/2 inhibitor with straightforward in vitro and in vivo use, while Azacitidine\u2019s dosing, toxicity, and CNS-relevant pharmacology make it less practical for an AD mouse-study workflow.",
+              "overall": "Although Idea 3 is more novel, Idea 1 is the stronger overall repurposing hypothesis because it is more directly aligned with the seed biology and substantially more feasible to test with existing tools and models."
+            }
+          },
+          {
+            "idea_a_id": 1,
+            "idea_b_id": 4,
+            "winners": {
+              "novelty": "4",
+              "specificity": "4",
+              "feasibility": "1",
+              "overall": "1"
+            },
+            "justifications": {
+              "novelty": "Sunitinib with NLRP3 inflammasome targeting is less directly foreshadowed by the seed literature than the JAK/STAT-centered Ruxolitinib idea, which closely echoes the cited STAT3 and cytokine-signalling framework.",
+              "specificity": "Idea 4 specifies a concrete repurposed drug, a defined pathway target, and a named AD model, making the mechanistic test more operational than the more canonical JAK/STAT suppression in Idea 1.",
+              "feasibility": "Ruxolitinib has a clearer mechanistic rationale, a more established pharmacological profile, and more straightforward assay readouts for cytokine/JAK-STAT modulation than testing a broader multi-kinase inhibitor against NLRP3 in AD.",
+              "overall": "Although Idea 4 is more novel, Idea 1 is the stronger repurposing hypothesis overall because its target-pathway-drug alignment is more direct and experimentally tractable for validating a neuroinflammation-synapse mechanism."
+            }
+          },
+          {
+            "idea_a_id": 1,
+            "idea_b_id": 5,
+            "winners": {
+              "novelty": "5",
+              "specificity": "1",
+              "feasibility": "5",
+              "overall": "5"
+            },
+            "justifications": {
+              "novelty": "Pioglitazone adds a more distinct immune-metabolic angle via PPAR\u03b3/Nrf2 modulation, whereas Ruxolitinib mainly follows the already well-trodden JAK/STAT neuroinflammation axis highlighted by the seed literature.",
+              "specificity": "Idea 1 is more directly actionable because it specifies a concrete kinase inhibitor target axis (JAK1/2 with Ruxolitinib) and a clearly defined downstream pathway (JAK/STAT) to test.",
+              "feasibility": "Pioglitazone is generally easier to deploy in translational and preclinical studies because it is a clinically established, orally available drug with broad experimental precedent and typically more favorable accessibility than repurposing a JAK inhibitor for CNS inflammation studies.",
+              "overall": "Despite being slightly less mechanistically crisp than Idea 1, Idea 5 is more novel and still sufficiently testable, while its PPAR\u03b3/Nrf2 framework offers a more differentiated repurposing rationale for Alzheimer\u2019s disease."
+            }
+          },
+          {
+            "idea_a_id": 2,
+            "idea_b_id": 3,
+            "winners": {
+              "novelty": "3",
+              "specificity": "3",
+              "feasibility": "2",
+              "overall": "2"
+            },
+            "justifications": {
+              "novelty": "Azacitidine plus epigenetic regulation of microglial STAT3-driven inflammation is less directly foreshadowed by the seed literature than the more canonical metformin\u2013AMPK/NF-kappaB anti-inflammatory axis.",
+              "specificity": "Idea 3 names a defined drug, a concrete epigenetic mechanism, a specific signaling pathway, and a specific AD mouse model, making the testable hypothesis more sharply articulated.",
+              "feasibility": "Metformin has a well-established safety profile, broad experimental availability, and clearer translational precedent than azacitidine, which poses more dosing and toxicity challenges in CNS applications.",
+              "overall": "Although less novel, Idea 2 is the stronger overall repurposing hypothesis because it is more practical, biologically plausible, and likely to be advanced with existing laboratory and translational resources."
+            }
+          },
+          {
+            "idea_a_id": 2,
+            "idea_b_id": 4,
+            "winners": {
+              "novelty": "4",
+              "specificity": "4",
+              "feasibility": "2",
+              "overall": "2"
+            },
+            "justifications": {
+              "novelty": "Sunitinib targeting the NLRP3 inflammasome in microglia is less directly implied by the seed literature than metformin\u2019s AMPK/NF-kappaB anti-inflammatory framing, making it the more genuinely novel repurposing angle.",
+              "specificity": "Idea 4 specifies a concrete repurposed drug, a defined pathway, and a named AD model, whereas Idea 2 is somewhat more generic in linking AMPK to NF-kappaB-mediated effects.",
+              "feasibility": "Metformin has extensive preclinical and clinical familiarity, better brain-penetration plausibility, and lower translational risk than sunitinib, which is more toxic and less practical for chronic AD use.",
+              "overall": "Although Idea 4 is more novel and mechanistically specific, Idea 2 is the stronger overall hypothesis because it is safer, more tractable, and better aligned with long-term repurposing in Alzheimer\u2019s disease."
+            }
+          },
+          {
+            "idea_a_id": 2,
+            "idea_b_id": 5,
+            "winners": {
+              "novelty": "5",
+              "specificity": "2",
+              "feasibility": "2",
+              "overall": "2"
+            },
+            "justifications": {
+              "novelty": "Pioglitazone framed through the PPAR\u03b3/Nrf2 axis and mitochondrial-immune crosstalk is a somewhat less direct extension of the seed literature than metformin\u2019s AMPK/NF-kappaB anti-inflammatory rationale, which is a more established repurposing angle.",
+              "specificity": "Idea 2 is more specific because it names metformin, AMPK, NF-kappaB, primary microglia, and the 3xTg-AD model, giving a tighter set of testable interventions and readouts.",
+              "feasibility": "Metformin has extensive existing pharmacology, good CNS translational familiarity, and the proposed primary microglia plus 3xTg-AD workflow is straightforward with standard tools.",
+              "overall": "Although Idea 5 is slightly more novel, Idea 2 is the stronger overall repurposing hypothesis because it is more concrete, experimentally tractable, and better aligned with established translational workflows."
+            }
+          },
+          {
+            "idea_a_id": 3,
+            "idea_b_id": 4,
+            "winners": {
+              "novelty": "4",
+              "specificity": "4",
+              "feasibility": "4",
+              "overall": "4"
+            },
+            "justifications": {
+              "novelty": "Sunitinib\u2019s proposed link to NLRP3 inflammasome modulation in AD is less directly implied by the seed literature than Azacitidine\u2019s more familiar epigenetic/STAT3 anti-inflammatory framing, making it the more genuinely novel repurposing angle.",
+              "specificity": "Idea 4 specifies a named repurposed drug, a concrete pathway target (NLRP3 inflammasome), and defined experimental models, whereas idea 3 is somewhat broader because STAT3 and epigenetic regulation are more diffuse mechanistic axes.",
+              "feasibility": "Sunitinib\u2019s effects on inflammasome signaling can be tested with standard microglial assays and in established AD mouse models without needing to disentangle the extensive genome-wide epigenetic consequences expected for Azacitidine.",
+              "overall": "Overall, Idea 4 is stronger because it is more novel, more tightly mechanistic, and more straightforward to validate experimentally as a drug repurposing hypothesis."
+            }
+          },
+          {
+            "idea_a_id": 3,
+            "idea_b_id": 5,
+            "winners": {
+              "novelty": "5",
+              "specificity": "5",
+              "feasibility": "5",
+              "overall": "5"
+            },
+            "justifications": {
+              "novelty": "Pioglitazone via PPAR\u03b3/Nrf2 is a more distinctive repurposing angle for microglial neuroinflammation than azacitidine, which more directly echoes the seed literature\u2019s already-emphasized cytokine/STAT3/epigenetic modulation theme.",
+              "specificity": "Idea 5 names a concrete approved drug and a defined pathway pair (PPAR\u03b3/Nrf2), whereas Idea 3\u2019s azacitidine plus STAT3/epigenetic regulation is comparatively less mechanistically anchored and more diffuse.",
+              "feasibility": "Pioglitazone is an established small-molecule with known CNS-relevant pharmacology and extensive experimental precedent, making it more practical than azacitidine, whose toxicity and epigenetic breadth complicate interpretation and in vivo use.",
+              "overall": "Idea 5 is the stronger repurposing hypothesis because it is both more practically testable and more convincingly distinct from the seed literature while still offering a plausible microglial-inflammatory mechanism."
+            }
+          },
+          {
+            "idea_a_id": 4,
+            "idea_b_id": 5,
+            "winners": {
+              "novelty": "4",
+              "specificity": "5",
+              "feasibility": "5",
+              "overall": "5"
+            },
+            "justifications": {
+              "novelty": "Sunitinib paired with the NLRP3 inflammasome in AD is less directly anticipated by the seed literature than Pioglitazone\u2019s well-trodden anti-inflammatory/PPAR\u03b3-Nrf2 framing, making it the more novel repurposing angle.",
+              "specificity": "Idea 5 is more specific because it clearly names Pioglitazone, PPAR\u03b3, Nrf2, primary microglia, and the APP/PS1 model, whereas Idea 4\u2019s sunitinib-to-NLRP3 link is mechanistically less concretely anchored.",
+              "feasibility": "Pioglitazone is better supported by existing pharmacology, has a clearer CNS-related translational path, and is generally easier to test in standard in vitro and APP/PS1 workflows than repurposing sunitinib for neuroinflammatory disease.",
+              "overall": "Although Idea 4 is more novel, Idea 5 is the stronger overall hypothesis because it is more specific, more practical to test, and better aligned with established druggability and experimental precedent."
+            }
+          }
+        ]
+      },
+      {
+        "condition": "B",
+        "round": 1,
+        "candidate_id": 1,
+        "idea": {
+          "problem": "The current understanding of microglial-driven neuroinflammation in Alzheimer's disease highlights the need for novel therapeutic strategies that can modulate cytokine signalling and protect synaptic function, beyond the existing approaches described in the literature, by targeting the intersection of immune and metabolic pathways.",
+          "method": "We propose to investigate the potential of Metformin, a biguanide that targets the AMP-activated protein kinase (AMPK) pathway, to suppress microglial-driven neuroinflammation and protect synaptic function through modulation of the NF-kappaB signalling pathway, using a combination of in vitro experiments with primary microglial cells and in vivo validation in the 3xTg-AD transgenic mouse model of Alzheimer's disease.",
+          "contribution": "This research hypothesis aims to contribute to the development of a novel drug repurposing strategy for Alzheimer's disease, by providing new insights into the therapeutic potential of Metformin in targeting microglial-driven neuroinflammation and synaptic dysfunction, and shedding light on the underlying molecular mechanisms involved."
+        },
+        "ranking": {
+          "dimension_wins": {
+            "novelty": 0,
+            "specificity": 1,
+            "feasibility": 4,
+            "overall": 4
+          },
+          "total_wins": 4,
+          "total_dimension_wins": 5
+        },
+        "scores": {
+          "novelty": 0,
+          "specificity": 1,
+          "feasibility": 4,
+          "overall_wins": 4,
+          "total_wins": 4,
+          "composite": 4
+        },
+        "pairwise_comparisons": [],
+        "weakness_targeted": null,
+        "targeted_query": null,
+        "retrieved_papers": null,
+        "retrieval_relevance": null,
+        "weakness_history": null,
+        "weakness_targeted_this_round": null,
+        "ood_query_used": null,
+        "duplicate_papers_filtered": null,
+        "idea_before_refinement": null,
+        "idea_after_refinement": null,
+        "ranking_before": null,
+        "ranking_after": null
+      },
+      {
+        "condition": "B",
+        "round": 1,
+        "candidate_id": 2,
+        "idea": {
+          "problem": "The current understanding of microglial-driven neuroinflammation in Alzheimer's disease highlights the need for novel therapeutic strategies that can modulate cytokine signalling and protect synaptic function by targeting the intersection of immune and mitochondrial pathways.",
+          "method": "We propose to investigate the potential of Pioglitazone, a peroxisome proliferator-activated receptor gamma (PPAR\u03b3) agonist, to suppress microglial-driven neuroinflammation and protect synaptic function through modulation of the PPAR\u03b3/Nrf2 signalling pathway, using a combination of in vitro experiments with primary microglial cells and in vivo validation in the APP/PS1 transgenic mouse model of Alzheimer's disease.",
+          "contribution": "This research hypothesis aims to contribute to the development of a novel drug repurposing strategy for Alzheimer's disease, by providing new insights into the therapeutic potential of Pioglitazone in targeting microglial-driven neuroinflammation and synaptic dysfunction, and shedding light on the underlying molecular mechanisms involved."
+        },
+        "ranking": {
+          "dimension_wins": {
+            "novelty": 3,
+            "specificity": 2,
+            "feasibility": 3,
+            "overall": 3
+          },
+          "total_wins": 3,
+          "total_dimension_wins": 8
+        },
+        "scores": {
+          "novelty": 3,
+          "specificity": 2,
+          "feasibility": 3,
+          "overall_wins": 3,
+          "total_wins": 3,
+          "composite": 3
+        },
+        "pairwise_comparisons": [],
+        "weakness_targeted": null,
+        "targeted_query": null,
+        "retrieved_papers": null,
+        "retrieval_relevance": null,
+        "weakness_history": null,
+        "weakness_targeted_this_round": null,
+        "ood_query_used": null,
+        "duplicate_papers_filtered": null,
+        "idea_before_refinement": null,
+        "idea_after_refinement": null,
+        "ranking_before": null,
+        "ranking_after": null
+      },
+      {
+        "condition": "B",
+        "round": 1,
+        "candidate_id": 3,
+        "idea": {
+          "problem": "The current understanding of microglial-driven neuroinflammation in Alzheimer's disease highlights the need for novel therapeutic strategies that can modulate cytokine signalling and protect synaptic function, beyond the existing approaches described in the literature.",
+          "method": "We propose to investigate the potential of Ruxolitinib, a JAK1/2 inhibitor, to suppress microglial-driven neuroinflammation and protect synaptic function through modulation of the JAK/STAT pathway, using a combination of in vitro experiments with primary microglial cells and in vivo validation in the APP/PS1 transgenic mouse model of Alzheimer's disease.",
+          "contribution": "This research hypothesis aims to contribute to the development of a novel drug repurposing strategy for Alzheimer's disease, by providing new insights into the therapeutic potential of Ruxolitinib in targeting microglial-driven neuroinflammation and synaptic dysfunction, and shedding light on the underlying molecular mechanisms involved."
+        },
+        "ranking": {
+          "dimension_wins": {
+            "novelty": 1,
+            "specificity": 2,
+            "feasibility": 2,
+            "overall": 2
+          },
+          "total_wins": 2,
+          "total_dimension_wins": 5
+        },
+        "scores": {
+          "novelty": 1,
+          "specificity": 2,
+          "feasibility": 2,
+          "overall_wins": 2,
+          "total_wins": 2,
+          "composite": 2
+        },
+        "pairwise_comparisons": [],
+        "weakness_targeted": null,
+        "targeted_query": null,
+        "retrieved_papers": null,
+        "retrieval_relevance": null,
+        "weakness_history": null,
+        "weakness_targeted_this_round": null,
+        "ood_query_used": null,
+        "duplicate_papers_filtered": null,
+        "idea_before_refinement": null,
+        "idea_after_refinement": null,
+        "ranking_before": null,
+        "ranking_after": null
+      },
+      {
+        "condition": "B",
+        "round": 1,
+        "candidate_id": 4,
+        "idea": {
+          "problem": "The current understanding of microglial-driven neuroinflammation in Alzheimer's disease highlights the need for novel therapeutic strategies that can modulate cytokine signalling and protect synaptic function by targeting the intersection of immune and cellular stress pathways.",
+          "method": "We propose to investigate the potential of Sunitinib, a multi-targeted receptor tyrosine kinase inhibitor, to suppress microglial-driven neuroinflammation and protect synaptic function through modulation of the NLRP3 inflammasome pathway, using a combination of in vitro experiments with primary microglial cells and in vivo validation in the 5xFAD transgenic mouse model of Alzheimer's disease.",
+          "contribution": "This research hypothesis aims to contribute to the development of a novel drug repurposing strategy for Alzheimer's disease, by providing new insights into the therapeutic potential of Sunitinib in targeting microglial-driven neuroinflammation and synaptic dysfunction, and shedding light on the underlying molecular mechanisms involved."
+        },
+        "ranking": {
+          "dimension_wins": {
+            "novelty": 4,
+            "specificity": 3,
+            "feasibility": 1,
+            "overall": 1
+          },
+          "total_wins": 1,
+          "total_dimension_wins": 8
+        },
+        "scores": {
+          "novelty": 4,
+          "specificity": 3,
+          "feasibility": 1,
+          "overall_wins": 1,
+          "total_wins": 1,
+          "composite": 1
+        },
+        "pairwise_comparisons": [],
+        "weakness_targeted": null,
+        "targeted_query": null,
+        "retrieved_papers": null,
+        "retrieval_relevance": null,
+        "weakness_history": null,
+        "weakness_targeted_this_round": null,
+        "ood_query_used": null,
+        "duplicate_papers_filtered": null,
+        "idea_before_refinement": null,
+        "idea_after_refinement": null,
+        "ranking_before": null,
+        "ranking_after": null
+      },
+      {
+        "condition": "B",
+        "round": 1,
+        "candidate_id": 5,
+        "idea": {
+          "problem": "The current understanding of microglial-driven neuroinflammation in Alzheimer's disease highlights the need for novel therapeutic strategies that can modulate cytokine signalling and protect synaptic function by targeting the intersection of immune and epigenetic pathways.",
+          "method": "We propose to investigate the potential of Azacitidine, a DNA methyltransferase inhibitor, to suppress microglial-driven neuroinflammation and protect synaptic function through modulation of the STAT3 signalling pathway and epigenetic regulation of pro-inflammatory gene expression, using a combination of in vitro experiments with primary microglial cells and in vivo validation in the APP/PS1 transgenic mouse model of Alzheimer's disease.",
+          "contribution": "This research hypothesis aims to contribute to the development of a novel drug repurposing strategy for Alzheimer's disease, by providing new insights into the therapeutic potential of Azacitidine in targeting microglial-driven neuroinflammation and synaptic dysfunction, and shedding light on the underlying molecular mechanisms involved."
+        },
+        "ranking": {
+          "dimension_wins": {
+            "novelty": 2,
+            "specificity": 2,
+            "feasibility": 0,
+            "overall": 0
+          },
+          "total_wins": 0,
+          "total_dimension_wins": 4
+        },
+        "scores": {
+          "novelty": 2,
+          "specificity": 2,
+          "feasibility": 0,
+          "overall_wins": 0,
+          "total_wins": 0,
+          "composite": 0
+        },
+        "pairwise_comparisons": [],
+        "weakness_targeted": null,
+        "targeted_query": null,
+        "retrieved_papers": null,
+        "retrieval_relevance": null,
+        "weakness_history": null,
+        "weakness_targeted_this_round": null,
+        "ood_query_used": null,
+        "duplicate_papers_filtered": null,
+        "idea_before_refinement": null,
+        "idea_after_refinement": null,
+        "ranking_before": null,
+        "ranking_after": null
+      },
+      {
+        "condition": "B",
+        "round": 2,
+        "candidate_id": 1,
+        "type": "pubmed_query",
+        "pubmed_query": "Metformin biguanide targets AMP-activated protein kinase AMPK suppress current understanding repurposing"
+      },
+      {
+        "condition": "B",
+        "round": 2,
+        "candidate_id": 1,
+        "idea": {
+          "problem": "The current understanding of microglial-driven neuroinflammation in Alzheimer's disease highlights the need for novel therapeutic strategies that can modulate cytokine signalling and protect synaptic function, beyond the existing approaches described in the literature, by targeting the intersection of immune and metabolic pathways.",
+          "method": "We propose to investigate the potential of Metformin, which targets the AMP-activated protein kinase (AMPK) pathway, to suppress microglial-driven neuroinflammation and protect synaptic function through modulation of the NF-kappaB signalling pathway, using a combination of in vitro experiments with primary microglial cells and in vivo validation in the 3xTg-AD transgenic mouse model of Alzheimer's disease, focusing on the specific mechanism by which Metformin inhibits the interaction between caveolin1 and AMPK\u03b1.",
+          "contribution": "This research hypothesis aims to contribute to the development of a novel drug repurposing strategy for Alzheimer's disease, by providing new insights into the therapeutic potential of Metformin in targeting microglial-driven neuroinflammation and synaptic dysfunction, and shedding light on the underlying molecular mechanisms involved."
+        },
+        "ranking": {
+          "dimension_wins": {
+            "novelty": 1,
+            "specificity": 1,
+            "feasibility": 0,
+            "overall": 1
+          },
+          "total_wins": 1,
+          "total_dimension_wins": 2
+        },
+        "scores": {
+          "novelty": 1,
+          "specificity": 1,
+          "feasibility": 0,
+          "overall_wins": 1,
+          "total_wins": 1,
+          "composite": 1
+        },
+        "pairwise_comparisons": [
+          {
+            "idea_a_label": "parent",
+            "idea_b_label": "refined",
+            "winners": {
+              "novelty": "refined",
+              "specificity": "refined",
+              "feasibility": "parent",
+              "overall": "refined"
+            },
+            "justifications": {
+              "novelty": "The refined idea is more novel because it adds a specific caveolin1\u2013AMPK\u03b1 interaction mechanism that goes beyond the broadly known metformin/AMPK/NF-kappaB neuroinflammation framework in the seed literature.",
+              "specificity": "The refined idea is more specific because it names the caveolin1\u2013AMPK\u03b1 interaction as a concrete mechanistic target in addition to metformin, AMPK, and NF-kappaB.",
+              "feasibility": "The parent is more feasible because it avoids the extra mechanistic burden of directly validating a caveolin1\u2013AMPK\u03b1 interaction, making the experimental plan simpler and more straightforward.",
+              "overall": "The refined hypothesis is better overall because it retains the same practical repurposing framework while adding a sharper, more testable mechanistic claim that improves scientific depth and originality."
+            }
+          }
+        ],
+        "weakness_targeted": null,
+        "targeted_query": "Metformin biguanide targets AMP-activated protein kinase AMPK suppress current understanding repurposing",
+        "retrieved_papers": [
+          {
+            "title": "Metformin activates AMPK and mTOR to Inhibit RANKL-stimulated osteoclast formation.",
+            "abstract": "Metformin is a medication used to treat type 2 diabetes by inhibiting hepatic glucose production through adenosine monophosphate-activated protein kinase (AMPK) activation. Autophagy is closely related to the homeostasis and stress mechanisms of the body. In recent years, much research has arisen on therapeutic methods utilizing autophagy mechanisms to treat diagnoses such as metabolic diseases, t"
+          },
+          {
+            "title": "Evaluating the efficacy and mechanism of metformin targets on reducing Alzheimer's disease risk in the general population: a Mendelian randomisation study.",
+            "abstract": "Metformin use has been associated with reduced incidence of dementia in diabetic individuals in observational studies. However, the causality between the two in the general population is unclear. This study uses Mendelian randomisation (MR) to investigate the causal effect of metformin targets on Alzheimer's disease and potential causal mechanisms in the brain linking the two. Genetic proxies for "
+          },
+          {
+            "title": "Metformin alleviates high glucose-induced ER stress and inflammation by inhibiting the interaction between caveolin1 and AMPK\u03b1 in rat astrocytes.",
+            "abstract": "Hyperglycemia-induced endoplasmic reticulum (ER) stress and inflammatory response afflict neuropathological diseases (such as epilepsy and Alzheimer's disease). Astrocytes are the critical cells that mediate brain inflammation in this process. Metformin is a kind of hypoglycemic drugs widely used in clinical practice, which has anti-inflammatory and antioxidant effects. However, the biological mec"
+          }
+        ],
+        "retrieval_relevance": 2,
+        "weakness_history": null,
+        "weakness_targeted_this_round": null,
+        "ood_query_used": null,
+        "duplicate_papers_filtered": null,
+        "idea_before_refinement": {
+          "problem": "The current understanding of microglial-driven neuroinflammation in Alzheimer's disease highlights the need for novel therapeutic strategies that can modulate cytokine signalling and protect synaptic function, beyond the existing approaches described in the literature, by targeting the intersection of immune and metabolic pathways.",
+          "method": "We propose to investigate the potential of Metformin, a biguanide that targets the AMP-activated protein kinase (AMPK) pathway, to suppress microglial-driven neuroinflammation and protect synaptic function through modulation of the NF-kappaB signalling pathway, using a combination of in vitro experiments with primary microglial cells and in vivo validation in the 3xTg-AD transgenic mouse model of Alzheimer's disease.",
+          "contribution": "This research hypothesis aims to contribute to the development of a novel drug repurposing strategy for Alzheimer's disease, by providing new insights into the therapeutic potential of Metformin in targeting microglial-driven neuroinflammation and synaptic dysfunction, and shedding light on the underlying molecular mechanisms involved."
+        },
+        "idea_after_refinement": {
+          "problem": "The current understanding of microglial-driven neuroinflammation in Alzheimer's disease highlights the need for novel therapeutic strategies that can modulate cytokine signalling and protect synaptic function, beyond the existing approaches described in the literature, by targeting the intersection of immune and metabolic pathways.",
+          "method": "We propose to investigate the potential of Metformin, which targets the AMP-activated protein kinase (AMPK) pathway, to suppress microglial-driven neuroinflammation and protect synaptic function through modulation of the NF-kappaB signalling pathway, using a combination of in vitro experiments with primary microglial cells and in vivo validation in the 3xTg-AD transgenic mouse model of Alzheimer's disease, focusing on the specific mechanism by which Metformin inhibits the interaction between caveolin1 and AMPK\u03b1.",
+          "contribution": "This research hypothesis aims to contribute to the development of a novel drug repurposing strategy for Alzheimer's disease, by providing new insights into the therapeutic potential of Metformin in targeting microglial-driven neuroinflammation and synaptic dysfunction, and shedding light on the underlying molecular mechanisms involved."
+        },
+        "ranking_before": {
+          "novelty_wins": 0,
+          "specificity_wins": 1,
+          "feasibility_wins": 4,
+          "overall_wins": 4,
+          "total_wins": 4
+        },
+        "ranking_after": {
+          "novelty_wins": 1,
+          "specificity_wins": 1,
+          "feasibility_wins": 0,
+          "overall_wins": 1,
+          "total_wins": 1
+        }
+      },
+      {
+        "condition": "B",
+        "round": 2,
+        "candidate_id": 2,
+        "type": "pubmed_query",
+        "pubmed_query": "Pioglitazone peroxisome proliferator-activated receptor gamma PPAR\u03b3 agonist suppress current understanding repurposing"
+      },
+      {
+        "condition": "B",
+        "round": 2,
+        "candidate_id": 2,
+        "idea": {
+          "problem": "The current understanding of microglial-driven neuroinflammation in Alzheimer's disease highlights the need for novel therapeutic strategies that can modulate cytokine signalling and protect synaptic function by targeting the intersection of immune and mitochondrial pathways.",
+          "method": "We propose to investigate the potential of Pioglitazone, a peroxisome proliferator-activated receptor gamma (PPAR\u03b3) agonist, to suppress microglial-driven neuroinflammation and protect synaptic function through modulation of the PPAR\u03b3/Nrf2 signalling pathway, specifically by enhancing CD36-mediated microglial amyloid-\u03b2 phagocytosis, using a combination of in vitro experiments with primary microglial cells and in vivo validation in the APP/PS1 transgenic mouse model of Alzheimer's disease.",
+          "contribution": "This research hypothesis aims to contribute to the development of a novel drug repurposing strategy for Alzheimer's disease, by providing new insights into the therapeutic potential of Pioglitazone in targeting microglial-driven neuroinflammation and synaptic dysfunction, and shedding light on the underlying molecular mechanisms involved."
+        },
+        "ranking": {
+          "dimension_wins": {
+            "novelty": 1,
+            "specificity": 1,
+            "feasibility": 0,
+            "overall": 1
+          },
+          "total_wins": 1,
+          "total_dimension_wins": 2
+        },
+        "scores": {
+          "novelty": 1,
+          "specificity": 1,
+          "feasibility": 0,
+          "overall_wins": 1,
+          "total_wins": 1,
+          "composite": 1
+        },
+        "pairwise_comparisons": [
+          {
+            "idea_a_label": "parent",
+            "idea_b_label": "refined",
+            "winners": {
+              "novelty": "refined",
+              "specificity": "refined",
+              "feasibility": "parent",
+              "overall": "refined"
+            },
+            "justifications": {
+              "novelty": "By adding a CD36-mediated amyloid-\u03b2 phagocytosis mechanism, the refined idea moves beyond the seed literature\u2019s general PPAR\u03b3/immune-modulation framing into a more specific, less obviously rephrased mechanistic hypothesis.",
+              "specificity": "The refined idea names a concrete effector pathway, CD36-mediated microglial amyloid-\u03b2 phagocytosis, in addition to Pioglitazone, PPAR\u03b3/Nrf2, and APP/PS1 validation, making the testable biology more explicit.",
+              "feasibility": "The parent hypothesis is easier to execute because it relies on a broader, more straightforward readout of neuroinflammation and synaptic protection without requiring the extra mechanistic dissection of CD36-dependent phagocytosis.",
+              "overall": "Although slightly more demanding experimentally, the refined hypothesis is stronger overall because it is more mechanistically specific and more clearly differentiates itself from the existing literature."
+            }
+          }
+        ],
+        "weakness_targeted": null,
+        "targeted_query": "Pioglitazone peroxisome proliferator-activated receptor gamma PPAR\u03b3 agonist suppress current understanding repurposing",
+        "retrieved_papers": [
+          {
+            "title": "PPAR\u03b3/RXR\u03b1-induced and CD36-mediated microglial amyloid-\u03b2 phagocytosis results in cognitive improvement in amyloid precursor protein/presenilin 1 mice.",
+            "abstract": "Alzheimer's disease (AD) is characterized by the extracellular deposition of amyloid-\u03b2 (A\u03b2), neurofibrillary tangle formation, and a microglial-driven inflammatory response. Chronic inflammatory activation compromises microglial clearance functions. Because peroxisome proliferator-activated receptor \u03b3 (PPAR\u03b3) agonists suppress inflammatory gene expression, we tested whether activation of PPAR\u03b3 wou"
+          }
+        ],
+        "retrieval_relevance": 3,
+        "weakness_history": null,
+        "weakness_targeted_this_round": null,
+        "ood_query_used": null,
+        "duplicate_papers_filtered": null,
+        "idea_before_refinement": {
+          "problem": "The current understanding of microglial-driven neuroinflammation in Alzheimer's disease highlights the need for novel therapeutic strategies that can modulate cytokine signalling and protect synaptic function by targeting the intersection of immune and mitochondrial pathways.",
+          "method": "We propose to investigate the potential of Pioglitazone, a peroxisome proliferator-activated receptor gamma (PPAR\u03b3) agonist, to suppress microglial-driven neuroinflammation and protect synaptic function through modulation of the PPAR\u03b3/Nrf2 signalling pathway, using a combination of in vitro experiments with primary microglial cells and in vivo validation in the APP/PS1 transgenic mouse model of Alzheimer's disease.",
+          "contribution": "This research hypothesis aims to contribute to the development of a novel drug repurposing strategy for Alzheimer's disease, by providing new insights into the therapeutic potential of Pioglitazone in targeting microglial-driven neuroinflammation and synaptic dysfunction, and shedding light on the underlying molecular mechanisms involved."
+        },
+        "idea_after_refinement": {
+          "problem": "The current understanding of microglial-driven neuroinflammation in Alzheimer's disease highlights the need for novel therapeutic strategies that can modulate cytokine signalling and protect synaptic function by targeting the intersection of immune and mitochondrial pathways.",
+          "method": "We propose to investigate the potential of Pioglitazone, a peroxisome proliferator-activated receptor gamma (PPAR\u03b3) agonist, to suppress microglial-driven neuroinflammation and protect synaptic function through modulation of the PPAR\u03b3/Nrf2 signalling pathway, specifically by enhancing CD36-mediated microglial amyloid-\u03b2 phagocytosis, using a combination of in vitro experiments with primary microglial cells and in vivo validation in the APP/PS1 transgenic mouse model of Alzheimer's disease.",
+          "contribution": "This research hypothesis aims to contribute to the development of a novel drug repurposing strategy for Alzheimer's disease, by providing new insights into the therapeutic potential of Pioglitazone in targeting microglial-driven neuroinflammation and synaptic dysfunction, and shedding light on the underlying molecular mechanisms involved."
+        },
+        "ranking_before": {
+          "novelty_wins": 3,
+          "specificity_wins": 2,
+          "feasibility_wins": 3,
+          "overall_wins": 3,
+          "total_wins": 3
+        },
+        "ranking_after": {
+          "novelty_wins": 1,
+          "specificity_wins": 1,
+          "feasibility_wins": 0,
+          "overall_wins": 1,
+          "total_wins": 1
+        }
+      },
+      {
+        "condition": "B",
+        "round": 2,
+        "candidate_id": 0,
+        "type": "round_selection",
+        "pairwise_comparisons": [
+          {
+            "idea_a_id": 1,
+            "idea_b_id": 2,
+            "winners": {
+              "novelty": "2",
+              "specificity": "1",
+              "feasibility": "2",
+              "overall": "2"
+            },
+            "justifications": {
+              "novelty": "Pioglitazone via PPAR\u03b3/Nrf2 with CD36-mediated amyloid-\u03b2 phagocytosis is a somewhat more distinctive mechanistic angle than metformin/AMPK/NF-\u03baB, which is a heavily explored anti-inflammatory repurposing route in Alzheimer\u2019s disease.",
+              "specificity": "Idea 1 is more specific because it names metformin, AMPK, NF-\u03baB, caveolin1\u2013AMPK\u03b1 interaction, primary microglia, and the 3xTg-AD model, giving a more testable mechanistic chain.",
+              "feasibility": "Pioglitazone has well-established pharmacology and the PPAR\u03b3/Nrf2/CD36 axis is straightforward to assay in primary microglia and APP/PS1 mice with standard tools.",
+              "overall": "Although Idea 1 is more mechanistically detailed, Idea 2 is better balanced in novelty and practical translational plausibility, making it the stronger repurposing hypothesis overall."
+            }
+          }
+        ],
+        "ranking": {
+          "dimension_wins": {
+            "novelty": 1,
+            "specificity": 0,
+            "feasibility": 1,
+            "overall": 1
+          },
+          "total_wins": 1,
+          "total_dimension_wins": 2
+        }
+      },
+      {
+        "condition": "B",
+        "round": 3,
+        "candidate_id": 1,
+        "type": "pubmed_query",
+        "pubmed_query": "Pioglitazone peroxisome proliferator-activated receptor gamma PPAR\u03b3 agonist suppress current understanding repurposing m"
+      },
+      {
+        "condition": "B",
+        "round": 3,
+        "candidate_id": 1,
+        "idea": {
+          "problem": "The current understanding of microglial-driven neuroinflammation in Alzheimer's disease highlights the need for novel therapeutic strategies that can modulate cytokine signalling and protect synaptic function by targeting the intersection of immune and mitochondrial pathways.",
+          "method": "We propose to investigate the potential of Pioglitazone, a peroxisome proliferator-activated receptor gamma (PPAR\u03b3) agonist, to suppress microglial-driven neuroinflammation and protect synaptic function through modulation of the PPAR\u03b3/Nrf2 signalling pathway, specifically by enhancing CD36-mediated microglial amyloid-\u03b2 phagocytosis, as demonstrated in the APP/PS1 transgenic mouse model where PPAR\u03b3/RXR\u03b1-induced and CD36-mediated microglial amyloid-\u03b2 phagocytosis results in cognitive improvement.",
+          "contribution": "This research hypothesis aims to contribute to the development of a novel drug repurposing strategy for Alzheimer's disease, by providing new insights into the therapeutic potential of Pioglitazone in targeting microglial-driven neuroinflammation and synaptic dysfunction, and shedding light on the underlying molecular mechanisms involved."
+        },
+        "ranking": {
+          "dimension_wins": {
+            "novelty": 0,
+            "specificity": 1,
+            "feasibility": 1,
+            "overall": 1
+          },
+          "total_wins": 1,
+          "total_dimension_wins": 2
+        },
+        "scores": {
+          "novelty": 0,
+          "specificity": 1,
+          "feasibility": 1,
+          "overall_wins": 1,
+          "total_wins": 1,
+          "composite": 1
+        },
+        "pairwise_comparisons": [
+          {
+            "idea_a_label": "parent",
+            "idea_b_label": "refined",
+            "winners": {
+              "novelty": "parent",
+              "specificity": "refined",
+              "feasibility": "refined",
+              "overall": "refined"
+            },
+            "justifications": {
+              "novelty": "The parent idea is more novel because it frames pioglitazone around a broader PPAR\u03b3/Nrf2-CD36 mechanism, whereas the refined version explicitly anchors itself to a previously reported APP/PS1 PPAR\u03b3/RXR\u03b1-CD36 phagocytosis effect and is therefore more derivative.",
+              "specificity": "The refined idea is more specific because it ties the hypothesis to the APP/PS1 model and a concrete prior mechanism of PPAR\u03b3/RXR\u03b1-induced, CD36-mediated amyloid-\u03b2 phagocytosis.",
+              "feasibility": "The refined hypothesis is more feasible because it narrows the expected mechanism to an established in vivo pathway in a standard transgenic mouse model, making the experimental readouts more directly testable.",
+              "overall": "Although less novel, the refined idea is the stronger repurposing hypothesis overall because it is better anchored to a defined, experimentally tractable mechanism and model system."
+            }
+          }
+        ],
+        "weakness_targeted": null,
+        "targeted_query": "Pioglitazone peroxisome proliferator-activated receptor gamma PPAR\u03b3 agonist suppress current understanding repurposing m",
+        "retrieved_papers": [
+          {
+            "title": "PPAR\u03b3/RXR\u03b1-induced and CD36-mediated microglial amyloid-\u03b2 phagocytosis results in cognitive improvement in amyloid precursor protein/presenilin 1 mice.",
+            "abstract": "Alzheimer's disease (AD) is characterized by the extracellular deposition of amyloid-\u03b2 (A\u03b2), neurofibrillary tangle formation, and a microglial-driven inflammatory response. Chronic inflammatory activation compromises microglial clearance functions. Because peroxisome proliferator-activated receptor \u03b3 (PPAR\u03b3) agonists suppress inflammatory gene expression, we tested whether activation of PPAR\u03b3 wou"
+          }
+        ],
+        "retrieval_relevance": 2,
+        "weakness_history": null,
+        "weakness_targeted_this_round": null,
+        "ood_query_used": null,
+        "duplicate_papers_filtered": null,
+        "idea_before_refinement": {
+          "problem": "The current understanding of microglial-driven neuroinflammation in Alzheimer's disease highlights the need for novel therapeutic strategies that can modulate cytokine signalling and protect synaptic function by targeting the intersection of immune and mitochondrial pathways.",
+          "method": "We propose to investigate the potential of Pioglitazone, a peroxisome proliferator-activated receptor gamma (PPAR\u03b3) agonist, to suppress microglial-driven neuroinflammation and protect synaptic function through modulation of the PPAR\u03b3/Nrf2 signalling pathway, specifically by enhancing CD36-mediated microglial amyloid-\u03b2 phagocytosis, using a combination of in vitro experiments with primary microglial cells and in vivo validation in the APP/PS1 transgenic mouse model of Alzheimer's disease.",
+          "contribution": "This research hypothesis aims to contribute to the development of a novel drug repurposing strategy for Alzheimer's disease, by providing new insights into the therapeutic potential of Pioglitazone in targeting microglial-driven neuroinflammation and synaptic dysfunction, and shedding light on the underlying molecular mechanisms involved."
+        },
+        "idea_after_refinement": {
+          "problem": "The current understanding of microglial-driven neuroinflammation in Alzheimer's disease highlights the need for novel therapeutic strategies that can modulate cytokine signalling and protect synaptic function by targeting the intersection of immune and mitochondrial pathways.",
+          "method": "We propose to investigate the potential of Pioglitazone, a peroxisome proliferator-activated receptor gamma (PPAR\u03b3) agonist, to suppress microglial-driven neuroinflammation and protect synaptic function through modulation of the PPAR\u03b3/Nrf2 signalling pathway, specifically by enhancing CD36-mediated microglial amyloid-\u03b2 phagocytosis, as demonstrated in the APP/PS1 transgenic mouse model where PPAR\u03b3/RXR\u03b1-induced and CD36-mediated microglial amyloid-\u03b2 phagocytosis results in cognitive improvement.",
+          "contribution": "This research hypothesis aims to contribute to the development of a novel drug repurposing strategy for Alzheimer's disease, by providing new insights into the therapeutic potential of Pioglitazone in targeting microglial-driven neuroinflammation and synaptic dysfunction, and shedding light on the underlying molecular mechanisms involved."
+        },
+        "ranking_before": {
+          "novelty_wins": 1,
+          "specificity_wins": 0,
+          "feasibility_wins": 1,
+          "overall_wins": 1,
+          "total_wins": 1
+        },
+        "ranking_after": {
+          "novelty_wins": 0,
+          "specificity_wins": 1,
+          "feasibility_wins": 1,
+          "overall_wins": 1,
+          "total_wins": 1
+        }
+      }
+    ]
+  },
+  {
+    "paper_id": "baricitinib_AD_neuroinflammation_2024",
+    "paper_short": "baricitinib_2024",
+    "condition": "C",
+    "research_question": "What existing FDA-approved drug, originally developed for a non-neurological indication, could suppress microglial-driven neuroinflammation and protect synaptic function through modulation of cytokine signalling described in these papers, and through what specific mechanism?",
+    "seed_paper_file": "seed_papers_baricitinib.py",
+    "ground_truth_drug": "baricitinib",
+    "final_hypothesis": {
+      "problem": "The current understanding of microglial-driven neuroinflammation in Alzheimer's disease highlights the need for novel therapeutic approaches that target the intricate cytokine networks and the NLRP3 inflammasome pathway to mitigate synaptic dysfunction and neurodegeneration.",
+      "method": "The existing FDA-approved drug, colchicine, which targets the NLRP3 inflammasome pathway and subsequently modulates interleukin-1 beta signalling, will be investigated for its potential to suppress microglial-driven neuroinflammation and protect synaptic function using a combination of in vitro microglial cultures and in vivo validation in the APP/PS1 mouse model of Alzheimer's disease.",
+      "contribution": "This research will contribute to the development of a new therapeutic strategy for Alzheimer's disease by repurposing colchicine, an anti-inflammatory drug originally developed for gout, to modulate cytokine signalling and mitigate neuroinflammation in the brain."
+    },
+    "contamination_hit": false,
+    "contamination_terms_triggered": [],
+    "scores": {
+      "named_specific_drug": 0.0,
+      "drug_class_match": 0.0,
+      "mechanism_match": 0.5,
+      "total": 0.16666666666666666,
+      "overall_similarity": 0.5336064033387109,
+      "genuine_rediscovery": true
+    },
+    "pipeline_log": [
+      {
+        "condition": "C",
+        "round": 1,
+        "candidate_id": 0,
+        "type": "pubmed_query",
+        "pubmed_query": "Alzheimer disease therapeutic target drug repurposing"
+      },
+      {
+        "condition": "C",
+        "round": 1,
+        "candidate_id": 0,
+        "type": "round_selection",
+        "pairwise_comparisons": [
+          {
+            "idea_a_id": 1,
+            "idea_b_id": 2,
+            "winners": {
+              "novelty": "2",
+              "specificity": "1",
+              "feasibility": "1",
+              "overall": "1"
+            },
+            "justifications": {
+              "novelty": "Montelukast targeting cysteinyl leukotriene receptor 1 and STAT3-linked microglial signaling is less directly implied by the seed literature than the more straightforward IL-6/STAT3 anti-inflammatory rationale behind tocilizumab.",
+              "specificity": "Idea 1 is more mechanistically crisp because it names a defined cytokine receptor target, a known FDA-approved antibody, and a direct microglial/neuroinflammation axis to test.",
+              "feasibility": "Tocilizumab has a clearer and more established pharmacology for pathway validation than the more indirect and potentially less certain STAT3-modulating effect attributed to montelukast in this context.",
+              "overall": "Although less novel, Idea 1 is the stronger repurposing hypothesis overall because it is more directly grounded in the disease biology, easier to operationalize, and more likely to yield interpretable results."
+            }
+          },
+          {
+            "idea_a_id": 1,
+            "idea_b_id": 3,
+            "winners": {
+              "novelty": "3",
+              "specificity": "1",
+              "feasibility": "1",
+              "overall": "1"
+            },
+            "justifications": {
+              "novelty": "Apremilast is a less obvious Alzheimer\u2019s repurposing candidate than tocilizumab, which more directly follows from the IL-6/STAT3 cytokine axis emphasized in the seed literature.",
+              "specificity": "Idea 1 is more tightly specified by naming the exact IL-6 receptor target, tocilizumab, and a clearly defined inflammatory mechanism to test in microglia and 5xFAD mice.",
+              "feasibility": "Tocilizumab has an established clinical profile and a direct mechanistic link to cytokine signaling, making it more straightforward to validate with existing assays and animal models than apremilast\u2019s broader PDE4/ NF-kB effects.",
+              "overall": "Although less novel, Idea 1 is the stronger hypothesis overall because it is more mechanistically aligned with the seed literature and more likely to yield interpretable preclinical results."
+            }
+          },
+          {
+            "idea_a_id": 1,
+            "idea_b_id": 4,
+            "winners": {
+              "novelty": "4",
+              "specificity": "4",
+              "feasibility": "4",
+              "overall": "4"
+            },
+            "justifications": {
+              "novelty": "Colchicine\u2019s proposed use to modulate the NLRP3 inflammasome and IL-1\u03b2 signaling in AD is less directly implied by the seed literature than simply targeting IL-6/STAT3-linked cytokine signaling with tocilizumab.",
+              "specificity": "Idea 4 names a more concrete mechanistic target chain\u2014colchicine, NLRP3 inflammasome, and IL-1\u03b2\u2014whereas Idea 1 is framed more broadly around IL-6 receptor pathway suppression and neuroinflammation.",
+              "feasibility": "Colchicine is a well-characterized small molecule with extensive existing pharmacology and easier CNS-oriented experimental handling than tocilizumab, a biologic whose brain exposure and in vivo interpretation are more challenging.",
+              "overall": "Overall, Idea 4 is stronger because it is more mechanistically specific, somewhat more novel relative to the seed set, and more practical to test with available repurposing tools."
+            }
+          },
+          {
+            "idea_a_id": 1,
+            "idea_b_id": 5,
+            "winners": {
+              "novelty": "5",
+              "specificity": "5",
+              "feasibility": "1",
+              "overall": "1"
+            },
+            "justifications": {
+              "novelty": "Idea 5 is more novel because it shifts from the well-trodden IL-6/STAT3 neuroinflammation axis already suggested by the seed literature to a vascular/BBB-focused repurposing angle using sunitinib.",
+              "specificity": "Idea 5 names a concrete drug, VEGFR pathway, tight junction proteins, and a defined BBB/CAA model, making the actionable hypothesis more mechanistically specified.",
+              "feasibility": "Tocilizumab is more feasible because its IL-6R target and anti-inflammatory readouts in microglia and 5xFAD mice are more established and less biologically complicated than repurposing a multi-kinase anti-angiogenic agent for CNS vascular effects.",
+              "overall": "Although less novel, Idea 1 is the stronger overall hypothesis because it is better aligned with the seed literature on microglial cytokine signaling and synaptic dysfunction and is more practical to validate experimentally."
+            }
+          },
+          {
+            "idea_a_id": 2,
+            "idea_b_id": 3,
+            "winners": {
+              "novelty": "3",
+              "specificity": "2",
+              "feasibility": "3",
+              "overall": "3"
+            },
+            "justifications": {
+              "novelty": "Apremilast via PDE4/NF-kappaB modulation is less directly suggested by the seed literature\u2019s STAT3-centered microglial cytokine framework than montelukast\u2019s more adjacent leukotriene/STAT3 angle.",
+              "specificity": "Idea 2 specifies montelukast, CysLT1, and downstream STAT3 signaling in a way that is more mechanistically concrete than the broader PDE4-to-NF-kappaB framing in Idea 3.",
+              "feasibility": "Apremilast is an established anti-inflammatory agent with well-characterized pharmacology and widely used experimental tools, making it somewhat more straightforward to test than the more mechanistically indirect montelukast hypothesis in this context.",
+              "overall": "Although Idea 2 is more mechanistically specific, Idea 3 is more novel and slightly more practical as a repurposing hypothesis because apremilast has a clearer anti-inflammatory rationale for probing microglial cytokine suppression and synaptic protection."
+            }
+          },
+          {
+            "idea_a_id": 2,
+            "idea_b_id": 4,
+            "winners": {
+              "novelty": "4",
+              "specificity": "4",
+              "feasibility": "4",
+              "overall": "4"
+            },
+            "justifications": {
+              "novelty": "Colchicine targeting the NLRP3 inflammasome is a more distinct repurposing angle than montelukast\u2019s broader cytokine/STAT3 framing, which aligns more closely with the seed literature\u2019s existing inflammatory signaling themes.",
+              "specificity": "Idea 4 names a clearer mechanistic chain\u2014colchicine, NLRP3 inflammasome, and IL-1\u03b2 signaling\u2014whereas Idea 2\u2019s link from montelukast to STAT3 is less direct and more mechanistically diffuse.",
+              "feasibility": "Colchicine is a well-characterized FDA-approved anti-inflammatory with established dosing and experimental precedent, making it easier to test in vitro and in the APP/PS1 model than a less established montelukast-to-STAT3 neuroimmune mechanism.",
+              "overall": "Idea 4 is the stronger overall repurposing hypothesis because it is more novel, mechanistically concrete, and experimentally tractable while still addressing a relevant inflammatory axis in Alzheimer\u2019s disease."
+            }
+          },
+          {
+            "idea_a_id": 2,
+            "idea_b_id": 5,
+            "winners": {
+              "novelty": "5",
+              "specificity": "5",
+              "feasibility": "2",
+              "overall": "2"
+            },
+            "justifications": {
+              "novelty": "Idea 5 is more novel because it shifts from the well-trodden cytokine/STAT3 neuroinflammation axis to a vascular blood-brain barrier mechanism tied to microglial dysfunction, which is less directly implied by the seed literature.",
+              "specificity": "Idea 5 names a more concrete target chain\u2014sunitinib, VEGFR signaling, tight junction proteins, and BBB dysfunction in an APP/PS1 model with cerebral amyloid angiopathy\u2014than the more general montelukast/STAT3 framing.",
+              "feasibility": "Idea 2 is more feasible because montelukast is a well-characterized CNS-relevant repurposing candidate with simpler in vitro and in vivo neuroinflammation assays than the vascular and CAA-dependent complexities of sunitinib.",
+              "overall": "Although Idea 5 is more novel and specific, Idea 2 is the stronger overall repurposing hypothesis because it is more biologically aligned with the seed literature and substantially more practical to test and translate."
+            }
+          },
+          {
+            "idea_a_id": 3,
+            "idea_b_id": 4,
+            "winners": {
+              "novelty": "4",
+              "specificity": "4",
+              "feasibility": "4",
+              "overall": "4"
+            },
+            "justifications": {
+              "novelty": "Colchicine\u2019s repurposing for Alzheimer\u2019s via NLRP3 inflammasome inhibition is a less conventional and more distinct angle than apremilast\u2019s broader PDE4/NF-kappa B anti-inflammatory strategy, which is closer to established neuroinflammation targeting.",
+              "specificity": "Idea 4 names a concrete drug, pathway, inflammasome target, cytokine readout, and APP/PS1 model, making it more operationally precise than the somewhat broader apremilast-centered hypothesis.",
+              "feasibility": "Colchicine and NLRP3/IL-1\u03b2 assays are widely available and the APP/PS1 model is well established, whereas apremilast\u2019s CNS relevance and translational dosing for microglial modulation are less straightforward.",
+              "overall": "Although both are testable, idea 4 is more novel, more specific, and slightly more practical as a focused repurposing hypothesis for inflammation-driven Alzheimer\u2019s pathology."
+            }
+          },
+          {
+            "idea_a_id": 3,
+            "idea_b_id": 5,
+            "winners": {
+              "novelty": "5",
+              "specificity": "5",
+              "feasibility": "3",
+              "overall": "3"
+            },
+            "justifications": {
+              "novelty": "Idea 5 is more novel because it shifts the repurposing angle from the already well-trodden neuroinflammation/cytokine axis to the less directly implied neurovascular barrier dysfunction and cerebral amyloid angiopathy intersection.",
+              "specificity": "Idea 5 is more specific because it names sunitinib, VEGF receptor signaling, tight junction proteins, APP/PS1 mice, and induced cerebral amyloid angiopathy as concrete testable elements.",
+              "feasibility": "Idea 3 is more feasible because apremilast\u2019s anti-inflammatory mechanism aligns more straightforwardly with microglial culture assays and AD inflammatory readouts than sunitinib\u2019s potentially confounded vascular toxicity profile.",
+              "overall": "Idea 3 is the stronger overall hypothesis because it is more directly grounded in the seed literature on microglial cytokine signaling and synaptic dysfunction while remaining operationally realistic for validation."
+            }
+          },
+          {
+            "idea_a_id": 4,
+            "idea_b_id": 5,
+            "winners": {
+              "novelty": "5",
+              "specificity": "5",
+              "feasibility": "4",
+              "overall": "4"
+            },
+            "justifications": {
+              "novelty": "Idea 5 is more novel because it shifts from the well-trodden inflammasome/cytokine-inhibition angle in AD to the less commonly repurposed intersection of VEGFR signaling, tight junction regulation, and blood-brain barrier dysfunction.",
+              "specificity": "Idea 5 specifies a concrete FDA-approved drug, a named pathway, a mechanistic readout, and a disease context with cerebral amyloid angiopathy, making the testable hypothesis more operational.",
+              "feasibility": "Colchicine has a clearer anti-inflammatory rationale and generally simpler in vitro/in vivo neuroinflammation assays than sunitinib, whose vascular and toxicity liabilities complicate translation in AD models.",
+              "overall": "Although less novel, Idea 4 is the stronger overall repurposing hypothesis because its mechanism is more directly aligned with established AD inflammatory biology and is more practical to validate."
+            }
+          }
+        ]
+      },
+      {
+        "condition": "C",
+        "round": 1,
+        "candidate_id": 1,
+        "idea": {
+          "problem": "The current understanding of microglial-driven neuroinflammation in Alzheimer's disease highlights the need for novel therapeutic approaches that target the intricate cytokine networks and the NLRP3 inflammasome pathway to mitigate synaptic dysfunction and neurodegeneration.",
+          "method": "The existing FDA-approved drug, colchicine, which targets the NLRP3 inflammasome pathway and subsequently modulates interleukin-1 beta signalling, will be investigated for its potential to suppress microglial-driven neuroinflammation and protect synaptic function using a combination of in vitro microglial cultures and in vivo validation in the APP/PS1 mouse model of Alzheimer's disease.",
+          "contribution": "This research will contribute to the development of a new therapeutic strategy for Alzheimer's disease by repurposing colchicine, an anti-inflammatory drug originally developed for gout, to modulate cytokine signalling and mitigate neuroinflammation in the brain."
+        },
+        "ranking": {
+          "dimension_wins": {
+            "novelty": 3,
+            "specificity": 3,
+            "feasibility": 4,
+            "overall": 4
+          },
+          "total_wins": 4,
+          "total_dimension_wins": 10
+        },
+        "scores": {
+          "novelty": 3,
+          "specificity": 3,
+          "feasibility": 4,
+          "overall_wins": 4,
+          "total_wins": 4,
+          "composite": 4
+        },
+        "pairwise_comparisons": [],
+        "weakness_targeted": null,
+        "targeted_query": null,
+        "retrieved_papers": null,
+        "retrieval_relevance": null,
+        "weakness_history": null,
+        "weakness_targeted_this_round": null,
+        "ood_query_used": null,
+        "duplicate_papers_filtered": null,
+        "idea_before_refinement": null,
+        "idea_after_refinement": null,
+        "ranking_before": null,
+        "ranking_after": null
+      },
+      {
+        "condition": "C",
+        "round": 1,
+        "candidate_id": 2,
+        "idea": {
+          "problem": "The current treatment options for Alzheimer's disease do not effectively address the underlying microglial-driven neuroinflammation and synaptic dysfunction, highlighting the need for novel therapeutic approaches that target these specific disease mechanisms.",
+          "method": "The existing FDA-approved drug, tocilizumab, which targets the interleukin-6 receptor pathway, will be investigated for its potential to suppress microglial-driven neuroinflammation and protect synaptic function using a combination of in vitro microglial cultures and in vivo validation in the 5xFAD mouse model of Alzheimer's disease.",
+          "contribution": "This research will contribute to the development of a new therapeutic strategy for Alzheimer's disease by repurposing tocilizumab, an anti-inflammatory drug originally developed for rheumatoid arthritis, to modulate cytokine signalling and mitigate neuroinflammation in the brain."
+        },
+        "ranking": {
+          "dimension_wins": {
+            "novelty": 0,
+            "specificity": 2,
+            "feasibility": 3,
+            "overall": 3
+          },
+          "total_wins": 3,
+          "total_dimension_wins": 5
+        },
+        "scores": {
+          "novelty": 0,
+          "specificity": 2,
+          "feasibility": 3,
+          "overall_wins": 3,
+          "total_wins": 3,
+          "composite": 3
+        },
+        "pairwise_comparisons": [],
+        "weakness_targeted": null,
+        "targeted_query": null,
+        "retrieved_papers": null,
+        "retrieval_relevance": null,
+        "weakness_history": null,
+        "weakness_targeted_this_round": null,
+        "ood_query_used": null,
+        "duplicate_papers_filtered": null,
+        "idea_before_refinement": null,
+        "idea_after_refinement": null,
+        "ranking_before": null,
+        "ranking_after": null
+      },
+      {
+        "condition": "C",
+        "round": 1,
+        "candidate_id": 3,
+        "idea": {
+          "problem": "The lack of effective therapeutic strategies for Alzheimer's disease necessitates the exploration of novel drug repurposing approaches that target the complex interplay between microglial-driven neuroinflammation, cytokine signalling, and synaptic dysfunction.",
+          "method": "The existing FDA-approved drug, apremilast, which targets the phosphodiesterase 4 pathway and subsequently modulates nuclear factor-kappa B signalling, will be investigated for its potential to suppress microglial-driven neuroinflammation and protect synaptic function using a combination of in vitro microglial cultures and in vivo validation in the 3xTg-AD mouse model of Alzheimer's disease.",
+          "contribution": "This research will contribute to the development of a new therapeutic strategy for Alzheimer's disease by repurposing apremilast, an anti-inflammatory drug originally developed for psoriatic arthritis, to modulate cytokine signalling and mitigate neuroinflammation in the brain."
+        },
+        "ranking": {
+          "dimension_wins": {
+            "novelty": 2,
+            "specificity": 0,
+            "feasibility": 2,
+            "overall": 2
+          },
+          "total_wins": 2,
+          "total_dimension_wins": 4
+        },
+        "scores": {
+          "novelty": 2,
+          "specificity": 0,
+          "feasibility": 2,
+          "overall_wins": 2,
+          "total_wins": 2,
+          "composite": 2
+        },
+        "pairwise_comparisons": [],
+        "weakness_targeted": null,
+        "targeted_query": null,
+        "retrieved_papers": null,
+        "retrieval_relevance": null,
+        "weakness_history": null,
+        "weakness_targeted_this_round": null,
+        "ood_query_used": null,
+        "duplicate_papers_filtered": null,
+        "idea_before_refinement": null,
+        "idea_after_refinement": null,
+        "ranking_before": null,
+        "ranking_after": null
+      },
+      {
+        "condition": "C",
+        "round": 1,
+        "candidate_id": 4,
+        "idea": {
+          "problem": "The current understanding of microglial-driven neuroinflammation in Alzheimer's disease highlights the need for novel therapeutic approaches that target the intricate cytokine networks and STAT3 signalling pathways to mitigate synaptic dysfunction and neurodegeneration.",
+          "method": "The existing FDA-approved drug, montelukast, which targets the cysteinyl leukotriene receptor 1 pathway and subsequently modulates STAT3 signalling, will be investigated for its potential to suppress microglial-driven neuroinflammation and protect synaptic function using a combination of in vitro microglial cultures and in vivo validation in the APP/PS1 mouse model of Alzheimer's disease.",
+          "contribution": "This research will contribute to the development of a new therapeutic strategy for Alzheimer's disease by repurposing montelukast, an anti-asthmatic drug originally developed for allergic rhinitis and asthma, to modulate cytokine signalling and mitigate neuroinflammation in the brain."
+        },
+        "ranking": {
+          "dimension_wins": {
+            "novelty": 1,
+            "specificity": 1,
+            "feasibility": 1,
+            "overall": 1
+          },
+          "total_wins": 1,
+          "total_dimension_wins": 3
+        },
+        "scores": {
+          "novelty": 1,
+          "specificity": 1,
+          "feasibility": 1,
+          "overall_wins": 1,
+          "total_wins": 1,
+          "composite": 1
+        },
+        "pairwise_comparisons": [],
+        "weakness_targeted": null,
+        "targeted_query": null,
+        "retrieved_papers": null,
+        "retrieval_relevance": null,
+        "weakness_history": null,
+        "weakness_targeted_this_round": null,
+        "ood_query_used": null,
+        "duplicate_papers_filtered": null,
+        "idea_before_refinement": null,
+        "idea_after_refinement": null,
+        "ranking_before": null,
+        "ranking_after": null
+      },
+      {
+        "condition": "C",
+        "round": 1,
+        "candidate_id": 5,
+        "idea": {
+          "problem": "The current therapeutic strategies for Alzheimer's disease do not effectively address the role of microglial-driven neuroinflammation in disrupting the blood-brain barrier, highlighting the need for novel approaches that target the intersection of neuroinflammation and vascular dysfunction.",
+          "method": "The existing FDA-approved drug, sunitinib, which targets the vascular endothelial growth factor receptor pathway and subsequently modulates the expression of tight junction proteins, will be investigated for its potential to suppress microglial-driven neuroinflammation and protect the blood-brain barrier using a combination of in vitro primary microglial cultures and in vivo validation in the APP/PS1 mouse model of Alzheimer's disease with induced cerebral amyloid angiopathy.",
+          "contribution": "This research will contribute to the development of a new therapeutic strategy for Alzheimer's disease by repurposing sunitinib, an anti-angiogenic drug originally developed for renal cell carcinoma, to modulate vascular endothelial growth factor signalling and mitigate neuroinflammation-induced vascular dysfunction in the brain."
+        },
+        "ranking": {
+          "dimension_wins": {
+            "novelty": 4,
+            "specificity": 4,
+            "feasibility": 0,
+            "overall": 0
+          },
+          "total_wins": 0,
+          "total_dimension_wins": 8
+        },
+        "scores": {
+          "novelty": 4,
+          "specificity": 4,
+          "feasibility": 0,
+          "overall_wins": 0,
+          "total_wins": 0,
+          "composite": 0
+        },
+        "pairwise_comparisons": [],
+        "weakness_targeted": null,
+        "targeted_query": null,
+        "retrieved_papers": null,
+        "retrieval_relevance": null,
+        "weakness_history": null,
+        "weakness_targeted_this_round": null,
+        "ood_query_used": null,
+        "duplicate_papers_filtered": null,
+        "idea_before_refinement": null,
+        "idea_after_refinement": null,
+        "ranking_before": null,
+        "ranking_after": null
+      },
+      {
+        "condition": "C",
+        "round": 2,
+        "candidate_id": 1,
+        "idea": {
+          "problem": "The current understanding of microglial-driven neuroinflammation in Alzheimer's disease highlights the need for novel therapeutic approaches that target the intricate cytokine networks and the NLRP3 inflammasome pathway to mitigate synaptic dysfunction and neurodegeneration.",
+          "method": "The existing FDA-approved drug, colchicine, which targets the NLRP3 inflammasome pathway and subsequently modulates interleukin-1 beta signalling, will be investigated for its potential to suppress microglial-driven neuroinflammation and protect synaptic function using a combination of in vitro microglial cultures and in vivo validation in the APP/PS1 mouse model of Alzheimer's disease.",
+          "contribution": "This research will contribute to the development of a new therapeutic strategy for Alzheimer's disease by repurposing colchicine, an anti-inflammatory drug originally developed for gout, to modulate cytokine signalling and mitigate neuroinflammation in the brain."
+        },
+        "ranking": {
+          "dimension_wins": {
+            "novelty": 1,
+            "specificity": 1,
+            "feasibility": 0,
+            "overall": 1
+          },
+          "total_wins": 1,
+          "total_dimension_wins": 2
+        },
+        "scores": {
+          "novelty": 1,
+          "specificity": 1,
+          "feasibility": 0,
+          "overall_wins": 1,
+          "total_wins": 1,
+          "composite": 1
+        },
+        "pairwise_comparisons": [
+          {
+            "idea_a_label": "parent",
+            "idea_b_label": "refined",
+            "winners": {
+              "novelty": "parent",
+              "specificity": "parent",
+              "feasibility": "refined",
+              "overall": "parent"
+            },
+            "justifications": {
+              "novelty": "The parent idea is slightly more novel because it explicitly proposes testing colchicine\u2019s effect on both NLRP3/IL-1\u03b2 signaling and synaptic protection in vivo, whereas the refined version narrows this to a more generic microglial culture readout.",
+              "specificity": "The parent names a concrete FDA-approved drug, a defined pathway target, and an APP/PS1 mouse validation step, making the experimental hypothesis more actionable than the refined version.",
+              "feasibility": "The refined idea is more feasible because it limits the work to APP/PS1 microglial cultures rather than requiring both in vitro and in vivo studies.",
+              "overall": "The parent is the stronger repurposing hypothesis overall because it is more mechanistically grounded and experimentally complete while still remaining practical with established models and tools."
+            }
+          }
+        ],
+        "weakness_targeted": "novelty",
+        "targeted_query": "rheumatoid arthritis synovial cytokine macrophage reprogramming",
+        "retrieved_papers": [
+          {
+            "title": "Inhibition of LXR controls the polarization of human inflammatory macrophages through upregulation of MAFB.",
+            "abstract": "Monocyte-derived macrophages contribute to pathogenesis in inflammatory diseases and their effector functions greatly depend on the prevailing extracellular milieu. Whereas M-CSF primes macrophages for acquisition of an anti-inflammatory profile, GM-CSF drives the generation of T cell-stimulatory and pro-inflammatory macrophages. Liver X Receptors (LXR\u03b1 and LXR\u03b2) are nuclear receptors that control"
+          },
+          {
+            "title": "Redox Homeostasis Strategy for Inflammatory Macrophage Reprogramming in Rheumatoid Arthritis Based on Ceria Oxide Nanozyme-Complexed Biopolymeric Micelles.",
+            "abstract": "The synovial tissues under rheumatoid arthritis conditions are usually infiltrated by inflammatory cells, particularly M1 macrophages with aberrant redox homeostasis, which causes rapid deterioration of articular structure and function. Herein, we created an ROS-responsive micelle (HA@RH-CeO"
+          },
+          {
+            "title": "Peptide-anchored neutrophil membrane-coated biomimetic nanodrug for targeted treatment of rheumatoid arthritis.",
+            "abstract": "Macrophage polarization determines the production of cytokines that fuel the initiation and evolution of rheumatoid arthritis (RA). Thus, modulation of macrophage polarization might represent a potential therapeutic strategy for RA. However, coordinated modulation of macrophages in the synovium and synovial fluid has not been achieved thus far. Herein, we develop a biomimetic ApoA-I mimetic peptid"
+          }
+        ],
+        "retrieval_relevance": 2,
+        "weakness_history": [],
+        "weakness_targeted_this_round": "novelty",
+        "ood_query_used": "rheumatoid arthritis synovial cytokine macrophage reprogramming",
+        "duplicate_papers_filtered": [],
+        "idea_before_refinement": {
+          "problem": "The current understanding of microglial-driven neuroinflammation in Alzheimer's disease highlights the need for novel therapeutic approaches that target the intricate cytokine networks and the NLRP3 inflammasome pathway to mitigate synaptic dysfunction and neurodegeneration.",
+          "method": "The existing FDA-approved drug, colchicine, which targets the NLRP3 inflammasome pathway and subsequently modulates interleukin-1 beta signalling, will be investigated for its potential to suppress microglial-driven neuroinflammation and protect synaptic function using a combination of in vitro microglial cultures and in vivo validation in the APP/PS1 mouse model of Alzheimer's disease.",
+          "contribution": "This research will contribute to the development of a new therapeutic strategy for Alzheimer's disease by repurposing colchicine, an anti-inflammatory drug originally developed for gout, to modulate cytokine signalling and mitigate neuroinflammation in the brain."
+        },
+        "idea_after_refinement": {
+          "problem": "The current understanding of microglial-driven neuroinflammation in Alzheimer's disease highlights the need for novel therapeutic approaches that target the intricate cytokine networks and the NLRP3 inflammasome pathway to mitigate synaptic dysfunction and neurodegeneration.",
+          "method": "The existing FDA-approved drug, colchicine, which targets the NLRP3 inflammasome pathway and subsequently modulates interleukin-1 beta signalling, will be investigated for its potential to suppress microglial-driven neuroinflammation and protect synaptic function using a combination of in vitro microglial cultures and in vivo validation in the APP/PS1 mouse model of Alzheimer's disease.",
+          "contribution": "This research will contribute to the development of a new therapeutic strategy for Alzheimer's disease by repurposing colchicine, an anti-inflammatory drug originally developed for gout, to modulate cytokine signalling and mitigate neuroinflammation in the brain."
+        },
+        "ranking_before": {
+          "novelty_wins": 3,
+          "specificity_wins": 3,
+          "feasibility_wins": 4,
+          "overall_wins": 4,
+          "total_wins": 4
+        },
+        "ranking_after": {
+          "novelty_wins": 1,
+          "specificity_wins": 1,
+          "feasibility_wins": 0,
+          "overall_wins": 1,
+          "total_wins": 1
+        }
+      },
+      {
+        "condition": "C",
+        "round": 2,
+        "candidate_id": 2,
+        "idea": {
+          "problem": "The current treatment options for Alzheimer's disease do not effectively address the underlying microglial-driven neuroinflammation and synaptic dysfunction, highlighting the need for novel therapeutic approaches that target these specific disease mechanisms.",
+          "method": "Tocilizumab will be investigated for its potential to suppress microglial-driven neuroinflammation by targeting the interleukin-6 receptor pathway in the 5xFAD mouse model.",
+          "contribution": "This research will contribute to the development of a new therapeutic strategy for Alzheimer's disease by repurposing tocilizumab to modulate cytokine signalling and mitigate neuroinflammation in the brain, with a focus on reprogramming microglial function to enhance synaptic protection."
+        },
+        "ranking": {
+          "dimension_wins": {
+            "novelty": 0,
+            "specificity": 0,
+            "feasibility": 1,
+            "overall": 1
+          },
+          "total_wins": 1,
+          "total_dimension_wins": 1
+        },
+        "scores": {
+          "novelty": 0,
+          "specificity": 0,
+          "feasibility": 1,
+          "overall_wins": 1,
+          "total_wins": 1,
+          "composite": 1
+        },
+        "pairwise_comparisons": [
+          {
+            "idea_a_label": "parent",
+            "idea_b_label": "refined",
+            "winners": {
+              "novelty": "parent",
+              "specificity": "parent",
+              "feasibility": "refined",
+              "overall": "refined"
+            },
+            "justifications": {
+              "novelty": "The parent is more novel because it explicitly extends the repurposing hypothesis into both in vitro microglial and in vivo synaptic validation, whereas the refined version narrows mainly to a familiar anti-IL-6R anti-inflammatory framing.",
+              "specificity": "The parent is more specific because it names tocilizumab, the IL-6 receptor pathway, microglial cultures, and the 5xFAD mouse model, while the refined idea omits the in vitro component and is less operationally detailed.",
+              "feasibility": "The refined idea is more feasible because it is narrower in scope and requires only one in vivo disease model rather than a combined in vitro-plus-in vivo program.",
+              "overall": "The refined hypothesis is stronger overall because it keeps the actionable tocilizumab-IL-6R-5xFAD core while focusing on a tighter, more realistic experimental question."
+            }
+          }
+        ],
+        "weakness_targeted": "novelty",
+        "targeted_query": "tumor associated macrophage cytokine microenvironment reprogramming",
+        "retrieved_papers": [
+          {
+            "title": "Preclinical evaluation of the efficacy of an antibody to human SIRP\u03b1 for cancer immunotherapy in humanized mouse models.",
+            "abstract": "Tumor-associated macrophages (TAMs) are abundant in the tumor microenvironment and are considered potential targets for cancer immunotherapy. To examine the antitumor effects of agents targeting human TAMs"
+          },
+          {
+            "title": "The role of tumor-associated macrophages in lung cancer: From mechanism to small molecule therapy.",
+            "abstract": "Tumor-associated macrophages (TAMs) are the main component of tumor-infiltrating immune cells in the lung tumor microenvironment. TAMs recruited to the lung cancer can create a suitable microenvironment for the growth and metastasis of lung cancer by secreting tumor promoting factors and interfering with the function of T cells. Currently, numerous studies have reported that small molecular drugs "
+          },
+          {
+            "title": "Blockade of C5a receptor unleashes tumor-associated macrophage antitumor response and enhances CXCL9-dependent CD8",
+            "abstract": "Macrophages play a crucial role in shaping the immune state within the tumor microenvironment (TME) and are often influenced by tumors to hinder antitumor immunity. However, the underlying mechanisms are still elusive. Here, we observed abnormal expression of complement 5a receptor (C5aR) in human ovarian cancer (OC), and identified high levels of C5aR expression on tumor-associated macrophages (T"
+          }
+        ],
+        "retrieval_relevance": 2,
+        "weakness_history": [],
+        "weakness_targeted_this_round": "novelty",
+        "ood_query_used": "tumor associated macrophage cytokine microenvironment reprogramming",
+        "duplicate_papers_filtered": [],
+        "idea_before_refinement": {
+          "problem": "The current treatment options for Alzheimer's disease do not effectively address the underlying microglial-driven neuroinflammation and synaptic dysfunction, highlighting the need for novel therapeutic approaches that target these specific disease mechanisms.",
+          "method": "The existing FDA-approved drug, tocilizumab, which targets the interleukin-6 receptor pathway, will be investigated for its potential to suppress microglial-driven neuroinflammation and protect synaptic function using a combination of in vitro microglial cultures and in vivo validation in the 5xFAD mouse model of Alzheimer's disease.",
+          "contribution": "This research will contribute to the development of a new therapeutic strategy for Alzheimer's disease by repurposing tocilizumab, an anti-inflammatory drug originally developed for rheumatoid arthritis, to modulate cytokine signalling and mitigate neuroinflammation in the brain."
+        },
+        "idea_after_refinement": {
+          "problem": "The current treatment options for Alzheimer's disease do not effectively address the underlying microglial-driven neuroinflammation and synaptic dysfunction, highlighting the need for novel therapeutic approaches that target these specific disease mechanisms.",
+          "method": "Tocilizumab will be investigated for its potential to suppress microglial-driven neuroinflammation by targeting the interleukin-6 receptor pathway in the 5xFAD mouse model.",
+          "contribution": "This research will contribute to the development of a new therapeutic strategy for Alzheimer's disease by repurposing tocilizumab to modulate cytokine signalling and mitigate neuroinflammation in the brain, with a focus on reprogramming microglial function to enhance synaptic protection."
+        },
+        "ranking_before": {
+          "novelty_wins": 0,
+          "specificity_wins": 2,
+          "feasibility_wins": 3,
+          "overall_wins": 3,
+          "total_wins": 3
+        },
+        "ranking_after": {
+          "novelty_wins": 0,
+          "specificity_wins": 0,
+          "feasibility_wins": 1,
+          "overall_wins": 1,
+          "total_wins": 1
+        }
+      },
+      {
+        "condition": "C",
+        "round": 2,
+        "candidate_id": 0,
+        "type": "round_selection",
+        "pairwise_comparisons": [
+          {
+            "idea_a_id": 1,
+            "idea_b_id": 2,
+            "winners": {
+              "novelty": "1",
+              "specificity": "1",
+              "feasibility": "1",
+              "overall": "1"
+            },
+            "justifications": {
+              "novelty": "Colchicine plus NLRP3/IL-1\u03b2 targeting is a somewhat more distinct repurposing angle than tocilizumab against IL-6R, which is closer to a straightforward extension of the existing cytokine-network/STAT3 neuroinflammation literature.",
+              "specificity": "Idea 1 is more mechanistically concrete because it specifies colchicine, the NLRP3 inflammasome, interleukin-1\u03b2 signaling, and validation in APP/PS1 mice and microglial cultures.",
+              "feasibility": "Colchicine is a small-molecule FDA-approved drug with readily available tools for in vitro and in vivo testing, whereas tocilizumab poses greater translational and brain-penetration challenges for CNS studies.",
+              "overall": "Idea 1 is better overall because it is more mechanistically grounded, more experimentally tractable, and somewhat more distinctive as a repurposing hypothesis."
+            }
+          }
+        ],
+        "ranking": {
+          "dimension_wins": {
+            "novelty": 1,
+            "specificity": 1,
+            "feasibility": 1,
+            "overall": 1
+          },
+          "total_wins": 1,
+          "total_dimension_wins": 3
+        }
+      },
+      {
+        "condition": "C",
+        "round": 3,
+        "candidate_id": 1,
+        "idea": {
+          "problem": "The current understanding of microglial-driven neuroinflammation in Alzheimer's disease highlights the need for novel therapeutic approaches that target the intricate cytokine networks and the NLRP3 inflammasome pathway to mitigate synaptic dysfunction and neurodegeneration.",
+          "method": "The existing FDA-approved drug, colchicine, which targets the NLRP3 inflammasome pathway and subsequently modulates interleukin-1 beta signalling, will be investigated for its potential to suppress microglial-driven neuroinflammation and protect synaptic function using a combination of in vitro microglial cultures and in vivo validation in the APP/PS1 mouse model of Alzheimer's disease.",
+          "contribution": "This research will contribute to the development of a new therapeutic strategy for Alzheimer's disease by repurposing colchicine, an anti-inflammatory drug originally developed for gout, to modulate cytokine signalling and mitigate neuroinflammation in the brain."
+        },
+        "ranking": {
+          "dimension_wins": {
+            "novelty": 1,
+            "specificity": 1,
+            "feasibility": 1,
+            "overall": 1
+          },
+          "total_wins": 1,
+          "total_dimension_wins": 3
+        },
+        "scores": {
+          "novelty": 1,
+          "specificity": 1,
+          "feasibility": 1,
+          "overall_wins": 1,
+          "total_wins": 1,
+          "composite": 1
+        },
+        "pairwise_comparisons": [
+          {
+            "idea_a_label": "parent",
+            "idea_b_label": "refined",
+            "winners": {
+              "novelty": "parent",
+              "specificity": "parent",
+              "feasibility": "parent",
+              "overall": "parent"
+            },
+            "justifications": {
+              "novelty": "The parent idea is more novel because it links colchicine to both NLRP3/IL-1\u03b2 modulation and broader cytokine-network effects on synaptic protection, whereas the refined version reduces the hypothesis to a more familiar single-pathway anti-inflammatory test.",
+              "specificity": "The parent idea is more specific because it names the FDA-approved drug colchicine, the NLRP3 inflammasome, IL-1\u03b2 signalling, in vitro microglial cultures, and APP/PS1 in vivo validation.",
+              "feasibility": "The parent idea is more feasible because it provides a concrete experimental roadmap with established models and readouts, while the refined version is narrower but less operationally informative.",
+              "overall": "The parent hypothesis is better overall because it is both more mechanistically grounded and more actionable as a repurposing study, making the translational claim stronger."
+            }
+          }
+        ],
+        "weakness_targeted": "consistency",
+        "targeted_query": "rheumatoid arthritis synovial cytokine macrophage reprogramming",
+        "retrieved_papers": [
+          {
+            "title": "Syntenin-1-mediated arthritogenicity is advanced by reprogramming RA metabolic macrophages and Th1 cells.",
+            "abstract": "Syntenin-1, a novel endogenous ligand, was discovered to be enriched in rheumatoid arthritis (RA) specimens compared with osteoarthritis synovial fluid and normal synovial tissue (ST). However, the cellular origin, immunoregulation and molecular mechanism of syntenin-1 are undescribed in RA. RA patient myeloid and lymphoid cells, as well as preclinical models, were used to investigate the impact o"
+          },
+          {
+            "title": "RANKL-responsive epigenetic mechanism reprograms macrophages into bone-resorbing osteoclasts.",
+            "abstract": "Monocyte/macrophage lineage cells are highly plastic and can differentiate into various cells under different environmental stimuli. Bone-resorbing osteoclasts are derived from the monocyte/macrophage lineage in response to receptor activator of NF-\u03baB ligand (RANKL). However, the epigenetic signature contributing to the fate commitment of monocyte/macrophage lineage differentiation into human oste"
+          },
+          {
+            "title": "Extracellular vesicle-guided in situ reprogramming of synovial macrophages for the treatment of rheumatoid arthritis.",
+            "abstract": "Activation state of synovial macrophages is significantly correlated with disease activity and severity of rheumatoid arthritis (RA) and provides valuable clues for RA treatment. Classically activated M1 macrophages in inflamed synovial joints secrete high levels of pro-inflammatory cytokines and chemokines, resulting in bone erosion and cartilage degradation. Herein, we propose extracellular vesi"
+          }
+        ],
+        "retrieval_relevance": 2,
+        "weakness_history": [
+          "novelty"
+        ],
+        "weakness_targeted_this_round": "consistency",
+        "ood_query_used": "rheumatoid arthritis synovial cytokine macrophage reprogramming",
+        "duplicate_papers_filtered": [
+          "Inhibition of LXR controls the polarization of human inflammatory macrophages through upregulation of MAFB.",
+          "Redox Homeostasis Strategy for Inflammatory Macrophage Reprogramming in Rheumatoid Arthritis Based on Ceria Oxide Nanozyme-Complexed Biopolymeric Micelles.",
+          "Peptide-anchored neutrophil membrane-coated biomimetic nanodrug for targeted treatment of rheumatoid arthritis."
+        ],
+        "idea_before_refinement": {
+          "problem": "The current understanding of microglial-driven neuroinflammation in Alzheimer's disease highlights the need for novel therapeutic approaches that target the intricate cytokine networks and the NLRP3 inflammasome pathway to mitigate synaptic dysfunction and neurodegeneration.",
+          "method": "The existing FDA-approved drug, colchicine, which targets the NLRP3 inflammasome pathway and subsequently modulates interleukin-1 beta signalling, will be investigated for its potential to suppress microglial-driven neuroinflammation and protect synaptic function using a combination of in vitro microglial cultures and in vivo validation in the APP/PS1 mouse model of Alzheimer's disease.",
+          "contribution": "This research will contribute to the development of a new therapeutic strategy for Alzheimer's disease by repurposing colchicine, an anti-inflammatory drug originally developed for gout, to modulate cytokine signalling and mitigate neuroinflammation in the brain."
+        },
+        "idea_after_refinement": {
+          "problem": "The current understanding of microglial-driven neuroinflammation in Alzheimer's disease highlights the need for novel therapeutic approaches that target the intricate cytokine networks and the NLRP3 inflammasome pathway to mitigate synaptic dysfunction and neurodegeneration.",
+          "method": "The existing FDA-approved drug, colchicine, which targets the NLRP3 inflammasome pathway and subsequently modulates interleukin-1 beta signalling, will be investigated for its potential to suppress microglial-driven neuroinflammation and protect synaptic function using a combination of in vitro microglial cultures and in vivo validation in the APP/PS1 mouse model of Alzheimer's disease.",
+          "contribution": "This research will contribute to the development of a new therapeutic strategy for Alzheimer's disease by repurposing colchicine, an anti-inflammatory drug originally developed for gout, to modulate cytokine signalling and mitigate neuroinflammation in the brain."
+        },
+        "ranking_before": {
+          "novelty_wins": 1,
+          "specificity_wins": 1,
+          "feasibility_wins": 1,
+          "overall_wins": 1,
+          "total_wins": 1
+        },
+        "ranking_after": {
+          "novelty_wins": 1,
+          "specificity_wins": 1,
+          "feasibility_wins": 1,
+          "overall_wins": 1,
+          "total_wins": 1
+        }
+      }
+    ]
+  }
+]

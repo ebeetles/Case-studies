@@ -1,0 +1,202 @@
+[
+  {
+    "source_id": "T1-A",
+    "compound": "Metformin",
+    "tier": 1,
+    "degradation_type": null,
+    "origin_source_id": null,
+    "text": "Metformin may activate AMPK and modulate the mTOR pathway to reduce neuroinflammation and tau pathology relevant to Alzheimer's disease."
+  },
+  {
+    "source_id": "T1-B",
+    "compound": "Liraglutide",
+    "tier": 1,
+    "degradation_type": null,
+    "origin_source_id": null,
+    "text": "Liraglutide may activate the GLP-1 receptor to reduce neuroinflammation, improve neuronal insulin signaling, and slow cortical atrophy relevant to Alzheimer's disease."
+  },
+  {
+    "source_id": "T1-C",
+    "compound": "Pioglitazone",
+    "tier": 1,
+    "degradation_type": null,
+    "origin_source_id": null,
+    "text": "Pioglitazone may activate PPAR-\u03b3 to stabilize cerebral glucose and lipid metabolism and reduce neuroinflammation relevant to delaying Alzheimer's disease onset."
+  },
+  {
+    "source_id": "T1-D",
+    "compound": "Losartan",
+    "tier": 1,
+    "degradation_type": null,
+    "origin_source_id": null,
+    "text": "Losartan may antagonize the angiotensin II type 1 receptor to reduce oxidative stress and cerebrovascular dysfunction relevant to slowing Alzheimer's disease progression."
+  },
+  {
+    "source_id": "T1-E",
+    "compound": "Sildenafil",
+    "tier": 1,
+    "degradation_type": null,
+    "origin_source_id": null,
+    "text": "Sildenafil may inhibit phosphodiesterase-5 to increase cGMP signaling and reduce tau phosphorylation and amyloid accumulation relevant to Alzheimer's disease."
+  },
+  {
+    "source_id": "T2-A",
+    "compound": "Baclofen",
+    "tier": 2,
+    "degradation_type": null,
+    "origin_source_id": null,
+    "text": "Baclofen may act on GABA-B receptor signaling to produce non-redundant modulation of Alzheimer's disease network pathophysiology."
+  },
+  {
+    "source_id": "T2-B",
+    "compound": "Ibudilast",
+    "tier": 2,
+    "degradation_type": null,
+    "origin_source_id": null,
+    "text": "Ibudilast may inhibit phosphodiesterase and neuroinflammatory glial activation to reduce amyloid and tau pathology relevant to Alzheimer's disease."
+  },
+  {
+    "source_id": "T2-C",
+    "compound": "Chenodiol",
+    "tier": 2,
+    "degradation_type": null,
+    "origin_source_id": null,
+    "text": "Chenodiol may act as a primary bile acid modulating an AD-related endophenotype network to produce disease-relevant molecular effects in Alzheimer's disease."
+  },
+  {
+    "source_id": "T2-D",
+    "compound": "Arundine",
+    "tier": 2,
+    "degradation_type": null,
+    "origin_source_id": null,
+    "text": "Arundine may modulate AD-associated endophenotype pathways to produce protective molecular effects relevant to Alzheimer's disease."
+  },
+  {
+    "source_id": "T2-E",
+    "compound": "Acamprosate",
+    "tier": 2,
+    "degradation_type": null,
+    "origin_source_id": null,
+    "text": "Acamprosate may modulate glutamatergic signaling to produce non-redundant impact on Alzheimer's disease network pathophysiology."
+  },
+  {
+    "source_id": "T3-A",
+    "compound": "Clozapine",
+    "tier": 3,
+    "degradation_type": null,
+    "origin_source_id": null,
+    "text": "Clozapine may have effects relevant to Alzheimer's disease."
+  },
+  {
+    "source_id": "T3-B",
+    "compound": "Verapamil",
+    "tier": 3,
+    "degradation_type": null,
+    "origin_source_id": null,
+    "text": "Verapamil, a calcium channel blocker, may be beneficial in Alzheimer's disease."
+  },
+  {
+    "source_id": "T3-C",
+    "compound": "Tamoxifen",
+    "tier": 3,
+    "degradation_type": null,
+    "origin_source_id": null,
+    "text": "Tamoxifen, a selective estrogen receptor modulator, may have a repurposing role in Alzheimer's disease."
+  },
+  {
+    "source_id": "T3-D",
+    "compound": "Adenosine",
+    "tier": 3,
+    "degradation_type": null,
+    "origin_source_id": null,
+    "text": "Adenosine may have relevance to Alzheimer's disease treatment."
+  },
+  {
+    "source_id": "T3-E",
+    "compound": "Vandetanib",
+    "tier": 3,
+    "degradation_type": null,
+    "origin_source_id": null,
+    "text": "Vandetanib, a tyrosine kinase inhibitor, may be repurposable for Alzheimer's disease."
+  },
+  {
+    "source_id": "T1-A-degrad-specificity",
+    "compound": "Metformin",
+    "tier": null,
+    "degradation_type": "specificity",
+    "origin_source_id": "T1-A",
+    "text": "Metformin may affect brain processes relevant to Alzheimer's disease."
+  },
+  {
+    "source_id": "T1-A-degrad-novelty",
+    "compound": "Metformin",
+    "tier": null,
+    "degradation_type": "novelty",
+    "origin_source_id": "T1-A",
+    "text": "Metformin may reduce amyloid-beta accumulation and plaque formation relevant to Alzheimer's disease."
+  },
+  {
+    "source_id": "T1-B-degrad-specificity",
+    "compound": "Liraglutide",
+    "tier": null,
+    "degradation_type": "specificity",
+    "origin_source_id": "T1-B",
+    "text": "Liraglutide may affect brain processes relevant to Alzheimer's disease."
+  },
+  {
+    "source_id": "T1-B-degrad-novelty",
+    "compound": "Liraglutide",
+    "tier": null,
+    "degradation_type": "novelty",
+    "origin_source_id": "T1-B",
+    "text": "Liraglutide may reduce amyloid-beta accumulation and plaque formation relevant to Alzheimer's disease."
+  },
+  {
+    "source_id": "T1-C-degrad-specificity",
+    "compound": "Pioglitazone",
+    "tier": null,
+    "degradation_type": "specificity",
+    "origin_source_id": "T1-C",
+    "text": "Pioglitazone may affect brain processes relevant to Alzheimer's disease."
+  },
+  {
+    "source_id": "T1-C-degrad-novelty",
+    "compound": "Pioglitazone",
+    "tier": null,
+    "degradation_type": "novelty",
+    "origin_source_id": "T1-C",
+    "text": "Pioglitazone may reduce amyloid-beta accumulation and plaque formation, relevant to delaying Alzheimer's disease onset."
+  },
+  {
+    "source_id": "T1-D-degrad-specificity",
+    "compound": "Losartan",
+    "tier": null,
+    "degradation_type": "specificity",
+    "origin_source_id": "T1-D",
+    "text": "Losartan may affect processes relevant to Alzheimer's disease."
+  },
+  {
+    "source_id": "T1-D-degrad-novelty",
+    "compound": "Losartan",
+    "tier": null,
+    "degradation_type": "novelty",
+    "origin_source_id": "T1-D",
+    "text": "Losartan may reduce amyloid-beta accumulation and plaque formation, relevant to slowing Alzheimer's disease progression."
+  },
+  {
+    "source_id": "T1-E-degrad-specificity",
+    "compound": "Sildenafil",
+    "tier": null,
+    "degradation_type": "specificity",
+    "origin_source_id": "T1-E",
+    "text": "Sildenafil may affect brain processes relevant to Alzheimer's disease."
+  },
+  {
+    "source_id": "T1-E-degrad-novelty",
+    "compound": "Sildenafil",
+    "tier": null,
+    "degradation_type": "novelty",
+    "origin_source_id": "T1-E",
+    "text": "Sildenafil may reduce amyloid-beta accumulation and plaque formation, relevant to Alzheimer's disease."
+  }
+]

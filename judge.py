@@ -695,18 +695,30 @@ Contribution: {idea['contribution']}
 The specific weakness is:
 "{feedback}"
 
-Your task is to generate a search query that finds papers from OUTSIDE the Alzheimer's disease literature that have solved an analogous problem in a different disease or biological context.
+Your task is to generate a PubMed search query that finds papers from OUTSIDE the Alzheimer's disease literature that have solved an analogous problem in a different disease or biological context.
+
+You MUST search within exactly one of these adjacent domains:
+cardiology, rheumatology, metabolic disease, oncology, pulmonology.
 
 Rules:
-- Do NOT include "Alzheimer's" or "Alzheimer" in the query
+- Do NOT include "Alzheimer's" or "Alzheimer" or any variant in the query
+- Do NOT name specific drugs from the hypothesis
 - Do NOT search for the specific mechanism already named in the hypothesis
-- DO search for how analogous problems were solved in different contexts
+- DO search for how analogous problems were solved in one of the five allowed domains
 - The goal is unexpected inspiration, not confirmation of existing approaches
 
-Examples of good out-of-distribution queries:
-- If weakness is about unclear BBB crossing mechanism: "novel membrane permeability drug delivery non-CNS"
-- If weakness is about NLRP3 mechanism unclear: "inflammasome independent neuroinflammation resolution mechanism"
-- If weakness is about gut microbiome causality unclear: "microbiome host interaction causal mechanism non-neurological"
+Good examples by domain:
+- cardiology: "cardiac fibrosis aldosterone inflammation macrophage resolution"
+- rheumatology: "rheumatoid arthritis synovial cytokine macrophage reprogramming"
+- metabolic disease: "type 2 diabetes insulin resistance inflammatory cytokine signalling"
+- oncology: "tumor associated macrophage cytokine microenvironment reprogramming"
+- pulmonology: "pulmonary fibrosis oxidative stress macrophage activation"
+
+Bad examples (never produce queries like these):
+- any query containing Alzheimer / Alzheimer's / AD dementia
+- "heart failure treatment guidelines review" (too generic, not analogous)
+- "baricitinib rheumatoid arthritis clinical trial" (names a specific drug)
+- "liraglutide semaglutide glycaemic control" (names holdout-class drugs)
 
 Generate ONE search query of 5-8 words following these rules.
 Reply with ONLY the query, nothing else."""

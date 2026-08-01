@@ -1,0 +1,152 @@
+{
+  "H013": [
+    {
+      "score": 2,
+      "justification": "This is a fairly established GLP-1 receptor repurposing rationale for AD, with the anti-inflammatory and insulin-sensitizing links already commonly proposed rather than a particularly novel mechanistic connection."
+    },
+    {
+      "score": 3,
+      "justification": "This is a plausible and fairly expected AD repurposing rationale, since GLP-1 agonism has already been repeatedly linked to neuroinflammation, insulin signaling, and neuroprotection in Alzheimer\u2019s disease rather than introducing a distinctly non-obvious new mechanistic connection."
+    }
+  ],
+  "H017": [
+    {
+      "score": 3,
+      "justification": "This is a plausible and fairly expected AD repurposing rationale: PPAR-\u03b3\u2013mediated metabolic and anti-inflammatory effects have been linked to AD before, and the hypothesis mainly repackages that established connection rather than introducing a distinctly non-obvious mechanistic angle."
+    },
+    {
+      "score": 3,
+      "justification": "This is a plausible and fairly expected AD repurposing rationale: PPAR-\u03b3 agonism has already been linked to metabolic and anti-inflammatory effects in the brain, and the hypothesis adds a reasonable but not especially non-obvious connection to AD via glucose/lipid stabilization and neuroinflammation."
+    }
+  ],
+  "H019": [
+    {
+      "score": 2,
+      "justification": "This is a fairly expected repurposing rationale for AD: PDE5 inhibition raising cGMP to support synaptic function and possibly reduce tau/A\u03b2 pathology has been discussed before, so it is not a particularly non-obvious AD-specific mechanistic insight."
+    },
+    {
+      "score": 2,
+      "justification": "This is a plausible but fairly established repurposing idea: PDE5 inhibition/cGMP signaling has already been repeatedly explored in AD for effects on synaptic function, tau phosphorylation, and amyloid-related pathology."
+    }
+  ],
+  "H023": [
+    {
+      "score": 2,
+      "justification": "This is a plausible but fairly expected AD repurposing rationale: metformin\u2019s AMPK/mTOR effects are already commonly linked to neuroinflammation, autophagy, and tau biology, so the connection is mechanistically sensible but not especially novel for Alzheimer\u2019s disease."
+    },
+    {
+      "score": 3,
+      "justification": "This is a plausible and fairly expected repurposing rationale for AD: linking metformin\u2019s AMPK activation and mTOR modulation to reduced neuroinflammation and tau pathology is mechanistically coherent, but it is not a highly non-obvious or specifically novel AD connection."
+    }
+  ],
+  "H024": [
+    {
+      "score": 2,
+      "justification": "This is a fairly expected repurposing rationale: angiotensin II/AT1R blockade and vascular/oxidative-stress benefits have already been broadly linked to neurodegeneration and AD, so the hypothesis is plausible but not especially non-obvious."
+    },
+    {
+      "score": 3,
+      "justification": "This is a plausible and fairly expected AD repurposing rationale, since ARB-mediated reduction of vascular dysfunction and oxidative stress has already been broadly linked to Alzheimer\u2019s-related pathology rather than presenting a clearly non-obvious new connection."
+    }
+  ],
+  "H001": [
+    {
+      "score": 2,
+      "justification": "This is a fairly expected repurposing rationale because metformin is already commonly discussed in AD via metabolic/AMPK-related effects, and the specific claim about lowering amyloid-beta and plaques is a plausible but not especially novel extension."
+    },
+    {
+      "score": 3,
+      "justification": "Metformin\u2019s potential to lower amyloid-beta via metabolic/AMPK-linked effects is a plausible but fairly expected AD repurposing rationale, and the specific connection to plaque reduction is not especially novel in the AD literature."
+    }
+  ],
+  "H004": [
+    {
+      "score": 2,
+      "justification": "Pioglitazone is already a fairly well-known repurposing candidate for Alzheimer\u2019s disease via PPAR-\u03b3\u2013mediated anti-inflammatory, insulin-sensitizing, and glial effects, so this framing is not especially novel."
+    },
+    {
+      "score": 3,
+      "justification": "Pioglitazone\u2019s PPAR-\u03b3\u2013mediated anti-inflammatory/insulin-sensitizing effects make it a fairly expected repurposing rationale for AD rather than a highly novel, specific mechanistic proposal."
+    }
+  ],
+  "H005": [
+    {
+      "score": 2,
+      "justification": "Liraglutide\u2019s potential to reduce amyloid-beta burden in AD is a fairly established GLP-1 receptor agonist repurposing idea, with the amyloid/plaque angle being a known and expected extension rather than a highly novel AD-specific mechanistic insight."
+    },
+    {
+      "score": 2,
+      "justification": "This is a fairly expected GLP-1 receptor agonist repurposing rationale for AD, since liraglutide has already been repeatedly proposed to affect amyloid handling and neuroinflammation rather than introducing a distinctly non-obvious AD-specific mechanism."
+    }
+  ],
+  "H009": [
+    {
+      "score": 3,
+      "justification": "Metformin has already been fairly widely proposed for AD via expected mechanisms like AMPK activation, insulin-sensitivity modulation, inflammation reduction, and effects on tau/amyloid-related pathways, so this is a plausible but not especially novel repurposing hypothesis."
+    },
+    {
+      "score": 2,
+      "justification": "This is a fairly well-known and extensively explored repurposing idea in AD, with metformin commonly linked to AMPK, insulin signaling, inflammation, and potential effects on tau/amyloid rather than a clearly novel AD-specific mechanistic angle."
+    }
+  ],
+  "H010": [
+    {
+      "score": 3,
+      "justification": "Losartan is a plausible but fairly expected AD repurposing candidate because its AT1 receptor blockade could reasonably be linked to neuroinflammation, cerebrovascular dysfunction, and downstream amyloid/tau-relevant stress pathways, but this is not a particularly non-obvious AD-specific mechanistic insight."
+    },
+    {
+      "score": 3,
+      "justification": "Losartan\u2019s proposed relevance to AD is a fairly expected repurposing idea because its angiotensin receptor blockade could plausibly reduce neuroinflammation, vascular dysfunction, and blood-brain barrier stress, but it is not a highly specific or non-obvious AD-linked mechanism."
+    }
+  ],
+  "H012": [
+    {
+      "score": 3,
+      "justification": "Liraglutide is a fairly expected AD repurposing candidate because GLP-1 receptor agonism has already been linked to neuroprotection, insulin signaling, inflammation, and synaptic function in the AD context, making the hypothesis plausible but not highly novel."
+    },
+    {
+      "score": 3,
+      "justification": "Liraglutide\u2019s GLP-1 receptor agonism has already been fairly widely explored in AD repurposing for effects on insulin signaling, inflammation, synaptic function, and possibly amyloid/tau-related neuroprotection, so this is a plausible but not especially novel AD-specific hypothesis."
+    }
+  ],
+  "H015": [
+    {
+      "score": 2,
+      "justification": "This is a fairly expected repurposing idea because losartan\u2019s angiotensin receptor blockade has already been broadly discussed in relation to vascular and inflammatory effects in AD, and the specific claim about lowering amyloid-beta/plaque burden is a plausible extension rather than a distinctly non-obvious mechanistic insight."
+    },
+    {
+      "score": 3,
+      "justification": "Losartan is a reasonably expected AD repurposing idea because angiotensin signaling, vascular effects, and downstream inflammatory/amyloid-processing influences have all been discussed in relation to Alzheimer\u2019s disease, but this specific claim about reducing amyloid-beta accumulation and plaque formation is not merely a restatement of a standard, established AD rationale."
+    }
+  ],
+  "H018": [
+    {
+      "score": 3,
+      "justification": "Sildenafil\u2019s PDE5 inhibition gives a plausible, fairly expected AD-repurposing rationale via cGMP/vascular and synaptic signaling effects, but it is not a highly novel or non-obvious AD-specific mechanistic proposal."
+    },
+    {
+      "score": 3,
+      "justification": "Sildenafil\u2019s PDE5 inhibition and downstream cGMP/NO signaling effects make a plausible but fairly expected AD repurposing rationale, with potential links to cerebrovascular function, synaptic plasticity, and neuroinflammation rather than a highly non-obvious AD-specific mechanism."
+    }
+  ],
+  "H020": [
+    {
+      "score": 3,
+      "justification": "Plausible and reasonably specific\u2014sildenafil\u2019s PDE5 inhibition/cGMP signaling could be linked to reduced amyloidogenic processing and plaque burden, but this is an expected repurposing rationale rather than a highly non-obvious AD-specific insight."
+    },
+    {
+      "score": 3,
+      "justification": "Sildenafil\u2019s PDE5/cGMP signaling and possible downstream effects on amyloid processing and clearance make this a plausible but fairly expected AD repurposing rationale rather than a highly non-obvious or specifically articulated new connection."
+    }
+  ],
+  "H025": [
+    {
+      "score": 2,
+      "justification": "Pioglitazone\u2019s anti-inflammatory/PPAR-\u03b3 effects on amyloid processing and plaque burden are a fairly standard, expected repurposing rationale in AD rather than a notably new or non-obvious mechanistic connection."
+    },
+    {
+      "score": 2,
+      "justification": "Pioglitazone\u2019s proposed anti-inflammatory/PPAR-\u03b3 effects on amyloid burden have been discussed in AD before, so this is a fairly expected repurposing rationale rather than a novel mechanistic link."
+    }
+  ]
+}

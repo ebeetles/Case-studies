@@ -1,0 +1,113 @@
+holdout_papers:
+
+  - paper_id: liraglutide_AD_phase2b_2025
+    pub_date: "2025-12"
+    journal: "Nature Medicine"
+    seed_paper_file: seed_papers_liraglutide.py
+    research_question: >
+      What existing FDA-approved drug, originally developed for a
+      non-neurological indication, could restore neuronal glucose metabolism
+      and reduce neuroinflammation in the context of brain insulin resistance
+      and mitochondrial dysfunction described in these papers, and through
+      what specific mechanism?
+    contamination_terms:
+      - liraglutide
+      - victoza
+      - GLP-1
+      - GLP1
+      - glucagon-like peptide
+      - semaglutide
+      - tirzepatide
+    ground_truth:
+      drug: liraglutide
+      drug_class: GLP-1 receptor agonist
+      original_indication: type 2 diabetes and obesity
+      mechanism: >
+        GLP-1 receptor agonism reduces neuroinflammation and restores
+        neuronal glucose metabolism by activating cAMP-PKA signalling
+        in neurons, reducing microglial activation, and improving
+        mitochondrial function in hippocampal and cortical neurons
+      ad_target: neuroinflammation and impaired neuronal glucose metabolism
+      model: Phase 2b randomised controlled trial in mild-to-moderate AD
+      key_claim: >
+        Liraglutide slows cognitive decline and reduces brain atrophy
+        in mild-to-moderate Alzheimer's disease compared to placebo
+    background_topics:
+      - brain insulin resistance
+      - impaired cerebral glucose metabolism
+      - neuroinflammation
+      - mitochondrial dysfunction
+
+  - paper_id: finerenone_AD_neuroprotection_2026
+    pub_date: "2026-05"
+    journal: "Nature Medicine"
+    seed_paper_file: seed_papers_finerenone.py
+    research_question: >
+      What existing FDA-approved drug, originally developed for a
+      non-neurological indication, could reduce neuroinflammation,
+      oxidative stress, and amyloid-related pathology through modulation
+      of hormonal or inflammatory signalling described in these papers,
+      and through what specific mechanism?
+    contamination_terms:
+      - finerenone
+      - kerendia
+      - mineralocorticoid
+      - mineralocorticoid receptor antagonist
+      - spironolactone
+      - eplerenone
+    ground_truth:
+      drug: finerenone
+      drug_class: nonsteroidal mineralocorticoid receptor antagonist
+      original_indication: heart failure with preserved ejection fraction
+      mechanism: >
+        Mineralocorticoid receptor antagonism reduces neuroinflammation
+        by blocking aldosterone-driven microglial activation and
+        oxidative stress, reducing amyloid plaque buildup
+      ad_target: neuroinflammation and amyloid pathology
+      model: mouse model of Alzheimer's disease
+      key_claim: >
+        Finerenone reduces amyloid plaque buildup by 42 percent
+        in 12-week trials in Alzheimer's mouse models
+    background_topics:
+      - neuroinflammation
+      - microglial activation
+      - oxidative stress
+      - amyloid pathology
+
+  - paper_id: baricitinib_AD_neuroinflammation_2024
+    pub_date: "2024"
+    journal: "Nature Aging"
+    seed_paper_file: seed_papers_baricitinib.py
+    research_question: >
+      What existing FDA-approved drug, originally developed for a
+      non-neurological indication, could suppress microglial-driven
+      neuroinflammation and protect synaptic function through modulation
+      of cytokine signalling described in these papers, and through what
+      specific mechanism?
+    contamination_terms:
+      - baricitinib
+      - olumiant
+      - JAK inhibitor
+      - JAK1
+      - JAK2
+      - tofacitinib
+      - ruxolitinib
+      - upadacitinib
+    ground_truth:
+      drug: baricitinib
+      drug_class: JAK1/JAK2 inhibitor
+      original_indication: rheumatoid arthritis
+      mechanism: >
+        JAK-STAT pathway inhibition reduces microglial-driven
+        neuroinflammation, decreasing pro-inflammatory cytokine
+        production and synaptic damage in Alzheimer's disease models
+      ad_target: neuroinflammation via JAK-STAT pathway
+      model: in vitro human microglial cells and mouse model
+      key_claim: >
+        Baricitinib reduces neuroinflammatory markers and improves
+        cognitive function in preclinical Alzheimer's disease models
+    background_topics:
+      - neuroinflammation
+      - microglial activation
+      - JAK-STAT signalling
+      - synaptic dysfunction

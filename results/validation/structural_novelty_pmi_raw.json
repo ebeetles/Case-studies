@@ -1,0 +1,760 @@
+{
+  "amendment2": "AMENDMENT 2 (pre-registered BEFORE observing any normalized counts):\n1. Per compound per window, also query count(A), count(C), total records;\n   expected = count(A)*count(C)/total ; pmi_ratio = observed/expected.\n   Report A-C pmi_ratio at pre-cutoff and present.\n2. Added fixed cutoff+5yr post window for every compound (equalizes elapsed\n   post-cutoff time; metformin had 14y, sildenafil 4y).\n3. New classification on pmi_ratio (A-C pmi>>1 -> Case 1; A-C pmi<~1 &\n   B-C pmi>>1 -> Case 2; both <~1 -> Case 3). Report actual values; no hard cutoff.\n4. SUCCESS CRITERION: >=4/5 Tier-1 show A-C pmi increasing pre-cutoff -> cutoff+5yr,\n   AND pre-cutoff values cluster separately from post values with a visible gap.\n5. Nothing else rerun; prior results intact. Amendment made before observing\n   normalized counts.\n",
+  "present_maxdate": "2026/07/20",
+  "pmi_results": {
+    "T1-A": {
+      "compound": "Metformin",
+      "cutoff_year": 2011,
+      "confidence": "high",
+      "windows": {
+        "pre_cutoff": {
+          "maxdate": "2010/12/31",
+          "count_A": 6862,
+          "count_B": 3540,
+          "count_C": 77474,
+          "total": 20804671,
+          "observed_AC": 8,
+          "expected_AC": 25.553232156374882,
+          "pmi_AC": 0.31307194139056116,
+          "observed_BC": 19,
+          "expected_BC": 13.182518483469408,
+          "pmi_BC": 1.4413027392167579
+        },
+        "post5yr": {
+          "maxdate": "2016/12/31",
+          "count_A": 15287,
+          "count_B": 11158,
+          "count_C": 124193,
+          "total": 26928345,
+          "observed_AC": 57,
+          "expected_AC": 70.50334474695715,
+          "pmi_AC": 0.8084722817701504,
+          "observed_BC": 131,
+          "expected_BC": 51.46047757483797,
+          "pmi_BC": 2.545642912261925
+        },
+        "present": {
+          "maxdate": "2026/07/20",
+          "count_A": 37573,
+          "count_B": 35536,
+          "count_C": 253317,
+          "total": 40725178,
+          "observed_AC": 425,
+          "expected_AC": 233.70995802645726,
+          "pmi_AC": 1.8184933307458284,
+          "observed_BC": 755,
+          "expected_BC": 221.03949826812297,
+          "pmi_BC": 3.4156791248421037
+        }
+      }
+    },
+    "T1-B": {
+      "compound": "Liraglutide",
+      "cutoff_year": 2010,
+      "confidence": "moderate",
+      "windows": {
+        "pre_cutoff": {
+          "maxdate": "2009/12/31",
+          "count_A": 177,
+          "count_B": 672,
+          "count_C": 71234,
+          "total": 19954080,
+          "observed_AC": 1,
+          "expected_AC": 0.6318716773712444,
+          "pmi_AC": 1.5825998154566259,
+          "observed_BC": 10,
+          "expected_BC": 2.3989704361213344,
+          "pmi_BC": 4.168454871068792
+        },
+        "post5yr": {
+          "maxdate": "2015/12/31",
+          "count_A": 1245,
+          "count_B": 2550,
+          "count_C": 115498,
+          "total": 25811826,
+          "observed_AC": 39,
+          "expected_AC": 5.570896456531204,
+          "pmi_AC": 7.000668618472922,
+          "observed_BC": 62,
+          "expected_BC": 11.410269850726563,
+          "pmi_BC": 5.43370146465485
+        },
+        "present": {
+          "maxdate": "2026/07/20",
+          "count_A": 5785,
+          "count_B": 17382,
+          "count_C": 253317,
+          "total": 40725178,
+          "observed_AC": 154,
+          "expected_AC": 35.98360810111131,
+          "pmi_AC": 4.279726467875908,
+          "observed_BC": 348,
+          "expected_BC": 108.11876854166236,
+          "pmi_BC": 3.2186826088932197
+        }
+      }
+    },
+    "T1-C": {
+      "compound": "Pioglitazone",
+      "cutoff_year": 2005,
+      "confidence": "moderate",
+      "windows": {
+        "pre_cutoff": {
+          "maxdate": "2004/12/31",
+          "count_A": 881,
+          "count_B": 2426,
+          "count_C": 46668,
+          "total": 16282757,
+          "observed_AC": 8,
+          "expected_AC": 2.5250335677182925,
+          "pmi_AC": 3.168274712177025,
+          "observed_BC": 31,
+          "expected_BC": 6.953157134261723,
+          "pmi_BC": 4.458406361514156
+        },
+        "post5yr": {
+          "maxdate": "2010/12/31",
+          "count_A": 2763,
+          "count_B": 7517,
+          "count_C": 77474,
+          "total": 20804671,
+          "observed_AC": 29,
+          "expected_AC": 10.289067392606208,
+          "pmi_AC": 2.81852561494928,
+          "observed_BC": 114,
+          "expected_BC": 27.992370463344507,
+          "pmi_BC": 4.0725382707149045
+        },
+        "present": {
+          "maxdate": "2026/07/20",
+          "count_A": 7494,
+          "count_B": 27430,
+          "count_C": 253317,
+          "total": 40725178,
+          "observed_AC": 175,
+          "expected_AC": 46.61385637160382,
+          "pmi_AC": 3.754248492227438,
+          "observed_BC": 554,
+          "expected_BC": 170.61890582774126,
+          "pmi_BC": 3.2470024192941698
+        }
+      }
+    },
+    "T1-D": {
+      "compound": "Losartan",
+      "cutoff_year": 2015,
+      "confidence": "moderate",
+      "windows": {
+        "pre_cutoff": {
+          "maxdate": "2014/12/31",
+          "count_A": 8253,
+          "count_B": 7972,
+          "count_C": 107070,
+          "total": 24715382,
+          "observed_AC": 14,
+          "expected_AC": 35.75298613632595,
+          "pmi_AC": 0.3915756839615598,
+          "observed_BC": 26,
+          "expected_BC": 34.53566042394166,
+          "pmi_BC": 0.7528450210836461
+        },
+        "post5yr": {
+          "maxdate": "2020/12/31",
+          "count_A": 9977,
+          "count_B": 10019,
+          "count_C": 166378,
+          "total": 31937290,
+          "observed_AC": 30,
+          "expected_AC": 51.97539634702882,
+          "pmi_AC": 0.5771961756615821,
+          "observed_BC": 63,
+          "expected_BC": 52.19419625146654,
+          "pmi_BC": 1.2070307529303095
+        },
+        "present": {
+          "maxdate": "2026/07/20",
+          "count_A": 11383,
+          "count_B": 11613,
+          "count_C": 253317,
+          "total": 40725178,
+          "observed_AC": 46,
+          "expected_AC": 70.80404684787382,
+          "pmi_AC": 0.6496803791290827,
+          "observed_BC": 88,
+          "expected_BC": 72.2346829521531,
+          "pmi_BC": 1.2182513496776826
+        }
+      }
+    },
+    "T1-E": {
+      "compound": "Sildenafil",
+      "cutoff_year": 2021,
+      "confidence": "high",
+      "windows": {
+        "pre_cutoff": {
+          "maxdate": "2020/12/31",
+          "count_A": 7258,
+          "count_B": 4927,
+          "count_C": 166378,
+          "total": 31937290,
+          "observed_AC": 38,
+          "expected_AC": 37.81070729545306,
+          "pmi_AC": 1.0050063254058648,
+          "observed_BC": 73,
+          "expected_BC": 25.667312599159164,
+          "pmi_BC": 2.8440842693594424
+        },
+        "post5yr": {
+          "maxdate": "2026/12/31",
+          "count_A": 8787,
+          "count_B": 6350,
+          "count_C": 253332,
+          "total": 40727664,
+          "observed_AC": 70,
+          "expected_AC": 54.65641938118523,
+          "pmi_AC": 1.2807278777595263,
+          "observed_BC": 131,
+          "expected_BC": 39.49792455565338,
+          "pmi_BC": 3.3166299615418615
+        },
+        "present": {
+          "maxdate": "2026/07/20",
+          "count_A": 8787,
+          "count_B": 6350,
+          "count_C": 253317,
+          "total": 40725178,
+          "observed_AC": 70,
+          "expected_AC": 54.656519340443396,
+          "pmi_AC": 1.280725535484348,
+          "observed_BC": 131,
+          "expected_BC": 39.49799679205822,
+          "pmi_BC": 3.316623895881725
+        }
+      }
+    }
+  },
+  "query_log": [
+    {
+      "link": "A-alone",
+      "context": "T1-A/pre_cutoff",
+      "term": "(\"Metformin\"[MeSH Terms] OR \"Metformin\"[Title/Abstract] OR \"Glucophage\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2010/12/31",
+      "count": 6862,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Metformin%22%5BMeSH+Terms%5D+OR+%22Metformin%22%5BTitle%2FAbstract%5D+OR+%22Glucophage%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2010%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C-alone",
+      "context": "T1-A/pre_cutoff",
+      "term": "(\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2010/12/31",
+      "count": 77474,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2010%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-alone",
+      "context": "T1-A/pre_cutoff",
+      "term": "(\"AMPK\"[Title/Abstract] OR \"AMP-activated protein kinase\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2010/12/31",
+      "count": 3540,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22AMPK%22%5BTitle%2FAbstract%5D+OR+%22AMP-activated+protein+kinase%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2010%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "total",
+      "context": "T1-A/pre_cutoff",
+      "term": "(\"1900/01/01\"[PDAT] : \"2010/12/31\"[PDAT])",
+      "mindate": "1900",
+      "maxdate": "2010/12/31",
+      "count": 20804671,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%221900%2F01%2F01%22%5BPDAT%5D+%3A+%222010%2F12%2F31%22%5BPDAT%5D%29&datetype=pdat&mindate=1900&maxdate=2010%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-alone",
+      "context": "T1-A/post5yr",
+      "term": "(\"Metformin\"[MeSH Terms] OR \"Metformin\"[Title/Abstract] OR \"Glucophage\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2016/12/31",
+      "count": 15287,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Metformin%22%5BMeSH+Terms%5D+OR+%22Metformin%22%5BTitle%2FAbstract%5D+OR+%22Glucophage%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2016%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C-alone",
+      "context": "T1-A/post5yr",
+      "term": "(\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2016/12/31",
+      "count": 124193,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2016%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-alone",
+      "context": "T1-A/post5yr",
+      "term": "(\"AMPK\"[Title/Abstract] OR \"AMP-activated protein kinase\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2016/12/31",
+      "count": 11158,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22AMPK%22%5BTitle%2FAbstract%5D+OR+%22AMP-activated+protein+kinase%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2016%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "total",
+      "context": "T1-A/post5yr",
+      "term": "(\"1900/01/01\"[PDAT] : \"2016/12/31\"[PDAT])",
+      "mindate": "1900",
+      "maxdate": "2016/12/31",
+      "count": 26928345,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%221900%2F01%2F01%22%5BPDAT%5D+%3A+%222016%2F12%2F31%22%5BPDAT%5D%29&datetype=pdat&mindate=1900&maxdate=2016%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C",
+      "context": "T1-A/post5yr",
+      "term": "(\"Metformin\"[MeSH Terms] OR \"Metformin\"[Title/Abstract] OR \"Glucophage\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2016/12/31",
+      "count": 57,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Metformin%22%5BMeSH+Terms%5D+OR+%22Metformin%22%5BTitle%2FAbstract%5D+OR+%22Glucophage%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2016%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-C",
+      "context": "T1-A/post5yr",
+      "term": "(\"AMPK\"[Title/Abstract] OR \"AMP-activated protein kinase\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2016/12/31",
+      "count": 131,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22AMPK%22%5BTitle%2FAbstract%5D+OR+%22AMP-activated+protein+kinase%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2016%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-alone",
+      "context": "T1-A/present",
+      "term": "(\"Metformin\"[MeSH Terms] OR \"Metformin\"[Title/Abstract] OR \"Glucophage\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 37573,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Metformin%22%5BMeSH+Terms%5D+OR+%22Metformin%22%5BTitle%2FAbstract%5D+OR+%22Glucophage%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C-alone",
+      "context": "T1-A/present",
+      "term": "(\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 253317,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-alone",
+      "context": "T1-A/present",
+      "term": "(\"AMPK\"[Title/Abstract] OR \"AMP-activated protein kinase\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 35536,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22AMPK%22%5BTitle%2FAbstract%5D+OR+%22AMP-activated+protein+kinase%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "total",
+      "context": "T1-A/present",
+      "term": "(\"1900/01/01\"[PDAT] : \"2026/07/20\"[PDAT])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 40725178,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%221900%2F01%2F01%22%5BPDAT%5D+%3A+%222026%2F07%2F20%22%5BPDAT%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-alone",
+      "context": "T1-B/pre_cutoff",
+      "term": "(\"Liraglutide\"[MeSH Terms] OR \"Liraglutide\"[Title/Abstract] OR \"Victoza\"[Title/Abstract] OR \"Saxenda\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2009/12/31",
+      "count": 177,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Liraglutide%22%5BMeSH+Terms%5D+OR+%22Liraglutide%22%5BTitle%2FAbstract%5D+OR+%22Victoza%22%5BTitle%2FAbstract%5D+OR+%22Saxenda%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2009%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C-alone",
+      "context": "T1-B/pre_cutoff",
+      "term": "(\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2009/12/31",
+      "count": 71234,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2009%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-alone",
+      "context": "T1-B/pre_cutoff",
+      "term": "(\"GLP-1 receptor\"[Title/Abstract] OR \"GLP-1R\"[Title/Abstract] OR \"glucagon-like peptide-1 receptor\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2009/12/31",
+      "count": 672,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22GLP-1+receptor%22%5BTitle%2FAbstract%5D+OR+%22GLP-1R%22%5BTitle%2FAbstract%5D+OR+%22glucagon-like+peptide-1+receptor%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2009%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "total",
+      "context": "T1-B/pre_cutoff",
+      "term": "(\"1900/01/01\"[PDAT] : \"2009/12/31\"[PDAT])",
+      "mindate": "1900",
+      "maxdate": "2009/12/31",
+      "count": 19954080,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%221900%2F01%2F01%22%5BPDAT%5D+%3A+%222009%2F12%2F31%22%5BPDAT%5D%29&datetype=pdat&mindate=1900&maxdate=2009%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-alone",
+      "context": "T1-B/post5yr",
+      "term": "(\"Liraglutide\"[MeSH Terms] OR \"Liraglutide\"[Title/Abstract] OR \"Victoza\"[Title/Abstract] OR \"Saxenda\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2015/12/31",
+      "count": 1245,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Liraglutide%22%5BMeSH+Terms%5D+OR+%22Liraglutide%22%5BTitle%2FAbstract%5D+OR+%22Victoza%22%5BTitle%2FAbstract%5D+OR+%22Saxenda%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2015%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C-alone",
+      "context": "T1-B/post5yr",
+      "term": "(\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2015/12/31",
+      "count": 115498,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2015%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-alone",
+      "context": "T1-B/post5yr",
+      "term": "(\"GLP-1 receptor\"[Title/Abstract] OR \"GLP-1R\"[Title/Abstract] OR \"glucagon-like peptide-1 receptor\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2015/12/31",
+      "count": 2550,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22GLP-1+receptor%22%5BTitle%2FAbstract%5D+OR+%22GLP-1R%22%5BTitle%2FAbstract%5D+OR+%22glucagon-like+peptide-1+receptor%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2015%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "total",
+      "context": "T1-B/post5yr",
+      "term": "(\"1900/01/01\"[PDAT] : \"2015/12/31\"[PDAT])",
+      "mindate": "1900",
+      "maxdate": "2015/12/31",
+      "count": 25811826,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%221900%2F01%2F01%22%5BPDAT%5D+%3A+%222015%2F12%2F31%22%5BPDAT%5D%29&datetype=pdat&mindate=1900&maxdate=2015%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C",
+      "context": "T1-B/post5yr",
+      "term": "(\"Liraglutide\"[MeSH Terms] OR \"Liraglutide\"[Title/Abstract] OR \"Victoza\"[Title/Abstract] OR \"Saxenda\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2015/12/31",
+      "count": 39,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Liraglutide%22%5BMeSH+Terms%5D+OR+%22Liraglutide%22%5BTitle%2FAbstract%5D+OR+%22Victoza%22%5BTitle%2FAbstract%5D+OR+%22Saxenda%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2015%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-C",
+      "context": "T1-B/post5yr",
+      "term": "(\"GLP-1 receptor\"[Title/Abstract] OR \"GLP-1R\"[Title/Abstract] OR \"glucagon-like peptide-1 receptor\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2015/12/31",
+      "count": 62,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22GLP-1+receptor%22%5BTitle%2FAbstract%5D+OR+%22GLP-1R%22%5BTitle%2FAbstract%5D+OR+%22glucagon-like+peptide-1+receptor%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2015%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-alone",
+      "context": "T1-B/present",
+      "term": "(\"Liraglutide\"[MeSH Terms] OR \"Liraglutide\"[Title/Abstract] OR \"Victoza\"[Title/Abstract] OR \"Saxenda\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 5785,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Liraglutide%22%5BMeSH+Terms%5D+OR+%22Liraglutide%22%5BTitle%2FAbstract%5D+OR+%22Victoza%22%5BTitle%2FAbstract%5D+OR+%22Saxenda%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-alone",
+      "context": "T1-B/present",
+      "term": "(\"GLP-1 receptor\"[Title/Abstract] OR \"GLP-1R\"[Title/Abstract] OR \"glucagon-like peptide-1 receptor\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 17382,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22GLP-1+receptor%22%5BTitle%2FAbstract%5D+OR+%22GLP-1R%22%5BTitle%2FAbstract%5D+OR+%22glucagon-like+peptide-1+receptor%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-alone",
+      "context": "T1-C/pre_cutoff",
+      "term": "(\"Pioglitazone\"[MeSH Terms] OR \"Pioglitazone\"[Title/Abstract] OR \"Actos\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2004/12/31",
+      "count": 881,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Pioglitazone%22%5BMeSH+Terms%5D+OR+%22Pioglitazone%22%5BTitle%2FAbstract%5D+OR+%22Actos%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2004%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C-alone",
+      "context": "T1-C/pre_cutoff",
+      "term": "(\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2004/12/31",
+      "count": 46668,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2004%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-alone",
+      "context": "T1-C/pre_cutoff",
+      "term": "(\"PPAR gamma\"[Title/Abstract] OR \"PPAR-gamma\"[Title/Abstract] OR \"PPARG\"[Title/Abstract] OR \"peroxisome proliferator-activated receptor gamma\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2004/12/31",
+      "count": 2426,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22PPAR+gamma%22%5BTitle%2FAbstract%5D+OR+%22PPAR-gamma%22%5BTitle%2FAbstract%5D+OR+%22PPARG%22%5BTitle%2FAbstract%5D+OR+%22peroxisome+proliferator-activated+receptor+gamma%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2004%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "total",
+      "context": "T1-C/pre_cutoff",
+      "term": "(\"1900/01/01\"[PDAT] : \"2004/12/31\"[PDAT])",
+      "mindate": "1900",
+      "maxdate": "2004/12/31",
+      "count": 16282757,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%221900%2F01%2F01%22%5BPDAT%5D+%3A+%222004%2F12%2F31%22%5BPDAT%5D%29&datetype=pdat&mindate=1900&maxdate=2004%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-alone",
+      "context": "T1-C/post5yr",
+      "term": "(\"Pioglitazone\"[MeSH Terms] OR \"Pioglitazone\"[Title/Abstract] OR \"Actos\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2010/12/31",
+      "count": 2763,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Pioglitazone%22%5BMeSH+Terms%5D+OR+%22Pioglitazone%22%5BTitle%2FAbstract%5D+OR+%22Actos%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2010%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-alone",
+      "context": "T1-C/post5yr",
+      "term": "(\"PPAR gamma\"[Title/Abstract] OR \"PPAR-gamma\"[Title/Abstract] OR \"PPARG\"[Title/Abstract] OR \"peroxisome proliferator-activated receptor gamma\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2010/12/31",
+      "count": 7517,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22PPAR+gamma%22%5BTitle%2FAbstract%5D+OR+%22PPAR-gamma%22%5BTitle%2FAbstract%5D+OR+%22PPARG%22%5BTitle%2FAbstract%5D+OR+%22peroxisome+proliferator-activated+receptor+gamma%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2010%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C",
+      "context": "T1-C/post5yr",
+      "term": "(\"Pioglitazone\"[MeSH Terms] OR \"Pioglitazone\"[Title/Abstract] OR \"Actos\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2010/12/31",
+      "count": 29,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Pioglitazone%22%5BMeSH+Terms%5D+OR+%22Pioglitazone%22%5BTitle%2FAbstract%5D+OR+%22Actos%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2010%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-C",
+      "context": "T1-C/post5yr",
+      "term": "(\"PPAR gamma\"[Title/Abstract] OR \"PPAR-gamma\"[Title/Abstract] OR \"PPARG\"[Title/Abstract] OR \"peroxisome proliferator-activated receptor gamma\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2010/12/31",
+      "count": 114,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22PPAR+gamma%22%5BTitle%2FAbstract%5D+OR+%22PPAR-gamma%22%5BTitle%2FAbstract%5D+OR+%22PPARG%22%5BTitle%2FAbstract%5D+OR+%22peroxisome+proliferator-activated+receptor+gamma%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2010%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-alone",
+      "context": "T1-C/present",
+      "term": "(\"Pioglitazone\"[MeSH Terms] OR \"Pioglitazone\"[Title/Abstract] OR \"Actos\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 7494,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Pioglitazone%22%5BMeSH+Terms%5D+OR+%22Pioglitazone%22%5BTitle%2FAbstract%5D+OR+%22Actos%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-alone",
+      "context": "T1-C/present",
+      "term": "(\"PPAR gamma\"[Title/Abstract] OR \"PPAR-gamma\"[Title/Abstract] OR \"PPARG\"[Title/Abstract] OR \"peroxisome proliferator-activated receptor gamma\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 27430,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22PPAR+gamma%22%5BTitle%2FAbstract%5D+OR+%22PPAR-gamma%22%5BTitle%2FAbstract%5D+OR+%22PPARG%22%5BTitle%2FAbstract%5D+OR+%22peroxisome+proliferator-activated+receptor+gamma%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-alone",
+      "context": "T1-D/pre_cutoff",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2014/12/31",
+      "count": 8253,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2014%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C-alone",
+      "context": "T1-D/pre_cutoff",
+      "term": "(\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2014/12/31",
+      "count": 107070,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2014%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-alone",
+      "context": "T1-D/pre_cutoff",
+      "term": "(\"angiotensin II type 1 receptor\"[Title/Abstract] OR \"AT1 receptor\"[Title/Abstract] OR \"AT1R\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2014/12/31",
+      "count": 7972,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22angiotensin+II+type+1+receptor%22%5BTitle%2FAbstract%5D+OR+%22AT1+receptor%22%5BTitle%2FAbstract%5D+OR+%22AT1R%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2014%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "total",
+      "context": "T1-D/pre_cutoff",
+      "term": "(\"1900/01/01\"[PDAT] : \"2014/12/31\"[PDAT])",
+      "mindate": "1900",
+      "maxdate": "2014/12/31",
+      "count": 24715382,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%221900%2F01%2F01%22%5BPDAT%5D+%3A+%222014%2F12%2F31%22%5BPDAT%5D%29&datetype=pdat&mindate=1900&maxdate=2014%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-alone",
+      "context": "T1-D/post5yr",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2020/12/31",
+      "count": 9977,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2020%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C-alone",
+      "context": "T1-D/post5yr",
+      "term": "(\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2020/12/31",
+      "count": 166378,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2020%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-alone",
+      "context": "T1-D/post5yr",
+      "term": "(\"angiotensin II type 1 receptor\"[Title/Abstract] OR \"AT1 receptor\"[Title/Abstract] OR \"AT1R\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2020/12/31",
+      "count": 10019,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22angiotensin+II+type+1+receptor%22%5BTitle%2FAbstract%5D+OR+%22AT1+receptor%22%5BTitle%2FAbstract%5D+OR+%22AT1R%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2020%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "total",
+      "context": "T1-D/post5yr",
+      "term": "(\"1900/01/01\"[PDAT] : \"2020/12/31\"[PDAT])",
+      "mindate": "1900",
+      "maxdate": "2020/12/31",
+      "count": 31937290,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%221900%2F01%2F01%22%5BPDAT%5D+%3A+%222020%2F12%2F31%22%5BPDAT%5D%29&datetype=pdat&mindate=1900&maxdate=2020%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C",
+      "context": "T1-D/post5yr",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2020/12/31",
+      "count": 30,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2020%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-C",
+      "context": "T1-D/post5yr",
+      "term": "(\"angiotensin II type 1 receptor\"[Title/Abstract] OR \"AT1 receptor\"[Title/Abstract] OR \"AT1R\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2020/12/31",
+      "count": 63,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22angiotensin+II+type+1+receptor%22%5BTitle%2FAbstract%5D+OR+%22AT1+receptor%22%5BTitle%2FAbstract%5D+OR+%22AT1R%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2020%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-alone",
+      "context": "T1-D/present",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 11383,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-alone",
+      "context": "T1-D/present",
+      "term": "(\"angiotensin II type 1 receptor\"[Title/Abstract] OR \"AT1 receptor\"[Title/Abstract] OR \"AT1R\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 11613,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22angiotensin+II+type+1+receptor%22%5BTitle%2FAbstract%5D+OR+%22AT1+receptor%22%5BTitle%2FAbstract%5D+OR+%22AT1R%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-alone",
+      "context": "T1-E/pre_cutoff",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2020/12/31",
+      "count": 7258,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2020%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-alone",
+      "context": "T1-E/pre_cutoff",
+      "term": "(\"phosphodiesterase-5\"[Title/Abstract] OR \"phosphodiesterase 5\"[Title/Abstract] OR \"PDE5\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2020/12/31",
+      "count": 4927,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22phosphodiesterase-5%22%5BTitle%2FAbstract%5D+OR+%22phosphodiesterase+5%22%5BTitle%2FAbstract%5D+OR+%22PDE5%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2020%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-alone",
+      "context": "T1-E/post5yr",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/12/31",
+      "count": 8787,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C-alone",
+      "context": "T1-E/post5yr",
+      "term": "(\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/12/31",
+      "count": 253332,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-alone",
+      "context": "T1-E/post5yr",
+      "term": "(\"phosphodiesterase-5\"[Title/Abstract] OR \"phosphodiesterase 5\"[Title/Abstract] OR \"PDE5\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/12/31",
+      "count": 6350,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22phosphodiesterase-5%22%5BTitle%2FAbstract%5D+OR+%22phosphodiesterase+5%22%5BTitle%2FAbstract%5D+OR+%22PDE5%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "total",
+      "context": "T1-E/post5yr",
+      "term": "(\"1900/01/01\"[PDAT] : \"2026/12/31\"[PDAT])",
+      "mindate": "1900",
+      "maxdate": "2026/12/31",
+      "count": 40727664,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%221900%2F01%2F01%22%5BPDAT%5D+%3A+%222026%2F12%2F31%22%5BPDAT%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C",
+      "context": "T1-E/post5yr",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/12/31",
+      "count": 70,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-C",
+      "context": "T1-E/post5yr",
+      "term": "(\"phosphodiesterase-5\"[Title/Abstract] OR \"phosphodiesterase 5\"[Title/Abstract] OR \"PDE5\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/12/31",
+      "count": 131,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22phosphodiesterase-5%22%5BTitle%2FAbstract%5D+OR+%22phosphodiesterase+5%22%5BTitle%2FAbstract%5D+OR+%22PDE5%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-alone",
+      "context": "T1-E/present",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 8787,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-alone",
+      "context": "T1-E/present",
+      "term": "(\"phosphodiesterase-5\"[Title/Abstract] OR \"phosphodiesterase 5\"[Title/Abstract] OR \"PDE5\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 6350,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22phosphodiesterase-5%22%5BTitle%2FAbstract%5D+OR+%22phosphodiesterase+5%22%5BTitle%2FAbstract%5D+OR+%22PDE5%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    }
+  ]
+}

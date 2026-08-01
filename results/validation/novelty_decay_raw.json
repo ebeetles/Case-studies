@@ -1,0 +1,54 @@
+{
+  "metformin": {
+    "cutoff": {
+      "date": "2012-01-01",
+      "note": "First mechanistic AMPK/mTOR-BACE1-AD proposals (Gupta, Bisht & Dey 2011; Li et al. 2012). Cutoff set to the Li et al. 2012 publication boundary per novelty_decay_curated_corpus.md.",
+      "confidence": "high"
+    },
+    "hypothesis_text": "Metformin may activate AMPK and modulate the mTOR pathway to reduce neuroinflammation and tau pathology relevant to Alzheimer's disease.",
+    "pre_sims": [
+      0.7455042004585266,
+      0.7290022969245911,
+      0.5739168524742126
+    ],
+    "post_sims": [
+      0.782861590385437,
+      0.7080020308494568,
+      0.6705120801925659
+    ],
+    "max_pre_sim": 0.7455042004585266,
+    "max_post_sim": 0.782861590385437,
+    "embedding_delta_post_minus_pre": 0.0373573899269104,
+    "judge_pre_score": 3,
+    "judge_pre_justification": "This is a plausible but fairly expected repurposing link: metformin\u2019s known AMPK activation is straightforwardly extended to AD-relevant processes like neuroinflammation and tau pathology, but the hypothesis does not articulate a particularly novel or non-obvious AD-specific mechanism beyond that general pathway.",
+    "judge_post_score": 3,
+    "judge_post_justification": "This is a plausible and fairly expected AD repurposing rationale: the provided literature already links metformin to AMPK/mTOR/S6K/BACE1 effects, amyloid-beta reduction, and broader anti-dementia associations, so the added tau/neuroinflammation angle is coherent but not highly non-obvious.",
+    "judge_delta_post_minus_pre": 0
+  },
+  "sildenafil": {
+    "cutoff": {
+      "date": "2021-12-06",
+      "note": "Fang et al., Nature Aging, published online 2021-12-06 \u2014 original computational (network-medicine) identification of sildenafil as an AD candidate. NOTE: this differs from the general PDE5/AD mechanistic biology literature (e.g. Puzzo et al. 2009), which predates this by over a decade \u2014 this cutoff specifically tests the computational-repurposing-identification framing, per novelty_decay_curated_corpus.md.",
+      "confidence": "high"
+    },
+    "hypothesis_text": "Sildenafil may inhibit phosphodiesterase-5 to increase cGMP signaling and reduce tau phosphorylation and amyloid accumulation relevant to Alzheimer's disease.",
+    "pre_sims": [
+      0.5945549011230469,
+      0.3561467230319977,
+      0.6249805092811584
+    ],
+    "post_sims": [
+      0.6732592582702637,
+      0.6296665072441101,
+      0.7516637444496155
+    ],
+    "max_pre_sim": 0.6249805092811584,
+    "max_post_sim": 0.7516637444496155,
+    "embedding_delta_post_minus_pre": 0.12668323516845703,
+    "judge_pre_score": 3,
+    "judge_pre_justification": "This is a plausible but fairly expected repurposing idea: it extends a known PDE5/cGMP signaling mechanism into AD-relevant endpoints like tau phosphorylation and amyloid burden, but the provided literature does not show a prior AD-specific rationale or a particularly non-obvious mechanistic bridge.",
+    "judge_post_score": 3,
+    "judge_post_justification": "The proposal is a plausible and fairly expected AD repurposing rationale because it links a known PDE5/cGMP mechanism to canonical AD pathologies (tau phosphorylation and amyloid burden), but it is not merely a generic restatement since the cited network-medicine and early validation literature gives it a more specific AD-targeted framing.",
+    "judge_delta_post_minus_pre": 0
+  }
+}

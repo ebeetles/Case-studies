@@ -1,0 +1,1097 @@
+{
+  "amendment": "AMENDMENT (made after decomposition review, BEFORE any PubMed counts observed):\n\n1. Added field mechanism_specificity = molecular_target | drug_class | null.\n   - null           -> Case 0 (undecomposable)\n   - drug_class     -> Case 0-class (names the drug's own class; makes no claim\n                       about how it acts on the disease -> fails specificity gate)\n   - molecular_target -> proceed to scoring.\n\n2. Revised classification. A-B is a sanity check, not a discriminator (in\n   repurposing the drug's target is known by construction, so A-B is high for\n   nearly all valid rows). Classify on B-C and A-C:\n   - A-C high              -> Case 1 (already proposed)\n   - A-C low, B-C high     -> Case 2 (bridgeable but unbridged)  [TARGET]\n   - A-C low, B-C low      -> Case 3 (disconnected)\n   Still report A-B; flag any row where A-B is unexpectedly low as a parse problem.\n\n3. Applied: chenodiol -> Case 0-class. verapamil, tamoxifen, vandetanib ->\n   Case 0-class. ibudilast (\"phosphodiesterase\", no isoform) and acamprosate\n   (\"glutamatergic signaling\", pathway-level) are borderline molecular_target \u2014\n   flagged, results reported.\n\n4. Metformin: mTOR run as a secondary mechanism alongside AMPK, both windows.\n\n5. This amendment documented verbatim; no counts were observed before it was made.\n",
+  "present_maxdate": "2026/07/20",
+  "thresholds": [
+    5,
+    20,
+    100
+  ],
+  "results": {
+    "T1-A": {
+      "source_id": "T1-A",
+      "tier": 1,
+      "compound": "Metformin",
+      "mechanism": "AMPK",
+      "mechanism_specificity": "molecular_target",
+      "borderline": false,
+      "windows": {
+        "present": {
+          "maxdate": "2026/07/20",
+          "A_C": 425,
+          "A_B": {
+            "T1-A": 3492,
+            "T1-A-mtor": 1339
+          },
+          "B_C": {
+            "T1-A": 755,
+            "T1-A-mtor": 1271
+          }
+        },
+        "pre_cutoff": {
+          "maxdate": "2010/12/31",
+          "A_C": 8,
+          "A_B": {
+            "T1-A": 310,
+            "T1-A-mtor": 47
+          },
+          "B_C": {
+            "T1-A": 19,
+            "T1-A-mtor": 49
+          }
+        }
+      },
+      "cutoff": {
+        "year": 2011,
+        "confidence": "high"
+      },
+      "classification": {
+        "present": {
+          "5": "Case 1",
+          "20": "Case 1",
+          "100": "Case 1"
+        },
+        "pre_cutoff": {
+          "5": "Case 1",
+          "20": "Case 3",
+          "100": "Case 3"
+        }
+      },
+      "classification_mtor": {
+        "present": {
+          "5": "Case 1",
+          "20": "Case 1",
+          "100": "Case 1"
+        },
+        "pre_cutoff": {
+          "5": "Case 1",
+          "20": "Case 2",
+          "100": "Case 3"
+        }
+      }
+    },
+    "T1-B": {
+      "source_id": "T1-B",
+      "tier": 1,
+      "compound": "Liraglutide",
+      "mechanism": "GLP-1 receptor",
+      "mechanism_specificity": "molecular_target",
+      "borderline": false,
+      "windows": {
+        "present": {
+          "maxdate": "2026/07/20",
+          "A_C": 154,
+          "A_B": {
+            "T1-B": 2803
+          },
+          "B_C": {
+            "T1-B": 348
+          }
+        },
+        "pre_cutoff": {
+          "maxdate": "2009/12/31",
+          "A_C": 1,
+          "A_B": {
+            "T1-B": 48
+          },
+          "B_C": {
+            "T1-B": 10
+          }
+        }
+      },
+      "cutoff": {
+        "year": 2010,
+        "confidence": "moderate"
+      },
+      "classification": {
+        "present": {
+          "5": "Case 1",
+          "20": "Case 1",
+          "100": "Case 1"
+        },
+        "pre_cutoff": {
+          "5": "Case 2",
+          "20": "Case 3",
+          "100": "Case 3"
+        }
+      }
+    },
+    "T1-C": {
+      "source_id": "T1-C",
+      "tier": 1,
+      "compound": "Pioglitazone",
+      "mechanism": "PPAR-\u03b3",
+      "mechanism_specificity": "molecular_target",
+      "borderline": false,
+      "windows": {
+        "present": {
+          "maxdate": "2026/07/20",
+          "A_C": 175,
+          "A_B": {
+            "T1-C": 1942
+          },
+          "B_C": {
+            "T1-C": 554
+          }
+        },
+        "pre_cutoff": {
+          "maxdate": "2004/12/31",
+          "A_C": 8,
+          "A_B": {
+            "T1-C": 233
+          },
+          "B_C": {
+            "T1-C": 31
+          }
+        }
+      },
+      "cutoff": {
+        "year": 2005,
+        "confidence": "moderate"
+      },
+      "classification": {
+        "present": {
+          "5": "Case 1",
+          "20": "Case 1",
+          "100": "Case 1"
+        },
+        "pre_cutoff": {
+          "5": "Case 1",
+          "20": "Case 2",
+          "100": "Case 3"
+        }
+      }
+    },
+    "T1-D": {
+      "source_id": "T1-D",
+      "tier": 1,
+      "compound": "Losartan",
+      "mechanism": "angiotensin II type 1 receptor",
+      "mechanism_specificity": "molecular_target",
+      "borderline": false,
+      "windows": {
+        "present": {
+          "maxdate": "2026/07/20",
+          "A_C": 46,
+          "A_B": {
+            "T1-D": 3002
+          },
+          "B_C": {
+            "T1-D": 88
+          }
+        },
+        "pre_cutoff": {
+          "maxdate": "2014/12/31",
+          "A_C": 14,
+          "A_B": {
+            "T1-D": 2331
+          },
+          "B_C": {
+            "T1-D": 26
+          }
+        }
+      },
+      "cutoff": {
+        "year": 2015,
+        "confidence": "moderate"
+      },
+      "classification": {
+        "present": {
+          "5": "Case 1",
+          "20": "Case 1",
+          "100": "Case 3"
+        },
+        "pre_cutoff": {
+          "5": "Case 1",
+          "20": "Case 2",
+          "100": "Case 3"
+        }
+      }
+    },
+    "T1-E": {
+      "source_id": "T1-E",
+      "tier": 1,
+      "compound": "Sildenafil",
+      "mechanism": "phosphodiesterase-5",
+      "mechanism_specificity": "molecular_target",
+      "borderline": false,
+      "windows": {
+        "present": {
+          "maxdate": "2026/07/20",
+          "A_C": 70,
+          "A_B": {
+            "T1-E": 2366
+          },
+          "B_C": {
+            "T1-E": 131
+          }
+        },
+        "pre_cutoff": {
+          "maxdate": "2020/12/31",
+          "A_C": 38,
+          "A_B": {
+            "T1-E": 1934
+          },
+          "B_C": {
+            "T1-E": 73
+          }
+        }
+      },
+      "cutoff": {
+        "year": 2021,
+        "confidence": "high"
+      },
+      "classification": {
+        "present": {
+          "5": "Case 1",
+          "20": "Case 1",
+          "100": "Case 2"
+        },
+        "pre_cutoff": {
+          "5": "Case 1",
+          "20": "Case 1",
+          "100": "Case 3"
+        }
+      }
+    },
+    "T2-A": {
+      "source_id": "T2-A",
+      "tier": 2,
+      "compound": "Baclofen",
+      "mechanism": "GABA-B receptor signaling",
+      "mechanism_specificity": "molecular_target",
+      "borderline": false,
+      "windows": {
+        "present": {
+          "maxdate": "2026/07/20",
+          "A_C": 34,
+          "A_B": {
+            "T2-A": 2251
+          },
+          "B_C": {
+            "T2-A": 37
+          }
+        }
+      },
+      "classification": {
+        "present": {
+          "5": "Case 1",
+          "20": "Case 1",
+          "100": "Case 3"
+        }
+      }
+    },
+    "T2-B": {
+      "source_id": "T2-B",
+      "tier": 2,
+      "compound": "Ibudilast",
+      "mechanism": "phosphodiesterase",
+      "mechanism_specificity": "molecular_target",
+      "borderline": true,
+      "windows": {
+        "present": {
+          "maxdate": "2026/07/20",
+          "A_C": 10,
+          "A_B": {
+            "T2-B": 89
+          },
+          "B_C": {
+            "T2-B": 454
+          }
+        }
+      },
+      "classification": {
+        "present": {
+          "5": "Case 1",
+          "20": "Case 2",
+          "100": "Case 2"
+        }
+      }
+    },
+    "T2-C": {
+      "source_id": "T2-C",
+      "tier": 2,
+      "compound": "Chenodiol",
+      "mechanism": "primary bile acid modulating an AD-related endophenotype network",
+      "mechanism_specificity": "drug_class",
+      "borderline": false,
+      "windows": {
+        "present": {
+          "maxdate": "2026/07/20",
+          "A_C": 11,
+          "A_B": {
+            "T2-C": 2491
+          },
+          "B_C": {
+            "T2-C": 240
+          }
+        }
+      },
+      "classification": {
+        "present": {
+          "5": "Case 0-class",
+          "20": "Case 0-class",
+          "100": "Case 0-class"
+        }
+      }
+    },
+    "T2-D": {
+      "source_id": "T2-D",
+      "tier": 2,
+      "compound": "Arundine",
+      "mechanism": null,
+      "mechanism_specificity": "null",
+      "borderline": false,
+      "windows": {
+        "present": {
+          "maxdate": "2026/07/20",
+          "A_C": 4
+        }
+      },
+      "classification": {
+        "present": {
+          "5": "Case 0",
+          "20": "Case 0",
+          "100": "Case 0"
+        }
+      }
+    },
+    "T2-E": {
+      "source_id": "T2-E",
+      "tier": 2,
+      "compound": "Acamprosate",
+      "mechanism": "glutamatergic signaling",
+      "mechanism_specificity": "molecular_target",
+      "borderline": true,
+      "windows": {
+        "present": {
+          "maxdate": "2026/07/20",
+          "A_C": 9,
+          "A_B": {
+            "T2-E": 95
+          },
+          "B_C": {
+            "T2-E": 1988
+          }
+        }
+      },
+      "classification": {
+        "present": {
+          "5": "Case 1",
+          "20": "Case 2",
+          "100": "Case 2"
+        }
+      }
+    },
+    "T3-A": {
+      "source_id": "T3-A",
+      "tier": 3,
+      "compound": "Clozapine",
+      "mechanism": null,
+      "mechanism_specificity": "null",
+      "borderline": false,
+      "windows": {
+        "present": {
+          "maxdate": "2026/07/20",
+          "A_C": 118
+        }
+      },
+      "classification": {
+        "present": {
+          "5": "Case 0",
+          "20": "Case 0",
+          "100": "Case 0"
+        }
+      }
+    },
+    "T3-B": {
+      "source_id": "T3-B",
+      "tier": 3,
+      "compound": "Verapamil",
+      "mechanism": "a calcium channel blocker",
+      "mechanism_specificity": "drug_class",
+      "borderline": false,
+      "windows": {
+        "present": {
+          "maxdate": "2026/07/20",
+          "A_C": 71,
+          "A_B": {
+            "T3-B": 3031
+          },
+          "B_C": {
+            "T3-B": 175
+          }
+        }
+      },
+      "classification": {
+        "present": {
+          "5": "Case 0-class",
+          "20": "Case 0-class",
+          "100": "Case 0-class"
+        }
+      }
+    },
+    "T3-C": {
+      "source_id": "T3-C",
+      "tier": 3,
+      "compound": "Tamoxifen",
+      "mechanism": "a selective estrogen receptor modulator",
+      "mechanism_specificity": "drug_class",
+      "borderline": false,
+      "windows": {
+        "present": {
+          "maxdate": "2026/07/20",
+          "A_C": 122,
+          "A_B": {
+            "T3-C": 1168
+          },
+          "B_C": {
+            "T3-C": 27
+          }
+        }
+      },
+      "classification": {
+        "present": {
+          "5": "Case 0-class",
+          "20": "Case 0-class",
+          "100": "Case 0-class"
+        }
+      }
+    },
+    "T3-D": {
+      "source_id": "T3-D",
+      "tier": 3,
+      "compound": "Adenosine",
+      "mechanism": null,
+      "mechanism_specificity": "null",
+      "borderline": false,
+      "windows": {
+        "present": {
+          "maxdate": "2026/07/20",
+          "A_C": 1287
+        }
+      },
+      "classification": {
+        "present": {
+          "5": "Case 0",
+          "20": "Case 0",
+          "100": "Case 0"
+        }
+      }
+    },
+    "T3-E": {
+      "source_id": "T3-E",
+      "tier": 3,
+      "compound": "Vandetanib",
+      "mechanism": "tyrosine kinase inhibitor",
+      "mechanism_specificity": "drug_class",
+      "borderline": false,
+      "windows": {
+        "present": {
+          "maxdate": "2026/07/20",
+          "A_C": 1,
+          "A_B": {
+            "T3-E": 440
+          },
+          "B_C": {
+            "T3-E": 103
+          }
+        }
+      },
+      "classification": {
+        "present": {
+          "5": "Case 0-class",
+          "20": "Case 0-class",
+          "100": "Case 0-class"
+        }
+      }
+    }
+  },
+  "earliest_ac_titles": {
+    "Metformin": [
+      {
+        "year": "2005",
+        "title": "Investigation of the pharmacokinetic and pharmacodynamic interactions between memantine and glyburide/metformin in healthy young subjects: a single-center, multiple-dose, open-label study."
+      },
+      {
+        "year": "2006",
+        "title": "Inhibitors of the Maillard reaction and AGE breakers as therapeutics for multiple diseases."
+      },
+      {
+        "year": "2007",
+        "title": "Methylglyoxal and advanced glycation endproducts: new therapeutic horizons?"
+      },
+      {
+        "year": "2008",
+        "title": "Memantine-induced myoclonus and delirium exacerbated by trimethoprim."
+      },
+      {
+        "year": "2009",
+        "title": "Antidiabetic drug metformin (GlucophageR) increases biogenesis of Alzheimer's amyloid peptides via up-regulating BACE1 transcription."
+      }
+    ],
+    "Sildenafil": [
+      {
+        "year": "2004",
+        "title": "Phosphodiesterase inhibition by sildenafil citrate attenuates the learning impairment induced by blockade of cholinergic muscarinic receptors in rats."
+      },
+      {
+        "year": "2007",
+        "title": "Versatile effects of sildenafil: recent pharmacological applications."
+      },
+      {
+        "year": "2008",
+        "title": "Role of phosphodiesterase 5 in synaptic plasticity and memory."
+      },
+      {
+        "year": "2008",
+        "title": "Prostacyclin among prostanoids."
+      },
+      {
+        "year": "2009",
+        "title": "PDE5 inhibitors in non-urological conditions."
+      }
+    ]
+  },
+  "query_log": [
+    {
+      "link": "A-C",
+      "context": "T1-A/present",
+      "term": "(\"Metformin\"[MeSH Terms] OR \"Metformin\"[Title/Abstract] OR \"Glucophage\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 425,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Metformin%22%5BMeSH+Terms%5D+OR+%22Metformin%22%5BTitle%2FAbstract%5D+OR+%22Glucophage%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-B[T1-A]",
+      "context": "T1-A/present",
+      "term": "(\"Metformin\"[MeSH Terms] OR \"Metformin\"[Title/Abstract] OR \"Glucophage\"[Title/Abstract]) AND (\"AMPK\"[Title/Abstract] OR \"AMP-activated protein kinase\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 3492,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Metformin%22%5BMeSH+Terms%5D+OR+%22Metformin%22%5BTitle%2FAbstract%5D+OR+%22Glucophage%22%5BTitle%2FAbstract%5D%29+AND+%28%22AMPK%22%5BTitle%2FAbstract%5D+OR+%22AMP-activated+protein+kinase%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-C[T1-A]",
+      "context": "T1-A/present",
+      "term": "(\"AMPK\"[Title/Abstract] OR \"AMP-activated protein kinase\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 755,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22AMPK%22%5BTitle%2FAbstract%5D+OR+%22AMP-activated+protein+kinase%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-B[T1-A-mtor]",
+      "context": "T1-A/present",
+      "term": "(\"Metformin\"[MeSH Terms] OR \"Metformin\"[Title/Abstract] OR \"Glucophage\"[Title/Abstract]) AND (\"mTOR\"[Title/Abstract] OR \"mechanistic target of rapamycin\"[Title/Abstract] OR \"mammalian target of rapamycin\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 1339,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Metformin%22%5BMeSH+Terms%5D+OR+%22Metformin%22%5BTitle%2FAbstract%5D+OR+%22Glucophage%22%5BTitle%2FAbstract%5D%29+AND+%28%22mTOR%22%5BTitle%2FAbstract%5D+OR+%22mechanistic+target+of+rapamycin%22%5BTitle%2FAbstract%5D+OR+%22mammalian+target+of+rapamycin%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-C[T1-A-mtor]",
+      "context": "T1-A/present",
+      "term": "(\"mTOR\"[Title/Abstract] OR \"mechanistic target of rapamycin\"[Title/Abstract] OR \"mammalian target of rapamycin\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 1271,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22mTOR%22%5BTitle%2FAbstract%5D+OR+%22mechanistic+target+of+rapamycin%22%5BTitle%2FAbstract%5D+OR+%22mammalian+target+of+rapamycin%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C",
+      "context": "T1-A/pre_cutoff",
+      "term": "(\"Metformin\"[MeSH Terms] OR \"Metformin\"[Title/Abstract] OR \"Glucophage\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2010/12/31",
+      "count": 8,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Metformin%22%5BMeSH+Terms%5D+OR+%22Metformin%22%5BTitle%2FAbstract%5D+OR+%22Glucophage%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2010%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-B[T1-A]",
+      "context": "T1-A/pre_cutoff",
+      "term": "(\"Metformin\"[MeSH Terms] OR \"Metformin\"[Title/Abstract] OR \"Glucophage\"[Title/Abstract]) AND (\"AMPK\"[Title/Abstract] OR \"AMP-activated protein kinase\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2010/12/31",
+      "count": 310,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Metformin%22%5BMeSH+Terms%5D+OR+%22Metformin%22%5BTitle%2FAbstract%5D+OR+%22Glucophage%22%5BTitle%2FAbstract%5D%29+AND+%28%22AMPK%22%5BTitle%2FAbstract%5D+OR+%22AMP-activated+protein+kinase%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2010%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-C[T1-A]",
+      "context": "T1-A/pre_cutoff",
+      "term": "(\"AMPK\"[Title/Abstract] OR \"AMP-activated protein kinase\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2010/12/31",
+      "count": 19,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22AMPK%22%5BTitle%2FAbstract%5D+OR+%22AMP-activated+protein+kinase%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2010%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-B[T1-A-mtor]",
+      "context": "T1-A/pre_cutoff",
+      "term": "(\"Metformin\"[MeSH Terms] OR \"Metformin\"[Title/Abstract] OR \"Glucophage\"[Title/Abstract]) AND (\"mTOR\"[Title/Abstract] OR \"mechanistic target of rapamycin\"[Title/Abstract] OR \"mammalian target of rapamycin\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2010/12/31",
+      "count": 47,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Metformin%22%5BMeSH+Terms%5D+OR+%22Metformin%22%5BTitle%2FAbstract%5D+OR+%22Glucophage%22%5BTitle%2FAbstract%5D%29+AND+%28%22mTOR%22%5BTitle%2FAbstract%5D+OR+%22mechanistic+target+of+rapamycin%22%5BTitle%2FAbstract%5D+OR+%22mammalian+target+of+rapamycin%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2010%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-C[T1-A-mtor]",
+      "context": "T1-A/pre_cutoff",
+      "term": "(\"mTOR\"[Title/Abstract] OR \"mechanistic target of rapamycin\"[Title/Abstract] OR \"mammalian target of rapamycin\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2010/12/31",
+      "count": 49,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22mTOR%22%5BTitle%2FAbstract%5D+OR+%22mechanistic+target+of+rapamycin%22%5BTitle%2FAbstract%5D+OR+%22mammalian+target+of+rapamycin%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2010%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C",
+      "context": "T1-B/present",
+      "term": "(\"Liraglutide\"[MeSH Terms] OR \"Liraglutide\"[Title/Abstract] OR \"Victoza\"[Title/Abstract] OR \"Saxenda\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 154,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Liraglutide%22%5BMeSH+Terms%5D+OR+%22Liraglutide%22%5BTitle%2FAbstract%5D+OR+%22Victoza%22%5BTitle%2FAbstract%5D+OR+%22Saxenda%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-B[T1-B]",
+      "context": "T1-B/present",
+      "term": "(\"Liraglutide\"[MeSH Terms] OR \"Liraglutide\"[Title/Abstract] OR \"Victoza\"[Title/Abstract] OR \"Saxenda\"[Title/Abstract]) AND (\"GLP-1 receptor\"[Title/Abstract] OR \"GLP-1R\"[Title/Abstract] OR \"glucagon-like peptide-1 receptor\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 2803,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Liraglutide%22%5BMeSH+Terms%5D+OR+%22Liraglutide%22%5BTitle%2FAbstract%5D+OR+%22Victoza%22%5BTitle%2FAbstract%5D+OR+%22Saxenda%22%5BTitle%2FAbstract%5D%29+AND+%28%22GLP-1+receptor%22%5BTitle%2FAbstract%5D+OR+%22GLP-1R%22%5BTitle%2FAbstract%5D+OR+%22glucagon-like+peptide-1+receptor%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-C[T1-B]",
+      "context": "T1-B/present",
+      "term": "(\"GLP-1 receptor\"[Title/Abstract] OR \"GLP-1R\"[Title/Abstract] OR \"glucagon-like peptide-1 receptor\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 348,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22GLP-1+receptor%22%5BTitle%2FAbstract%5D+OR+%22GLP-1R%22%5BTitle%2FAbstract%5D+OR+%22glucagon-like+peptide-1+receptor%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C",
+      "context": "T1-B/pre_cutoff",
+      "term": "(\"Liraglutide\"[MeSH Terms] OR \"Liraglutide\"[Title/Abstract] OR \"Victoza\"[Title/Abstract] OR \"Saxenda\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2009/12/31",
+      "count": 1,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Liraglutide%22%5BMeSH+Terms%5D+OR+%22Liraglutide%22%5BTitle%2FAbstract%5D+OR+%22Victoza%22%5BTitle%2FAbstract%5D+OR+%22Saxenda%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2009%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-B[T1-B]",
+      "context": "T1-B/pre_cutoff",
+      "term": "(\"Liraglutide\"[MeSH Terms] OR \"Liraglutide\"[Title/Abstract] OR \"Victoza\"[Title/Abstract] OR \"Saxenda\"[Title/Abstract]) AND (\"GLP-1 receptor\"[Title/Abstract] OR \"GLP-1R\"[Title/Abstract] OR \"glucagon-like peptide-1 receptor\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2009/12/31",
+      "count": 48,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Liraglutide%22%5BMeSH+Terms%5D+OR+%22Liraglutide%22%5BTitle%2FAbstract%5D+OR+%22Victoza%22%5BTitle%2FAbstract%5D+OR+%22Saxenda%22%5BTitle%2FAbstract%5D%29+AND+%28%22GLP-1+receptor%22%5BTitle%2FAbstract%5D+OR+%22GLP-1R%22%5BTitle%2FAbstract%5D+OR+%22glucagon-like+peptide-1+receptor%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2009%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-C[T1-B]",
+      "context": "T1-B/pre_cutoff",
+      "term": "(\"GLP-1 receptor\"[Title/Abstract] OR \"GLP-1R\"[Title/Abstract] OR \"glucagon-like peptide-1 receptor\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2009/12/31",
+      "count": 10,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22GLP-1+receptor%22%5BTitle%2FAbstract%5D+OR+%22GLP-1R%22%5BTitle%2FAbstract%5D+OR+%22glucagon-like+peptide-1+receptor%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2009%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C",
+      "context": "T1-C/present",
+      "term": "(\"Pioglitazone\"[MeSH Terms] OR \"Pioglitazone\"[Title/Abstract] OR \"Actos\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 175,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Pioglitazone%22%5BMeSH+Terms%5D+OR+%22Pioglitazone%22%5BTitle%2FAbstract%5D+OR+%22Actos%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-B[T1-C]",
+      "context": "T1-C/present",
+      "term": "(\"Pioglitazone\"[MeSH Terms] OR \"Pioglitazone\"[Title/Abstract] OR \"Actos\"[Title/Abstract]) AND (\"PPAR gamma\"[Title/Abstract] OR \"PPAR-gamma\"[Title/Abstract] OR \"PPARG\"[Title/Abstract] OR \"peroxisome proliferator-activated receptor gamma\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 1942,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Pioglitazone%22%5BMeSH+Terms%5D+OR+%22Pioglitazone%22%5BTitle%2FAbstract%5D+OR+%22Actos%22%5BTitle%2FAbstract%5D%29+AND+%28%22PPAR+gamma%22%5BTitle%2FAbstract%5D+OR+%22PPAR-gamma%22%5BTitle%2FAbstract%5D+OR+%22PPARG%22%5BTitle%2FAbstract%5D+OR+%22peroxisome+proliferator-activated+receptor+gamma%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-C[T1-C]",
+      "context": "T1-C/present",
+      "term": "(\"PPAR gamma\"[Title/Abstract] OR \"PPAR-gamma\"[Title/Abstract] OR \"PPARG\"[Title/Abstract] OR \"peroxisome proliferator-activated receptor gamma\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 554,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22PPAR+gamma%22%5BTitle%2FAbstract%5D+OR+%22PPAR-gamma%22%5BTitle%2FAbstract%5D+OR+%22PPARG%22%5BTitle%2FAbstract%5D+OR+%22peroxisome+proliferator-activated+receptor+gamma%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C",
+      "context": "T1-C/pre_cutoff",
+      "term": "(\"Pioglitazone\"[MeSH Terms] OR \"Pioglitazone\"[Title/Abstract] OR \"Actos\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2004/12/31",
+      "count": 8,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Pioglitazone%22%5BMeSH+Terms%5D+OR+%22Pioglitazone%22%5BTitle%2FAbstract%5D+OR+%22Actos%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2004%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-B[T1-C]",
+      "context": "T1-C/pre_cutoff",
+      "term": "(\"Pioglitazone\"[MeSH Terms] OR \"Pioglitazone\"[Title/Abstract] OR \"Actos\"[Title/Abstract]) AND (\"PPAR gamma\"[Title/Abstract] OR \"PPAR-gamma\"[Title/Abstract] OR \"PPARG\"[Title/Abstract] OR \"peroxisome proliferator-activated receptor gamma\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2004/12/31",
+      "count": 233,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Pioglitazone%22%5BMeSH+Terms%5D+OR+%22Pioglitazone%22%5BTitle%2FAbstract%5D+OR+%22Actos%22%5BTitle%2FAbstract%5D%29+AND+%28%22PPAR+gamma%22%5BTitle%2FAbstract%5D+OR+%22PPAR-gamma%22%5BTitle%2FAbstract%5D+OR+%22PPARG%22%5BTitle%2FAbstract%5D+OR+%22peroxisome+proliferator-activated+receptor+gamma%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2004%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-C[T1-C]",
+      "context": "T1-C/pre_cutoff",
+      "term": "(\"PPAR gamma\"[Title/Abstract] OR \"PPAR-gamma\"[Title/Abstract] OR \"PPARG\"[Title/Abstract] OR \"peroxisome proliferator-activated receptor gamma\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2004/12/31",
+      "count": 31,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22PPAR+gamma%22%5BTitle%2FAbstract%5D+OR+%22PPAR-gamma%22%5BTitle%2FAbstract%5D+OR+%22PPARG%22%5BTitle%2FAbstract%5D+OR+%22peroxisome+proliferator-activated+receptor+gamma%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2004%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C",
+      "context": "T1-D/present",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 46,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-B[T1-D]",
+      "context": "T1-D/present",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND (\"angiotensin II type 1 receptor\"[Title/Abstract] OR \"AT1 receptor\"[Title/Abstract] OR \"AT1R\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 3002,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%28%22angiotensin+II+type+1+receptor%22%5BTitle%2FAbstract%5D+OR+%22AT1+receptor%22%5BTitle%2FAbstract%5D+OR+%22AT1R%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-C[T1-D]",
+      "context": "T1-D/present",
+      "term": "(\"angiotensin II type 1 receptor\"[Title/Abstract] OR \"AT1 receptor\"[Title/Abstract] OR \"AT1R\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 88,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22angiotensin+II+type+1+receptor%22%5BTitle%2FAbstract%5D+OR+%22AT1+receptor%22%5BTitle%2FAbstract%5D+OR+%22AT1R%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C",
+      "context": "T1-D/pre_cutoff",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2014/12/31",
+      "count": 14,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2014%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-B[T1-D]",
+      "context": "T1-D/pre_cutoff",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND (\"angiotensin II type 1 receptor\"[Title/Abstract] OR \"AT1 receptor\"[Title/Abstract] OR \"AT1R\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2014/12/31",
+      "count": 2331,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%28%22angiotensin+II+type+1+receptor%22%5BTitle%2FAbstract%5D+OR+%22AT1+receptor%22%5BTitle%2FAbstract%5D+OR+%22AT1R%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2014%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-C[T1-D]",
+      "context": "T1-D/pre_cutoff",
+      "term": "(\"angiotensin II type 1 receptor\"[Title/Abstract] OR \"AT1 receptor\"[Title/Abstract] OR \"AT1R\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2014/12/31",
+      "count": 26,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22angiotensin+II+type+1+receptor%22%5BTitle%2FAbstract%5D+OR+%22AT1+receptor%22%5BTitle%2FAbstract%5D+OR+%22AT1R%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2014%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C",
+      "context": "T1-E/present",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 70,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-B[T1-E]",
+      "context": "T1-E/present",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND (\"phosphodiesterase-5\"[Title/Abstract] OR \"phosphodiesterase 5\"[Title/Abstract] OR \"PDE5\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 2366,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%28%22phosphodiesterase-5%22%5BTitle%2FAbstract%5D+OR+%22phosphodiesterase+5%22%5BTitle%2FAbstract%5D+OR+%22PDE5%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-C[T1-E]",
+      "context": "T1-E/present",
+      "term": "(\"phosphodiesterase-5\"[Title/Abstract] OR \"phosphodiesterase 5\"[Title/Abstract] OR \"PDE5\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 131,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22phosphodiesterase-5%22%5BTitle%2FAbstract%5D+OR+%22phosphodiesterase+5%22%5BTitle%2FAbstract%5D+OR+%22PDE5%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C",
+      "context": "T1-E/pre_cutoff",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2020/12/31",
+      "count": 38,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2020%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-B[T1-E]",
+      "context": "T1-E/pre_cutoff",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND (\"phosphodiesterase-5\"[Title/Abstract] OR \"phosphodiesterase 5\"[Title/Abstract] OR \"PDE5\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2020/12/31",
+      "count": 1934,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%28%22phosphodiesterase-5%22%5BTitle%2FAbstract%5D+OR+%22phosphodiesterase+5%22%5BTitle%2FAbstract%5D+OR+%22PDE5%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2020%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-C[T1-E]",
+      "context": "T1-E/pre_cutoff",
+      "term": "(\"phosphodiesterase-5\"[Title/Abstract] OR \"phosphodiesterase 5\"[Title/Abstract] OR \"PDE5\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2020/12/31",
+      "count": 73,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22phosphodiesterase-5%22%5BTitle%2FAbstract%5D+OR+%22phosphodiesterase+5%22%5BTitle%2FAbstract%5D+OR+%22PDE5%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2020%2F12%2F31&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C",
+      "context": "T2-A/present",
+      "term": "(\"Baclofen\"[MeSH Terms] OR \"Baclofen\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 34,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Baclofen%22%5BMeSH+Terms%5D+OR+%22Baclofen%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-B[T2-A]",
+      "context": "T2-A/present",
+      "term": "(\"Baclofen\"[MeSH Terms] OR \"Baclofen\"[Title/Abstract]) AND (\"GABA-B receptor\"[Title/Abstract] OR \"GABAB receptor\"[Title/Abstract] OR \"GABA(B) receptor\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 2251,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Baclofen%22%5BMeSH+Terms%5D+OR+%22Baclofen%22%5BTitle%2FAbstract%5D%29+AND+%28%22GABA-B+receptor%22%5BTitle%2FAbstract%5D+OR+%22GABAB+receptor%22%5BTitle%2FAbstract%5D+OR+%22GABA%28B%29+receptor%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-C[T2-A]",
+      "context": "T2-A/present",
+      "term": "(\"GABA-B receptor\"[Title/Abstract] OR \"GABAB receptor\"[Title/Abstract] OR \"GABA(B) receptor\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 37,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22GABA-B+receptor%22%5BTitle%2FAbstract%5D+OR+%22GABAB+receptor%22%5BTitle%2FAbstract%5D+OR+%22GABA%28B%29+receptor%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C",
+      "context": "T2-B/present",
+      "term": "(\"Ibudilast\"[MeSH Terms] OR \"Ibudilast\"[Title/Abstract] OR \"MN-166\"[Title/Abstract] OR \"AV-411\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 10,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Ibudilast%22%5BMeSH+Terms%5D+OR+%22Ibudilast%22%5BTitle%2FAbstract%5D+OR+%22MN-166%22%5BTitle%2FAbstract%5D+OR+%22AV-411%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-B[T2-B]",
+      "context": "T2-B/present",
+      "term": "(\"Ibudilast\"[MeSH Terms] OR \"Ibudilast\"[Title/Abstract] OR \"MN-166\"[Title/Abstract] OR \"AV-411\"[Title/Abstract]) AND (\"phosphodiesterase\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 89,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Ibudilast%22%5BMeSH+Terms%5D+OR+%22Ibudilast%22%5BTitle%2FAbstract%5D+OR+%22MN-166%22%5BTitle%2FAbstract%5D+OR+%22AV-411%22%5BTitle%2FAbstract%5D%29+AND+%28%22phosphodiesterase%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-C[T2-B]",
+      "context": "T2-B/present",
+      "term": "(\"phosphodiesterase\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 454,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22phosphodiesterase%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C",
+      "context": "T2-C/present",
+      "term": "(\"Chenodiol\"[MeSH Terms] OR \"Chenodiol\"[Title/Abstract] OR \"Chenodeoxycholic acid\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 11,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Chenodiol%22%5BMeSH+Terms%5D+OR+%22Chenodiol%22%5BTitle%2FAbstract%5D+OR+%22Chenodeoxycholic+acid%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-B[T2-C]",
+      "context": "T2-C/present",
+      "term": "(\"Chenodiol\"[MeSH Terms] OR \"Chenodiol\"[Title/Abstract] OR \"Chenodeoxycholic acid\"[Title/Abstract]) AND (\"bile acid\"[Title/Abstract] OR \"bile acids\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 2491,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Chenodiol%22%5BMeSH+Terms%5D+OR+%22Chenodiol%22%5BTitle%2FAbstract%5D+OR+%22Chenodeoxycholic+acid%22%5BTitle%2FAbstract%5D%29+AND+%28%22bile+acid%22%5BTitle%2FAbstract%5D+OR+%22bile+acids%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-C[T2-C]",
+      "context": "T2-C/present",
+      "term": "(\"bile acid\"[Title/Abstract] OR \"bile acids\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 240,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22bile+acid%22%5BTitle%2FAbstract%5D+OR+%22bile+acids%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C",
+      "context": "T2-D/present",
+      "term": "(\"Arundine\"[MeSH Terms] OR \"Arundine\"[Title/Abstract] OR \"3,3'-diindolylmethane\"[Title/Abstract] OR \"diindolylmethane\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 4,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Arundine%22%5BMeSH+Terms%5D+OR+%22Arundine%22%5BTitle%2FAbstract%5D+OR+%223%2C3%27-diindolylmethane%22%5BTitle%2FAbstract%5D+OR+%22diindolylmethane%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C",
+      "context": "T2-E/present",
+      "term": "(\"Acamprosate\"[MeSH Terms] OR \"Acamprosate\"[Title/Abstract] OR \"Campral\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 9,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Acamprosate%22%5BMeSH+Terms%5D+OR+%22Acamprosate%22%5BTitle%2FAbstract%5D+OR+%22Campral%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-B[T2-E]",
+      "context": "T2-E/present",
+      "term": "(\"Acamprosate\"[MeSH Terms] OR \"Acamprosate\"[Title/Abstract] OR \"Campral\"[Title/Abstract]) AND (\"glutamatergic\"[Title/Abstract] OR \"glutamate signaling\"[Title/Abstract] OR \"glutamate receptor\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 95,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Acamprosate%22%5BMeSH+Terms%5D+OR+%22Acamprosate%22%5BTitle%2FAbstract%5D+OR+%22Campral%22%5BTitle%2FAbstract%5D%29+AND+%28%22glutamatergic%22%5BTitle%2FAbstract%5D+OR+%22glutamate+signaling%22%5BTitle%2FAbstract%5D+OR+%22glutamate+receptor%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-C[T2-E]",
+      "context": "T2-E/present",
+      "term": "(\"glutamatergic\"[Title/Abstract] OR \"glutamate signaling\"[Title/Abstract] OR \"glutamate receptor\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 1988,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22glutamatergic%22%5BTitle%2FAbstract%5D+OR+%22glutamate+signaling%22%5BTitle%2FAbstract%5D+OR+%22glutamate+receptor%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C",
+      "context": "T3-A/present",
+      "term": "(\"Clozapine\"[MeSH Terms] OR \"Clozapine\"[Title/Abstract] OR \"Clozaril\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 118,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Clozapine%22%5BMeSH+Terms%5D+OR+%22Clozapine%22%5BTitle%2FAbstract%5D+OR+%22Clozaril%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C",
+      "context": "T3-B/present",
+      "term": "(\"Verapamil\"[MeSH Terms] OR \"Verapamil\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 71,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Verapamil%22%5BMeSH+Terms%5D+OR+%22Verapamil%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-B[T3-B]",
+      "context": "T3-B/present",
+      "term": "(\"Verapamil\"[MeSH Terms] OR \"Verapamil\"[Title/Abstract]) AND (\"calcium channel blocker\"[Title/Abstract] OR \"calcium channel blockers\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 3031,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Verapamil%22%5BMeSH+Terms%5D+OR+%22Verapamil%22%5BTitle%2FAbstract%5D%29+AND+%28%22calcium+channel+blocker%22%5BTitle%2FAbstract%5D+OR+%22calcium+channel+blockers%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-C[T3-B]",
+      "context": "T3-B/present",
+      "term": "(\"calcium channel blocker\"[Title/Abstract] OR \"calcium channel blockers\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 175,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22calcium+channel+blocker%22%5BTitle%2FAbstract%5D+OR+%22calcium+channel+blockers%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C",
+      "context": "T3-C/present",
+      "term": "(\"Tamoxifen\"[MeSH Terms] OR \"Tamoxifen\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 122,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Tamoxifen%22%5BMeSH+Terms%5D+OR+%22Tamoxifen%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-B[T3-C]",
+      "context": "T3-C/present",
+      "term": "(\"Tamoxifen\"[MeSH Terms] OR \"Tamoxifen\"[Title/Abstract]) AND (\"selective estrogen receptor modulator\"[Title/Abstract] OR \"estrogen receptor modulator\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 1168,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Tamoxifen%22%5BMeSH+Terms%5D+OR+%22Tamoxifen%22%5BTitle%2FAbstract%5D%29+AND+%28%22selective+estrogen+receptor+modulator%22%5BTitle%2FAbstract%5D+OR+%22estrogen+receptor+modulator%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-C[T3-C]",
+      "context": "T3-C/present",
+      "term": "(\"selective estrogen receptor modulator\"[Title/Abstract] OR \"estrogen receptor modulator\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 27,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22selective+estrogen+receptor+modulator%22%5BTitle%2FAbstract%5D+OR+%22estrogen+receptor+modulator%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C",
+      "context": "T3-D/present",
+      "term": "(\"Adenosine\"[MeSH Terms] OR \"Adenosine\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 1287,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Adenosine%22%5BMeSH+Terms%5D+OR+%22Adenosine%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C",
+      "context": "T3-E/present",
+      "term": "(\"Vandetanib\"[MeSH Terms] OR \"Vandetanib\"[Title/Abstract] OR \"Caprelsa\"[Title/Abstract] OR \"ZD6474\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 1,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Vandetanib%22%5BMeSH+Terms%5D+OR+%22Vandetanib%22%5BTitle%2FAbstract%5D+OR+%22Caprelsa%22%5BTitle%2FAbstract%5D+OR+%22ZD6474%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-B[T3-E]",
+      "context": "T3-E/present",
+      "term": "(\"Vandetanib\"[MeSH Terms] OR \"Vandetanib\"[Title/Abstract] OR \"Caprelsa\"[Title/Abstract] OR \"ZD6474\"[Title/Abstract]) AND (\"tyrosine kinase inhibitor\"[Title/Abstract] OR \"tyrosine kinase inhibitors\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 440,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Vandetanib%22%5BMeSH+Terms%5D+OR+%22Vandetanib%22%5BTitle%2FAbstract%5D+OR+%22Caprelsa%22%5BTitle%2FAbstract%5D+OR+%22ZD6474%22%5BTitle%2FAbstract%5D%29+AND+%28%22tyrosine+kinase+inhibitor%22%5BTitle%2FAbstract%5D+OR+%22tyrosine+kinase+inhibitors%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "B-C[T3-E]",
+      "context": "T3-E/present",
+      "term": "(\"tyrosine kinase inhibitor\"[Title/Abstract] OR \"tyrosine kinase inhibitors\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 103,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22tyrosine+kinase+inhibitor%22%5BTitle%2FAbstract%5D+OR+%22tyrosine+kinase+inhibitors%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C-earliest",
+      "context": "Metformin-earliest-titles",
+      "term": "(\"Metformin\"[MeSH Terms] OR \"Metformin\"[Title/Abstract] OR \"Glucophage\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 425,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Metformin%22%5BMeSH+Terms%5D+OR+%22Metformin%22%5BTitle%2FAbstract%5D+OR+%22Glucophage%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A-C-earliest",
+      "context": "Sildenafil-earliest-titles",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND (\"Alzheimer Disease\"[MeSH Terms] OR Alzheimer*[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 70,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%28%22Alzheimer+Disease%22%5BMeSH+Terms%5D+OR+Alzheimer%2A%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    }
+  ]
+}

@@ -1,0 +1,1052 @@
+[
+  {
+    "higher_tier_id": "H013",
+    "lower_tier_id": "H003",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H013",
+    "lower_tier_id": "H006",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H013",
+    "lower_tier_id": "H007",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H013",
+    "lower_tier_id": "H021",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H013",
+    "lower_tier_id": "H022",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H017",
+    "lower_tier_id": "H003",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H017",
+    "lower_tier_id": "H006",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    }
+  },
+  {
+    "higher_tier_id": "H017",
+    "lower_tier_id": "H007",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H017",
+    "lower_tier_id": "H021",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H017",
+    "lower_tier_id": "H022",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H019",
+    "lower_tier_id": "H003",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H019",
+    "lower_tier_id": "H006",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H019",
+    "lower_tier_id": "H007",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H019",
+    "lower_tier_id": "H021",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H019",
+    "lower_tier_id": "H022",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H023",
+    "lower_tier_id": "H003",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H023",
+    "lower_tier_id": "H006",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    }
+  },
+  {
+    "higher_tier_id": "H023",
+    "lower_tier_id": "H007",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H023",
+    "lower_tier_id": "H021",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H023",
+    "lower_tier_id": "H022",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H024",
+    "lower_tier_id": "H003",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H024",
+    "lower_tier_id": "H006",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    }
+  },
+  {
+    "higher_tier_id": "H024",
+    "lower_tier_id": "H007",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H024",
+    "lower_tier_id": "H021",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H024",
+    "lower_tier_id": "H022",
+    "higher_tier": 1,
+    "lower_tier": 2,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H013",
+    "lower_tier_id": "H002",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H013",
+    "lower_tier_id": "H008",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H013",
+    "lower_tier_id": "H011",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H013",
+    "lower_tier_id": "H014",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H013",
+    "lower_tier_id": "H016",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H017",
+    "lower_tier_id": "H002",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H017",
+    "lower_tier_id": "H008",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H017",
+    "lower_tier_id": "H011",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H017",
+    "lower_tier_id": "H014",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H017",
+    "lower_tier_id": "H016",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H019",
+    "lower_tier_id": "H002",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H019",
+    "lower_tier_id": "H008",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H019",
+    "lower_tier_id": "H011",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H019",
+    "lower_tier_id": "H014",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H019",
+    "lower_tier_id": "H016",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H023",
+    "lower_tier_id": "H002",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H023",
+    "lower_tier_id": "H008",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H023",
+    "lower_tier_id": "H011",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H023",
+    "lower_tier_id": "H014",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H023",
+    "lower_tier_id": "H016",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H024",
+    "lower_tier_id": "H002",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H024",
+    "lower_tier_id": "H008",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H024",
+    "lower_tier_id": "H011",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H024",
+    "lower_tier_id": "H014",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H024",
+    "lower_tier_id": "H016",
+    "higher_tier": 1,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H003",
+    "lower_tier_id": "H002",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H003",
+    "lower_tier_id": "H008",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H003",
+    "lower_tier_id": "H011",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H003",
+    "lower_tier_id": "H014",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    }
+  },
+  {
+    "higher_tier_id": "H003",
+    "lower_tier_id": "H016",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H006",
+    "lower_tier_id": "H002",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H006",
+    "lower_tier_id": "H008",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H006",
+    "lower_tier_id": "H011",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H006",
+    "lower_tier_id": "H014",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H006",
+    "lower_tier_id": "H016",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H007",
+    "lower_tier_id": "H002",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H007",
+    "lower_tier_id": "H008",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H007",
+    "lower_tier_id": "H011",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H007",
+    "lower_tier_id": "H014",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    },
+    "order2_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    }
+  },
+  {
+    "higher_tier_id": "H007",
+    "lower_tier_id": "H016",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H021",
+    "lower_tier_id": "H002",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H021",
+    "lower_tier_id": "H008",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H021",
+    "lower_tier_id": "H011",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H021",
+    "lower_tier_id": "H014",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H021",
+    "lower_tier_id": "H016",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H022",
+    "lower_tier_id": "H002",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    }
+  },
+  {
+    "higher_tier_id": "H022",
+    "lower_tier_id": "H008",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    }
+  },
+  {
+    "higher_tier_id": "H022",
+    "lower_tier_id": "H011",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    }
+  },
+  {
+    "higher_tier_id": "H022",
+    "lower_tier_id": "H014",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "B"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "A"
+    }
+  },
+  {
+    "higher_tier_id": "H022",
+    "lower_tier_id": "H016",
+    "higher_tier": 2,
+    "lower_tier": 3,
+    "order1_winners": {
+      "novelty": "A",
+      "specificity": "A"
+    },
+    "order2_winners": {
+      "novelty": "B",
+      "specificity": "B"
+    }
+  }
+]

@@ -76,7 +76,15 @@ def _esearch_ids(term: str, n: int) -> list[str]:
     _throttle()
     esearch = requests.get(
         PUBMED_ESEARCH,
-        params={"db": "pubmed", "term": term, "retmax": n, "retmode": "json"},
+        params={
+            "db": "pubmed",
+            "term": term,
+            "retmax": n,
+            "retmode": "json",
+            "datetype": "pdat",
+            "mindate": "1900",
+            "maxdate": "2023/12/31",
+        },
         headers=HEADERS,
         timeout=30,
     )
