@@ -31,7 +31,7 @@ from openai import OpenAI
 # Config
 # ---------------------------------------------------------------------------
 
-DATA_PATH = os.path.join(os.path.dirname(__file__), "results", "all_runs_log.json")
+DATA_PATH = os.path.join("results", "all_runs_log.json")
 EMBEDDING_MODEL = os.environ.get("EMBEDDING_MODEL", "text-embedding-3-small")
 
 # ---------------------------------------------------------------------------
@@ -195,7 +195,8 @@ def main():
     print("  Centroid dist:   higher = more spread (more diverse)")
 
     # Save results
-    out_path = os.path.join(os.path.dirname(__file__), "results", "diversity_metrics.json")
+    out_path = os.path.join("results", "diversity_probe", "diversity_metrics.json")
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
     payload = {
         "embedding_model": EMBEDDING_MODEL,
         "conditions": {

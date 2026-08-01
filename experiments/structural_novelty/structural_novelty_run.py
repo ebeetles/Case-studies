@@ -1,5 +1,9 @@
 from __future__ import annotations
 
+import os, sys
+sys.path.insert(0, os.getcwd())  # repo root (run scripts from repo root)
+import _exppath  # noqa: E402  (extends sys.path to experiment folders)
+
 """
 Structural novelty — Steps 2-4 (PubMed counting + classification).
 
@@ -34,7 +38,7 @@ HEADERS = {"User-Agent": "CaseStudy/1.0 (Alzheimer research; academic use)"}
 PUBMED_DELAY = 0.4
 TOOL = "CaseStudyStructuralNovelty"
 
-OUT_DIR = Path("results/validation")
+OUT_DIR = Path("results/structural_novelty")
 PRESENT_MAXDATE = date(2026, 7, 20).strftime("%Y/%m/%d")  # currentDate
 THRESHOLDS = [5, 20, 100]
 
@@ -511,7 +515,7 @@ def write_summary(rows, results, earliest_titles) -> None:
 
     L.append("## Full query log\n")
     L.append(f"{len(_query_log)} queries. Full URLs in "
-             "`results/validation/structural_novelty_raw.json` (`query_log`). "
+             "`results/structural_novelty/structural_novelty_raw.json` (`query_log`). "
              "Sample (first 8):\n")
     L.append("| Link | Context | maxdate | Count | Term |")
     L.append("|---|---|---|---|---|")

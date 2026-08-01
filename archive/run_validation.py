@@ -1,5 +1,9 @@
 from __future__ import annotations
 
+import os, sys
+sys.path.insert(0, os.getcwd())  # repo root (run scripts from repo root)
+import _exppath  # noqa: E402  (extends sys.path to experiment folders)
+
 """
 Rubric-quality validation experiment (hypothesis_validation_sources.md).
 
@@ -8,7 +12,7 @@ Part 2: run rubric / holistic / pairwise judges blind (text only, no labels).
 Part 3: analyze tier recovery, dimension localization, stability. No p-values
          / confidence intervals (n too small) — raw rates and deltas only.
 
-Output: results/validation/*.json (raw), results/validation/summary.md (tables).
+Output: results/archive/*.json (raw), results/archive/summary.md (tables).
 """
 
 import json
@@ -35,7 +39,7 @@ from validation_judge import (
 from judge import get_judge_model
 from generator import get_generator_model
 
-OUT_DIR = Path("results/validation")
+OUT_DIR = Path("results/archive")
 SEED = 42
 N_REPEATS = 2
 

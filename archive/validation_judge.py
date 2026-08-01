@@ -1,5 +1,9 @@
 from __future__ import annotations
 
+import os, sys
+sys.path.insert(0, os.getcwd())  # repo root (run scripts from repo root)
+import _exppath  # noqa: E402  (extends sys.path to experiment folders)
+
 """
 Judge conditions for the rubric-validation experiment (blind — text only, no
 tier/degradation labels, no other hypotheses).

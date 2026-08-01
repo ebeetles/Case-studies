@@ -12,7 +12,7 @@ import os
 import matplotlib.pyplot as plt
 
 RESULTS_DIR = "results"
-PROBE_RESULTS_PATH = os.path.join(RESULTS_DIR, "probe_results.json")
+PROBE_RESULTS_PATH = os.path.join(RESULTS_DIR, "diversity_probe", "probe_results.json")
 
 
 def main():
@@ -47,7 +47,7 @@ def main():
     fig.suptitle("Condition C: exploration/exploitation probe", fontsize=13)
     fig.tight_layout()
 
-    out_path = os.path.join(RESULTS_DIR, "probe_diversity.png")
+    out_path = os.path.join(RESULTS_DIR, "diversity_probe", "probe_diversity.png")
     fig.savefig(out_path, dpi=150, bbox_inches="tight")
     print(f"Saved {out_path}")
 

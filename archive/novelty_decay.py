@@ -1,5 +1,9 @@
 from __future__ import annotations
 
+import os, sys
+sys.path.insert(0, os.getcwd())  # repo root (run scripts from repo root)
+import _exppath  # noqa: E402  (extends sys.path to experiment folders)
+
 """
 Novelty-decay experiment (Steps 3-5): time-split retrospective validation of
 the rubric NOVELTY dimension, adapted from HindSight (Jiang 2026,
@@ -40,7 +44,7 @@ from measure_diversity import embed_texts, cosine_similarity, EMBEDDING_MODEL
 from validation_judge import rubric_score_novelty
 from judge import get_judge_model
 
-OUT_DIR = Path("results/validation")
+OUT_DIR = Path("results/archive")
 COMPOUNDS = ["metformin", "sildenafil"]  # high-confidence only; see prompt
 
 

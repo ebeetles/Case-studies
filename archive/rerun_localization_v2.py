@@ -1,5 +1,9 @@
 from __future__ import annotations
 
+import os, sys
+sys.path.insert(0, os.getcwd())  # repo root (run scripts from repo root)
+import _exppath  # noqa: E402  (extends sys.path to experiment folders)
+
 """
 Re-run degradation localization (section 3b) only, using the revised NOVELTY
 rubric definition (validation_judge.rubric_score_novelty).
@@ -13,9 +17,9 @@ scores are reused unchanged from the prior run since that prompt didn't change.
 Tier recovery (3a) is intentionally NOT rerun for novelty: the "reached trial"
 ground truth is invalid for novelty specifically (trial stage confounds with
 "became well-known over time"), per this run's request. Specificity tier
-recovery is unaffected and can be found in results/validation/summary.md.
+recovery is unaffected and can be found in results/archive/summary.md.
 
-Output: results/validation/summary_v2_localization_only.md
+Output: results/archive/summary_v2_localization_only.md
 """
 
 import json
@@ -29,7 +33,7 @@ _sanitize_env()
 from validation_judge import rubric_score_novelty
 from judge import get_judge_model
 
-OUT_DIR = Path("results/validation")
+OUT_DIR = Path("results/archive")
 N_REPEATS = 2
 
 
@@ -143,7 +147,7 @@ def _write_summary(lookup, localization, stability_novelty, novelty_mean, specif
     lines.append("Tier recovery (3a) is not rerun here for novelty — trial-stage "
                   "ground truth is confounded with a hypothesis becoming well-known "
                   "over time, so it's not a valid novelty check. Specificity tier "
-                  "recovery is unaffected; see results/validation/summary.md.\n")
+                  "recovery is unaffected; see results/archive/summary.md.\n")
     lines.append("No p-values / confidence intervals — n too small to be meaningful.\n")
 
     lines.append("## 3b. Dimension localization (degraded variants, revised novelty)\n")

@@ -17,7 +17,7 @@ from pathlib import Path
 import requests
 
 S2_SEARCH_URL = "https://api.semanticscholar.org/graph/v1/paper/search"
-CACHE_PATH = Path("results/validation/s2_cache.json")
+CACHE_PATH = Path("results/archive/s2_cache.json")
 S2_DELAY = 10.0  # unauthenticated public API is aggressively rate-limited
 HEADERS = {"User-Agent": "CaseStudy/1.0 (Alzheimer research; academic use)"}
 FIELDS = "title,abstract,year,publicationDate,paperId"

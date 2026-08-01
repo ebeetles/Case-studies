@@ -1,5 +1,9 @@
 from __future__ import annotations
 
+import os, sys
+sys.path.insert(0, os.getcwd())  # repo root (run scripts from repo root)
+import _exppath  # noqa: E402  (extends sys.path to experiment folders)
+
 """
 Structural novelty — AMENDMENT 2 (PMI normalization).
 
@@ -33,7 +37,7 @@ from pathlib import Path
 import structural_novelty_run as snr  # reuses esearch_count (+ query logging), term builders
 from structural_novelty import TIER1_CUTOFFS
 
-OUT_DIR = Path("results/validation")
+OUT_DIR = Path("results/structural_novelty")
 PRESENT_MAXDATE = snr.PRESENT_MAXDATE
 
 TIER1 = ["T1-A", "T1-B", "T1-C", "T1-D", "T1-E"]

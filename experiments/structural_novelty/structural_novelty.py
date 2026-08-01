@@ -1,5 +1,9 @@
 from __future__ import annotations
 
+import os, sys
+sys.path.insert(0, os.getcwd())  # repo root (run scripts from repo root)
+import _exppath  # noqa: E402  (extends sys.path to experiment folders)
+
 """
 Structural novelty via literature-based discovery (Swanson's ABC model, 1986;
 time-sliced as in SKiM, bioRxiv 2020, and Zhang et al., J Biomed Inform 2021).
@@ -44,7 +48,7 @@ _sanitize_env()
 from validation_data import TIERED_HYPOTHESES
 from judge import _call_judge, get_judge_model
 
-OUT_DIR = Path("results/validation")
+OUT_DIR = Path("results/structural_novelty")
 
 # Per-compound cutoffs for Test 1 (from novelty_decay_curated_corpus.md).
 # HIGH confidence: metformin, sildenafil. MODERATE (estimates): the rest.
@@ -162,7 +166,7 @@ def main() -> None:
 
     if not do_run:
         print("\n[STOP] Step 1 complete. Decomposition written to "
-              "results/validation/structural_decomposition.json")
+              "results/structural_novelty/structural_decomposition.json")
         print("Review the table above. If the parse is correct, re-run with --run "
               "to execute Steps 2-4 (PubMed queries + classification).")
         return

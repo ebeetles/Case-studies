@@ -1,5 +1,9 @@
 from __future__ import annotations
 
+import os, sys
+sys.path.insert(0, os.getcwd())  # repo root (run scripts from repo root)
+import _exppath  # noqa: E402  (extends sys.path to experiment folders)
+
 """
 Follow-up diagnostic to novelty_decay.py: is the novelty judge's flat 3/5-both-
 conditions result because it (a) reads the literature but doesn't weight it in
@@ -27,7 +31,7 @@ from curated_corpus_data import CUTOFFS, CURATED_PAPERS, HYPOTHESIS_TEXT
 from validation_judge import check_literature_comprehension, rubric_score_novelty
 from judge import get_judge_model
 
-OUT_DIR = Path("results/validation")
+OUT_DIR = Path("results/archive")
 COMPOUNDS = ["metformin", "sildenafil"]
 
 # Specific mechanism phrase probed in the comprehension question, matching
@@ -102,7 +106,7 @@ def write_summary(rows: list[dict]) -> None:
     lines: list[str] = []
     lines.append("# Novelty Comprehension Check\n")
     lines.append(
-        "Diagnostic follow-up to results/validation/novelty_decay.md, which found "
+        "Diagnostic follow-up to results/archive/novelty_decay.md, which found "
         "the novelty judge scored 3/5 in BOTH pre-cutoff and post-cutoff literature "
         "conditions for both compounds — a flat, non-responsive result despite the "
         "embedding-similarity sanity check confirming the corpora were correctly "

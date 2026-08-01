@@ -20,6 +20,10 @@ Uses OpenAI text-embedding-3-small for the diversity metrics (same as
 measure_diversity.py).
 """
 
+import os, sys
+sys.path.insert(0, os.getcwd())  # repo root (run scripts from repo root)
+import _exppath  # noqa: E402  (extends sys.path to experiment folders)
+
 import json
 import os
 from itertools import combinations
@@ -36,8 +40,8 @@ from measure_diversity import (
     EMBEDDING_MODEL,
 )
 
-RESULTS_PATH = os.path.join(os.path.dirname(__file__), "results", "probe_results.json")
-BASELINE_LOG_PATH = os.path.join(os.path.dirname(__file__), "results", "all_runs_log.json")
+RESULTS_PATH = os.path.join("results", "diversity_probe", "probe_results.json")
+BASELINE_LOG_PATH = os.path.join("results", "all_runs_log.json")
 
 CONFIGS = [
     # (label, temperature, max_rounds)

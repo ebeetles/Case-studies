@@ -1,5 +1,9 @@
 from __future__ import annotations
 
+import os, sys
+sys.path.insert(0, os.getcwd())  # repo root (run scripts from repo root)
+import _exppath  # noqa: E402  (extends sys.path to experiment folders)
+
 """
 Axiom compliance tests for the PMI novelty metric.
 
@@ -12,7 +16,7 @@ metformin (2011) and liraglutide (2021, per task spec) — reusing the baseline
 pre-cutoff PMI counts already computed in structural_novelty_pmi_raw.json.
 NOTHING is re-queried for Axioms 1-2 (they are arithmetic on the cached
 counts). Axiom 4 issues a handful of fresh off-topic esearch counts. Axioms
-7-8 are NOT rerun — they are reframed from results/validation/novelty_decay.md
+7-8 are NOT rerun — they are reframed from results/archive/novelty_decay.md
 and the pre-registered decay success criterion (structural_novelty_pmi.md).
 
 PMI A-C ratio:  observed(A,C) / (count(A) * count(C) / total)
@@ -31,7 +35,7 @@ from pathlib import Path
 
 import structural_novelty_run as snr
 
-OUT_DIR = Path("results/validation")
+OUT_DIR = Path("results/structural_novelty")
 RAW = OUT_DIR / "structural_novelty_pmi_raw.json"
 
 # --- Synthetic test papers (NOT real; never submitted to PubMed) --------------

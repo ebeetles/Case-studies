@@ -1,5 +1,9 @@
 from __future__ import annotations
 
+import os, sys
+sys.path.insert(0, os.getcwd())  # repo root (run scripts from repo root)
+import _exppath  # noqa: E402  (extends sys.path to experiment folders)
+
 """
 Step 2 of the novelty-decay experiment: build a dated corpus of AD
 drug-repurposing literature via the Semantic Scholar public API.
@@ -17,7 +21,7 @@ from pathlib import Path
 
 from semantic_scholar import search_papers, SemanticScholarError
 
-OUT_PATH = Path("results/validation/corpus.json")
+OUT_PATH = Path("results/archive/corpus.json")
 
 QUERIES = [
     "Alzheimer's disease drug repurposing",

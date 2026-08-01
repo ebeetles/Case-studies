@@ -1,5 +1,9 @@
 from __future__ import annotations
 
+import os, sys
+sys.path.insert(0, os.getcwd())  # repo root (run scripts from repo root)
+import _exppath  # noqa: E402  (extends sys.path to experiment folders)
+
 """
 Degradation module: generates specificity- and novelty-degraded variants of
 Tier 1 hypotheses for the rubric-localization sub-experiment.

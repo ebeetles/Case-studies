@@ -1,5 +1,9 @@
 from __future__ import annotations
 
+import os, sys
+sys.path.insert(0, os.getcwd())  # repo root (run scripts from repo root)
+import _exppath  # noqa: E402  (extends sys.path to experiment folders)
+
 """
 MOOSE-Chem-style rediscovery evaluation.
 
@@ -460,8 +464,8 @@ def run_paper_test(paper: dict, scorer: EmbeddingScorer) -> list[dict]:
         for entry in paper_results:
             entry["condition_comparisons_vs_D"] = comparisons
 
-    out_path = RESULTS_DIR / f"rediscovery_{paper_id}.json"
-    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+    out_path = RESULTS_DIR / "rediscovery" / f"rediscovery_{paper_id}.json"
+    out_path.parent.mkdir(parents=True, exist_ok=True)
     with open(out_path, "w") as f:
         json.dump(paper_results, f, indent=2)
     print(f"\nResults saved to {out_path}")
