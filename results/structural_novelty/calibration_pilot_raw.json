@@ -1,0 +1,2167 @@
+{
+  "window_maxdate": "2026/07/20",
+  "control_diseases": [
+    "Malaria",
+    "Tuberculosis",
+    "Leprosy",
+    "Cholera",
+    "Dengue",
+    "Measles",
+    "Hepatitis C",
+    "Schistosomiasis",
+    "Melanoma",
+    "Osteosarcoma",
+    "Retinoblastoma",
+    "Pancreatic Neoplasms",
+    "Leukemia, Myeloid, Acute",
+    "Uterine Cervical Neoplasms",
+    "Psoriasis",
+    "Vitiligo",
+    "Acne Vulgaris",
+    "Alopecia Areata",
+    "Pemphigus",
+    "Glaucoma",
+    "Cataract",
+    "Keratoconus",
+    "Retinitis Pigmentosa",
+    "Schizophrenia",
+    "Bipolar Disorder",
+    "Anorexia Nervosa",
+    "Obsessive-Compulsive Disorder",
+    "Crohn Disease",
+    "Celiac Disease",
+    "Cholelithiasis",
+    "Appendicitis",
+    "Osteoarthritis",
+    "Gout",
+    "Spondylitis, Ankylosing",
+    "Scoliosis",
+    "Asthma",
+    "Cystic Fibrosis",
+    "Hyperthyroidism",
+    "Acromegaly",
+    "Endometriosis"
+  ],
+  "results": [
+    {
+      "sid": "T1-D",
+      "compound": "Losartan",
+      "window_maxdate": "2026/07/20",
+      "count_A": 11386,
+      "total": 40762085,
+      "AD": {
+        "observed": 21,
+        "count_C": 143339,
+        "expected": 40.03862545304049,
+        "ratio": 0.5244935299946788,
+        "ratio_low": 0.32466976168606293,
+        "ratio_high": 0.8017440751704344
+      },
+      "raw_ratio_meshOR_tiab_reference": {
+        "year": 2015,
+        "confidence": "moderate"
+      },
+      "n_controls": 40,
+      "AD_percentile": 85.0,
+      "controls_sorted": [
+        {
+          "disease": "Leprosy",
+          "observed": 0,
+          "count_C": 23920,
+          "expected": 6.681530642998267,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Cholera",
+          "observed": 0,
+          "count_C": 9846,
+          "expected": 2.7502654979498717,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Measles",
+          "observed": 0,
+          "count_C": 17631,
+          "expected": 4.9248355671698345,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Retinoblastoma",
+          "observed": 0,
+          "count_C": 8766,
+          "expected": 2.4485910374800506,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Uterine Cervical Neoplasms",
+          "observed": 0,
+          "count_C": 94498,
+          "expected": 26.395956634701097,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Vitiligo",
+          "observed": 0,
+          "count_C": 7332,
+          "expected": 2.048034392745121,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Acne Vulgaris",
+          "observed": 0,
+          "count_C": 14796,
+          "expected": 4.132940108436554,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Alopecia Areata",
+          "observed": 0,
+          "count_C": 4803,
+          "expected": 1.341613364478289,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Pemphigus",
+          "observed": 0,
+          "count_C": 9468,
+          "expected": 2.6446794367854345,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Retinitis Pigmentosa",
+          "observed": 0,
+          "count_C": 11665,
+          "expected": 3.2583635012782097,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Anorexia Nervosa",
+          "observed": 0,
+          "count_C": 15703,
+          "expected": 4.386290789590375,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Appendicitis",
+          "observed": 0,
+          "count_C": 22605,
+          "expected": 6.314214054555845,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Spondylitis, Ankylosing",
+          "observed": 0,
+          "count_C": 17592,
+          "expected": 4.913941767208424,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Scoliosis",
+          "observed": 0,
+          "count_C": 23359,
+          "expected": 6.5248275204764425,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Acromegaly",
+          "observed": 0,
+          "count_C": 9749,
+          "expected": 2.7231706621484157,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Tuberculosis",
+          "observed": 3,
+          "count_C": 217572,
+          "expected": 60.77399603087036,
+          "ratio": 0.049363217756425624
+        },
+        {
+          "disease": "Schizophrenia",
+          "observed": 2,
+          "count_C": 123134,
+          "expected": 34.394799088417585,
+          "ratio": 0.05814832628789793
+        },
+        {
+          "disease": "Bipolar Disorder",
+          "observed": 1,
+          "count_C": 49084,
+          "expected": 13.710545571945106,
+          "ratio": 0.0729365578308005
+        },
+        {
+          "disease": "Cholelithiasis",
+          "observed": 1,
+          "count_C": 38951,
+          "expected": 10.88011287940742,
+          "ratio": 0.09191081113622274
+        },
+        {
+          "disease": "Osteosarcoma",
+          "observed": 1,
+          "count_C": 35156,
+          "expected": 9.820062344700965,
+          "ratio": 0.10183234738215417
+        },
+        {
+          "disease": "Endometriosis",
+          "observed": 1,
+          "count_C": 29240,
+          "expected": 8.167556689016276,
+          "ratio": 0.12243563627110164
+        },
+        {
+          "disease": "Asthma",
+          "observed": 6,
+          "count_C": 152763,
+          "expected": 42.67101444884382,
+          "ratio": 0.1406106716115949
+        },
+        {
+          "disease": "Crohn Disease",
+          "observed": 2,
+          "count_C": 49248,
+          "expected": 13.756355397423857,
+          "ratio": 0.1453873458644823
+        },
+        {
+          "disease": "Leukemia, Myeloid, Acute",
+          "observed": 3,
+          "count_C": 71395,
+          "expected": 19.942637134484166,
+          "ratio": 0.15043145897753396
+        },
+        {
+          "disease": "Obsessive-Compulsive Disorder",
+          "observed": 1,
+          "count_C": 19348,
+          "expected": 5.404442093676023,
+          "ratio": 0.1850329752205402
+        },
+        {
+          "disease": "Dengue",
+          "observed": 1,
+          "count_C": 18933,
+          "expected": 5.288520888958453,
+          "ratio": 0.1890887870156347
+        },
+        {
+          "disease": "Malaria",
+          "observed": 6,
+          "count_C": 81092,
+          "expected": 22.651282730017368,
+          "ratio": 0.26488566106893496
+        },
+        {
+          "disease": "Glaucoma",
+          "observed": 5,
+          "count_C": 65416,
+          "expected": 18.27253380193874,
+          "ratio": 0.27363473802792987
+        },
+        {
+          "disease": "Cataract",
+          "observed": 3,
+          "count_C": 35355,
+          "expected": 9.87564865732457,
+          "ratio": 0.30377751417624205
+        },
+        {
+          "disease": "Hepatitis C",
+          "observed": 7,
+          "count_C": 74106,
+          "expected": 20.699895895904245,
+          "ratio": 0.33816595190631105
+        },
+        {
+          "disease": "Melanoma",
+          "observed": 14,
+          "count_C": 119403,
+          "expected": 33.352625558776005,
+          "ratio": 0.4197570585658498
+        },
+        {
+          "disease": "Keratoconus",
+          "observed": 1,
+          "count_C": 7763,
+          "expected": 2.1684248487289106,
+          "ratio": 0.461164241216928
+        },
+        {
+          "disease": "Osteoarthritis",
+          "observed": 12,
+          "count_C": 90499,
+          "expected": 25.27892314635034,
+          "ratio": 0.47470376528806
+        },
+        {
+          "disease": "Cystic Fibrosis",
+          "observed": 6,
+          "count_C": 43131,
+          "expected": 12.047704772707284,
+          "ratio": 0.4980201717419506
+        },
+        {
+          "disease": "Psoriasis",
+          "observed": 8,
+          "count_C": 54269,
+          "expected": 15.158862310404388,
+          "ratio": 0.5277440903008365
+        },
+        {
+          "disease": "Schistosomiasis",
+          "observed": 4,
+          "count_C": 26197,
+          "expected": 7.31756096382214,
+          "ratio": 0.5466302255322384
+        },
+        {
+          "disease": "Celiac Disease",
+          "observed": 4,
+          "count_C": 23303,
+          "expected": 6.509185141044674,
+          "ratio": 0.614516243327814
+        },
+        {
+          "disease": "Pancreatic Neoplasms",
+          "observed": 27,
+          "count_C": 104024,
+          "expected": 29.056837107326576,
+          "ratio": 0.9292133173432028
+        },
+        {
+          "disease": "Hyperthyroidism",
+          "observed": 13,
+          "count_C": 48302,
+          "expected": 13.492110916308624,
+          "ratio": 0.9635260249962974
+        },
+        {
+          "disease": "Gout",
+          "observed": 41,
+          "count_C": 15475,
+          "expected": 4.322603959046747,
+          "ratio": 9.485023469289013
+        }
+      ]
+    },
+    {
+      "sid": "T1-E",
+      "compound": "Sildenafil",
+      "window_maxdate": "2026/07/20",
+      "count_A": 8792,
+      "total": 40762085,
+      "AD": {
+        "observed": 38,
+        "count_C": 143339,
+        "expected": 30.916879938796065,
+        "ratio": 1.2291020334272371,
+        "ratio_low": 0.8697857512928362,
+        "ratio_high": 1.6870385699499109
+      },
+      "raw_ratio_meshOR_tiab_reference": {
+        "year": 2021,
+        "confidence": "high"
+      },
+      "n_controls": 40,
+      "AD_percentile": 92.5,
+      "controls_sorted": [
+        {
+          "disease": "Leprosy",
+          "observed": 0,
+          "count_C": 23920,
+          "expected": 5.15931999062364,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Cholera",
+          "observed": 0,
+          "count_C": 9846,
+          "expected": 2.1236899927960016,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Measles",
+          "observed": 0,
+          "count_C": 17631,
+          "expected": 3.8028415867343393,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Osteosarcoma",
+          "observed": 0,
+          "count_C": 35156,
+          "expected": 7.582819966152369,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Retinoblastoma",
+          "observed": 0,
+          "count_C": 8766,
+          "expected": 1.8907441069317235,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Leukemia, Myeloid, Acute",
+          "observed": 0,
+          "count_C": 71395,
+          "expected": 15.399232890074195,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Psoriasis",
+          "observed": 0,
+          "count_C": 54269,
+          "expected": 11.705315074044911,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Vitiligo",
+          "observed": 0,
+          "count_C": 7332,
+          "expected": 1.5814437362563765,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Acne Vulgaris",
+          "observed": 0,
+          "count_C": 14796,
+          "expected": 3.1913586363406092,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Pemphigus",
+          "observed": 0,
+          "count_C": 9468,
+          "expected": 2.0421589327435044,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Keratoconus",
+          "observed": 0,
+          "count_C": 7763,
+          "expected": 1.6744063999670282,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Anorexia Nervosa",
+          "observed": 0,
+          "count_C": 15703,
+          "expected": 3.386990042339591,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Celiac Disease",
+          "observed": 0,
+          "count_C": 23303,
+          "expected": 5.026238868791918,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Cholelithiasis",
+          "observed": 0,
+          "count_C": 38951,
+          "expected": 8.401365926203235,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Appendicitis",
+          "observed": 0,
+          "count_C": 22605,
+          "expected": 4.875686805520375,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Spondylitis, Ankylosing",
+          "observed": 0,
+          "count_C": 17592,
+          "expected": 3.7944296519670178,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Scoliosis",
+          "observed": 0,
+          "count_C": 23359,
+          "expected": 5.038317544355251,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Hyperthyroidism",
+          "observed": 0,
+          "count_C": 48302,
+          "expected": 10.418289054644776,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Acromegaly",
+          "observed": 0,
+          "count_C": 9749,
+          "expected": 2.1027680011952286,
+          "ratio": 0.0
+        },
+        {
+          "disease": "Osteoarthritis",
+          "observed": 1,
+          "count_C": 90499,
+          "expected": 19.519786782251202,
+          "ratio": 0.05123006778482192
+        },
+        {
+          "disease": "Pancreatic Neoplasms",
+          "observed": 2,
+          "count_C": 104024,
+          "expected": 22.437002621431166,
+          "ratio": 0.08913846620892484
+        },
+        {
+          "disease": "Uterine Cervical Neoplasms",
+          "observed": 2,
+          "count_C": 94498,
+          "expected": 20.38233363185421,
+          "ratio": 0.09812419108253294
+        },
+        {
+          "disease": "Tuberculosis",
+          "observed": 5,
+          "count_C": 217572,
+          "expected": 46.928242851169166,
+          "ratio": 0.10654564706071092
+        },
+        {
+          "disease": "Cataract",
+          "observed": 1,
+          "count_C": 35355,
+          "expected": 7.625742402529213,
+          "ratio": 0.13113477314265587
+        },
+        {
+          "disease": "Endometriosis",
+          "observed": 1,
+          "count_C": 29240,
+          "expected": 6.306794169140268,
+          "ratio": 0.158559162259186
+        },
+        {
+          "disease": "Schistosomiasis",
+          "observed": 1,
+          "count_C": 26197,
+          "expected": 5.650447566654159,
+          "ratio": 0.17697713113938995
+        },
+        {
+          "disease": "Asthma",
+          "observed": 6,
+          "count_C": 152763,
+          "expected": 32.94954848359695,
+          "ratio": 0.1820965772258439
+        },
+        {
+          "disease": "Crohn Disease",
+          "observed": 2,
+          "count_C": 49248,
+          "expected": 10.622332395411078,
+          "ratio": 0.18828256597054088
+        },
+        {
+          "disease": "Bipolar Disorder",
+          "observed": 2,
+          "count_C": 49084,
+          "expected": 10.586959131261318,
+          "ratio": 0.18891165774829266
+        },
+        {
+          "disease": "Malaria",
+          "observed": 4,
+          "count_C": 81092,
+          "expected": 17.490784978246328,
+          "ratio": 0.22869185145062887
+        },
+        {
+          "disease": "Obsessive-Compulsive Disorder",
+          "observed": 1,
+          "count_C": 19348,
+          "expected": 4.173182407131529,
+          "ratio": 0.2396252793290572
+        },
+        {
+          "disease": "Dengue",
+          "observed": 1,
+          "count_C": 18933,
+          "expected": 4.08367079358183,
+          "ratio": 0.24487772167425123
+        },
+        {
+          "disease": "Hepatitis C",
+          "observed": 5,
+          "count_C": 74106,
+          "expected": 15.983970201720545,
+          "ratio": 0.3128133959772892
+        },
+        {
+          "disease": "Schizophrenia",
+          "observed": 10,
+          "count_C": 123134,
+          "expected": 26.55885065741853,
+          "ratio": 0.3765223175125147
+        },
+        {
+          "disease": "Gout",
+          "observed": 2,
+          "count_C": 15475,
+          "expected": 3.3378125775460212,
+          "ratio": 0.5991948180237284
+        },
+        {
+          "disease": "Glaucoma",
+          "observed": 9,
+          "count_C": 65416,
+          "expected": 14.109618583053345,
+          "ratio": 0.6378627421445424
+        },
+        {
+          "disease": "Melanoma",
+          "observed": 21,
+          "count_C": 119403,
+          "expected": 25.754108898011474,
+          "ratio": 0.8154038675211726
+        },
+        {
+          "disease": "Retinitis Pigmentosa",
+          "observed": 4,
+          "count_C": 11665,
+          "expected": 2.5160312579692623,
+          "ratio": 1.5898053680098068
+        },
+        {
+          "disease": "Alopecia Areata",
+          "observed": 2,
+          "count_C": 4803,
+          "expected": 1.0359621201908586,
+          "ratio": 1.9305725190333538
+        },
+        {
+          "disease": "Cystic Fibrosis",
+          "observed": 18,
+          "count_C": 43131,
+          "expected": 9.302952780752015,
+          "ratio": 1.934869543489712
+        }
+      ]
+    }
+  ],
+  "query_log": [
+    {
+      "link": "A",
+      "context": "Losartan/A",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 11386,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "total",
+      "context": "Losartan/total",
+      "term": "(\"1900/01/01\"[PDAT] : \"2026/07/20\"[PDAT])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 40762085,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%221900%2F01%2F01%22%5BPDAT%5D+%3A+%222026%2F07%2F20%22%5BPDAT%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/AD",
+      "term": "\"Alzheimer Disease\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 143339,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Alzheimer+Disease%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/AD",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Alzheimer Disease\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 21,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Alzheimer+Disease%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Malaria",
+      "term": "\"Malaria\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 81092,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Malaria%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Malaria",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Malaria\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 6,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Malaria%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Tuberculosis",
+      "term": "\"Tuberculosis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 217572,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Tuberculosis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Tuberculosis",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Tuberculosis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 3,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Tuberculosis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Leprosy",
+      "term": "\"Leprosy\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 23920,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Leprosy%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Leprosy",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Leprosy\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Leprosy%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Cholera",
+      "term": "\"Cholera\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 9846,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Cholera%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Cholera",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Cholera\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Cholera%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Dengue",
+      "term": "\"Dengue\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 18933,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Dengue%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Dengue",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Dengue\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 1,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Dengue%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Measles",
+      "term": "\"Measles\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 17631,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Measles%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Measles",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Measles\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Measles%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Hepatitis C",
+      "term": "\"Hepatitis C\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 74106,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Hepatitis+C%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Hepatitis C",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Hepatitis C\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 7,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Hepatitis+C%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Schistosomiasis",
+      "term": "\"Schistosomiasis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 26197,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Schistosomiasis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Schistosomiasis",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Schistosomiasis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 4,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Schistosomiasis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Melanoma",
+      "term": "\"Melanoma\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 119403,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Melanoma%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Melanoma",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Melanoma\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 14,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Melanoma%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Osteosarcoma",
+      "term": "\"Osteosarcoma\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 35156,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Osteosarcoma%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Osteosarcoma",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Osteosarcoma\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 1,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Osteosarcoma%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Retinoblastoma",
+      "term": "\"Retinoblastoma\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 8766,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Retinoblastoma%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Retinoblastoma",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Retinoblastoma\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Retinoblastoma%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Pancreatic Neoplasms",
+      "term": "\"Pancreatic Neoplasms\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 104024,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Pancreatic+Neoplasms%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Pancreatic Neoplasms",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Pancreatic Neoplasms\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 27,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Pancreatic+Neoplasms%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Leukemia, Myeloid, Acute",
+      "term": "\"Leukemia, Myeloid, Acute\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 71395,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Leukemia%2C+Myeloid%2C+Acute%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Leukemia, Myeloid, Acute",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Leukemia, Myeloid, Acute\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 3,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Leukemia%2C+Myeloid%2C+Acute%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Uterine Cervical Neoplasms",
+      "term": "\"Uterine Cervical Neoplasms\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 94498,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Uterine+Cervical+Neoplasms%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Uterine Cervical Neoplasms",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Uterine Cervical Neoplasms\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Uterine+Cervical+Neoplasms%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Psoriasis",
+      "term": "\"Psoriasis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 54269,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Psoriasis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Psoriasis",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Psoriasis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 8,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Psoriasis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Vitiligo",
+      "term": "\"Vitiligo\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 7332,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Vitiligo%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Vitiligo",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Vitiligo\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Vitiligo%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Acne Vulgaris",
+      "term": "\"Acne Vulgaris\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 14796,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Acne+Vulgaris%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Acne Vulgaris",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Acne Vulgaris\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Acne+Vulgaris%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Alopecia Areata",
+      "term": "\"Alopecia Areata\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 4803,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Alopecia+Areata%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Alopecia Areata",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Alopecia Areata\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Alopecia+Areata%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Pemphigus",
+      "term": "\"Pemphigus\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 9468,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Pemphigus%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Pemphigus",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Pemphigus\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Pemphigus%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Glaucoma",
+      "term": "\"Glaucoma\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 65416,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Glaucoma%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Glaucoma",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Glaucoma\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 5,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Glaucoma%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Cataract",
+      "term": "\"Cataract\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 35355,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Cataract%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Cataract",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Cataract\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 3,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Cataract%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Keratoconus",
+      "term": "\"Keratoconus\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 7763,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Keratoconus%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Keratoconus",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Keratoconus\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 1,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Keratoconus%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Retinitis Pigmentosa",
+      "term": "\"Retinitis Pigmentosa\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 11665,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Retinitis+Pigmentosa%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Retinitis Pigmentosa",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Retinitis Pigmentosa\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Retinitis+Pigmentosa%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Schizophrenia",
+      "term": "\"Schizophrenia\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 123134,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Schizophrenia%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Schizophrenia",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Schizophrenia\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 2,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Schizophrenia%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Bipolar Disorder",
+      "term": "\"Bipolar Disorder\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 49084,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Bipolar+Disorder%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Bipolar Disorder",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Bipolar Disorder\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 1,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Bipolar+Disorder%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Anorexia Nervosa",
+      "term": "\"Anorexia Nervosa\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 15703,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Anorexia+Nervosa%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Anorexia Nervosa",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Anorexia Nervosa\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Anorexia+Nervosa%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Obsessive-Compulsive Disorder",
+      "term": "\"Obsessive-Compulsive Disorder\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 19348,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Obsessive-Compulsive+Disorder%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Obsessive-Compulsive Disorder",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Obsessive-Compulsive Disorder\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 1,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Obsessive-Compulsive+Disorder%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Crohn Disease",
+      "term": "\"Crohn Disease\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 49248,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Crohn+Disease%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Crohn Disease",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Crohn Disease\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 2,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Crohn+Disease%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Celiac Disease",
+      "term": "\"Celiac Disease\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 23303,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Celiac+Disease%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Celiac Disease",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Celiac Disease\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 4,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Celiac+Disease%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Cholelithiasis",
+      "term": "\"Cholelithiasis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 38951,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Cholelithiasis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Cholelithiasis",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Cholelithiasis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 1,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Cholelithiasis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Appendicitis",
+      "term": "\"Appendicitis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 22605,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Appendicitis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Appendicitis",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Appendicitis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Appendicitis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Osteoarthritis",
+      "term": "\"Osteoarthritis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 90499,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Osteoarthritis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Osteoarthritis",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Osteoarthritis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 12,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Osteoarthritis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Gout",
+      "term": "\"Gout\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 15475,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Gout%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Gout",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Gout\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 41,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Gout%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Spondylitis, Ankylosing",
+      "term": "\"Spondylitis, Ankylosing\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 17592,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Spondylitis%2C+Ankylosing%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Spondylitis, Ankylosing",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Spondylitis, Ankylosing\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Spondylitis%2C+Ankylosing%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Scoliosis",
+      "term": "\"Scoliosis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 23359,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Scoliosis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Scoliosis",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Scoliosis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Scoliosis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Asthma",
+      "term": "\"Asthma\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 152763,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Asthma%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Asthma",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Asthma\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 6,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Asthma%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Cystic Fibrosis",
+      "term": "\"Cystic Fibrosis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 43131,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Cystic+Fibrosis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Cystic Fibrosis",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Cystic Fibrosis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 6,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Cystic+Fibrosis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Hyperthyroidism",
+      "term": "\"Hyperthyroidism\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 48302,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Hyperthyroidism%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Hyperthyroidism",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Hyperthyroidism\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 13,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Hyperthyroidism%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Acromegaly",
+      "term": "\"Acromegaly\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 9749,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Acromegaly%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Acromegaly",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Acromegaly\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Acromegaly%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Losartan/Endometriosis",
+      "term": "\"Endometriosis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 29240,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Endometriosis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Losartan/Endometriosis",
+      "term": "(\"Losartan\"[MeSH Terms] OR \"Losartan\"[Title/Abstract] OR \"Cozaar\"[Title/Abstract]) AND \"Endometriosis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 1,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Losartan%22%5BMeSH+Terms%5D+OR+%22Losartan%22%5BTitle%2FAbstract%5D+OR+%22Cozaar%22%5BTitle%2FAbstract%5D%29+AND+%22Endometriosis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "A",
+      "context": "Sildenafil/A",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 8792,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "total",
+      "context": "Sildenafil/total",
+      "term": "(\"1900/01/01\"[PDAT] : \"2026/07/20\"[PDAT])",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 40762085,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%221900%2F01%2F01%22%5BPDAT%5D+%3A+%222026%2F07%2F20%22%5BPDAT%5D%29&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/AD",
+      "term": "\"Alzheimer Disease\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 143339,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Alzheimer+Disease%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/AD",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Alzheimer Disease\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 38,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Alzheimer+Disease%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Malaria",
+      "term": "\"Malaria\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 81092,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Malaria%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Malaria",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Malaria\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 4,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Malaria%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Tuberculosis",
+      "term": "\"Tuberculosis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 217572,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Tuberculosis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Tuberculosis",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Tuberculosis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 5,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Tuberculosis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Leprosy",
+      "term": "\"Leprosy\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 23920,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Leprosy%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Leprosy",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Leprosy\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Leprosy%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Cholera",
+      "term": "\"Cholera\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 9846,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Cholera%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Cholera",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Cholera\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Cholera%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Dengue",
+      "term": "\"Dengue\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 18933,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Dengue%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Dengue",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Dengue\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 1,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Dengue%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Measles",
+      "term": "\"Measles\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 17631,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Measles%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Measles",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Measles\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Measles%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Hepatitis C",
+      "term": "\"Hepatitis C\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 74106,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Hepatitis+C%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Hepatitis C",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Hepatitis C\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 5,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Hepatitis+C%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Schistosomiasis",
+      "term": "\"Schistosomiasis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 26197,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Schistosomiasis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Schistosomiasis",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Schistosomiasis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 1,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Schistosomiasis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Melanoma",
+      "term": "\"Melanoma\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 119403,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Melanoma%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Melanoma",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Melanoma\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 21,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Melanoma%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Osteosarcoma",
+      "term": "\"Osteosarcoma\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 35156,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Osteosarcoma%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Osteosarcoma",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Osteosarcoma\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Osteosarcoma%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Retinoblastoma",
+      "term": "\"Retinoblastoma\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 8766,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Retinoblastoma%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Retinoblastoma",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Retinoblastoma\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Retinoblastoma%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Pancreatic Neoplasms",
+      "term": "\"Pancreatic Neoplasms\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 104024,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Pancreatic+Neoplasms%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Pancreatic Neoplasms",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Pancreatic Neoplasms\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 2,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Pancreatic+Neoplasms%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Leukemia, Myeloid, Acute",
+      "term": "\"Leukemia, Myeloid, Acute\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 71395,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Leukemia%2C+Myeloid%2C+Acute%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Leukemia, Myeloid, Acute",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Leukemia, Myeloid, Acute\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Leukemia%2C+Myeloid%2C+Acute%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Uterine Cervical Neoplasms",
+      "term": "\"Uterine Cervical Neoplasms\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 94498,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Uterine+Cervical+Neoplasms%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Uterine Cervical Neoplasms",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Uterine Cervical Neoplasms\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 2,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Uterine+Cervical+Neoplasms%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Psoriasis",
+      "term": "\"Psoriasis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 54269,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Psoriasis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Psoriasis",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Psoriasis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Psoriasis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Vitiligo",
+      "term": "\"Vitiligo\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 7332,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Vitiligo%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Vitiligo",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Vitiligo\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Vitiligo%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Acne Vulgaris",
+      "term": "\"Acne Vulgaris\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 14796,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Acne+Vulgaris%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Acne Vulgaris",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Acne Vulgaris\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Acne+Vulgaris%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Alopecia Areata",
+      "term": "\"Alopecia Areata\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 4803,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Alopecia+Areata%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Alopecia Areata",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Alopecia Areata\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 2,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Alopecia+Areata%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Pemphigus",
+      "term": "\"Pemphigus\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 9468,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Pemphigus%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Pemphigus",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Pemphigus\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Pemphigus%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Glaucoma",
+      "term": "\"Glaucoma\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 65416,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Glaucoma%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Glaucoma",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Glaucoma\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 9,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Glaucoma%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Cataract",
+      "term": "\"Cataract\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 35355,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Cataract%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Cataract",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Cataract\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 1,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Cataract%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Keratoconus",
+      "term": "\"Keratoconus\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 7763,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Keratoconus%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Keratoconus",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Keratoconus\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Keratoconus%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Retinitis Pigmentosa",
+      "term": "\"Retinitis Pigmentosa\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 11665,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Retinitis+Pigmentosa%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Retinitis Pigmentosa",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Retinitis Pigmentosa\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 4,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Retinitis+Pigmentosa%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Schizophrenia",
+      "term": "\"Schizophrenia\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 123134,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Schizophrenia%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Schizophrenia",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Schizophrenia\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 10,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Schizophrenia%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Bipolar Disorder",
+      "term": "\"Bipolar Disorder\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 49084,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Bipolar+Disorder%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Bipolar Disorder",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Bipolar Disorder\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 2,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Bipolar+Disorder%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Anorexia Nervosa",
+      "term": "\"Anorexia Nervosa\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 15703,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Anorexia+Nervosa%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Anorexia Nervosa",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Anorexia Nervosa\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Anorexia+Nervosa%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Obsessive-Compulsive Disorder",
+      "term": "\"Obsessive-Compulsive Disorder\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 19348,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Obsessive-Compulsive+Disorder%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Obsessive-Compulsive Disorder",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Obsessive-Compulsive Disorder\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 1,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Obsessive-Compulsive+Disorder%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Crohn Disease",
+      "term": "\"Crohn Disease\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 49248,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Crohn+Disease%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Crohn Disease",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Crohn Disease\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 2,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Crohn+Disease%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Celiac Disease",
+      "term": "\"Celiac Disease\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 23303,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Celiac+Disease%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Celiac Disease",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Celiac Disease\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Celiac+Disease%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Cholelithiasis",
+      "term": "\"Cholelithiasis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 38951,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Cholelithiasis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Cholelithiasis",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Cholelithiasis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Cholelithiasis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Appendicitis",
+      "term": "\"Appendicitis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 22605,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Appendicitis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Appendicitis",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Appendicitis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Appendicitis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Osteoarthritis",
+      "term": "\"Osteoarthritis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 90499,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Osteoarthritis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Osteoarthritis",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Osteoarthritis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 1,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Osteoarthritis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Gout",
+      "term": "\"Gout\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 15475,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Gout%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Gout",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Gout\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 2,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Gout%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Spondylitis, Ankylosing",
+      "term": "\"Spondylitis, Ankylosing\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 17592,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Spondylitis%2C+Ankylosing%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Spondylitis, Ankylosing",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Spondylitis, Ankylosing\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Spondylitis%2C+Ankylosing%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Scoliosis",
+      "term": "\"Scoliosis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 23359,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Scoliosis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Scoliosis",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Scoliosis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Scoliosis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Asthma",
+      "term": "\"Asthma\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 152763,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Asthma%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Asthma",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Asthma\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 6,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Asthma%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Cystic Fibrosis",
+      "term": "\"Cystic Fibrosis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 43131,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Cystic+Fibrosis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Cystic Fibrosis",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Cystic Fibrosis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 18,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Cystic+Fibrosis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Hyperthyroidism",
+      "term": "\"Hyperthyroidism\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 48302,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Hyperthyroidism%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Hyperthyroidism",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Hyperthyroidism\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Hyperthyroidism%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Acromegaly",
+      "term": "\"Acromegaly\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 9749,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Acromegaly%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Acromegaly",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Acromegaly\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 0,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Acromegaly%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "C",
+      "context": "Sildenafil/Endometriosis",
+      "term": "\"Endometriosis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 29240,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Endometriosis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    },
+    {
+      "link": "drug-C",
+      "context": "Sildenafil/Endometriosis",
+      "term": "(\"Sildenafil\"[MeSH Terms] OR \"Sildenafil\"[Title/Abstract] OR \"Viagra\"[Title/Abstract]) AND \"Endometriosis\"[MeSH Terms]",
+      "mindate": "1900",
+      "maxdate": "2026/07/20",
+      "count": 1,
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%28%22Sildenafil%22%5BMeSH+Terms%5D+OR+%22Sildenafil%22%5BTitle%2FAbstract%5D+OR+%22Viagra%22%5BTitle%2FAbstract%5D%29+AND+%22Endometriosis%22%5BMeSH+Terms%5D&datetype=pdat&mindate=1900&maxdate=2026%2F07%2F20&retmode=json&retmax=0&tool=CaseStudyStructuralNovelty"
+    }
+  ]
+}
