@@ -34,6 +34,8 @@ Prior results (structural_novelty.md / .json) are left intact.
 import json
 from pathlib import Path
 
+from scipy.stats import chi2
+
 import structural_novelty_run as snr  # reuses esearch_count (+ query logging), term builders
 from structural_novelty import TIER1_CUTOFFS
 
@@ -77,10 +79,50 @@ def cached_count(term: str, maxdate: str, link: str, context: str) -> int:
     return val
 
 
-def pmi(observed: int, count_a: int, count_c: int, total: int) -> tuple[float, float]:
+def poisson_ci(k: int, alpha: float = 0.05) -> tuple[float, float]:
+    """Exact (Garwood) two-sided Poisson confidence interval on a count k.
+
+    Uses the chi-square form: lower = chi2.ppf(a/2, 2k)/2 (0 when k == 0),
+    upper = chi2.ppf(1-a/2, 2(k+1))/2. Preferred over the sqrt(N) normal
+    approximation, which is invalid for the small counts that dominate the
+    pre-cutoff windows (e.g. observed = 1).
+    """
+    lower = chi2.ppf(alpha / 2, 2 * k) / 2 if k > 0 else 0.0
+    upper = chi2.ppf(1 - alpha / 2, 2 * (k + 1)) / 2
+    return lower, upper
+
+
+def ratio_ci(observed: int, expected: float,
+             alpha: float = 0.05) -> tuple[float, float]:
+    """95% CI on the observed/expected ratio: the Poisson interval on the
+    observed count divided through by the (fixed) expected count."""
+    if not expected or expected != expected:  # 0 or NaN
+        return float("nan"), float("nan")
+    lo_k, hi_k = poisson_ci(observed, alpha)
+    return lo_k / expected, hi_k / expected
+
+
+def pmi(observed: int, count_a: int, count_c: int,
+        total: int) -> tuple[float, float, float, float]:
+    """Return (expected, ratio, ratio_low, ratio_high).
+
+    ratio = observed / expected; (ratio_low, ratio_high) is the exact 95%
+    Poisson interval on the observed count, propagated through the ratio.
+    """
     expected = (count_a * count_c / total) if total else float("nan")
-    ratio = (observed / expected) if expected else float("nan")
-    return expected, ratio
+    if not expected or expected != expected:
+        nan = float("nan")
+        return expected, nan, nan, nan
+    ratio = observed / expected
+    lo, hi = ratio_ci(observed, expected)
+    return expected, ratio, lo, hi
+
+
+def fmt_ci(ratio: float, lo: float, hi: float) -> str:
+    """Format a ratio with its 95% CI, e.g. '1.58 (0.04–8.8)'."""
+    if ratio != ratio:  # NaN
+        return "nan"
+    return f"{ratio:.2f} ({lo:.2f}–{hi:.2g})"
 
 
 def main() -> None:
@@ -124,17 +166,20 @@ def main() -> None:
                 obs_bc = snr.esearch_count(f"{mech} AND {snr.DISEASE_TERM}",
                                            maxd, "1900", "B-C", f"{sid}/{wname}")
 
-            exp_ac, pmi_ac = pmi(obs_ac, count_a, count_c, total)
-            exp_bc, pmi_bc = pmi(obs_bc, count_b, count_c, total)
+            exp_ac, pmi_ac, lo_ac, hi_ac = pmi(obs_ac, count_a, count_c, total)
+            exp_bc, pmi_bc, lo_bc, hi_bc = pmi(obs_bc, count_b, count_c, total)
 
             rec["windows"][wname] = {
                 "maxdate": maxd, "count_A": count_a, "count_B": count_b,
                 "count_C": count_c, "total": total,
-                "observed_AC": obs_ac, "expected_AC": exp_ac, "pmi_AC": pmi_ac,
-                "observed_BC": obs_bc, "expected_BC": exp_bc, "pmi_BC": pmi_bc,
+                "observed_AC": obs_ac, "expected_AC": exp_ac,
+                "pmi_AC": pmi_ac, "pmi_AC_low": lo_ac, "pmi_AC_high": hi_ac,
+                "observed_BC": obs_bc, "expected_BC": exp_bc,
+                "pmi_BC": pmi_bc, "pmi_BC_low": lo_bc, "pmi_BC_high": hi_bc,
             }
-            log(f"{sid}/{wname}: A-C obs={obs_ac} exp={exp_ac:.1f} pmi={pmi_ac:.2f} | "
-                f"B-C obs={obs_bc} exp={exp_bc:.1f} pmi={pmi_bc:.2f}")
+            log(f"{sid}/{wname}: A-C obs={obs_ac} exp={exp_ac:.1f} "
+                f"pmi={pmi_ac:.2f} [{lo_ac:.2f}–{hi_ac:.2g}] | "
+                f"B-C obs={obs_bc} pmi={pmi_bc:.2f} [{lo_bc:.2f}–{hi_bc:.2g}]")
         windows_pmi[sid] = rec
 
     raw = {
@@ -163,18 +208,27 @@ def write_summary(windows_pmi: dict) -> None:
     L.append("## PMI ratios per compound × window\n")
     L.append("`pmi = observed / (count(A)*count(C)/total)`. >>1 = over-represented "
              "(link established); ~1 = chance; <1 = under-represented.\n")
+    L.append("Each ratio is shown as **point (95% CI)**. The interval is the exact "
+             "Poisson (Garwood) confidence interval on the observed co-occurrence "
+             "count, divided through by the expected count — *not* a sqrt(N) "
+             "approximation, which is invalid at the small counts here (e.g. "
+             "liraglutide pre-cutoff, observed = 1).\n")
     L.append("| ID | Compound | Conf | Window | maxdate | count(A) | count(C) | "
-             "total | obs A-C | exp A-C | **pmi A-C** | obs B-C | pmi B-C |")
+             "total | obs A-C | exp A-C | **pmi A-C (95% CI)** | obs B-C | "
+             "pmi B-C (95% CI) |")
     L.append("|---|---|---|---|---|---|---|---|---|---|---|---|---|")
     for sid in TIER1:
         r = windows_pmi[sid]
         for wname in ("pre_cutoff", "post5yr", "present"):
             w = r["windows"][wname]
+            lo_ac, hi_ac = ratio_ci(w["observed_AC"], w["expected_AC"])
+            lo_bc, hi_bc = ratio_ci(w["observed_BC"], w["expected_BC"])
             L.append(
                 f"| {sid} | {r['compound']} | {r['confidence'][:3]} | {wname} | "
                 f"{w['maxdate']} | {w['count_A']} | {w['count_C']} | {w['total']} | "
-                f"{w['observed_AC']} | {w['expected_AC']:.1f} | **{w['pmi_AC']:.2f}** | "
-                f"{w['observed_BC']} | {w['pmi_BC']:.2f} |"
+                f"{w['observed_AC']} | {w['expected_AC']:.1f} | "
+                f"**{fmt_ci(w['pmi_AC'], lo_ac, hi_ac)}** | "
+                f"{w['observed_BC']} | {fmt_ci(w['pmi_BC'], lo_bc, hi_bc)} |"
             )
     L.append("")
 
@@ -183,20 +237,27 @@ def write_summary(windows_pmi: dict) -> None:
     L.append(">=4/5 Tier-1 compounds show A-C pmi increasing pre-cutoff -> "
              "cutoff+5yr, AND pre-cutoff values cluster separately from post "
              "values with a visible gap.\n")
-    L.append("| ID | Compound | pmi A-C pre-cutoff | pmi A-C cutoff+5yr | Increased? |")
-    L.append("|---|---|---|---|---|")
+    L.append("| ID | Compound | pmi A-C pre-cutoff (95% CI) | "
+             "pmi A-C cutoff+5yr (95% CI) | Increased? | 95% CIs disjoint? |")
+    L.append("|---|---|---|---|---|---|")
     n_inc = 0
+    n_disjoint = 0
     pre_vals, post_vals = [], []
     for sid in TIER1:
         r = windows_pmi[sid]
-        pre = r["windows"]["pre_cutoff"]["pmi_AC"]
-        post = r["windows"]["post5yr"]["pmi_AC"]
+        wp, wq = r["windows"]["pre_cutoff"], r["windows"]["post5yr"]
+        pre, post = wp["pmi_AC"], wq["pmi_AC"]
+        lo_p, hi_p = ratio_ci(wp["observed_AC"], wp["expected_AC"])
+        lo_q, hi_q = ratio_ci(wq["observed_AC"], wq["expected_AC"])
         pre_vals.append(pre)
         post_vals.append(post)
         inc = post > pre
         n_inc += int(inc)
-        L.append(f"| {sid} | {r['compound']} | {pre:.2f} | {post:.2f} | "
-                 f"{'YES' if inc else 'no'} |")
+        disjoint = (hi_p < lo_q) or (hi_q < lo_p)  # intervals do not overlap
+        n_disjoint += int(disjoint)
+        L.append(f"| {sid} | {r['compound']} | {fmt_ci(pre, lo_p, hi_p)} | "
+                 f"{fmt_ci(post, lo_q, hi_q)} | {'YES' if inc else 'no'} | "
+                 f"{'yes' if disjoint else 'no (overlap)'} |")
     L.append("")
 
     max_pre = max(pre_vals)
@@ -204,11 +265,18 @@ def write_summary(windows_pmi: dict) -> None:
     gap = min_post - max_pre
     clusters_separate = gap > 0
     L.append(f"- A-C pmi increased pre→post in **{n_inc}/5** compounds.")
+    L.append(f"- The pre- vs post-cutoff 95% CIs are **disjoint in {n_disjoint}/5** "
+             f"compounds; in the rest the increase is not distinguishable from no "
+             f"change at 95%. (Liraglutide's headline pre-cutoff 1.58 rests on a "
+             f"single observed paper: CI ≈ 0.04–8.8, which overlaps its own post "
+             f"value — the point estimate is not reliable.)")
     L.append(f"- Pre-cutoff pmi range: [{min(pre_vals):.2f}, {max(pre_vals):.2f}]; "
-             f"cutoff+5yr pmi range: [{min(post_vals):.2f}, {max(post_vals):.2f}].")
+             f"cutoff+5yr pmi range: [{min(post_vals):.2f}, {max(post_vals):.2f}] "
+             f"(point estimates).")
     L.append(f"- Highest pre-cutoff pmi = {max_pre:.2f}; lowest post pmi = "
              f"{min_post:.2f}; gap = {gap:+.2f} "
-             f"({'clean separation — no overlap' if clusters_separate else 'OVERLAP — clusters not separable'}).")
+             f"({'clean separation — no overlap' if clusters_separate else 'OVERLAP — clusters not separable'} "
+             f"on point estimates alone).")
     crit_met = (n_inc >= 4) and clusters_separate
     L.append(f"\n**Criterion {'MET' if crit_met else 'NOT MET'}** "
              f"(needs >=4/5 increasing AND a visible gap; got {n_inc}/5 increasing, "
@@ -218,20 +286,25 @@ def write_summary(windows_pmi: dict) -> None:
     L.append("## PMI-based classification (Amendment 2 #3)\n")
     L.append("No hard cutoff baked in. Values reported; a descriptive boundary of "
              "pmi≈1 (chance) is used only to label, and flagged as descriptive.\n")
-    L.append("| ID | Compound | Window | pmi A-C | pmi B-C | Descriptive case |")
+    L.append("| ID | Compound | Window | pmi A-C (95% CI) | pmi B-C (95% CI) | "
+             "Descriptive case |")
     L.append("|---|---|---|---|---|---|")
     for sid in TIER1:
         r = windows_pmi[sid]
         for wname in ("pre_cutoff", "post5yr", "present"):
             w = r["windows"][wname]
             ac, bc = w["pmi_AC"], w["pmi_BC"]
+            lo_ac, hi_ac = ratio_ci(w["observed_AC"], w["expected_AC"])
+            lo_bc, hi_bc = ratio_ci(w["observed_BC"], w["expected_BC"])
             if ac >= 2:
                 case = "Case 1 (A-C over-represented)"
             elif bc >= 2:
                 case = "Case 2 (B-C over-rep, A-C not)"
             else:
                 case = "Case 3 (neither over-represented)"
-            L.append(f"| {sid} | {r['compound']} | {wname} | {ac:.2f} | {bc:.2f} | {case} |")
+            L.append(f"| {sid} | {r['compound']} | {wname} | "
+                     f"{fmt_ci(ac, lo_ac, hi_ac)} | {fmt_ci(bc, lo_bc, hi_bc)} | "
+                     f"{case} |")
     L.append("")
     L.append("_Descriptive boundary pmi≥2 = '>>1'. This is a post-hoc label for "
              "readability, not a pre-registered threshold; the raw pmi values above "
@@ -239,10 +312,19 @@ def write_summary(windows_pmi: dict) -> None:
 
     # Natural-separation commentary
     L.append("## Does a natural separation appear in the values?\n")
-    ac_pre = [windows_pmi[s]["windows"]["pre_cutoff"]["pmi_AC"] for s in TIER1]
-    ac_post = [windows_pmi[s]["windows"]["post5yr"]["pmi_AC"] for s in TIER1]
-    L.append(f"- A-C pmi pre-cutoff values: {[f'{v:.2f}' for v in ac_pre]}")
-    L.append(f"- A-C pmi cutoff+5yr values: {[f'{v:.2f}' for v in ac_post]}")
+    def _ci_list(window: str) -> list[str]:
+        out = []
+        for s in TIER1:
+            w = windows_pmi[s]["windows"][window]
+            lo, hi = ratio_ci(w["observed_AC"], w["expected_AC"])
+            out.append(fmt_ci(w["pmi_AC"], lo, hi))
+        return out
+
+    L.append(f"- A-C pmi pre-cutoff values: {_ci_list('pre_cutoff')}")
+    L.append(f"- A-C pmi cutoff+5yr values: {_ci_list('post5yr')}")
+    L.append("- On point estimates a gap can appear, but once the 95% Poisson CIs "
+             "are drawn the pre- and post-cutoff ranges overlap for most compounds; "
+             "the separation is not robust at n this small.")
     L.append("")
 
     (OUT_DIR / "structural_novelty_pmi.md").write_text("\n".join(L))
