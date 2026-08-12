@@ -15,9 +15,12 @@ hypotheses (and the metrics that score them) actually hold up.
 **Structural novelty via PMI paper-counting** — `experiments/structural_novelty/`
 → results in **`results/structural_novelty/`**.
 
-The newest run is the **axiom-compliance test** of the PMI metric
-([`axiom_tests.py`](experiments/structural_novelty/axiom_tests.py) →
-[`results/structural_novelty/axiom_tests.md`](results/structural_novelty/axiom_tests.md)).
+The newest run is **Step 2 — per-drug calibration**
+([`calibration.py`](experiments/structural_novelty/calibration.py) →
+[`results/structural_novelty/calibration.md`](results/structural_novelty/calibration.md)):
+each drug's Alzheimer's ratio is reported as a percentile within the distribution
+of ratios that drug produces against ~100 unrelated diseases, which removes the
+publication-volume confound that makes raw ratios non-comparable across drugs.
 This line replaced the LLM-as-judge novelty metric (see the archive below) with a
 PubMed co-occurrence / PMI measure, and is the current working approach.
 
@@ -25,8 +28,10 @@ PubMed co-occurrence / PMI measure, and is the current working approach.
 |---|---|---|
 | `structural_novelty.py` | Swanson ABC decomposition of each hypothesis (A→B→C) | `structural_novelty/structural_decomposition.json` |
 | `structural_novelty_run.py` | Raw A-C / B-C PubMed co-occurrence counts per window | `structural_novelty/structural_novelty.md`, `_raw.json` |
-| `structural_novelty_pmi.py` | PMI normalization of those counts (observed/expected ratios) | `structural_novelty/structural_novelty_pmi.md`, `_raw.json` |
+| `structural_novelty_pmi.py` | PMI normalization + Poisson 95% CIs on every ratio (Step 1) | `structural_novelty/structural_novelty_pmi.md`, `_raw.json` |
 | `axiom_tests.py` | Tests the PMI metric against the novelty-metric axioms | `structural_novelty/axiom_tests.md`, `_raw.json` |
+| `calibration_pilot.py` | Step-2 de-risking pilot (losartan, sildenafil) | `structural_novelty/calibration_pilot.md`, `_raw.json` |
+| `calibration.py` | **Step 2**: per-drug percentile calibration, all 5 drugs, bootstrap CIs | `structural_novelty/calibration.md`, `calibration_raw.json` |
 
 ---
 
