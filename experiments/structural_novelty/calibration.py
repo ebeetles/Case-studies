@@ -76,6 +76,37 @@ NEG_CONTROL_SYNONYMS = {
 }
 snr.COMPOUND_SYNONYMS.update(NEG_CONTROL_SYNONYMS)
 
+# Option-1 expansion: 14 more negative controls (-> 20 total) so pos-vs-neg
+# separation can be tested at the CLUSTER level (Mann-Whitney) rather than per
+# drug, which sidesteps the small-AD-count resolution limit. Same selection rule:
+# healthy literature, no strong AD story. Deliberately avoids drug classes with a
+# real AD literature (NSAIDs, statins, PDE5, HSV antivirals, anticholinergics,
+# montelukast, doxycycline).
+EXTRA_NEG_CONTROLS = [
+    ("N-7", "Ciprofloxacin"), ("N-8", "Azithromycin"), ("N-9", "Metronidazole"),
+    ("N-10", "Nitrofurantoin"), ("N-11", "Loperamide"), ("N-12", "Ranitidine"),
+    ("N-13", "Fexofenadine"), ("N-14", "Cetirizine"), ("N-15", "Terbinafine"),
+    ("N-16", "Fluconazole"), ("N-17", "Tamsulosin"), ("N-18", "Finasteride"),
+    ("N-19", "Oseltamivir"), ("N-20", "Sumatriptan"),
+]
+EXTRA_NEG_SYNONYMS = {
+    "Ciprofloxacin": ["Ciprofloxacin", "Cipro"],
+    "Azithromycin":  ["Azithromycin", "Zithromax"],
+    "Metronidazole": ["Metronidazole", "Flagyl"],
+    "Nitrofurantoin": ["Nitrofurantoin", "Macrobid", "Macrodantin"],
+    "Loperamide":    ["Loperamide", "Imodium"],
+    "Ranitidine":    ["Ranitidine", "Zantac"],
+    "Fexofenadine":  ["Fexofenadine", "Allegra"],
+    "Cetirizine":    ["Cetirizine", "Zyrtec"],
+    "Terbinafine":   ["Terbinafine", "Lamisil"],
+    "Fluconazole":   ["Fluconazole", "Diflucan"],
+    "Tamsulosin":    ["Tamsulosin", "Flomax"],
+    "Finasteride":   ["Finasteride", "Proscar", "Propecia"],
+    "Oseltamivir":   ["Oseltamivir", "Tamiflu"],
+    "Sumatriptan":   ["Sumatriptan", "Imitrex"],
+}
+snr.COMPOUND_SYNONYMS.update(EXTRA_NEG_SYNONYMS)
+
 # ~100 MeSH disease headings, drug-agnostic and chosen to avoid every Tier-1
 # drug's real domain (metabolic/diabetes/obesity, cardiovascular/renal, fibrosis/
 # Marfan, pulmonary-hypertension/erectile) and anything neurodegenerative /
@@ -447,6 +478,123 @@ def write_negcontrol_report(tier1: list[dict], neg: list[dict]) -> None:
         f"resolvable_clear={resolvable_clear}; overall={'PASS' if overall else 'FAIL/INCONCLUSIVE'}")
 
 
+def _drug_pctile_draws(r: dict, rng: np.random.Generator, B: int) -> np.ndarray:
+    """B bootstrap draws of a drug's AD percentile: redraw AD obs AND every control
+    obs from their Poisson, recompute the percentile each time."""
+    ad_obs, ad_exp = r["AD"]["observed"], r["AD"]["expected"]
+    cobs = np.array([c["observed"] for c in r["controls"]], float)
+    cexp = np.array([c["expected"] for c in r["controls"]], float)
+    ad_draw = rng.poisson(ad_obs, size=B) / ad_exp                # (B,)
+    cdraw = rng.poisson(cobs[None, :].repeat(B, 0)) / cexp        # (B, n)
+    return (cdraw < ad_draw[:, None]).mean(axis=1) * 100.0        # (B,)
+
+
+def cluster_stats(pos: list[dict], neg: list[dict]) -> dict:
+    """Cluster-level pos-vs-neg separation: Mann-Whitney U (one-sided) on the
+    point percentiles + AUC effect size with a bootstrap 95% CI (propagates the
+    Poisson count noise the per-drug CIs exposed)."""
+    from scipy.stats import mannwhitneyu
+
+    pos_p = np.array([r["AD_percentile"] for r in pos], float)
+    neg_p = np.array([r["AD_percentile"] for r in neg], float)
+    U, p = mannwhitneyu(pos_p, neg_p, alternative="greater")
+    auc_point = float((pos_p[:, None] > neg_p[None, :]).mean())
+
+    rng = np.random.default_rng(SEED)
+    posm = np.vstack([_drug_pctile_draws(r, rng, BOOTSTRAP_B) for r in pos])  # (np, B)
+    negm = np.vstack([_drug_pctile_draws(r, rng, BOOTSTRAP_B) for r in neg])  # (nn, B)
+    aucs = np.array([(posm[:, b][:, None] > negm[:, b][None, :]).mean()
+                     for b in range(BOOTSTRAP_B)])
+    auc_lo, auc_hi = float(np.percentile(aucs, 2.5)), float(np.percentile(aucs, 97.5))
+
+    return {
+        "n_pos": len(pos), "n_neg": len(neg),
+        "U": float(U), "p_one_sided": float(p),
+        "auc_point": auc_point, "auc_ci": [auc_lo, auc_hi],
+        "pos_median": float(np.median(pos_p)), "pos_min": float(pos_p.min()),
+        "pos_max": float(pos_p.max()),
+        "neg_median": float(np.median(neg_p)), "neg_min": float(neg_p.min()),
+        "neg_max": float(neg_p.max()),
+    }
+
+
+def write_negcluster_report(tier1: list[dict], neg: list[dict], s: dict) -> None:
+    p_pass = s["p_one_sided"] < 0.05
+    auc_pass = s["auc_ci"][0] > 0.5
+    overall = p_pass and auc_pass
+
+    L: list[str] = []
+    L.append("# Step 2 — Negative-control CLUSTER test (expanded set)\n")
+    L.append(f"Option 1: expand to **{s['n_neg']} negative controls** and test "
+             f"pos-vs-neg separation at the CLUSTER level, sidestepping the "
+             f"per-drug small-count resolution limit (a single near-zero-AD-count "
+             f"drug can't be resolved alone, but the groups can be compared).\n")
+    L.append("**Pre-registered pass condition (set before results):** "
+             "(a) one-sided Mann-Whitney U (H1: Tier-1 percentiles > negative "
+             "percentiles) **p < 0.05**, AND (b) bootstrap 95% CI of the AUC effect "
+             "size (P a random positive outranks a random negative) has **lower "
+             "bound > 0.5**.\n")
+
+    L.append("## Result\n")
+    L.append(f"- Mann-Whitney U = {s['U']:.0f}, **one-sided p = {s['p_one_sided']:.2g}** "
+             f"(H1: positives rank above negatives).")
+    L.append(f"- Effect size **AUC = {s['auc_point']:.2f}** "
+             f"(95% CI {s['auc_ci'][0]:.2f}–{s['auc_ci'][1]:.2f}), i.e. a random "
+             f"Tier-1 drug outranks a random negative ~{s['auc_point']*100:.0f}% of "
+             f"the time.")
+    L.append(f"- Tier-1 percentiles: median {s['pos_median']:.0f}th "
+             f"(range {s['pos_min']:.0f}–{s['pos_max']:.0f}); negatives: median "
+             f"{s['neg_median']:.0f}th (range {s['neg_min']:.0f}–{s['neg_max']:.0f}).\n")
+
+    L.append("## VERDICT (computed)\n")
+    L.append(f"- (a) MWU one-sided p = {s['p_one_sided']:.2g} < 0.05 → "
+             f"**{'PASS' if p_pass else 'FAIL'}**.")
+    L.append(f"- (b) AUC 95% CI lower {s['auc_ci'][0]:.2f} > 0.50 → "
+             f"**{'PASS' if auc_pass else 'FAIL'}**.")
+    L.append(f"\n**Cluster verdict (a AND b): {'PASS' if overall else 'FAIL'}.** "
+             + ("Tier-1 drugs rank significantly and reliably above the negative "
+                "controls; the top tier is real signal, not a low bar."
+                if overall else
+                "The positive and negative clusters are not separated at the "
+                "pre-registered level.") + "\n")
+
+    L.append("## Full ranking (all drugs by calibrated percentile)\n")
+    L.append("| Drug | Group | AD obs | Raw AD ratio (95% CI) | "
+             "Calibrated percentile (95% CI) |")
+    L.append("|---|---|---|---|---|")
+    rows = ([("pos", r) for r in tier1] + [("neg", r) for r in neg])
+    for kind, r in sorted(rows, key=lambda x: -x[1]["AD_percentile"]):
+        ad = r["AD"]
+        raw = fmt_ci(ad["ratio"], ad["ratio_low"], ad["ratio_high"])
+        lo, hi = r["AD_percentile_ci"]
+        L.append(f"| {r['compound']} | {kind} | {ad['observed']} | {raw} | "
+                 f"**{r['AD_percentile']:.0f}th** ({lo:.0f}–{hi:.0f}) |")
+    L.append("")
+
+    (OUT_DIR / "calibration_negcluster.md").write_text("\n".join(L))
+    log(f"Wrote {OUT_DIR / 'calibration_negcluster.md'}")
+    log(f"CLUSTER VERDICT: p={s['p_one_sided']:.2g} (pass={p_pass}); "
+        f"AUC={s['auc_point']:.2f} CI[{s['auc_ci'][0]:.2f},{s['auc_ci'][1]:.2f}] "
+        f"(pass={auc_pass}); overall={'PASS' if overall else 'FAIL'}")
+
+
+def run_negative_cluster() -> None:
+    tier1 = _load_results("calibration_raw.json")                     # 5 positives
+    existing = _load_results("calibration_negcontrol_raw.json")       # 6 negatives
+    have = {r["compound"] for r in existing}
+    new = [calibrate(sid, comp) for sid, comp in EXTRA_NEG_CONTROLS
+           if comp not in have]
+    neg = existing + new
+    s = cluster_stats(tier1, neg)
+    raw = {"window_maxdate": MAXDATE, "bootstrap_B": BOOTSTRAP_B,
+           "control_diseases": CONTROL_DISEASES, "tier1": tier1, "negatives": neg,
+           "cluster_stats": s, "query_log": snr._query_log}
+    (OUT_DIR / "calibration_negcluster_raw.json").write_text(json.dumps(raw, indent=2))
+    log(f"Wrote calibration_negcluster_raw.json ({len(snr._query_log)} queries)")
+    write_negcluster_report(tier1, neg, s)
+    log("Done.")
+
+
 def main() -> None:
     results = [calibrate(sid, comp) for sid, comp in DRUGS]
     raw = {"window_maxdate": MAXDATE, "bootstrap_B": BOOTSTRAP_B,
@@ -463,7 +611,11 @@ if __name__ == "__main__":
     mode = sys.argv[1] if len(sys.argv) > 1 else "tier1"
     if mode == "preview":
         preview(NEG_CONTROLS)
+    elif mode == "preview_extra":
+        preview(EXTRA_NEG_CONTROLS)
     elif mode == "negcontrols":
         run_negative_controls()
+    elif mode == "negcluster":
+        run_negative_cluster()
     else:
         main()
