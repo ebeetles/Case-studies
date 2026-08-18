@@ -53,6 +53,29 @@ DRUGS = [
     ("T1-D", "Losartan"), ("T1-E", "Sildenafil"),
 ]
 
+# Negative-control drugs: healthy literature, no strong Alzheimer's story. Run
+# through the IDENTICAL calibration path (same controls, ratio, bootstrap, trim,
+# present window) to test whether the metric ranks true negatives LOW. If they
+# cluster near the 50th percentile, the Tier-1 top tier (85th–98th) is real
+# signal; if they also land high, that tier is a low bar.
+NEG_CONTROLS = [
+    ("N-1", "Omeprazole"), ("N-2", "Loratadine"), ("N-3", "Hydrochlorothiazide"),
+    ("N-4", "Amoxicillin"), ("N-5", "Clotrimazole"), ("N-6", "Albuterol"),
+]
+
+# Register synonyms so snr.compound_term (the Tier-1 query builder) works for the
+# negative controls too — same MeSH-heading + brand/INN[tiab] construction as the
+# Tier-1 drugs, so drug-literature capture is comparable.
+NEG_CONTROL_SYNONYMS = {
+    "Omeprazole":          ["Omeprazole", "Prilosec", "Losec"],
+    "Loratadine":          ["Loratadine", "Claritin"],
+    "Hydrochlorothiazide": ["Hydrochlorothiazide", "Microzide", "HydroDIURIL"],
+    "Amoxicillin":         ["Amoxicillin", "Amoxil"],
+    "Clotrimazole":        ["Clotrimazole", "Lotrimin", "Canesten"],
+    "Albuterol":           ["Albuterol", "Salbutamol", "Ventolin"],
+}
+snr.COMPOUND_SYNONYMS.update(NEG_CONTROL_SYNONYMS)
+
 # ~100 MeSH disease headings, drug-agnostic and chosen to avoid every Tier-1
 # drug's real domain (metabolic/diabetes/obesity, cardiovascular/renal, fibrosis/
 # Marfan, pulmonary-hypertension/erectile) and anything neurodegenerative /
@@ -264,6 +287,166 @@ def write_report(results: list[dict]) -> None:
     log(f"Wrote {OUT_DIR / 'calibration.md'}")
 
 
+def preview(drugs: list[tuple[str, str]]) -> None:
+    """Cheap pre-flight (no full calibration): print each drug's total literature
+    count (count_A) and its raw Alzheimer's co-occurrence, so the drug list can be
+    finalized — e.g. confirm a 'negative' control has no major AD literature —
+    before spending ~600 queries on the full run."""
+    total = cached_count(total_term(MAXDATE), "total", "corpus")
+    log(f"window = present ({MAXDATE}); corpus total = {total}")
+    log(f"{'drug':22} {'count_A':>9} {'AD obs':>7} {'AD exp':>8} {'raw ratio':>10}")
+    ad_c = cached_count(mesh(AD_MESH), "C", "AD")
+    for _sid, comp in drugs:
+        comp_term = snr.compound_term(comp)
+        count_a = snr.esearch_count(comp_term, MAXDATE, "1900", "A", f"{comp}/A")
+        ad_obs = snr.esearch_count(f"{comp_term} AND {mesh(AD_MESH)}", MAXDATE,
+                                   "1900", "drug-C", f"{comp}/AD")
+        ad_exp = count_a * ad_c / total
+        ratio = ad_obs / ad_exp if ad_exp else float("nan")
+        log(f"{comp:22} {count_a:>9} {ad_obs:>7} {ad_exp:>8.1f} {ratio:>10.2f}")
+    log("Preview only — no calibration run. Confirm the drug list to proceed.")
+
+
+def _load_results(name: str) -> list[dict]:
+    return json.loads((OUT_DIR / name).read_text())["results"]
+
+
+def run_negative_controls() -> None:
+    """Run the negative controls through the identical calibrate() path and write a
+    combined report contrasting them with the cached Tier-1 results."""
+    tier1 = _load_results("calibration_raw.json")  # reuse; do not re-run Tier-1
+    neg = [calibrate(sid, comp) for sid, comp in NEG_CONTROLS]
+    raw = {"window_maxdate": MAXDATE, "bootstrap_B": BOOTSTRAP_B,
+           "contamination_ratio": CONTAMINATION_RATIO,
+           "control_diseases": CONTROL_DISEASES, "results": neg,
+           "query_log": snr._query_log}
+    (OUT_DIR / "calibration_negcontrol_raw.json").write_text(json.dumps(raw, indent=2))
+    log(f"Wrote calibration_negcontrol_raw.json ({len(snr._query_log)} queries)")
+    write_negcontrol_report(tier1, neg)
+    log("Done.")
+
+
+# Pre-registered pass condition (set BEFORE looking at results):
+#   (a) negative cluster median < CLUSTER_MAX (60th), AND
+#   (b) each negative's percentile-CI UPPER < the Tier-1 CI LOWER floor.
+# Nuance: AD obs <= DIRECTIONAL_OBS rests on 1-2 papers -> DIRECTIONAL ONLY, its
+# wide CI reads "can't resolve", not pass/fail. A negative whose CI is so wide it
+# overlaps the Tier-1 floor is "can't resolve at these counts", not "failed".
+CLUSTER_MAX = 60.0
+DIRECTIONAL_OBS = 2
+
+
+def _contrast_row(r: dict, kind: str) -> str:
+    ad = r["AD"]
+    raw = fmt_ci(ad["ratio"], ad["ratio_low"], ad["ratio_high"])
+    lo, hi = r["AD_percentile_ci"]
+    return (f"| {r['compound']} | {kind} | {ad['observed']} | {raw} | "
+            f"**{r['AD_percentile']:.0f}th** ({lo:.0f}–{hi:.0f}) | "
+            f"{r['AD_percentile_trimmed']:.0f}th |")
+
+
+def write_negcontrol_report(tier1: list[dict], neg: list[dict]) -> None:
+    t1_pcts = [r["AD_percentile"] for r in tier1]
+    neg_pcts = [r["AD_percentile"] for r in neg]
+    tier1_floor = min(r["AD_percentile_ci"][0] for r in tier1)  # Tier-1 CI lower floor
+
+    L: list[str] = []
+    L.append("# Step 2 — Negative-control validation\n")
+    L.append("Does the calibration rank true NEGATIVES low? The negative-control "
+             "drugs below (healthy literature, no strong Alzheimer's story) are run "
+             "through the **identical** path as the Tier-1 drugs — same ~100 control "
+             "diseases, same observed/expected ratio, same bootstrap 95% CI "
+             f"(B={BOOTSTRAP_B}), same contamination trim (ratio ≥ "
+             f"{CONTAMINATION_RATIO:g}), same present window ({MAXDATE}).\n")
+    L.append("**Scope of this test.** These are STRONG negatives (raw AD ratios "
+             "0.03–0.29, floor values), not boundary cases near chance. So this "
+             "validates *doesn't rank obvious non-candidates high* — NOT that the "
+             "metric discriminates at the positive/negative boundary.\n")
+
+    L.append("## Pre-registered pass condition (set before results)\n")
+    L.append(f"**(a)** negative cluster median < {CLUSTER_MAX:.0f}th, AND "
+             f"**(b)** every negative's percentile-CI upper < the Tier-1 CI lower "
+             f"floor (**{tier1_floor:.0f}th**, the lowest Tier-1 CI bound). "
+             f"Negatives with AD obs ≤ {DIRECTIONAL_OBS} are DIRECTIONAL ONLY.\n")
+
+    L.append("## Combined table — negatives and Tier-1 for contrast\n")
+    L.append("| Drug | Group | AD obs | Raw AD ratio (95% CI) | "
+             "Calibrated percentile (95% CI) | Trimmed |")
+    L.append("|---|---|---|---|---|---|")
+    for r in tier1:
+        L.append(_contrast_row(r, "pos"))
+    for r in neg:
+        L.append(_contrast_row(r, "neg"))
+    L.append("")
+
+    # (1) per-drug pass/fail: negative CI upper vs Tier-1 floor
+    L.append(f"## Per-negative: CI upper vs Tier-1 floor ({tier1_floor:.0f}th)\n")
+    L.append("| Drug | AD obs | Percentile (95% CI) | CI upper | "
+             f"< floor ({tier1_floor:.0f})? | Status |")
+    L.append("|---|---|---|---|---|---|")
+    for r in neg:
+        lo, hi = r["AD_percentile_ci"]
+        obs = r["AD"]["observed"]
+        clears = hi < tier1_floor
+        directional = obs <= DIRECTIONAL_OBS
+        if directional:
+            status = "DIRECTIONAL (obs≤2) — can't resolve"
+        elif clears:
+            status = "clears floor"
+        else:
+            status = "CI overlaps Tier-1 — can't resolve at these counts"
+        L.append(f"| {r['compound']} | {obs} | {r['AD_percentile']:.0f}th "
+                 f"({lo:.0f}–{hi:.0f}) | {hi:.0f} | {'yes' if clears else 'no'} | "
+                 f"{status} |")
+    L.append("")
+
+    # (3) cluster stats
+    L.append("## Cluster comparison\n")
+    L.append(f"- Negative controls: min {min(neg_pcts):.0f}th, "
+             f"median {st.median(neg_pcts):.0f}th, max {max(neg_pcts):.0f}th "
+             f"(range {min(neg_pcts):.0f}–{max(neg_pcts):.0f}).")
+    L.append(f"- Tier-1: min {min(t1_pcts):.0f}th, median {st.median(t1_pcts):.0f}th, "
+             f"max {max(t1_pcts):.0f}th (range {min(t1_pcts):.0f}–{max(t1_pcts):.0f}).")
+    L.append("")
+
+    # (2) computed verdict
+    resolvable = [r for r in neg if r["AD"]["observed"] > DIRECTIONAL_OBS]
+    directional = [r for r in neg if r["AD"]["observed"] <= DIRECTIONAL_OBS]
+    crit_a = st.median(neg_pcts) < CLUSTER_MAX
+    all_clear = all(r["AD_percentile_ci"][1] < tier1_floor for r in neg)
+    resolvable_clear = all(r["AD_percentile_ci"][1] < tier1_floor for r in resolvable)
+    overall = crit_a and all_clear
+
+    L.append("## VERDICT (computed)\n")
+    L.append(f"- (a) negative median {st.median(neg_pcts):.0f}th < {CLUSTER_MAX:.0f} "
+             f"→ **{'PASS' if crit_a else 'FAIL'}**.")
+    L.append(f"- (b) all six CI uppers < Tier-1 floor {tier1_floor:.0f} "
+             f"→ **{'PASS' if all_clear else 'FAIL'}**.")
+    L.append(f"- Among the {len(resolvable)} RESOLVABLE negatives (obs > "
+             f"{DIRECTIONAL_OBS}: "
+             f"{', '.join(r['compound'] for r in resolvable)}), all CI uppers < "
+             f"floor → **{'PASS' if resolvable_clear else 'FAIL'}**.")
+    if directional:
+        L.append(f"- {len(directional)} DIRECTIONAL negatives (obs ≤ "
+                 f"{DIRECTIONAL_OBS}: {', '.join(r['compound'] for r in directional)}) "
+                 f"— wide CIs; read as 'can't resolve', not pass/fail.")
+    L.append(f"\n**Strict verdict (a AND b over all six): "
+             f"{'PASS' if overall else 'FAIL / INCONCLUSIVE'}.** "
+             + ("The metric ranks these strong negatives below the Tier-1 cluster."
+                if overall else
+                "At least one negative's CI reaches the Tier-1 floor; where that is "
+                "driven by AD obs ≤ 2 (directional) or a wide CI, the reading is "
+                "'can't resolve at these counts' (small-count limit), not a metric "
+                "failure. See the per-negative status column.") + "\n")
+
+    (OUT_DIR / "calibration_negcontrol.md").write_text("\n".join(L))
+    log(f"Wrote {OUT_DIR / 'calibration_negcontrol.md'}")
+    # console mirror of the machine-checkable verdict
+    log(f"VERDICT: crit_a(median<{CLUSTER_MAX:.0f})={crit_a}; "
+        f"all_clear(CIupper<{tier1_floor:.0f})={all_clear}; "
+        f"resolvable_clear={resolvable_clear}; overall={'PASS' if overall else 'FAIL/INCONCLUSIVE'}")
+
+
 def main() -> None:
     results = [calibrate(sid, comp) for sid, comp in DRUGS]
     raw = {"window_maxdate": MAXDATE, "bootstrap_B": BOOTSTRAP_B,
@@ -277,4 +460,10 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    mode = sys.argv[1] if len(sys.argv) > 1 else "tier1"
+    if mode == "preview":
+        preview(NEG_CONTROLS)
+    elif mode == "negcontrols":
+        run_negative_controls()
+    else:
+        main()
